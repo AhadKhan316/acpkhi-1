@@ -27,9 +27,9 @@ const SovapaPage = () => {
     { id: 1, name: "Graphic Design", image: departmentImg1, route: "graphic-design" },
     { id: 2, name: "Dance", image: departmentImg2, route: "dance" },
     { id: 3, name: "Fine Arts", image: departmentImg3, route: "fine-arts" },
-    { id: 4, name: "Textile Design", image: departmentImg4, route: "textile-design" },
-    { id: 5, name: "Theatre", image: departmentImg5, route: "theatre" },
-    { id: 6, name: "Music", image: departmentImg6, route: "music" },
+    { id: 4, name: "Music", image: departmentImg4, route: "music" },
+    { id: 5, name: "textile Design", image: departmentImg5, route: "textile-design" },
+    { id: 6, name: "Theatre", image: departmentImg6, route: "theatre" },
   ];
 
   const swiperImages = [
