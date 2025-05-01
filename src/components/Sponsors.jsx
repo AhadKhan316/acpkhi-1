@@ -104,7 +104,7 @@ const SponsorsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Our Sponsors
+          Our Partners
         </motion.h2>
 
         {/* Top Sponsors */}

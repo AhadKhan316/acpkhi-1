@@ -70,14 +70,14 @@ const GoverningBody = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white text-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white text-gray-900 py-12 px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
-      <div className="max-w-7xl mx-auto text-center mb-16">
-        <motion.h1 
+      <div className="mx-4 text-center mb-16">
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900"
+          className="text-2xl md:text-4xl lg:text-4xl font-bold mb-6 text-gray-900"
         >
           Governing Body
         </motion.h1>
@@ -121,7 +121,7 @@ const GoverningBody = () => {
                 </span>
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
                 Mohammad Ahmed Shah
               </h2>
 
@@ -141,7 +141,7 @@ const GoverningBody = () => {
       {/* Tabs Section */}
       <div className="max-w-7xl mx-auto mb-16">
         <div className="flex flex-col items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -160,7 +160,7 @@ const GoverningBody = () => {
               >
                 <span className="relative z-10">{tab}</span>
                 {activeTab === tab && (
-                  <motion.span 
+                  <motion.span
                     className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 z-0"
                     layoutId="activeTab"
                     transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
@@ -171,7 +171,7 @@ const GoverningBody = () => {
           </motion.div>
 
           {/* Active Tab Indicator */}
-          <motion.div 
+          <motion.div
             className="h-1 bg-gradient-to-r from-red-500 to-red-700 rounded-full mb-8"
             initial={{ width: 0 }}
             animate={{ width: "200px" }}
@@ -189,9 +189,9 @@ const GoverningBody = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-800">
             {activeTab} <span className="text-red-600">of Arts Council</span>
           </h3>
-          <Cards 
-            title={activeTab} 
-            items={members[activeTab]} 
+          <Cards
+            title={activeTab}
+            items={members[activeTab]}
             cardClassName="hover:scale-105 transition-transform duration-300"
             gridClassName="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
           />

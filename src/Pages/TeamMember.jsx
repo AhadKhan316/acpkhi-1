@@ -69,73 +69,111 @@ const TeamMembers = () => {
   ];
 
   return (
-    <div className=" text-black py-6 sm:py-6 lg:py-8 px-4 sm:px-6 lg:px-8">
-      <div className="mx-4">
-        {/* Executive Director Section */}
-        <motion.section
-          initial="hidden"
-          whileInView="visible"
-          // variants={fadeIn}
-          viewport={{ once: true, amount: 0.2 }}
-          className="mb-20"
+    <div className="bg-white text-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */}
+      <div className="mx-4 text-center mb-16">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-2xl md:text-4xl lg:text-4xl font-bold mb-6 text-gray-900"
         >
-          <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
-            <div className="flex flex-col lg:flex-row">
-              {/* Image Section */}
-              <div className="lg:w-2/7 relative">
-                <div className="aspect-square lg:aspect-auto lg:h-full">
-                  <img
-                    src={execDirectorImg}
-                    alt="Executive Director"
-                    className="w-full h-full object-cover"
-                    loading="eager"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent"></div>
-                </div>
+          Our Team
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
+        >
+          Meet the passionate team driving the Arts Council of Pakistan, dedicated to fostering creativity and cultural excellence.
+        </motion.p>
+      </div>
+
+      {/* Executive Director Section */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="mb-20 max-w-7xl mx-auto"
+      >
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+          <div className="flex flex-col lg:flex-row">
+            {/* Image Section */}
+            <div className="lg:w-2/5 relative">
+              <div className="aspect-square lg:aspect-auto lg:h-full">
+                <img
+                  src={execDirectorImg}
+                  alt="Executive Director M. Daniyal Umer"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
+              </div>
+            </div>
+
+            {/* Dutton Section */}
+            <div className="p-8 lg:p-12 lg:w-3/5">
+              <div className="mb-6">
+                <span className="inline-block bg-gradient-to-r from-red-600 to-red-800 text-white text-sm font-medium px-4 py-2 rounded-full shadow-md">
+                  Executive Director
+                </span>
               </div>
 
-              {/* Content Section */}
-              <div className="p-8 lg:p-6 lg:w-3/5">
-                <div className="mb-6">
-                  <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
-                    Executive Director
-                  </span>
-                </div>
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
+                M. Daniyal Umer
+              </h2>
 
-                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
-                  M. Daniyal Umer
-                </h2>
-
-                <div className="prose prose-lg text-gray-600 mb-8">
-                  <p>
-                    Leading the Arts Council of Pakistan, Karachi (ACPKHI), as the world's youngest Executive Director is an honour. Our mission is to enrich global culture, art, and literature. Over the past decade, working with President Mohammad Ahmed Shah (HI)(SI), I've focused on empowering youth creativity.
-                  </p>
-                  <p>
-                    We've built a passionate team, and as ACPKHI grows as a cultural hub, I aim to integrate modern technology into our initiatives. With continued dedication, we will elevate ACPKHI as a global center for artistic excellence.
-                  </p>
-                </div>
-
-                {/* <div className="flex flex-wrap gap-4">
-                  <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-md">
-                    Contact
-                  </button>
-                  <button className="px-6 py-3 border border-gray-200 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                    View Full Profile
-                  </button>
-                </div> */}
+              <div className="text-gray-600 space-y-4 text-lg">
+                <p>
+                  Leading the Arts Council of Pakistan, Karachi (ACPKHI), as the world's youngest Executive Director is an honour. Our mission is to enrich global culture, art, and literature.
+                </p>
+                <p>
+                  Over the past decade, working with President Mohammad Ahmed Shah (HI)(SI), I've focused on empowering youth creativity. We've built a passionate team, and as ACPKHI grows as a cultural hub, I aim to integrate modern technology into our initiatives.
+                </p>
               </div>
             </div>
           </div>
-        </motion.section>
+        </div>
+      </motion.section>
+
+      {/* Directors Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-7xl mx-auto mb-16"
+      >
+        <h3 className="text-2xl md:text-4xl font-bold text-center mb-6 text-gray-800">
+          Directors <span className="text-red-600">of Arts Council</span>
+        </h3>
+        <Cards
+          // title="Directors"
+          items={directors}
+          cardClassName="hover:scale-105 transition-transform duration-300"
+          gridClassName="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        />
+      </motion.div>
+
+      {/* Managers Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-7xl mx-auto mb-16"
+      >
+        <h3 className="text-2xl md:text-4xl font-bold text-center mb-6 text-gray-800">
+          HOD / Managers <span className="text-red-600">of Arts Council</span>
+        </h3>
+        <Cards
+          // title="HOD / Managers"
+          items={managers}
+          cardClassName="hover:scale-105 transition-transform duration-300"
+          gridClassName="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        />
+      </motion.div>
 
 
-
-        {/* Directors Section */}
-        <Cards title="Directors" items={directors} />
-
-        {/* Managers Section */}
-        <Cards title="HOD / Managers" items={managers} />
-      </div>
     </div>
   );
 };
