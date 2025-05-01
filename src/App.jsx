@@ -25,6 +25,9 @@ import MembersVerification from './Pages/MembersVerification';
 import Career from './Pages/Careers';
 import Tenders from './Pages/Tenders';
 
+// Media Kit
+// import MediaKit from './Pages/MediaKit';
+
 // ACP Sub Pages
 import UpcomingEventsPage from './Pages/AcpSubPages/UpcomingEventsPage';
 import SovapaCoursePage from './Pages/AcpSubPages/SovapaCoursePage';
@@ -93,6 +96,7 @@ const App = () => {
           <Route path="/career" element={<Career />} />
           <Route path="/tenders" element={<Tenders />} />
           <Route path="/contactUs" element={<ContactUs />} />
+          {/* <Route path="/mediaKit" element={<MediaKit />} /> */}
         </Route>
 
         {/* Routes without Navbar and Footer */}

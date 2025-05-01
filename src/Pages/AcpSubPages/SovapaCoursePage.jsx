@@ -30,8 +30,8 @@ const PrevArrow = ({ onClick }) => (
 // Course Instructors
 // Communication Design Department
 import CdHead1 from "/src/assets/academies/CommunicationDesignAssets/muhammadAli-Head1.png";
-import Instructor1 from "/src/assets/academies/CommunicationDesignAssets/mOwais-Instructor2.jpeg";
-// import instructor3 from "/src/assets/academies/CommunicationDesignAssets/instructor3.jpg";
+import Instructor2 from "/src/assets/academies/CommunicationDesignAssets/mOwais-Instructor2.jpeg";
+import Instructor3 from "/src/assets/academies/CommunicationDesignAssets/dumy-Instructor3.png";
 
 // Dance Department
 import DanceHead1 from "/src/assets/academies/DanceAssets/maniChao-Head1.jpeg";
@@ -48,9 +48,9 @@ import FineArtsInstructor6 from "/src/assets/academies/FineArtsAssets/faheemRao-
 import FineArtsInstructor7 from "/src/assets/academies/FineArtsAssets/syedFarazAli-Instructor7.jpeg";
 import FineArtsInstructor8 from "/src/assets/academies/FineArtsAssets/Shamama-Instructor8.jpg";
 import FineArtsInstructor9 from "/src/assets/academies/FineArtsAssets/nazarUlIslam-Instructor9.jpeg";
-import FineArtsInstructor10 from "/src/assets/academies/FineArtsAssets/Shamama-Instructor8.jpg";
-import FineArtsInstructor11 from "/src/assets/academies/FineArtsAssets/Shamama-Instructor8.jpg";
-import FineArtsInstructor12 from "/src/assets/academies/FineArtsAssets/Shamama-Instructor8.jpg";
+import FineArtsInstructor10 from "/src/assets/academies/FineArtsAssets/dumy-Instructor9.png";
+import FineArtsInstructor11 from "/src/assets/academies/FineArtsAssets/dumy-Instructor9.png";
+import FineArtsInstructor12 from "/src/assets/academies/FineArtsAssets/dumy-Instructor9.png";
 
 // Music Department
 import MusicHead1 from "/src/assets/academies/MusicAssets/AhsanBari-Head1.jpg";
@@ -69,9 +69,9 @@ import MusicInstructor13 from "/src/assets/academies/MusicAssets/Zeeshan-Instruc
 import MusicInstructor14 from "/src/assets/academies/MusicAssets/shahidTabla-Instructor14.jpg";
 import MusicInstructor15 from "/src/assets/academies/MusicAssets/john-Instructor15.jpeg";
 import MusicInstructor16 from "/src/assets/academies/MusicAssets/faheem-Instructor16.jpg";
-import MusicInstructor17 from "/src/assets/academies/MusicAssets/faheem-Instructor16.jpg";
-import MusicInstructor18 from "/src/assets/academies/MusicAssets/faheem-Instructor16.jpg";
-import MusicInstructor19 from "/src/assets/academies/MusicAssets/faheem-Instructor16.jpg";
+import MusicInstructor17 from "/src/assets/academies/MusicAssets/dumy-Instructor17.png";
+import MusicInstructor18 from "/src/assets/academies/MusicAssets/dumy-Instructor17.png";
+import MusicInstructor19 from "/src/assets/academies/MusicAssets/dumy-Instructor17.png";
 
 // Textile Design Department
 import TextileHead1 from "/src/assets/academies/TextileDesignAssets/muhammadZeeshan-Head1.jpg";
@@ -80,7 +80,19 @@ import TextileInstructor3 from "/src/assets/academies/TextileDesignAssets/shahKh
 import TextileInstructor4 from "/src/assets/academies/TextileDesignAssets/mYaseen-Instructor4.jpeg";
 import TextileInstructor5 from "/src/assets/academies/TextileDesignAssets/Shamama-Instructor5.jpg";
 
-
+// Theatre Department
+import TheatreHead1 from "/src/assets/academies/TheatreAssets/khalidAhmed-Head1.jpg";
+import TheatreInstructor2 from "/src/assets/academies/TheatreAssets/nazar-Instructor2.jpeg";
+import TheatreInstructor3 from "/src/assets/academies/TheatreAssets/farhanAlam-Instructor3.jpg";
+import TheatreInstructor4 from "/src/assets/academies/TheatreAssets/uzmaSabeen-Instructor4.jpg";
+import TheatreInstructor5 from "/src/assets/academies/TheatreAssets/muneebUrRehman-Instructor5.jpg";
+import TheatreInstructor6 from "/src/assets/academies/TheatreAssets/raheel-Instructor6.jpeg";
+import TheatreInstructor7 from "/src/assets/academies/TheatreAssets/kashifHussain-Instructor7.jpg";
+import TheatreInstructor8 from "/src/assets/academies/TheatreAssets/farhanRahim-Instructor8.jpg";
+import TheatreInstructor9 from "/src/assets/academies/TheatreAssets/sameena-Instructor9.jpg";
+import TheatreInstructor10 from "/src/assets/academies/TheatreAssets/irumBasheer-Instructor10.jpg";
+import TheatreInstructor11 from "/src/assets/academies/TheatreAssets/SaadZameer-Instructor11.jpg";
+import TheatreInstructor12 from "/src/assets/academies/TheatreAssets/dumy-Instructor12.png";
 
 const placeholderImages = {
   "graphic-design": [
@@ -178,9 +190,8 @@ const CoursePage = () => {
       },
       instructors: [
         { name: "Muhammad Ali Khan", title: "Head of Department", image: CdHead1 },
-        { name: "Muhammad Owais", title: "UI/UX Designer, 2D & 3D Graphic Designer Teacher", image: Instructor1 },
-        { name: "Sachin Kumar", title: "Graphic Design Assistant Teacher", image: Instructor1 },
-
+        { name: "Muhammad Owais", title: "UI/UX Designer, 2D & 3D Graphic Designer Teacher", image: Instructor2 },
+        { name: "Sachin Kumar", title: "Graphic Design Assistant Teacher", image: Instructor3 },
       ],
       registerLink: "/academies/graphic-design/register",
     },
@@ -300,7 +311,7 @@ const CoursePage = () => {
         { name: "Faheem Rao", title: "Sculpture Teacher", image: FineArtsInstructor6 },
         { name: "Syed Faraz Ali", title: "Contemporary Sculpture & Thesis Review Teacher", image: FineArtsInstructor7 },
         { name: "Shamama Tuz Zahra", title: "History of Art Teacher", image: FineArtsInstructor8 },
-        { name: "Masood Alam Khan", title: "Technique of Water Color Teacher", image: FineArtsInstructor9 },
+        { name: "Masood Alam Khan", title: "Technique of Water Color Teacher", image: FineArtsInstructor10 },
         { name: "Uzma Noor", title: "Print Making Teacher", image: FineArtsInstructor11 },
         { name: "Kashif Khan", title: "Calligrapher Teacher", image: FineArtsInstructor12 },
       ],
@@ -342,7 +353,6 @@ const CoursePage = () => {
           "Shift : Evening"
         ],
       },
-
       howToApply: {
         "Requirements": [
           "Matric/Intermediate",
@@ -421,7 +431,6 @@ const CoursePage = () => {
           "Handcrafted",
         ],
       },
-
       howToApply: {
         "Requirements": [
           "Matric/Intermediate",
@@ -454,37 +463,77 @@ const CoursePage = () => {
       heroImages: placeholderImages.theatre,
       description: "The Theatre Department offers immersive training in acting, stage direction, and theatre production, preparing students for a career in the performing arts.",
       details: {
-        "1-Year Diploma": [
-          "Students will master:",
-          "Acting Techniques",
-          "Stage Direction",
-          "Theatre History",
-          "Stage Design",
-        ],
-        "3-Month Certificate Course (Morning Shift)": [
-          "Students will learn the basics of:",
+        "3-Year Diploma": [
+          "Students will get to choose one of the following disciplines:",
+          "Acting",
+          "Direction",
+          "Diction",
+          "Voice",
+          "Improvisation",
+          "Movement and Dance",
+          "Music for Theatre",
           "Script Writing",
-          "Acting Basics",
+          "Dramatic Literature",
+        ],
+        "Throughout the diploma": [
+          "Throughout the diploma, students will be part of 9 theatre productions at ACPKHI"
+        ],
+        Timing: [
+          "Monday to Friday",
+          "Shift : Morning",
+        ],
+        "3-Month Short Course": [
+          "Students will get a basic understanding of the following:",
+          "Acting",
+          "Diction",
+          "Voice",
+          "Improvisation",
+          "Movement & Dance",
+        ],
+        "3-Month Short Course Days": [
+          "Monday, Wednesday & Friday",
+          "Shift : Evening",
+        ],
+        "During the Short Course": [
+          "Students will be part of 1 theatre production at ACPKHI at the end of the course."
         ],
       },
       howToApply: {
         "Requirements": [
           "Matric/Intermediate",
-          "Age: 18 - 28 years",
+          "Age bracket: 10-35 (varies from course to course)",
         ],
         "Documents": [
+          "CNIC/B-Form copy",
           "2 passport size photos",
           "Educational Documents",
-          "Parent/Guardian CNIC",
+          "Parent/Guardian CNIC Copy",
         ],
         "Fee Structure": [
-          "Admission Fee for Diploma: Rs. 9,000",
-          "Monthly Fee for the course: Rs. 6,500",
+          "Admission fee for any course: Rs 1,000",
+          "trimester fee for diploma: Rs 18,000",
+          "Monthly fee for short course: Rs 8,000",
+          "The fee is only to be paid on a trimester basis.",
         ],
       },
       instructors: [
-        { name: "Khalid Mehmood", title: "Theatre Director", image: "https://via.placeholder.com/150" },
-        { name: "Sana Javed", title: "Acting Coach", image: "https://via.placeholder.com/150" },
+        { name: "Khalid Mehmood", title: "Head of Department", image: TheatreHead1 },
+        { name: "Nazar Ul Hassan", title: "Diction and Voice Teacher", image: TheatreInstructor2 },
+        { name: "Farhan Alam Siddiqui", title: "Acting Teacher", image: TheatreInstructor3 },
+        { name: "Uzma Sabeen", title: "Acting Coach", image: TheatreInstructor4 },
+        { name: "Muneeb Ur Rehman", title: "Improvisation Teacher", image: TheatreInstructor5 },
+        { name: "Rahil Siddiqui", title: "Disction and Voice Teacher", image: TheatreInstructor6 },
+        { name: "Kashif Hussain", title: "Movement Teacher", image: TheatreInstructor7 },
+        { name: "Farhan Rahim", title: "Assistant Teacher", image: TheatreInstructor8 },
+        { name: "Sameena Nazir", title: "Script Writing Teacher", image: TheatreInstructor9 },
+        { name: "Irum Basheer", title: "Makeup Teacher", image: TheatreInstructor10 },
+        { name: "Saad Zameer", title: "Acting Teacher", image: TheatreInstructor11 },
+        { name: "Hassan Raza", title: "Acting Teacher", image: TheatreInstructor12 },
+        { name: "Sheryle John", title: "Acting Junior Teacher", image: TheatreInstructor12 },
+        { name: "Mazhar Suleman", title: "Acting Teacher", image: TheatreInstructor12 },
+        { name: "Muhammad Samhan Ghazi", title: "Voice Junior Teacher", image: TheatreInstructor12 },
+        { name: "Shanay Qasim", title: "Movement Teacher", image: TheatreInstructor12 },
+        { name: "Ashmal Nazir", title: "Movement Teacher", image: TheatreInstructor12 },
       ],
       registerLink: "/academies/theatre/register",
     },
@@ -531,10 +580,8 @@ const CoursePage = () => {
     <div className="bg-white text-black">
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-
         <section className="mb-12">
           <div className="flex flex-col lg:flex-row gap-8">
-
             <div className="lg:w-2/3">
               <Slider {...sliderSettings}>
                 {currentCourse.heroImages.map((image, index) => (
@@ -575,7 +622,6 @@ const CoursePage = () => {
 
         {/* Tabbed Content */}
         <section>
-
           <div className="mb-12 flex flex-col sm:flex-row gap-2 sm:gap-4">
             {["details", "instructors", "howToApply", "enroll"].map((tab) => (
               <motion.button
@@ -604,26 +650,56 @@ const CoursePage = () => {
                 <h2 className="text-2xl sm:text-4xl font-bold text-black mb-6 border-l-4 border-red-600 pl-4">
                   Details
                 </h2>
-                <div className="space-y-4">
-                  {Object.entries(currentCourse.details).map(([section, items], index) => (
-                    <div key={index}>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{section}</h3>
-                      <ul className="space-y-3">
-                        {items.map((item, idx) => (
-                          <motion.li
-                            key={idx}
-                            className="flex items-center text-gray-700"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: idx * 0.1 }}
-                          >
-                            <FaCheckCircle className="text-red-600 mr-3" />
-                            {item}
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Left Column */}
+                  <div className="space-y-4">
+                    {Object.entries(currentCourse.details)
+                      .slice(0, Math.ceil(Object.keys(currentCourse.details).length / 2))
+                      .map(([section, items], index) => (
+                        <div key={index}>
+                          <h3 className="text-xl font-semibold text-gray-900 mb-2">{section}</h3>
+                          <ul className="space-y-3">
+                            {items.map((item, idx) => (
+                              <motion.li
+                                key={idx}
+                                className="flex items-center text-gray-700"
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                              >
+                                <FaCheckCircle className="text-red-600 mr-3" />
+                                {item}
+                              </motion.li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                  </div>
+
+                  {/* Right Column */}
+                  <div className="space-y-4">
+                    {Object.entries(currentCourse.details)
+                      .slice(Math.ceil(Object.keys(currentCourse.details).length / 2))
+                      .map(([section, items], index) => (
+                        <div key={index}>
+                          <h3 className="text-xl font-semibold text-gray-900 mb-2">{section}</h3>
+                          <ul className="space-y-3">
+                            {items.map((item, idx) => (
+                              <motion.li
+                                key={idx}
+                                className="flex items-center text-gray-700"
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                              >
+                                <FaCheckCircle className="text-red-600 mr-3" />
+                                {item}
+                              </motion.li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                  </div>
                 </div>
               </motion.div>
             )}
@@ -637,26 +713,56 @@ const CoursePage = () => {
                 <h2 className="text-2xl sm:text-4xl font-bold text-black mb-6 border-l-4 border-red-600 pl-4">
                   How to Apply
                 </h2>
-                <div className="space-y-4">
-                  {Object.entries(currentCourse.howToApply).map(([section, items], index) => (
-                    <div key={index}>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{section}</h3>
-                      <ul className="space-y-3">
-                        {items.map((item, idx) => (
-                          <motion.li
-                            key={idx}
-                            className="flex items-center text-gray-700"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: idx * 0.1 }}
-                          >
-                            <FaCheckCircle className="text-red-600 mr-3" />
-                            {item}
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Left Column */}
+                  <div className="space-y-4">
+                    {Object.entries(currentCourse.howToApply)
+                      .slice(0, Math.ceil(Object.keys(currentCourse.howToApply).length / 2))
+                      .map(([section, items], index) => (
+                        <div key={index}>
+                          <h3 className="text-xl font-semibold text-gray-900 mb-2">{section}</h3>
+                          <ul className="space-y-3">
+                            {items.map((item, idx) => (
+                              <motion.li
+                                key={idx}
+                                className="flex items-center text-gray-700"
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                              >
+                                <FaCheckCircle className="text-red-600 mr-3" />
+                                {item}
+                              </motion.li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                  </div>
+
+                  {/* Right Column */}
+                  <div className="space-y-4">
+                    {Object.entries(currentCourse.howToApply)
+                      .slice(Math.ceil(Object.keys(currentCourse.howToApply).length / 2))
+                      .map(([section, items], index) => (
+                        <div key={index}>
+                          <h3 className="text-xl font-semibold text-gray-900 mb-2">{section}</h3>
+                          <ul className="space-y-3">
+                            {items.map((item, idx) => (
+                              <motion.li
+                                key={idx}
+                                className="flex items-center text-gray-700"
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                              >
+                                <FaCheckCircle className="text-red-600 mr-3" />
+                                {item}
+                              </motion.li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                  </div>
                 </div>
               </motion.div>
             )}
@@ -676,8 +782,6 @@ const CoursePage = () => {
                   className="relative bg-cover bg-center rounded-lg p-6 sm:p-8 lg:p-12"
                   style={{
                     backgroundImage: `url('https://acpkhi.com/imgs/academies.webp')`,
-                    // backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                    // backgroundBlendMode: 'overlay',
                   }}
                 >
                   {/* Overlay to ensure text readability */}
@@ -780,7 +884,6 @@ const CoursePage = () => {
                           defaultValue=""
                         >
                           <option value="" disabled>Select District</option>
-                          {/* Add district options as needed */}
                           <option value="central">Central</option>
                           <option value="east">East</option>
                           <option value="south">South</option>
@@ -917,7 +1020,7 @@ const CoursePage = () => {
                         <img
                           src={instructor.image}
                           alt={instructor.name}
-                          className=" object-cover"
+                          className="object-cover"
                           loading="lazy"
                           style={{ backgroundColor: "#e5e7eb" }}
                         />
