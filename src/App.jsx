@@ -12,7 +12,7 @@ import Sovapa from './components/Academy';
 import CommunityFeedback from './components/CommunityFeedback';
 import Production from './components/Production';
 // import OurSocial from './components/OurSocial';
-import OurSponsors from './components/Sponsors';
+// import OurSponsors from './components/Sponsors';
 import ContactUs from './Pages/ContactUs';
 
 // Pages
@@ -70,7 +70,7 @@ const App = () => {
               {/* <OurSocial /> */}
               <StayUpdated />
               <CommunityFeedback />
-              <OurSponsors />
+              {/* <OurSponsors /> */}
             </>
           } />
 
