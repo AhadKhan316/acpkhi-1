@@ -60,7 +60,7 @@ const Feedback = () => {
       {/* Subtle Background Gradient */}
       {/* <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-black pointer-events-none"></div> */}
 
-      <div className="mx-4 px-4  relative">
+      <div className="px-4 relative max-w-7xl mx-auto">
         <div className="text-center mb-10 sm:mb-12">
           <motion.h2
             className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-2 sm:mb-3"

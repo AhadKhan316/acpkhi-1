@@ -2,7 +2,7 @@ import React from "react";
 
 const Career = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="max-w-7xl mx-auto rounded-lg py-6 sm:py-8 px-4 sm:px-6 lg:px-8 min-h-screen bg-white text-gray-900">
       {/* Hero Banner with Gradient Overlay */}
       <div className="relative w-full h-64 md:h-96 overflow-hidden">
         <img

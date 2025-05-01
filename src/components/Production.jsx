@@ -57,7 +57,7 @@ const ProductionMessage = () => {
   return (
     <motion.section
       id="production-message"
-      className="bg-white py-12 sm:py-6 lg:py-16 px-4 sm:px-6 lg:px-8"
+      className="bg-white py-12 sm:py-6 lg:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

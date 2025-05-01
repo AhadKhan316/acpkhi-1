@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const ContactUs = () => {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="max-w-7xl mx-auto rounded-lg py-6 sm:py-8 px-4 sm:px-6 lg:px-8 min-h-screen bg-white text-black">
       {/* Hero Banner with Gradient Overlay */}
       <div className="relative w-full h-64 md:h-96 overflow-hidden">
         <motion.img

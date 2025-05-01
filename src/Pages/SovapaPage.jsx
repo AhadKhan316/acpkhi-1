@@ -43,7 +43,7 @@ const SovapaPage = () => {
 
   return (
     <div className="py-6 min-h-screen bg-white text-black">
-      <div className="mx-4 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         <SectionWithSwiper
           title="Arts Council Academies Where Artists Thrive"
           description="Since 1954, the Arts Council of Pakistan Academies have been the perfect place to nurture your creativity. Our Performing Arts Academy & Visual Arts Academy boast of highly qualified faculty in their respective disciplines. Join us to kickstart your artistic career."

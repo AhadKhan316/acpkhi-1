@@ -95,10 +95,10 @@ const SponsorsSection = () => {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white max-w-7xl mx-auto">
       <div className="mx-4">
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-800"
+          className="text-2xl sm:text-4xl font-bold text-center mb-4 text-black"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

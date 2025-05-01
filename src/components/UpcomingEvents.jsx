@@ -79,7 +79,7 @@ const UpcomingEvents = () => {
       animate="visible"
       variants={sectionVariants}
     >
-      <div className="mx-2 px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="text-center">

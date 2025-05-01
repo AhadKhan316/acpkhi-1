@@ -186,11 +186,11 @@ const GoverningBody = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-800">
+          <h3 className="text-2xl md:text-4xl font-bold text-center mb-6 text-black">
             {activeTab} <span className="text-red-600">of Arts Council</span>
           </h3>
           <Cards
-            title={activeTab}
+            // title={activeTab}
             items={members[activeTab]}
             cardClassName="hover:scale-105 transition-transform duration-300"
             gridClassName="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"

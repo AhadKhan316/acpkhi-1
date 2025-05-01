@@ -15,7 +15,7 @@ const VoterVerification = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="bg-white text-gray-900 max-w-7xl mx-auto rounded-lg py-6 sm:py-8 px-4 sm:px-6 lg:px-8 min-h-screen">
       {/* Hero Banner with Gradient Overlay */}
       <div className="relative w-full h-74 md:h-116 overflow-hidden">
         <img

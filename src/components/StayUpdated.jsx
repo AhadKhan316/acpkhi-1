@@ -60,7 +60,7 @@ const StayUpdated = () => {
   };
 
   return (
-    <section className="py-12 sm:py-8 md:py-6 lg:py-16 px-4 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden">
+    <section className="py-12 sm:py-8 md:py-6 lg:py-16 px-4 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden max-w-7xl mx-auto">
       {/* SVG Background */}
       <div className="absolute inset-0">
         <svg
@@ -89,7 +89,7 @@ const StayUpdated = () => {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-5xl mx-auto text-center relative z-10">
+      <div className="text-center relative z-10">
         <motion.h2
           initial="hidden"
           whileInView="visible"
