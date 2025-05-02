@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
+import StayUpdatedImage from "/src/assets/acp-logo-and-hero-img/stayUpdatebgimg.jpg";
+
 const StayUpdated = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -63,7 +65,7 @@ const StayUpdated = () => {
     <section
       className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[95vh] text-white flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `url('./src/assets/acp-logo-and-hero-img/stayUpdatebgimg.jpg')`,
+        backgroundImage: `url(${StayUpdatedImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

@@ -85,8 +85,7 @@ const Hero = () => {
             key={index}
             src={slide}
             alt={`Hero Slide ${index + 1}`}
-            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0"
-              }`}
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0"}`}
           />
         ))}
       </div>
@@ -105,31 +104,14 @@ const Hero = () => {
           className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg"
           variants={titleVariants}
         >
-          {/* Hub of <span className="text-red-600">Arts</span> and <span className="text-red-600">Culture</span> */}
           Hub of Arts and Culture
         </motion.h1>
-        {/* <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg text-red-600"
-          variants={titleVariants}
-        >
-          Arts Council Karachi
-        </motion.h1> */}
         <motion.p
           className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 opacity-90 drop-shadow"
           variants={subtitleVariants}
         >
           Committed to the promotion, education and preservation of art and culture since 1954
         </motion.p>
-        {/* <motion.button
-          className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-[#B90602] hover:bg-red-600 transition duration-150 ease-in-out"
-          variants={buttonVariants}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          aria-label="Learn More"
-        >
-          Learn More
-          <ArrowRight  className="ml-2 -mr-1 h-4 sm:h-5 w-4 sm:w-5" aria-hidden="true" />
-        </motion.button> */}
       </motion.div>
 
       {/* Slide Indicators */}
@@ -137,8 +119,8 @@ const Hero = () => {
         {slides.map((_, index) => (
           <span
             key={index}
-            className={` w-2 h-2 sm:w-3 sm:h-3 rounded-full ${index === currentSlide ? "bg-white" : "bg-red-700"
-              }`}
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer ${index === currentSlide ? "bg-white" : "bg-red-700"}`}
+            onClick={() => setCurrentSlide(index)}
           />
         ))}
       </div>
