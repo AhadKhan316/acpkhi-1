@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate, Link } from "react-router-dom";
 
+import RegistrationForm from '/src/assets/FormPosters/alumni-2025.jpeg';
+
 const Registration = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -121,12 +123,12 @@ const Registration = () => {
   ];
 
   return (
-    <section className="min-h-screen py-12 px-4" style={{ backgroundImage: "url('/pyf/wp-content/uploads/2018/06/figure3.png')" }}>
+    <section className="min-h-screen py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="flex justify-center p-6">
             <img
-              src="https://acpkhi.com/events/alumni%202025.webp"
+              src={RegistrationForm}
               alt="Event Banner"
               className="max-w-full h-auto"
               onError={(e) => {
