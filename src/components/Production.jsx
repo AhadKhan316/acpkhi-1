@@ -132,7 +132,7 @@ const ProductionMessage = () => {
               </motion.p>
 
               <motion.p
-                className="text-gray-700 text-base sm:text-lg leading-relaxed mb-3"
+                className="text-black text-base sm:text-lg leading-relaxed mb-3"
                 variants={itemVariants}
               >
                 We believe in the transformative power of the arts, uniting talents from Pakistan and beyond, and fostering artistic expression and exchange while making culture accessible to all through our digital productions and archives.

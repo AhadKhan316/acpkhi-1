@@ -60,51 +60,34 @@ const StayUpdated = () => {
   };
 
   return (
-    <section className="py-12 sm:py-8 md:py-6 lg:py-16 px-4 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden max-w-7xl mx-auto">
-      {/* SVG Background */}
-      <div className="absolute inset-0">
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 1440 320"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          <path
-            fill="#B90602"
-            fillOpacity="0.9"
-            d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,192C672,203,768,213,864,213.3C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          >
-            <animate
-              attributeName="d"
-              dur="10s"
-              repeatCount="indefinite"
-              values="
-                M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,192C672,203,768,213,864,213.3C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
-                M0,192L48,181.3C96,171,192,149,288,144C384,139,480,149,576,160C672,171,768,181,864,181.3C960,181,1056,171,1152,160C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
-                M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,192C672,203,768,213,864,213.3C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            />
-          </path>
-        </svg>
-      </div>
+    <section
+      className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[95vh] text-white flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `url('./src/assets/acp-logo-and-hero-img/stayUpdatebgimg.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Overlay for text readability */}
+      <div className="absolute inset-0 bg-black/30"></div>
 
       {/* Main Content */}
-      <div className="text-center relative z-10">
+      <motion.div
+        className="relative z-20 text-center px-4 sm:px-6 lg:px-8 py-4 sm:py-6 max-w-3xl mx-auto"
+        initial="hidden"
+        animate="visible"
+        variants={textVariants}
+      >
         <motion.h2
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg"
           variants={textVariants}
-          className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-bold text-black mb-4 sm:mb-6 tracking-tight"
         >
           Stay Updated
         </motion.h2>
         <motion.p
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          className="text-base sm:text-lg md:text-xl lg:text-3xl mb-6 opacity-90 drop-shadow"
           variants={textVariants}
-          className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 text-black"
         >
           Get the Latest Updates and Offers
         </motion.p>
@@ -123,13 +106,13 @@ const StayUpdated = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full max-w-xs sm:max-w-sm p-2 sm:p-3 rounded-lg bg-black/50 backdrop-blur-md text-white border border-black focus:outline-none focus:ring-2 focus:ring-black transition duration-300 text-sm sm:text-base placeholder-white"
+            className="w-full max-w-xs sm:max-w-sm p-2 sm:p-3 rounded-lg bg-black/50 backdrop-blur-md text-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white transition duration-300 text-sm sm:text-base placeholder-gray-300"
             aria-label="Email address"
           />
           <motion.button
             type="submit"
             disabled={isLoading}
-            className={` sm:w-auto bg-[#000000] text-white font-sans font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-[#B90602] transition duration-300 text-sm sm:text-base ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`sm:w-auto bg-[#B90602] text-white font-sans font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-red-700 transition duration-300 text-sm sm:text-base ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
             whileHover={isLoading ? {} : { scale: 1.05 }}
             whileTap={isLoading ? {} : { scale: 0.95 }}
           >
@@ -141,12 +124,12 @@ const StayUpdated = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className={`mt-6 text-sm px-4 py-2 rounded-lg ${message.type === 'success' ? 'bg-gray-800 text-gray-300' : 'bg-gray-800 text-gray-400'}`}
+            className={`mt-6 text-sm px-4 py-2 rounded-lg ${message.type === 'success' ? 'bg-green-800 text-green-200' : 'bg-red-800 text-red-200'}`}
           >
             {message.content}
           </motion.p>
         )}
-      </div>
+      </motion.div>
     </section>
   );
 };

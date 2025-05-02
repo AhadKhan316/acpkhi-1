@@ -30,7 +30,7 @@ const UpcomingEvents = () => {
       date: "2025-04-13",
       description: "Learn from experts in our series of art workshops.",
       image: posterImg3,
-      registerLink: "https://acpkhi.com/admissions",
+      registerLink: "/admission",
     },
   ]);
 

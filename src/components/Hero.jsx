@@ -102,10 +102,11 @@ const Hero = () => {
         variants={contentVariants}
       >
         <motion.h1
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-2 tracking-tight drop-shadow-lg"
+          className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg"
           variants={titleVariants}
         >
-          Hub of <span className="text-red-600">Arts</span> and <span className="text-red-600">Culture</span>
+          {/* Hub of <span className="text-red-600">Arts</span> and <span className="text-red-600">Culture</span> */}
+          Hub of Arts and Culture
         </motion.h1>
         {/* <motion.h1
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg text-red-600"

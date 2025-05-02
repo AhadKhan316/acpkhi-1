@@ -27,6 +27,7 @@ import Tenders from './Pages/Tenders';
 
 // Media Kit
 import MediaKit from './Pages/MediaKit';
+import AdmissionRegistration from './Pages/AdmissionForm';
 
 // ACP Sub Pages
 import UpcomingEventsPage from './Pages/AcpSubPages/UpcomingEventsPage';
@@ -68,10 +69,9 @@ const App = () => {
               <UpcomingEvents />
               {/* <PresidentMessage /> */}
               <Sovapa />
-
+              <StayUpdated />
               <Production />
               {/* <OurSocial /> */}
-              <StayUpdated />
               <CommunityFeedback />
               {/* <OurSponsors /> */}
             </>
@@ -97,6 +97,7 @@ const App = () => {
           <Route path="/tenders" element={<Tenders />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/mediaKit" element={<MediaKit />} />
+          <Route path="/admission" element={<AdmissionRegistration />} />
         </Route>
 
         {/* Routes without Navbar and Footer */}
