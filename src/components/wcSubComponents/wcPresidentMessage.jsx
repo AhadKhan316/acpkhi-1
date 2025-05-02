@@ -2,8 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-// Placeholder image for the president's photo (replace with actual WC asset)
-const presidentImage = "https://placehold.co/600x400";
+const presidentImage = "/src/assets/wc-assets/wcPresidentImg.jpg";
 
 const WcPresidentMessage = () => {
   return (

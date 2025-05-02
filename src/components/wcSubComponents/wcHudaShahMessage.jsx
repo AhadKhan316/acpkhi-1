@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-// Placeholder image for the president's photo (replace with actual WC asset)
-const hudaShahMessage = "https://placehold.co/600x400";
+const NoorUlHudaImg = "/src/assets/wc-assets/wcNoorUlHudaImg.jpg";
+
 
 const WcHudaShahMessage = () => {
   return (
@@ -23,7 +23,7 @@ const WcHudaShahMessage = () => {
             className="relative"
           >
             <img
-              src={hudaShahMessage}
+              src={NoorUlHudaImg}
               alt="President's Photo"
               className="w-full max-w-lg mx-auto rounded-2xl shadow-xl object-cover transform -rotate-3 hover:-translate-y-2 transition-transform duration-300"
             />
