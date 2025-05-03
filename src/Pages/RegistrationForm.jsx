@@ -22,6 +22,7 @@ const Registration = () => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [serverError, setServerError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,6 +30,7 @@ const Registration = () => {
       ...prev,
       [name]: value
     }));
+    setServerError('');
   };
 
   const validateCNIC = (value) => {
@@ -45,6 +47,7 @@ const Registration = () => {
       ...prev,
       cnic: validatedValue
     }));
+    setServerError('');
   };
 
   const validateForm = () => {
@@ -73,21 +76,19 @@ const Registration = () => {
     }
 
     setIsSubmitting(true);
+    setServerError('');
 
     try {
-      // Track Facebook Pixel event
       if (window.fbq) {
         window.fbq('track', 'CompleteRegistration');
       }
 
-      // Prepare form data for submission
       const submissionData = {
         ...formData,
-        date_time: new Date().toISOString().slice(0, 19).replace('T', ' ')
+        a_date: new Date().toISOString()
       };
 
-      // Make API call to PHP backend
-      const response = await fetch('http://localhost:5173/src/api/register.php', {
+      const response = await fetch('http://localhost:5000/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -96,20 +97,26 @@ const Registration = () => {
       });
 
       if (!response.ok) {
+        const result = await response.json();
+        if (result.errors) {
+          const backendErrors = {};
+          result.errors.forEach(error => {
+            backendErrors[error.path] = error.msg;
+          });
+          setErrors(backendErrors);
+        } else {
+          setServerError(result.message || 'Registration failed. Please try again.');
+        }
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const result = await response.json();
-
       if (result.success) {
-        // Redirect to OTP verification page
         navigate(`/verify-otp?email=${encodeURIComponent(formData.email)}`);
-      } else {
-        alert(result.message || 'Registration failed. Please try again.');
       }
     } catch (error) {
       console.error('Registration error:', error);
-      alert('An error occurred during registration. Please try again.');
+      setServerError('An error occurred during registration. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -118,7 +125,6 @@ const Registration = () => {
   const cities = [
     "Ahmed Nager Chatha", "Ahmadpur East", "Ali Khan Abad", "Alipur", "Arifwala",
     "Attock", "Abbottabad", "Adezai", "Alpuri", "Akora Khattak", "Ayubia", "Awaran",
-    // Add all other cities from your original list
     "other"
   ];
 
@@ -140,8 +146,14 @@ const Registration = () => {
 
           <div className="p-6 md:p-8">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800">REGISTRATION</h2>
+              <h2 className="text-2xl md:text-4xl font-bold text-black">REGISTRATION</h2>
             </div>
+
+            {serverError && (
+              <div className="text-center mb-4">
+                <p className="text-sm text-red-500">{serverError}</p>
+              </div>
+            )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -286,7 +298,7 @@ const Registration = () => {
                     value={formData.institute}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
-                    placeholder=""
+                    placeholder="Educational Institution"
                   />
                 </div>
 
@@ -301,7 +313,7 @@ const Registration = () => {
                     value={formData.address}
                     onChange={handleChange}
                     className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600 ${errors.address ? 'border-red-500' : 'border-gray-300'}`}
-                    placeholder=""
+                    placeholder="Current Address"
                     required
                   />
                   {errors.address && <p className="mt-1 text-sm text-red-500">{errors.address}</p>}
@@ -326,104 +338,102 @@ const Registration = () => {
                   </select>
                   {errors.city && <p className="mt-1 text-sm text-red-500">{errors.city}</p>}
                 </div>
+              </div>
 
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="contact" className="block text-sm font-medium text-gray-700 mb-1">
-                      Contact No (Primary) <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      id="contact"
-                      name="contact"
-                      value={formData.contact}
-                      onChange={(e) => {
-                        const numericValue = e.target.value.replace(/[^0-9]/g, '');
-                        if (numericValue.length <= 11) {
-                          handleChange({
-                            target: {
-                              name: 'contact',
-                              value: numericValue
-                            }
-                          });
-                        }
-                      }}
-                      className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600 ${errors.contact ? 'border-red-500' : 'border-gray-300'}`}
-                      placeholder="03001234567"
-                      required
-                    />
-                    {errors.contact && <p className="mt-1 text-sm text-red-500">{errors.contact}</p>}
-                  </div>
-
-                  <div>
-                    <label htmlFor="contact_ii" className="block text-sm font-medium text-gray-700 mb-1">
-                      Contact No (Secondary)
-                    </label>
-                    <input
-                      type="tel"
-                      id="contact_ii"
-                      name="contact_ii"
-                      value={formData.contact_ii}
-                      onChange={(e) => {
-                        const numericValue = e.target.value.replace(/[^0-9]/g, '');
-                        if (numericValue.length <= 11) {
-                          handleChange({
-                            target: {
-                              name: 'contact_ii',
-                              value: numericValue
-                            }
-                          });
-                        }
-                      }}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
-                      placeholder="03331234567"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="social_media" className="block text-sm font-medium text-gray-700 mb-1">
-                      Social Media ID
-                    </label>
-                    <input
-                      type="text"
-                      id="social_media"
-                      name="social_media"
-                      value={formData.social_media}
-                      onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
-                      placeholder="Ex: FB, Insta, personal social media"
-                    />
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <label htmlFor="contact" className="block text-sm font-medium text-gray-700 mb-1">
+                    Contact No (Primary) <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="contact"
+                    name="contact"
+                    value={formData.contact}
+                    onChange={(e) => {
+                      const numericValue = e.target.value.replace(/[^0-9]/g, '');
+                      if (numericValue.length <= 11) {
+                        handleChange({
+                          target: {
+                            name: 'contact',
+                            value: numericValue
+                          }
+                        });
+                      }
+                    }}
+                    className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600 ${errors.contact ? 'border-red-500' : 'border-gray-300'}`}
+                    placeholder="03001234567"
+                    required
+                  />
+                  {errors.contact && <p className="mt-1 text-sm text-red-500">{errors.contact}</p>}
                 </div>
 
-                <div className="mt-5 text-center">
-                  <button
-                    type="submit"
-                    className="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-md transition duration-300 w-full max-w-xs mx-auto"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      <span className="flex items-center justify-center">
-                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Processing...
-                      </span>
-                    ) : (
-                      'Submit'
-                    )}
-                  </button>
-                  <br />
-
-                  <Link
-                    to="/resend-otp"
-                    className="inline-block mt-4 bg-[#fad03b] hover:bg-[#e8c12a] text-black font-medium py-2 px-6 rounded-md transition duration-300"
-                  >
-                    Resend OTP
-                  </Link>
+                <div>
+                  <label htmlFor="contact_ii" className="block text-sm font-medium text-gray-700 mb-1">
+                    Contact No (Secondary)
+                  </label>
+                  <input
+                    type="tel"
+                    id="contact_ii"
+                    name="contact_ii"
+                    value={formData.contact_ii}
+                    onChange={(e) => {
+                      const numericValue = e.target.value.replace(/[^0-9]/g, '');
+                      if (numericValue.length <= 11) {
+                        handleChange({
+                          target: {
+                            name: 'contact_ii',
+                            value: numericValue
+                          }
+                        });
+                      }
+                    }}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    placeholder="03331234567"
+                  />
                 </div>
+
+                <div>
+                  <label htmlFor="social_media" className="block text-sm font-medium text-gray-700 mb-1">
+                    Social Media ID
+                  </label>
+                  <input
+                    type="text"
+                    id="social_media"
+                    name="social_media"
+                    value={formData.social_media}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    placeholder="Ex: FB, Insta, personal social media"
+                  />
+                </div>
+              </div>
+
+              <div className="mt-5 text-center">
+                <button
+                  type="submit"
+                  className="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-md transition duration-300 w-full max-w-xs mx-auto"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <span className="flex items-center justify-center">
+                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Processing...
+                    </span>
+                  ) : (
+                    'Submit'
+                  )}
+                </button>
+                <br />
+                <Link
+                  to="/resend-otp"
+                  className="inline-block mt-4 bg-[#fad03b] hover:bg-[#e8c12a] text-black font-medium py-2 px-6 rounded-md transition duration-300"
+                >
+                  Resend OTP
+                </Link>
               </div>
             </form>
           </div>
