@@ -1,64 +1,107 @@
-// const express = require("express");
-// const router = express.Router();
-// const { body, validationResult } = require("express-validator");
-// const bcrypt = require("bcryptjs");
-// const pool = require("../config/database");
-// const { sendOtpEmail } = require("../utils/sendEmail");
+const express = require("express");
+const router = express.Router();
+const pool = require("../config/db");
+const transporter = require("../config/email");
+const { validateRegistration } = require("../middleware/validate");
 
-// // Validation middleware
-// const validateRegistration = [body("name").trim().notEmpty().withMessage("Name is required").escape(), body("f_name").trim().notEmpty().withMessage("Father's name is required").escape(), body("email").isEmail().normalizeEmail().withMessage("Valid email is required"), body("Days").isIn(["day1", "day2", "day3", "all days"]).withMessage("Invalid day selection"), body("age").isInt({ min: 1, max: 120 }).withMessage("Valid age (1-120) is required"), body("gender").isIn(["male", "female", "other"]).withMessage("Invalid gender selection"), body("cnic").isLength({ min: 13, max: 13 }).withMessage("CNIC must be 13 digits").isNumeric().withMessage("CNIC must be numeric"), body("address").trim().notEmpty().withMessage("Address is required").escape(), body("city").trim().notEmpty().withMessage("City is required").escape(), body("contact").isLength({ min: 11, max: 11 }).withMessage("Contact must be 11 digits").isNumeric().withMessage("Contact must be numeric"), body("contact_ii").optional().isLength({ min: 11, max: 11 }).withMessage("Secondary contact must be 11 digits").isNumeric().withMessage("Secondary contact must be numeric"), body("social_media").optional().trim().escape(), body("a_date").isISO8601().withMessage("Invalid date format")];
+router.post("/register", validateRegistration, async (req, res) => {
+  try {
+    const { name, f_name, email, Days, age, gender, cnic, institute, address, city, contact, contact_ii, social_media, a_date } = req.body;
 
-// // Generate a 6-digit OTP
-// const generateOTP = () => Math.floor(100000 + Math.random() * 900000).toString();
+    const [existing] = await pool.query("SELECT id FROM registrations WHERE email = ? OR cnic = ?", [email, cnic]);
 
-// // router.get("/", (req, res) => {
-// //   res.status(200).json({ success: true, message: "Registration endpoint" });
-// // });
+    if (existing.length > 0) {
+      return res.status(400).json({
+        success: false,
+        message: "Email or CNIC already registered",
+      });
+    }
 
-// // Registration endpoint
-// router.post("/", validateRegistration, async (req, res, next) => {
-//   const errors = validationResult(req);
-//   if (!errors.isEmpty()) {
-//     return res.status(400).json({ success: false, message: "Validation failed", errors: errors.array() });
-//   }
+    // Generate OTP
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    const otpExpires = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
 
-//   const { name, f_name, email, Days, age, gender, cnic, institute, address, city, contact, contact_ii, social_media, a_date } = req.body;
+    // Store registration with OTP
+    const [result] = await pool.query(
+      `INSERT INTO registrations (
+        name, f_name, email, event_day, age, gender, cnic,
+        institute, address, city, contact, contact_ii,
+        social_media, application_date, otp, otp_expires
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [name, f_name, email, Days, age, gender, cnic, institute, address, city, contact, contact_ii, social_media, a_date, otp, otpExpires]
+    );
 
-//   const connection = await pool.getConnection();
-//   try {
-//     await connection.beginTransaction();
+    // Send OTP email
+    await transporter.sendMail({
+      from: process.env.EMAIL_FROM || "no-reply@yourdomain.com",
+      to: email,
+      subject: "Registration OTP Verification",
+      html: `
+        <h2>Registration Verification</h2>
+        <p>Your OTP for registration is: <strong>${otp}</strong></p>
+        <p>This OTP is valid for 10 minutes.</p>
+      `,
+    });
 
-//     const [existing] = await connection.query("SELECT id FROM alumnifestival_2025 WHERE email = ? OR cnic = ?", [email, cnic]);
-//     if (existing.length > 0) {
-//       throw Object.assign(new Error("Email or CNIC already registered"), { status: 400 });
-//     }
+    res.status(201).json({
+      success: true,
+      message: "Registration successful, OTP sent to email",
+      id: result.insertId,
+      email: email,
+    });
+  } catch (error) {
+    console.error("Registration error:", error);
+    res.status(500).json({
+      success: false,
+      message: "Registration failed",
+    });
+  }
+});
 
-//     const salt = await bcrypt.genSalt(10);
-//     const hashedCNIC = await bcrypt.hash(cnic, salt);
+// New endpoint for OTP verification
+router.post("/verify-otp", async (req, res) => {
+  try {
+    const { email, otp } = req.body;
 
-//     const otp = generateOTP();
-//     const otpExpiry = new Date(Date.now() + 10 * 60 * 1000).toISOString(); // OTP valid for 10 minutes
-//     const uniqueCode = `REG-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+    const [rows] = await pool.query("SELECT id, otp, otp_expires FROM registrations WHERE email = ?", [email]);
 
-//     await connection.query(
-//       `INSERT INTO alumnifestival_2025 (
-//         name, f_name, email, Days, age, gender, cnic, institute, address, city, 
-//         contact, contact_ii, social_media, a_date, otp, otp_expiry, uniqueCode, is_verified
-//       ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-//       [name, f_name, email, Days, age, gender, hashedCNIC, institute || null, address, city, contact, contact_ii || null, social_media || null, a_date, otp, otpExpiry, uniqueCode, false]
-//     );
+    if (rows.length === 0) {
+      return res.status(404).json({
+        success: false,
+        message: "Registration not found",
+      });
+    }
 
-//     await sendOtpEmail(email, otp);
+    const registration = rows[0];
 
-//     await connection.commit();
+    if (new Date() > new Date(registration.otp_expires)) {
+      return res.status(400).json({
+        success: false,
+        message: "OTP has expired",
+      });
+    }
 
-//     res.status(200).json({ success: true, message: "Registration successful. Please verify your OTP." });
-//   } catch (error) {
-//     await connection.rollback();
-//     next(error);
-//   } finally {
-//     connection.release();
-//   }
-// });
+    if (registration.otp !== otp) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid OTP",
+      });
+    }
 
-// module.exports = router;
+    // Clear OTP and mark as verified
+    await pool.query("UPDATE registrations SET otp = NULL, otp_expires = NULL, is_verified = 1 WHERE id = ?", [registration.id]);
+
+    res.json({
+      success: true,
+      message: "OTP verified successfully",
+    });
+  } catch (error) {
+    console.error("OTP verification error:", error);
+    res.status(500).json({
+      success: false,
+      message: "OTP verification failed",
+    });
+  }
+});
+
+module.exports = router;
