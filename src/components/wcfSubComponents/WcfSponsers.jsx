@@ -32,7 +32,7 @@ const WcfSponsors = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={imageVariants}
-          whileHover="hover"
+        // whileHover="hover"
         >
           <div className="relative w-full">
             <img

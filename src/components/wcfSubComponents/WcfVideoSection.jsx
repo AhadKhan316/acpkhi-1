@@ -41,7 +41,7 @@ function WcfVideoSection() {
   };
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+    <section className="relative py-16 px-6 sm:px-6 lg:px-8 bg-white overflow-hidden">
       {/* Decorative elements */}
       {/* <div className="absolute top-0 right-0 w-32 h-32 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div> */}
       {/* <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div> */}
@@ -59,10 +59,10 @@ function WcfVideoSection() {
             className="relative group"
             variants={scaleIn}
           >
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-1 group-hover:rotate-0 transition-all duration-500">
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-white transform rotate-1 group-hover:rotate-0 transition-all duration-500">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/y2B89Bf5SHA?si=PKFZkNlKqjJa5go_"
+                src="https://www.youtube.com/embed/y2B89Bf5SHA?si=PKFZkNlKqjJa5go_&autoplay=1&mute=1&loop=1&playlist=y2B89Bf5SHA"
                 title="World Culture Festival Highlights"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

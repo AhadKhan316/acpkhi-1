@@ -47,7 +47,7 @@ function WcfPerformances() {
         <div className="text-center mb-6">
           <h2 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700 mb-8">Performing Nations</h2>
           {/* <div className="w-24 h-1.5 bg-blue-600 mx-auto mb-6 rounded-full"></div> */}
-          <p className="text-lg md:text-xl text-gray-600 mx-auto">
+          <p className="text-lg md:text-xl text-black mx-auto">
             Celebrating cultural diversity through performances from {nations.length}+ nations worldwide
           </p>
         </div>

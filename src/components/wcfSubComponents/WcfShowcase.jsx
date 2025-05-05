@@ -16,7 +16,7 @@ const ShowcaseSection = () => {
   return (
     <section className="py-12 bg-white text-center">
       <h2 className="text-2xl md:text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">Showcase</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto px-6">
         {showcases.map((showcase, index) => (
           <div
             key={showcase.id}
