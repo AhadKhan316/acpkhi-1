@@ -25,21 +25,36 @@ db.connect((err) => {
   console.log("Connected to MySQL");
 });
 
-// Nodemailer setup
+// Nodemailer setup for AWS SES SMTP
 const transporter = nodemailer.createTransport({
-  // service: "email-smtp.us-east-1.amazonaws.com",
-  host: "email-smtp.us-east-1.amazonaws.com",
-  port: 465,
+  host: process.env.SMTP_HOST || "email-smtp.us-east-1.amazonaws.com",
+  port: parseInt(process.env.SMTP_PORT || "465"),
+  secure: true, // true for 465, false for other ports
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASSWORD,
   },
+  tls: {
+    // Required for AWS SES
+    rejectUnauthorized: false,
+    ciphers: 'SSLv3'
+  }
+});
+
+// Test the SMTP connection on startup
+transporter.verify((error) => {
+  if (error) {
+    console.error("SMTP connection error:", error);
+  } else {
+    console.log("SMTP server is ready to take our messages");
+  }
 });
 
 // Generate a 6-digit OTP
 const generateOTP = () => {
   return Math.floor(100000 + Math.random() * 900000).toString();
 };
+
 
 // API endpoint for form submission
 app.post(
