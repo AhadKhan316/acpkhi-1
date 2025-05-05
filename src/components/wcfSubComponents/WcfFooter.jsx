@@ -7,7 +7,7 @@ import WcfLogo from '/src/assets/wcf-assets/wcf-logo.png';
 
 function Footer() {
   return (
-    <footer className="bg-black py-16 px-4 sm:px-6 lg:px-8 text-white">
+    <footer id='footerWcf' className=" not-only:bg-black py-16 px-4 sm:px-6 lg:px-8 text-white">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Logo & Copyright */}
         <div className="flex flex-col items-center md:items-start">

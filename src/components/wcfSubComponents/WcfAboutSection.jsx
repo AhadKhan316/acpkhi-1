@@ -137,9 +137,9 @@ function WcfAboutSection() {
   };
 
   return (
-    <div className="bg-white text-black py-12 px-6 sm:px-6 lg:px-8">
+    <div className="bg-white text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700 py-12 px-6 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Tabs */}
-      <div className="mb-8">
+      <div className="mb-6">
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           {["About World Culture Festival", "President Message", "About Arts Council"].map((tab) => (
             <motion.button

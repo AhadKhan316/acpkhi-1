@@ -1,6 +1,6 @@
 // src/pages/WorldCultureFestival.jsx
 import React from "react";
-import { Route, Routes } from "react-router-dom"; 
+import { Route, Routes } from "react-router-dom";
 
 import WcfNavbar from "../components/wcfSubComponents/WcfNavbar";
 import WcfHeroSection from "../components/wcfSubComponents/WcfHero";
@@ -8,8 +8,10 @@ import WcfVideoSection from "../components/wcfSubComponents/WcfVideoSection";
 import WcfAboutSection from "../components/wcfSubComponents/WcfAboutSection";
 // import WcfAboutAcp from "../components/wcfSubComponents/WcfAboutAcp";
 import WcfPerformingNations from "../components/wcfSubComponents/WcfPerformingNations";
-import WcfUpcomingShows from "../components/wcfSubComponents/WcfUpcomingShows";
-import WcfExhibitions from "../components/wcfSubComponents/WcfExhibitions";
+import FullScreenVideo from "../components/wcfSubComponents/WcfFullScreenVideo";
+// import WcfUpcomingShows from "../components/wcfSubComponents/WcfUpcomingShows";
+// import WcfExhibitions from "../components/wcfSubComponents/WcfExhibitions";
+import WcfShowcase from "../components/wcfSubComponents/WcfShowcase";
 import WcfNewsLetterSignup from "../components/wcfSubComponents/WcfNewsLetter";
 import WcfSponsors from "../components/wcfSubComponents/WcfSponsers";
 import WcfFooter from "../components/wcfSubComponents/WcfFooter";
@@ -36,8 +38,10 @@ const WorldCultureFestival = () => {
             <WcfAboutSection />
             {/* <WcfAboutAcp /> */}
             <WcfPerformingNations />
-            <WcfUpcomingShows />
-            <WcfExhibitions />
+            <FullScreenVideo />
+            <WcfShowcase />
+            {/* <WcfUpcomingShows /> */}
+            {/* <WcfExhibitions /> */}
             <WcfNewsLetterSignup />
             <WcfSponsors />
           </>

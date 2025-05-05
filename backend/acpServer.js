@@ -28,8 +28,15 @@ db.connect((err) => {
 // Nodemailer setup
 const transporter = nodemailer.createTransport({
   // service: "email-smtp.us-east-1.amazonaws.com",
-  host: "email-smtp.us-east-1.amazonaws.com",
+  // host: "email-smtp.us-east-1.amazonaws.com",
+  // port: 465,
+  // auth: {
+  //   user: process.env.EMAIL_USER,
+  //   pass: process.env.EMAIL_PASS,
+  // },
+  host: process.env.EMAIL_HOST,
   port: 465,
+  secure: true,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -114,6 +121,7 @@ app.post(
 
       await transporter.sendMail(mailOptions);
       res.status(200).json({ success: true, message: "Registration successful. OTP sent to email." });
+      res.json({ success: true });
     } catch (error) {
       console.error("Error processing registration:", error);
       res.status(500).json({ success: false, message: "Registration failed. Please try again." });
