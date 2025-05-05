@@ -30,6 +30,10 @@ import MediaKit from './Pages/MediaKit';
 import Registration from './Pages/RegistrationForm';
 import Admission from './Pages/AdmissionsForm';
 
+// OTP sending pages
+import VerifyOtp from './Pages/VerifyOtp';
+import ResendOtp from './Pages/ResendOtp';
+
 // ACP Sub Pages
 import UpcomingEventsPage from './Pages/AcpSubPages/UpcomingEventsPage';
 import SovapaCoursePage from './Pages/AcpSubPages/SovapaCoursePage';
@@ -85,6 +89,10 @@ const App = () => {
 
           {/* Arts Alumni Festival Route */}
           <Route path="/alumni" element={<ArtsAlumniFestival />} />
+
+          {/* OTP Pages */}
+          <Route path="/verifyOtp" element={<VerifyOtp />} />
+          <Route path="/resend-otp" element={<ResendOtp />} />
 
           {/* Contact Us */}
 

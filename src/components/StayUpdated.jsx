@@ -63,7 +63,7 @@ const StayUpdated = () => {
 
   return (
     <section
-      className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[95vh] text-white flex items-center justify-center overflow-hidden"
+      className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[95vh] text-white overflow-hidden"
       style={{
         backgroundImage: `url(${StayUpdatedImage})`,
         backgroundSize: "cover",

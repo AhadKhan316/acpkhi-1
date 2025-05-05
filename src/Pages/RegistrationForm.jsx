@@ -88,6 +88,7 @@ const Registration = () => {
         a_date: new Date().toISOString()
       };
 
+
       const response = await fetch('https://aalmiurduconference.com/api/register', {
         method: 'POST',
         headers: {
@@ -112,7 +113,7 @@ const Registration = () => {
 
       const result = await response.json();
       if (result.success) {
-        navigate(`/verify-otp?email=${encodeURIComponent(formData.email)}`);
+        navigate(`/verifyOtp?email=${encodeURIComponent(formData.email)}`);
       }
     } catch (error) {
       console.error('Registration error:', error);
