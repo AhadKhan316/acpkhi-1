@@ -173,7 +173,7 @@ const UpcomingEvents = () => {
         )}
 
         {/* View All Events Button */}
-        <div className="text-center mt-8">
+        {/* <div className="text-center mt-8">
           <motion.button
             className="px-6 py-4 bg-[#B90602] text-white font-semibold text-sm sm:text-base rounded-xl shadow-md hover:bg-black/80 transition duration-300"
             whileHover={{ scale: 1.05 }}
@@ -182,7 +182,7 @@ const UpcomingEvents = () => {
           >
             View All Events
           </motion.button>
-        </div>
+        </div> */}
       </div>
     </motion.section>
   );

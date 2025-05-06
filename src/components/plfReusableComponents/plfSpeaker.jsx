@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from 'react-router-dom'; // For React Router v6
+// OR if using Next.js:
+// import { useRouter } from 'next/router';
 
 const NextArrow = ({ className, style, onClick }) => (
   <div
@@ -11,7 +15,6 @@ const NextArrow = ({ className, style, onClick }) => (
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      right: "30px",
       backgroundColor: "green",
       zIndex: 2,
     }}
@@ -31,7 +34,6 @@ const PrevArrow = ({ className, style, onClick }) => (
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      left: "30px",
       backgroundColor: "green",
       zIndex: 2,
     }}
@@ -43,134 +45,223 @@ const PrevArrow = ({ className, style, onClick }) => (
   </div>
 );
 
-const PlfSpeakerCard = ({ speakers, title = "Speakers" }) => {
-  const settings = {
-    infinite: true,
-    speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    centerMode: true,
-    centerPadding: "0px",
-    dots: true,
-    customPaging: () => (
-      <div className="w-2 h-2 bg-green-400 rounded-full mt-4 transition-all duration-300 hover:bg-green-600" />
-    ),
-    responsive: [
-      {
-        breakpoint: 1536, // 2xl
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "0px",
-        },
-      },
-      {
-        breakpoint: 1280, // xl
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "0px",
-        },
-      },
-      {
-        breakpoint: 1024, // lg
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "20px",
-        },
-      },
-      {
-        breakpoint: 768, // md
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "40px",
-        },
-      },
-      {
-        breakpoint: 640, // sm
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "20px",
-        },
-      },
-    ],
+const PlfSpeakerCard = ({ speakers, title = "" }) => {
+  // Choose the appropriate navigation method based on your router
+  // For React Router v6:
+  const navigate = useNavigate();
+  // OR for Next.js:
+  // const router = useRouter();
+
+  const handleViewAllDelegates = () => {
+    // For React Router:
+    navigate('/delegates');
+    // OR for Next.js:
+    // router.push('/delegates');
   };
 
-  const fallbackImage = "https://placehold.co/150x150";
+  // Slider settings
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ],
+    appendDots: dots => (
+      <div className="mt-10">
+        <ul className="flex justify-center gap-2">{dots}</ul>
+      </div>
+    ),
+    customPaging: () => (
+      <div className="w-3 h-3 rounded-full bg-green-900 hover:bg-green-900 transition-all" />
+    )
+  };
 
   return (
-    <section className="py-16 px-4 sm:px-6 md:px-8 bg-green-900 text-gray-900 relative overflow-hidden">
-      <div className="mx-4 relative z-10">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-center mb-12 md:mb-16 text-white tracking-tight"
-        >
-          {title}
-        </motion.h2>
-
+    <section className="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Section header with All Delegates button */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="mb-16 text-center"
         >
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-green-900">
+              {title}
+            </h2>
+            <button
+              onClick={handleViewAllDelegates}
+              className="bg-green-700 hover:bg-green-800 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap"
+            >
+              All Delegates
+            </button>
+          </div>
+        </motion.div>
+
+        {/* Speaker Slider */}
+        <div className="px-4 sm:px-6">
           <Slider {...settings}>
             {speakers.map((speaker, index) => (
-              <div key={index} className="px-3 sm:px-4">
-                <motion.div
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 15px 30px rgba(0, 0, 0, 0.15)",
-                    y: -5,
-                  }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="relative bg-white rounded-xl overflow-hidden shadow-lg mx-auto max-w-[320px] h-[380px] sm:h-[400px] md:h-[420px] flex flex-col"
-                >
-                  {/* Image Container */}
-                  <div className="relative aspect-[3/5] bg-gray-100 rounded-t-xl overflow-hidden">
-                    <img
-                      src={speaker.image || fallbackImage}
-                      alt={speaker.name}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                      onError={(e) => (e.target.src = fallbackImage)}
-                    />
-                    <div className="absolute inset-0 border-2 border-green-700/70 rounded-t-xl m-2 transition-colors duration-300 hover:border-green-800/90" />
-                    {/* Hover Overlay */}
-                    <motion.div
-                      className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 0.9 }}
-                    >
-                      <div className="text-center text-white">
-                        <h3 className="text-xl sm:text-2xl font-bold">{speaker.name}</h3>
-                        {speaker.role && (
-                          <p className="text-sm sm:text-base text-green-200 font-medium">{speaker.role}</p>
-                        )}
-                      </div>
-                    </motion.div>
-                  </div>
-                </motion.div>
+              <div key={index} className="px-2">
+                <SpeakerCard speaker={speaker} index={index} />
               </div>
             ))}
           </Slider>
-        </motion.div>
+        </div>
       </div>
     </section>
+  );
+};
+
+const SpeakerCard = ({ speaker, index }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  // Choose the appropriate navigation method based on your router
+  // For React Router v6:
+  const navigate = useNavigate();
+  // OR for Next.js:
+  // const router = useRouter();
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    setMousePosition({ x, y });
+  };
+
+  const handleImageClick = () => {
+    // For React Router:
+    navigate(`/delegates/${speaker.id || speaker.slug}`);
+    // OR for Next.js:
+    // router.push(`/delegates/${speaker.id || speaker.slug}`);
+  };
+
+  const fallbackImage = "https://placehold.co/600x900/1e293b/ffffff?text=Speaker";
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ delay: index * 0.1, duration: 0.6 }}
+      className="relative h-[350px] rounded-2xl overflow-hidden group mx-auto"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{ maxWidth: "400px" }}
+    >
+      {/* Card background layer */}
+      <div className="absolute inset-0 rounded-2xl" />
+
+      {/* Glow effect */}
+      <motion.div
+        className="absolute inset-0 bg-green-500 opacity-0 group-hover:opacity-10 rounded-2xl"
+        animate={{ opacity: isHovered ? 0.1 : 0 }}
+        transition={{ duration: 0.4 }}
+      />
+
+      {/* Image container with parallax effect - now clickable */}
+      <motion.div
+        className="absolute inset-0 overflow-hidden cursor-pointer"
+        animate={{
+          x: mousePosition.x * 20,
+          y: mousePosition.y * 20,
+          transition: { type: "spring", stiffness: 100, damping: 10 }
+        }}
+        onClick={handleImageClick}
+      >
+        <motion.img
+          src={speaker.image || fallbackImage}
+          alt={speaker.name}
+          className="w-full h-full object-cover"
+          animate={{
+            scale: isHovered ? 1.05 : 1,
+            transition: { duration: 0.6 }
+          }}
+          onError={(e) => (e.target.src = fallbackImage)}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+      </motion.div>
+
+      {/* Decorative border */}
+      <div className="absolute inset-0 border border-white/20 rounded-2xl m-1 group-hover:m-0 group-hover:border-green-400/50 transition-all duration-500" />
+
+      {/* Speaker info */}
+      <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
+        <motion.h3
+          className="text-2xl font-bold text-white mb-1"
+          animate={{
+            y: isHovered ? -5 : 0,
+            transition: { duration: 0.3 }
+          }}
+        >
+          {speaker.name}
+        </motion.h3>
+
+        {speaker.role && (
+          <motion.p
+            className="text-green-300 font-medium mb-2"
+            animate={{
+              y: isHovered ? -3 : 0,
+              opacity: isHovered ? 1 : 0.9,
+              transition: { duration: 0.3 }
+            }}
+          >
+            {speaker.role}
+          </motion.p>
+        )}
+
+        {speaker.company && (
+          <motion.p
+            className="text-sm text-white/80"
+            animate={{
+              y: isHovered ? -2 : 0,
+              opacity: isHovered ? 1 : 0.8,
+              transition: { duration: 0.3 }
+            }}
+          >
+            {speaker.company}
+          </motion.p>
+        )}
+      </div>
+
+      {/* Floating accent element */}
+      <motion.div
+        className="absolute top-4 right-4 w-2 h-2 bg-green-500 rounded-full"
+        animate={{
+          y: [0, -5, 0],
+          opacity: [0.6, 1, 0.6],
+          scale: [1, 1.2, 1],
+          transition: { duration: 2, repeat: Infinity }
+        }}
+      />
+    </motion.div>
   );
 };
 
