@@ -8,7 +8,7 @@ router.post("/register", validateRegistration, async (req, res) => {
   try {
     const { name, f_name, email, Days, age, gender, cnic, institute, address, city, contact, contact_ii, social_media, a_date } = req.body;
 
-    const [existing] = await pool.query("SELECT id FROM registrations WHERE email = ? OR cnic = ?", [email, cnic]);
+    const [existing] = await pool.query("SELECT id FROM alumnifestival_2025 WHERE email = ? OR cnic = ?", [email, cnic]);
 
     if (existing.length > 0) {
       return res.status(400).json({
@@ -23,7 +23,7 @@ router.post("/register", validateRegistration, async (req, res) => {
 
     // Store registration with OTP
     const [result] = await pool.query(
-      `INSERT INTO registrations (
+      `INSERT INTO alumnifestival_2025 (
         name, f_name, email, event_day, age, gender, cnic,
         institute, address, city, contact, contact_ii,
         social_media, application_date, otp, otp_expires
@@ -33,7 +33,7 @@ router.post("/register", validateRegistration, async (req, res) => {
 
     // Send OTP email
     await transporter.sendMail({
-      from: process.env.EMAIL_FROM || "no-reply@yourdomain.com",
+      from: process.env.EMAIL_FROM || "no-reply@acpkhi.com",
       to: email,
       subject: "Registration OTP Verification",
       html: `
@@ -63,7 +63,7 @@ router.post("/verify-otp", async (req, res) => {
   try {
     const { email, otp } = req.body;
 
-    const [rows] = await pool.query("SELECT id, otp, otp_expires FROM registrations WHERE email = ?", [email]);
+    const [rows] = await pool.query("SELECT id, otp, otp_expires FROM alumnifestival_2025 WHERE email = ?", [email]);
 
     if (rows.length === 0) {
       return res.status(404).json({
@@ -89,7 +89,7 @@ router.post("/verify-otp", async (req, res) => {
     }
 
     // Clear OTP and mark as verified
-    await pool.query("UPDATE registrations SET otp = NULL, otp_expires = NULL, is_verified = 1 WHERE id = ?", [registration.id]);
+    await pool.query("UPDATE alumnifestival_2025 SET otp = NULL, otp_expires = NULL, is_verified = 1 WHERE id = ?", [registration.id]);
 
     res.json({
       success: true,
