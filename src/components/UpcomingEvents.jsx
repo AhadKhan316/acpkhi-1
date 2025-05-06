@@ -91,23 +91,24 @@ const UpcomingEvents = () => {
           >
             Upcoming Events
           </motion.h2>
-        </div>
-        {/* Header Section with Calendar Button */}
-        <div className="relative mb-16 sm:mb-18">
-          {/* Calendar Button (Top Left) */}
-          <motion.button
-            className="absolute right-5 top-0 flex items-center px-6 py-3 bg-[#B90602] text-white font-bold text-sm sm:text-base rounded-xl shadow-md hover:bg-black/80 transition duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="View Calendar"
-          >
-            <Link to="/upcomingEvents" className="flex items-center">
-              Calendar
-              <IoIosArrowForward className="ml-2 text-lg" />
-            </Link>
-          </motion.button>
+          {/* Header Section with Calendar Button */}
+          <div className="relative mb-16 sm:mb-18">
+            {/* Calendar Button (Top Left) */}
+            <motion.button
+              className="px-6 py-3 bg-[#B90602] text-white font-bold text-sm sm:text-base rounded-xl shadow-md hover:bg-black/80 transition duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="View Calendar"
+            >
+              <Link to="/upcomingEvents" className="flex items-center">
+                Calendar
+                <IoIosArrowForward className="ml-2 text-lg" />
+              </Link>
+            </motion.button>
 
+          </div>
         </div>
+
 
         {/* Events Grid */}
         {events.length > 0 ? (

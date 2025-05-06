@@ -110,17 +110,18 @@ const PlfSpeakerCard = ({ speakers, title = "" }) => {
           transition={{ duration: 0.8 }}
           className="mb-16 text-center"
         >
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-green-900">
               {title}
             </h2>
-            <button
-              onClick={handleViewAllDelegates}
-              className="bg-green-700 hover:bg-green-800 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap"
-            >
-              All Delegates
-            </button>
+
           </div>
+          <button
+            onClick={handleViewAllDelegates}
+            className="bg-green-700 hover:bg-green-800 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap mt-5"
+          >
+            All Delegates
+          </button>
         </motion.div>
 
         {/* Speaker Slider */}
