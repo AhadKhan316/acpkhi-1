@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const pool = require("../config/db");
+const pool = require("../config/db"); // Make sure this path is correct
 const transporter = require("../config/email");
 const { validateRegistration } = require("../middleware/validate");
 

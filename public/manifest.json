@@ -1,7 +1,7 @@
 {
   "name": "Arts Council Pakistan, Karachi",
   "short_name": "acp",
-  "start_url": "http://localhost:5173/",
+  "start_url": "https://aalmiurduconference.com",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000"
