@@ -53,20 +53,6 @@ const PlfVideo = () => {
         ))}
       </div>
 
-      {/* Linear Gradient Overlay */}
-      <div className="absolute inset-0 z-10"></div>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-12 sm:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
-        {slides.map((_, index) => (
-          <span
-            key={index}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer ${index === currentSlide ? "bg-white" : "bg-red-700"}`}
-            onClick={() => setCurrentSlide(index)}
-          />
-        ))}
-      </div>
-
       {/* Scroll Indicator */}
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
         <motion.div className="animate-bounce">
