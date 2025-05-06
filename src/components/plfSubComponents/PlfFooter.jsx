@@ -6,7 +6,7 @@ import PlfFooterLogo from "/src/assets/plf-assets/plf-logo.png";
 
 const PlfFooter = () => {
   return (
-    <footer className="relative bg-gray-900 text-white py-12 overflow-hidden">
+    <footer id="plfFooter" className="relative bg-gray-900 text-white py-12 overflow-hidden">
       {/* Wave Background */}
       <div className="absolute inset-0">
         <svg

@@ -36,8 +36,8 @@ const PlfHero = () => {
     },
   };
 
-  const moveDown = () => {
-    const targetSection = document.getElementById("footer");
+  const PlfmoveDown = () => {
+    const targetSection = document.getElementById("plfFooter");
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: "smooth" });
     }
@@ -130,8 +130,9 @@ const PlfHero = () => {
         {slides.map((_, index) => (
           <span
             key={index}
-            className={` w-2 h-2 sm:w-3 sm:h-3 rounded-full ${index === currentSlide ? "bg-white" : "bg-green-700"
+            className={` w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer ${index === currentSlide ? "bg-white" : "bg-green-700"
               }`}
+            onClick={() => setCurrentSlide(index)}
           />
         ))}
       </div>
@@ -141,7 +142,7 @@ const PlfHero = () => {
         <div className="animate-bounce">
           <svg
             className="w-6 h-6 text-white"
-            onClick={moveDown}
+            onClick={PlfmoveDown}
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"

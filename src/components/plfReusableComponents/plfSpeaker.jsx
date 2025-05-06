@@ -112,19 +112,6 @@ const PlfSpeakerCard = ({ speakers, title = "Speakers" }) => {
 
   return (
     <section className="py-16 px-4 sm:px-6 md:px-8 bg-green-900 text-gray-900 relative overflow-hidden">
-      {/* Decorative Background Element */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <circle cx="50" cy="50" r="40" fill="url(#grad)" />
-          <defs>
-            <radialGradient id="grad" cx="0.5" cy="0.5" r="0.5">
-              <stop offset="0%" style={{ stopColor: "#22c55e" }} />
-              <stop offset="100%" style={{ stopColor: "transparent" }} />
-            </radialGradient>
-          </defs>
-        </svg>
-      </div>
-
       <div className="mx-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
@@ -152,37 +139,31 @@ const PlfSpeakerCard = ({ speakers, title = "Speakers" }) => {
                     y: -5,
                   }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="relative bg-white rounded-xl overflow-hidden shadow-lg mx-auto max-w-[320px] h-[380px] sm:h-[400px] md:h-[420px] flex flex-col group border border-gray-100"
+                  className="relative bg-white rounded-xl overflow-hidden shadow-lg mx-auto max-w-[320px] h-[380px] sm:h-[400px] md:h-[420px] flex flex-col"
                 >
                   {/* Image Container */}
-                  <div className="relative w-full aspect-[4/5] bg-gray-100 rounded-t-xl overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-900/30 via-transparent to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-90" />
+                  <div className="relative aspect-[3/5] bg-gray-100 rounded-t-xl overflow-hidden">
                     <img
                       src={speaker.image || fallbackImage}
                       alt={speaker.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                       onError={(e) => (e.target.src = fallbackImage)}
                     />
-                    <div className="absolute inset-0 border-2 border-green-700/70 rounded-t-xl m-2 transition-colors duration-300 group-hover:border-green-800/90" />
+                    <div className="absolute inset-0 border-2 border-green-700/70 rounded-t-xl m-2 transition-colors duration-300 hover:border-green-800/90" />
+                    {/* Hover Overlay */}
+                    <motion.div
+                      className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+                      initial={{ opacity: 0 }}
+                      whileHover={{ opacity: 0.9 }}
+                    >
+                      <div className="text-center text-white">
+                        <h3 className="text-xl sm:text-2xl font-bold">{speaker.name}</h3>
+                        {speaker.role && (
+                          <p className="text-sm sm:text-base text-green-200 font-medium">{speaker.role}</p>
+                        )}
+                      </div>
+                    </motion.div>
                   </div>
-
-                  {/* Speaker Info */}
-                  <div className="flex-1 p-5 sm:p-6 flex flex-col items-center justify-center text-center bg-gradient-to-b from-white to-gray-50">
-                    <h3 className="text-xl sm:text-2xl font-semibold text-green-900 mb-2 truncate">{speaker.name}</h3>
-                    {/* {speaker.role && (
-                      <p className="text-sm sm:text-base text-green-700 font-medium truncate">{speaker.role}</p>
-                    )}
-                    {speaker.bio && (
-                      <p className="text-xs sm:text-sm text-gray-600 mt-2 line-clamp-2">{speaker.bio}</p>
-                    )} */}
-                  </div>
-
-                  {/* Subtle Accent */}
-                  <motion.div
-                    className="absolute bottom-3 right-3 w-4 h-4 bg-green-700 rounded-full"
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  />
                 </motion.div>
               </div>
             ))}

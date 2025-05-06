@@ -17,11 +17,11 @@ import PlfDelegatePage from "./PlfSubPages/plfDelegates";
 import PlfContactPage from "./PlfSubPages/plfContactPage";
 
 // Delegates Images
-import AucDelegate1 from "/src/assets/plf-assets/plf-delegate1.jpeg";
-import AucDelegate2 from "/src/assets/plf-assets/plf-delegate2.jpeg";
-import AucDelegate3 from "/src/assets/plf-assets/plf-delegate3.jpeg";
-import AucDelegate4 from "/src/assets/plf-assets/plf-delegate4.jpeg";
-import AucDelegate5 from "/src/assets/plf-assets/plf-delegate5.jpeg";
+import AucDelegate1 from "/src/assets/plf-assets/Umair-najmi-delegate1.jpg";
+import AucDelegate2 from "/src/assets/plf-assets/Rehman-Faris-delegate2.jpg";
+import AucDelegate3 from "/src/assets/plf-assets/Amar-Sindhu-delegate3.jpg";
+import AucDelegate4 from "/src/assets/plf-assets/Paras-masroor-delegate4.jpg";
+import AucDelegate5 from "/src/assets/plf-assets/mustafa-qureshi-delegate5.jpg";
 
 // const PlfMainPage = () => {
 //   const sessions = [
