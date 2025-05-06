@@ -27,7 +27,7 @@ const FullScreenVideo = () => {
       <div className="absolute inset-0 w-full h-full">
 
         <iframe
-          className="w-full h-full"
+          className="w-1296 h-729"
           src={videoUrl}
           title="World Culture Festival Highlights"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
