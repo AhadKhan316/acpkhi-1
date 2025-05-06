@@ -115,7 +115,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-23 sm:bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
+      <div className="absolute bottom-12 sm:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
         {slides.map((_, index) => (
           <span
             key={index}

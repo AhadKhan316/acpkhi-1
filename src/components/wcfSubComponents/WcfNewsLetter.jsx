@@ -48,14 +48,15 @@ function WcfNewsletterSignup() {
             ) : (
               <form onSubmit={handleSubmit} className="mt-8">
                 <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                  <div className="relative flex-grow">
+                  <div className="relative flex-grow ">
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email"
                       required
-                      className="w-full px-5 py-3 rounded-lg focus:border-black focus:ring-2 focus:ring-black transition-all duration-200"
+                      className="w-full px-5 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-black focus:ring-2 focus:ring-black transition-all duration-200"
+
                     />
                     <svg
                       className="absolute right-3 top-3.5 h-5 w-5 text-gray-400"

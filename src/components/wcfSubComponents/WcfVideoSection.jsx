@@ -41,12 +41,12 @@ function WcfVideoSection() {
   };
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+    <section className="relative py-16 px-6 sm:px-6 lg:px-8 bg-white overflow-hidden">
       {/* Decorative elements */}
       {/* <div className="absolute top-0 right-0 w-32 h-32 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div> */}
       {/* <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div> */}
 
-      <div className="mx-4">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
           initial="hidden"
@@ -59,10 +59,10 @@ function WcfVideoSection() {
             className="relative group"
             variants={scaleIn}
           >
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-1 group-hover:rotate-0 transition-all duration-500">
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-white transform rotate-1 group-hover:rotate-0 transition-all duration-500">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/y2B89Bf5SHA?si=PKFZkNlKqjJa5go_"
+                src="https://www.youtube.com/embed/y2B89Bf5SHA?si=PKFZkNlKqjJa5go_&autoplay=1&mute=1&loop=1&playlist=y2B89Bf5SHA"
                 title="World Culture Festival Highlights"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -100,8 +100,8 @@ function WcfVideoSection() {
                 </div>
 
                 <div className="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
-                  <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>

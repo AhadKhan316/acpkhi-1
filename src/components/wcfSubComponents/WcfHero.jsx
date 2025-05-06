@@ -66,6 +66,20 @@ const WcfHero = () => {
     },
   };
 
+  // const wcfMoveDown = () => {
+  //   const targetSection = document.getElementsById("footerWcf");
+  //   if (targetSection) {
+  //     targetSection.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }
+
+  const wcfMoveDown = () => {
+    // Corrected the method name to getElementById
+    const targetSection = document.getElementById("footerWcf");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
   return (
     <section className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[95vh] text-white flex items-center justify-center overflow-hidden">
       {/* Background Slider */}
@@ -142,8 +156,9 @@ const WcfHero = () => {
         {slides.map((_, index) => (
           <span
             key={index}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${index === currentSlide ? "bg-white" : "bg-red-700"
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer ${index === currentSlide ? "bg-white" : "bg-red-700"
               }`}
+            onClick={() => setCurrentSlide(index)}
           />
         ))}
       </div>
@@ -154,6 +169,7 @@ const WcfHero = () => {
           <svg
             className="w-6 h-6 text-white"
             fill="none"
+            onClick={wcfMoveDown}
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
