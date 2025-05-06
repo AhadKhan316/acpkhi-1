@@ -33,7 +33,29 @@ const nations = [
   { code: "RW", name: "Rwanda" },
   { code: "ZA", name: "South Africa" },
   { code: "KR", name: "South Korea" },
-  { code: "LK", name: "Sri Lanka" }
+  { code: "LK", name: "Sri Lanka" },
+
+
+{ code: "NG", name: "Nigeria" },       // Correct code for Nigeria
+{ code: "MY", name: "Malaysia" },     // Correct code for Malaysia
+{ code: "ID", name: "Indonesia" },    // Correct code for Indonesia
+{ code: "KW", name: "Kuwait" },       // Correct code for Kuwait
+{ code: "NL", name: "Natherland" },   // Assuming "Natherland" is a typo for Netherlands
+{ code: "ER", name: "Eritia" },       // Assuming "Eritia" is a typo for Eritrea
+{ code: "PL", name: "Poloand" },      // Assuming "Poloand" is a typo for Poland
+{ code: "AR", name: "Argentia" },     // Assuming "Argentia" is a typo for Argentina
+{ code: "CZ", name: "Czech Republic" }, // Correct code for Czech Republic
+{ code: "MA", name: "Morocco" },      // Correct code for Morocco
+{ code: "PT", name: "Portugal" },     // Correct code for Portugal
+{ code: "JO", name: "Jorden" },       // Assuming "Jorden" is a typo for Jordan
+{ code: "HU", name: "Hungry" },       // Assuming "Hungry" is a typo for Hungary
+{ code: "BG", name: "Bulgaria" },     // Correct code for Bulgaria
+{ code: "SE", name: "Sweden" },       // Correct code for Sweden
+{ code: "DK", name: "Denmark" },      // Correct code for Denmark
+{ code: "RO", name: "Romania" },      // Correct code for Romania
+{ code: "GR", name: "Gracce" },       // Assuming "Gracce" is a typo for Greece
+{ code: "UZ", name: "Uzbekistan" },   // Correct code for Uzbekistan
+{ code: "CA", name: "Canada" }        // Already correct
 ];
 
 // Flags that need special width handling
