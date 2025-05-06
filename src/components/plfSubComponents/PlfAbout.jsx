@@ -85,12 +85,12 @@ const PlfAbout = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-green-800 text-center mt-12 mb-8">
+        {/* <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-green-800 text-center mt-12 mb-8">
           Our Legacy Unfolded
         </h2>
         <p className="mt-2 text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
           Discover the essence of PLF and ACP through a modern lens on tradition.
-        </p>
+        </p> */}
       </motion.div>
 
       {/* Tabs and Content */}

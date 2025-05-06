@@ -1,8 +1,20 @@
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const PlfVideo = () => {
+  const videoUrl = "https://www.youtube.com/embed/5UavsFzUT0Q?si=kWMBDRwoNFXNJRfA&autoplay=1&mute=1&loop=1&playlist=5UavsFzUT0Q";
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [videoUrl]; 
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
   // Framer Motion Variants
-  const frameVariants = {
+  const contentVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -11,73 +23,68 @@ const PlfVideo = () => {
     },
   };
 
-  const textVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, delay: 0.3, ease: "easeOut" },
-    },
+  const wcfMoveDown = () => {
+    const targetSection = document.getElementById("footerWcf");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <section className="w-full py-6 sm:py-8 text-green-900 overflow-hidden relative">
-      {/* Section Header */}
-      <motion.div
-        className="text-center mb-10 sm:mb-12"
-        initial="hidden"
-        whileInView="visible"
-        variants={textVariants}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-green-800 text-center mt-12 mb-8">
-          PLF Sukkur Chapter 2 Highlights
-        </h2>
-        <p className="mt-2 text-base sm:text-lg max-w-3xl mx-auto text-gray-600">
-          Watch our promo video to see the spirit of the Pakistan Literature Festival.
-        </p>
-      </motion.div>
-
-      {/* Video Container */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="relative w-full rounded-lg shadow-2xl overflow-hidden"
-          initial="hidden"
-          whileInView="visible"
-          variants={frameVariants}
-          viewport={{ once: true }}
-        >
-          {/* Decorative Frame */}
-          <div className="absolute inset-0 rounded-lg pointer-events-none z-10">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-600/20 to-transparent animate-spotlight"></div>
-          </div>
-
-          {/* Video Iframe */}
-          <div className="relative w-full pb-[56.25%] bg-gray-900">
-            <iframe
-              src="https://www.youtube.com/embed/5UavsFzUT0Q?si=kWMBDRwoNFXNJRfA&autoplay=1&loop=1&mute=1&playlist=5UavsFzUT0Q"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; loop; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            />
-          </div>
-        </motion.div>
-
-        {/* Description */}
-        <motion.p
-          className="mt-6 text-sm sm:text-base md:text-lg text-center max-w-3xl mx-auto text-gray-600"
-          initial="hidden"
-          whileInView="visible"
-          variants={textVariants}
-          viewport={{ once: true }}
-        >
-          Dive into the highlights of PLF Sukkur Chapter 2, featuring captivating performances, insightful discussions, and the celebration of Pakistan’s literary heritage.
-        </motion.p>
+    <motion.section
+      className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[95vh] flex items-center justify-center overflow-hidden"
+      initial="hidden"
+      animate="visible"
+      variants={contentVariants}
+    >
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full">
+        {slides.map((slide, index) => (
+          <iframe
+            key={index}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0"}`}
+            src={slide}
+            title="PLF Sukkur Chapter 2 Highlights"
+            frameBorder="0"
+            allow="accelerometer; autoplay; loop; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        ))}
       </div>
-    </section>
+
+      {/* Linear Gradient Overlay */}
+      <div className="absolute inset-0 z-10"></div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-12 sm:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
+        {slides.map((_, index) => (
+          <span
+            key={index}
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer ${index === currentSlide ? "bg-white" : "bg-red-700"}`}
+            onClick={() => setCurrentSlide(index)}
+          />
+        ))}
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+        <motion.div className="animate-bounce">
+          <svg
+            className="w-6 h-6 text-white cursor-pointer"
+            fill="none"
+            onClick={wcfMoveDown}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </motion.div>
+      </div>
+    </motion.section>
   );
 };
 
