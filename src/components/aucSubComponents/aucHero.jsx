@@ -62,6 +62,13 @@ const AucHero = () => {
     },
   };
 
+  const AucmoveDown = () => {
+    const targetSection = document.getElementById("aucFooter");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <section className="relative w-full h-[60vh] sm:h-[50vh] md:h-[60vh] lg:h-[95vh] text-white flex items-center justify-center overflow-hidden">
       {/* Background Slider */}
@@ -118,21 +125,23 @@ const AucHero = () => {
       </motion.div>
 
       {/* Slide Indicators */}
-      {/* <div className="absolute bottom-12 sm:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
+      <div className="absolute bottom-12 sm:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
         {slides.map((_, index) => (
           <span
             key={index}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${index === currentSlide ? "bg-green-900" : "bg-red-700"
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer ${index === currentSlide ? "bg-red-700" : "bg-red-800"
               }`}
+            onClick={() => setCurrentSlide(index)}
           />
         ))}
-      </div> */}
+      </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
         <div className="animate-bounce">
           <svg
             className="w-6 h-6 text-white"
+            onClick={AucmoveDown}
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"

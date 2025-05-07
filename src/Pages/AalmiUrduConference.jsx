@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-
 import AucNavbar from "../components/aucSubComponents/aucNavbar";
 import AucHero from "../components/aucSubComponents/aucHero";
 import AucAbout from "../components/aucSubComponents/aucAbout";

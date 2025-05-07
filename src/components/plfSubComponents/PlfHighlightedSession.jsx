@@ -1,79 +1,82 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+// Importing icons from react-icons
+import { FaBook, FaGraduationCap, FaChartLine, FaTheaterMasks, FaNewspaper, FaUsers, FaFemale, FaPenFancy, FaMusic, FaUtensils, FaLaugh, FaGuitar } from "react-icons/fa";
+
 const PlfHighlightedSession = () => {
   const sessions = [
     {
       id: 1,
-      title: "Pakistan Language & Culture",
+      title: "Literary Insights",
       description: "Discussions on modern literature with renowned authors.",
-      image: "https://placehold.co/400x300",
+      icon: <FaBook className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
     {
       id: 2,
-      title: "Education",
-      description: "Discussions on modern literature with renowned authors.",
-      image: "https://placehold.co/400x300",
+      title: "Future of Education",
+      description: "Exploring innovative trends in global education.",
+      icon: <FaGraduationCap className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
     {
       id: 3,
-      title: "Economics",
-      description: "An evening of poetic expressions by celebrated poets.",
-      image: "https://placehold.co/400x300",
+      title: "Global Economics",
+      description: "Analyzing economic trends with industry experts.",
+      icon: <FaChartLine className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
     {
       id: 4,
-      title: "Cultural Dance",
-      description: "Experience traditional dances from around the world.",
-      image: "https://placehold.co/400x300",
+      title: "Cultural Performances",
+      description: "Experience traditional dances and theatrical acts.",
+      icon: <FaTheaterMasks className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
     {
       id: 5,
-      title: "Media",
-      description: "Live performances by local and international artists.",
-      image: "https://placehold.co/400x300",
+      title: "Media & Journalism",
+      description: "Insights into the evolving world of media.",
+      icon: <FaNewspaper className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
     {
       id: 6,
-      title: "Youth Activism",
-      description: "Showcasing contemporary art from emerging talents.",
-      image: "https://placehold.co/400x300",
+      title: "Youth Leadership",
+      description: "Empowering the next generation of change-makers.",
+      icon: <FaUsers className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
     {
       id: 7,
-      title: "Women Empowerment",
-      description: "Learn the art of storytelling from experts.",
-      image: "https://placehold.co/400x300",
+      title: "Women in Leadership",
+      description: "Celebrating achievements and discussing challenges.",
+      icon: <FaFemale className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
     {
       id: 8,
-      title: "Poetry",
-      description: "A heartfelt finale with awards and performances.",
-      image: "https://placehold.co/400x300",
+      title: "Poetic Expressions",
+      description: "An evening of poetry with celebrated poets.",
+      icon: <FaPenFancy className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
     {
       id: 9,
-      title: "performing Art",
-      description: "A heartfelt finale with awards and performances.",
-      image: "https://placehold.co/400x300",
+      title: "Performing Arts Showcase",
+      description: "Live performances by local and international artists.",
+      icon: <FaMusic className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
     {
       id: 10,
-      title: "Food Festival",
-      description: "A heartfelt finale with awards and performances.",
-      image: "https://placehold.co/400x300",
+      title: "Global Cuisine Festival",
+      description: "Taste culinary delights from around the world.",
+      icon: <FaUtensils className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
     {
       id: 11,
-      title: "Humour & Satire",
-      description: "A heartfelt finale with awards and performances.",
-      image: "https://placehold.co/400x300",
+      title: "Humor & Satire Night",
+      description: "A night of laughter with comedians and satirists.",
+      icon: <FaLaugh className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
     {
       id: 12,
-      title: "Musical Events",
-      description: "A heartfelt finale with awards and performances.",
-      image: "https://placehold.co/400x300",
+      title: "Musical Harmony",
+      description: "Enjoy live music from diverse genres.",
+      icon: <FaGuitar className="w-16 h-16 sm:w-20 sm:h-20 text-green-800" />,
     },
   ];
 
@@ -94,10 +97,7 @@ const PlfHighlightedSession = () => {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden">
-      {/* Subtle Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-800/20 to-gray-900/20 opacity-30 pointer-events-none" />
-
+    <section className="px-4 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden">
       <div className="mx-auto max-w-7xl relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
@@ -122,14 +122,8 @@ const PlfHighlightedSession = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Image Container */}
-              <div className="relative w-full h-48 sm:h-56 overflow-hidden">
-                <img
-                  src={session.image}
-                  alt={session.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-                {/* Hover Overlay */}
+              <div className="relative w-full h-48 sm:h-56 bg-white/90 flex items-center justify-center overflow-hidden">
+                {session.icon}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0"
                   animate={{ opacity: hoveredIndex === index ? 0.7 : 0 }}
@@ -137,7 +131,6 @@ const PlfHighlightedSession = () => {
                 />
               </div>
 
-              {/* Session Info */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <h3 className="text-lg sm:text-xl font-semibold text-white tracking-wide mb-2">{session.title}</h3>

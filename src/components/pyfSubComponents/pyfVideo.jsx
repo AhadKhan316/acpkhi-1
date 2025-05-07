@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 
 const PyfVideo = () => {
-  // Framer Motion Variants
-  const frameVariants = {
+  const videoUrl = "https://www.youtube.com/embed/iaHo9AQkaPo?si=NAc-SScXdZ0ddHkG&autoplay=1&loop=1&mute=1&playlist=iaHo9AQkaPo";
+
+  const contentVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -21,7 +22,7 @@ const PyfVideo = () => {
   };
 
   return (
-    <section className="w-full py-6 sm:py-8 text-red-900 overflow-hidden relative">
+    <section className="w-full py-12 sm:py-16 bg-white text-black overflow-hidden">
       {/* Section Header */}
       <motion.div
         className="text-center mb-10 sm:mb-12"
@@ -30,53 +31,36 @@ const PyfVideo = () => {
         variants={textVariants}
         viewport={{ once: true }}
       >
-        <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-green-800 text-center mt-12 mb-8">
-          PYF Promo Video Highlights
+        <h2 className="text-2xl md:text-4xl font-bold text-green-800">
+          Experience PYF in Motion
         </h2>
-        <p className="mt-2 text-base sm:text-lg max-w-3xl mx-auto text-black">
+        <p className="mt-2 text-base sm:text-xl text-black max-w-3xl mx-auto">
           Watch our promo video to experience the vibrant spirit of the Pakistan Youth Festival.
         </p>
       </motion.div>
 
       {/* Video Container */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="relative w-full rounded-lg shadow-2xl overflow-hidden"
-          initial="hidden"
-          whileInView="visible"
-          variants={frameVariants}
-          viewport={{ once: true }}
-        >
-          {/* Decorative Frame */}
-          <div className="absolute inset-0 rounded-lg pointer-events-none z-10">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-600/10 to-transparent animate-spotlight"></div>
-          </div>
-
-          {/* Video Iframe */}
-          <div className="relative w-full pb-[56.25%] bg-green-800">
+      <motion.section
+        className="relative flex items-center justify-center overflow-hidden mt-15"
+        initial="hidden"
+        animate="visible"
+        variants={contentVariants}
+      >
+        {/* Background Video Wrapper */}
+        <div className="relative w-full h-full flex items-center justify-center">
+          <div className="w-full aspect-video max-h-full max-w-full">
             <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/iaHo9AQkaPo?si=NAc-SScXdZ0ddHkG"
-              title="AUC Promo Video"
+              className="w-full h-full object-contain object-center"
+              src={videoUrl}
+              title="PYF Promo Video Highlights"
               frameBorder="0"
-              allow="accelerometer; autoplay; loop; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; loop; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-            ></iframe>
+            />
           </div>
-        </motion.div>
-
-        {/* Description */}
-        <motion.p
-          className="mt-6 text-sm sm:text-base md:text-lg text-center max-w-3xl mx-auto text-black"
-          initial="hidden"
-          whileInView="visible"
-          variants={textVariants}
-          viewport={{ once: true }}
-        >
-          Relive the energy of the Pakistan Youth Festival, featuring dynamic performances, inspiring moments, and the celebration of youth creativity across Pakistan.
-        </motion.p>
-      </div>
+        </div>
+      </motion.section>
     </section>
   );
 };

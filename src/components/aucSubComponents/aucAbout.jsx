@@ -61,21 +61,21 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="w-full py-12 sm:py-16 bg-gradient-to-b from-teal-50 to-white overflow-hidden relative">
+    <section className="w-full py-6 sm:py-8 bg-white overflow-hidden relative">
       {/* Section Header */}
       <motion.div
-        className="text-center mb-10 sm:mb-12"
+        className="text-center mb-6 sm:mb-12"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-red-800 tracking-tight">
+        {/* <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-red-800 tracking-tight">
           Our Legacy Unfolded
         </h2>
         <p className="mt-2 text-base sm:text-xl text-black max-w-3xl mx-auto">
           Explore the essence of AUC and ACP through a modern lens on tradition.
-        </p>
+        </p> */}
       </motion.div>
 
       {/* Tabs and Content */}

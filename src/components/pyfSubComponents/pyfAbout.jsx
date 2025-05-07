@@ -85,12 +85,12 @@ const PyfAbout = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-green-800 text-center mt-12 mb-8">
+        {/* <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-green-800 text-center mt-12 mb-8">
           Our Journey Unfolded
         </h2>
         <p className="mt-2 text-base sm:text-xl text-black max-w-3xl mx-auto">
           Explore the heart of PYF and its vision through a modern take on youth empowerment.
-        </p>
+        </p> */}
       </motion.div>
 
       {/* Tabs and Content */}
@@ -117,7 +117,7 @@ const PyfAbout = () => {
           key={activeTab}
           className="relative bg-white/90 rounded-lg shadow-xl border-t-4 border-green-800 max-w-full sm:max-w-4xl mx-auto"
           variants={panelVariants}
-          initial="hidden"  
+          initial="hidden"
           animate="visible"
           exit="exit"
         >

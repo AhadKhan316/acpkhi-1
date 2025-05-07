@@ -3,7 +3,7 @@ import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useNavigate } from 'react-router-dom'; // For React Router v6
+import { useNavigate } from 'react-router-dom';
 // OR if using Next.js:
 // import { useRouter } from 'next/router';
 
