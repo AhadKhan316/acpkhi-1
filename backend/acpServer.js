@@ -1,25 +1,28 @@
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const registerRoutes = require('./routes/register');
+const express = require("express");
+const cors = require("cors");
+const helmet = require("helmet");
+const registerRoutes = require("./routes/register");
 
 const app = express();
 
 // Middleware
 app.use(helmet());
-app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: ["https://aalmiurduconference.com"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 // Routes
-app.use('/api', registerRoutes);
+
+app.use("/api", registerRoutes);
 
 // Error handling
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).json({ message: 'Internal server error' });
+  res.status(500).json({ message: "Internal server error" });
 });
 
 const PORT = process.env.PORT || 3001;

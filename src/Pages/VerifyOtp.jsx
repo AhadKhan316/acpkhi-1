@@ -28,7 +28,7 @@ const VerifyOtp = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://aalmiurduconference.com/api/verify-otp', {
+      const response = await fetch('https://acpkhi.com/api/verify-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

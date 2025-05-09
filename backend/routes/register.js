@@ -1,8 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const pool = require("../config/db"); // Make sure this path is correct
+const pool = require("../config/db");
 const transporter = require("../config/email");
 const { validateRegistration } = require("../middleware/validate");
+
+router.get("/test", (req, res) => {
+  res.send("API is working");
+});
 
 router.post("/register", validateRegistration, async (req, res) => {
   try {
