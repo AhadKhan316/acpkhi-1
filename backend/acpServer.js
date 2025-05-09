@@ -9,10 +9,11 @@ const app = express();
 app.use(helmet());
 app.use(
   cors({
-    origin: ["https://aalmiurduconference.com"],
+    origin: ["https://aalmiurduconference.com", "http://localhost:3000"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 // Routes

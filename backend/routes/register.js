@@ -37,7 +37,7 @@ router.post("/register", validateRegistration, async (req, res) => {
 
     // Send OTP email
     await transporter.sendMail({
-      from: process.env.EMAIL_FROM || "no-reply@acpkhi.com",
+      from: process.env.EMAIL_FROM,
       to: email,
       subject: "Registration OTP Verification",
       html: `
@@ -53,6 +53,8 @@ router.post("/register", validateRegistration, async (req, res) => {
       id: result.insertId,
       email: email,
     });
+    console.log(req.body);
+    res.json({ message: "Registration successful" });
   } catch (error) {
     console.error("Registration error:", error);
     res.status(500).json({
