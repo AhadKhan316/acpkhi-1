@@ -121,7 +121,7 @@ const ProductionMessage = () => {
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 tracking-tight"
                 variants={itemVariants}
               >
-                Our Initiatives
+                Initiatives
               </motion.h1>
 
               <motion.p
@@ -135,10 +135,12 @@ const ProductionMessage = () => {
                 className="text-black text-base sm:text-lg leading-relaxed mb-3"
                 variants={itemVariants}
               >
-                We believe in the transformative power of the arts, uniting talents from Pakistan and beyond, and fostering artistic expression and exchange while making culture accessible to all through our digital productions and archives.
+                At the Arts Council of Pakistan, we see the arts as a powerful force for connection and change. Our year-round programming brings together voices from across Pakistan and the global arts community, creating space for expression, collaboration, and cultural dialogue.
+
+Signature events like the World Culture Festival, Aalmi Urdu Conference, Pakistan Literature Festival, Pakistan Theatre Festival, Pakistan Music Festival, and the Women’s Conference reflect our commitment to celebrating diversity, creativity, and the evolving cultural spirit of our times.
               </motion.p>
 
-              <motion.div variants={itemVariants}>
+              {/* <motion.div variants={itemVariants}>
                 <p className="text-black text-base sm:text-lg leading-relaxed">
                   Some of our biggest events of the year include:
                 </p>
@@ -161,7 +163,7 @@ const ProductionMessage = () => {
                     </motion.li>
                   ))}
                 </ul>
-              </motion.div>
+              </motion.div> */}
 
               {/* <motion.p
                 className="text-gray-700 text-base sm:text-lg leading-relaxed mt-6 mb-8"
@@ -182,14 +184,14 @@ const ProductionMessage = () => {
           </div>
 
           {/* Floating badge */}
-          <motion.div
+          {/* <motion.div
             className="absolute top-6 right-6 bg-white/90 px-6 py-3 rounded-full shadow-xl z-10"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.9 }}
           >
             <span className="text-base font-semibold text-gray-900">Est. 1954</span>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </motion.section>

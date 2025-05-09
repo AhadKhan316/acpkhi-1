@@ -42,7 +42,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
           >
-            Arts Council supports cultural activities while educating youth in the field of arts. It strives to promote literature, fine arts, and performing arts in Pakistan.
+            The Arts Council of Pakistan, Karachi is the country’s leading platform for arts and culture. As an NPO and NGO, since 1955, the Council has played a central role in preserving heritage, supporting creative talent, and shaping literary and cultural conversations, and the voices in various social causes in Pakistan. Today, its impact extends beyond borders, with international collaborations and festivals placing it at the heart of the global arts scene.
           </motion.p>
         </div>
       ),
@@ -105,7 +105,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
           >
-            The Arts Council of Pakistan endeavors to uphold and champion the rich tapestry of Pakistani arts and culture on the world stage. Our aspiration is to provide a nurturing and inspirational environment that fosters talent, connections, and collaboration among communities not only within Pakistan but across the globe.
+            At the Arts Council of Pakistan, our mission is to spotlight the depth and diversity of Pakistani arts, literature and culture on a global stage. We’re committed to creating a vibrant, inclusive space that inspires creativity, supports emerging talent, and builds meaningful connections—both across Pakistan and around the world.
           </motion.p>
         </div>
       ),

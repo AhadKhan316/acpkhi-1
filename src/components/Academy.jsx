@@ -140,15 +140,17 @@ const Academies = () => {
                 className="text-black text-base sm:text-lg leading-relaxed mb-6"
                 variants={itemVariants}
               >
-                Shaping Creative Minds Since 1954, ACPKHI is a sanctuary for artistic growth, fostering young talents to become visionary creators who inspire and elevate our nation.
+                Since 1955, SOVAPA has been shaping creative minds and nurturing the next generation of artists. What began as a single department and a single teacher has grown into a dynamic hub for artistic discovery—where young talents are empowered to explore, experiment, and evolve.
+
+Whether in visual or performing arts, our students train under the mentorship of leading industry professionals, gaining the skills and confidence to inspire, innovate, and make their mark on the world.
               </motion.p>
 
-              <motion.p
+              {/* <motion.p
                 className="text-black text-base sm:text-lg leading-relaxed mb-8"
                 variants={itemVariants}
               >
                 From theatre and music to fine arts and design, our academies empower hundreds of students annually under the guidance of world-class instructors.
-              </motion.p>
+              </motion.p> */}
 
               <motion.div
                 className="mt-8"
@@ -170,7 +172,7 @@ const Academies = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.9 }}
           >
-            <span className="text-base font-semibold text-gray-900">Est. 1954</span>
+            <span className="text-base font-semibold text-gray-900">Est. 1955</span>
           </motion.div>
         </div>
       </div>

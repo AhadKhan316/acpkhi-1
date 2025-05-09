@@ -85,13 +85,14 @@ const StayUpdated = () => {
           className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg"
           variants={textVariants}
         >
-          Stay Updated
+        Updates
+
         </motion.h2>
         <motion.p
           className="text-base sm:text-lg md:text-xl lg:text-3xl mb-6 opacity-90 drop-shadow"
           variants={textVariants}
         >
-          Get the Latest Updates and Offers
+          Get the latest scoop from us
         </motion.p>
         <motion.form
           onSubmit={handleSubmit}

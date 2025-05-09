@@ -137,7 +137,7 @@ const Navbar = () => {
 
 
 
-                    <li><NavLink to="/sovapa">Sovapa</NavLink></li>
+                    <li><NavLink to="/sovapa">SOVAPA</NavLink></li>
                     <li><NavLink to="/facilities">Facilities</NavLink></li>
                     {/* <li><NavLink to="/events">Events</NavLink></li> */}
 
@@ -195,7 +195,7 @@ const Navbar = () => {
                         </li>
 
 
-                        <li><NavLink to="/sovapa">Sovapa</NavLink></li>
+                        <li><NavLink to="/sovapa">SOVAPA</NavLink></li>
                         <li><NavLink to="/facilities">Facilities</NavLink></li>
                         {/* <li><NavLink to="/events">Events</NavLink></li> */}
                         <li className="relative group">
