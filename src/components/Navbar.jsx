@@ -123,17 +123,18 @@ const Navbar = () => {
                         </DropdownButton>
 
                         {isSubMenuOpen["production"] && (
-                            <div className="absolute top-full left-0 mt-2 w-64 bg-black rounded-md shadow-lg z-40">
-                                <NavLink to="/festival/wcf">World Culture Festival</NavLink>
-                                <NavLink to="/festival/auc">Aalmi Urdu Conference</NavLink>
-                                <NavLink to="/festival/plf">Pakistan Literature Festival</NavLink>
-                                <NavLink to="/festival/ptf">Pakistan Theatre Festival</NavLink>
-                                <NavLink to="/festival/pyf">Pakistan Youth Festival</NavLink>
-                                <NavLink to="/festival/wc">Women Conference</NavLink>
-                                <NavLink to="/festival/aaf">Arts Alumni Festival</NavLink>
+                            <div className="absolute top-full left-0 mt-2 w-65 bg-black rounded-md shadow-lg z-40 flex flex-col font-semibold">
+                                <a href="/festival/wcf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">World Culture Festival</a>
+                                <a href="/festival/auc" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Aalmi Urdu Conference</a>
+                                <a href="/festival/plf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Pakistan Literature Festival</a>
+                                <a href="/festival/ptf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Pakistan Theatre Festival</a>
+                                <a href="/festival/pyf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Pakistan Youth Festival</a>
+                                <a href="/festival/wc" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Women Conference</a>
+                                <a href="/festival/aaf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Arts Alumni Festival</a>
                             </div>
                         )}
                     </li>
+
 
 
                     <li><NavLink to="/sovapa">Sovapa</NavLink></li>
@@ -181,14 +182,14 @@ const Navbar = () => {
                             </DropdownButton>
 
                             {isSubMenuOpen["production"] && (
-                                <div className="relative top-full left-0 mt-2 w-64 bg-black rounded-md shadow-lg z-40">
-                                    <NavLink to="/festival/wcf">World Culture Festival</NavLink>
-                                    <NavLink to="/festival/auc">Aalmi Urdu Conference</NavLink>
-                                    <NavLink to="/festival/plf">Pakistan Literature Festival</NavLink>
-                                    <NavLink to="/festival/ptf">Pakistan Theatre Festival</NavLink>
-                                    <NavLink to="/festival/pyf">Pakistan Youth Festival</NavLink>
-                                    <NavLink to="/festival/wc">Women Conference</NavLink>
-                                    <NavLink to="/festival/aaf">Arts Alumni Festival</NavLink>
+                                <div className="top-full left-0 mt-2 w-65 bg-black rounded-md shadow-lg z-40 flex flex-col font-semibold">
+                                    <a href="/festival/wcf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">World Culture Festival</a>
+                                    <a href="/festival/auc" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Aalmi Urdu Conference</a>
+                                    <a href="/festival/plf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Pakistan Literature Festival</a>
+                                    <a href="/festival/ptf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Pakistan Theatre Festival</a>
+                                    <a href="/festival/pyf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Pakistan Youth Festival</a>
+                                    <a href="/festival/wc" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Women Conference</a>
+                                    <a href="/festival/aaf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Arts Alumni Festival</a>
                                 </div>
                             )}
                         </li>

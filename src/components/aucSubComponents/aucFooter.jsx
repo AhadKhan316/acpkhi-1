@@ -4,7 +4,7 @@ import AucFooterLogo from "/src/assets/auc-assets/auc-logo.png"
 
 const AucFooter = () => {
   return (
-    <footer className="bg-gray-900 text-white py-16 px-4 md:px-8 relative overflow-hidden">
+    <footer id="aucFooter" className="bg-gray-900 text-white py-16 px-4 md:px-8 relative overflow-hidden">
       {/* Calligraphic Pattern Background */}
       <div className="absolute inset-0 bg-[url('https://via.placeholder.com/300x300?text=Calligraphy')] opacity-5 bg-repeat" />
 

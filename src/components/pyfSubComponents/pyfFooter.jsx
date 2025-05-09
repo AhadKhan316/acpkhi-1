@@ -16,7 +16,7 @@ const PyfFooter = () => {
   };
 
   return (
-    <footer className="bg-green-900 text-white py-12 px-4 sm:px-6 md:px-8 relative overflow-hidden">
+    <footer id="pyfFooter" className="bg-green-900 text-white py-12 px-4 sm:px-6 md:px-8 relative overflow-hidden">
       {/* Decorative Background Element */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">

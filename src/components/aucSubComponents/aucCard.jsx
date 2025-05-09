@@ -1,11 +1,11 @@
 import React from "react";
 import AucDelegateCard from "../aucReusableComponents/aucDelegatesCard";
 
-import AucDelegateCard1 from "/src/assets/auc-assets/auc-delegate-card1.jpeg"
-import AucDelegateCard2 from "/src/assets/auc-assets/auc-delegate-card2.jpeg"
-import AucDelegateCard3 from "/src/assets/auc-assets/auc-delegate-card3.jpeg"
-import AucDelegateCard4 from "/src/assets/auc-assets/auc-delegate-card4.jpeg"
-import AucDelegateCard5 from "/src/assets/auc-assets/auc-delegate-card5.jpeg"
+import AucDelegateCard1 from "/src/assets/auc-assets/adnan-siddiqui-delegate1.jpg"
+import AucDelegateCard2 from "/src/assets/auc-assets/Iftikhar-Arif-delegate2.jpg"
+import AucDelegateCard3 from "/src/assets/auc-assets/humayun-saeed-delegate3.jpg"
+import AucDelegateCard4 from "/src/assets/auc-assets/Suhail-Warraich-delegate4.jpg"
+import AucDelegateCard5 from "/src/assets/auc-assets/hameeda-shaheen-delegate5.jpg"
 
 // Delegate data
 const delegates = [

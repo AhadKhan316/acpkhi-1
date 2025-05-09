@@ -7,6 +7,7 @@ import VideoSection from "../components/plfSubComponents/PlfVideo";
 import AboutSection from "../components/plfSubComponents/PlfAbout";
 import SessionsSection from "../components/plfReusableComponents/PlfSession";
 import PlfSpeakerCard from "../components/plfReusableComponents/plfSpeaker";
+import PlfHighlightedSession from "../components/plfSubComponents/PlfHighlightedSession";
 import NewsletterSection from "../components/plfSubComponents/PlfNewsletter";
 import PlfSponsors from "../components/plfSubComponents/PlfSponsors";
 import FooterSection from "../components/plfSubComponents/PlfFooter";
@@ -19,7 +20,7 @@ import PlfContactPage from "./PlfSubPages/plfContactPage";
 // Delegates Images
 import AucDelegate1 from "/src/assets/plf-assets/Umair-najmi-delegate1.jpg";
 import AucDelegate2 from "/src/assets/plf-assets/Rehman-Faris-delegate2.jpg";
-import AucDelegate3 from "/src/assets/plf-assets/Amar-Sindhu-delegate3.jpg";
+import AucDelegate3 from "/src/assets/plf-assets/Umair-najmi-delegate1.jpg";
 import AucDelegate4 from "/src/assets/plf-assets/Paras-masroor-delegate4.jpg";
 import AucDelegate5 from "/src/assets/plf-assets/mustafa-qureshi-delegate5.jpg";
 
@@ -76,6 +77,7 @@ const PlfMainPage = () => {
               <HeroSection />
               <AboutSection />
               <VideoSection />
+              <PlfHighlightedSession />
               <PlfSpeakerCard speakers={speakers} title="Delegates" />
               <SessionsSection />
               <NewsletterSection />

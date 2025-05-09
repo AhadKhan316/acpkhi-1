@@ -7,13 +7,13 @@ import { useNavigate } from "react-router-dom";
 
 const NextArrow = ({ className, style, onClick }) => (
   <div
-    className={`${className} text-red-700 hover:text-red-900 rounded-full transition-all duration-300 sm:w-14 sm:h-14 w-10 h-10 shadow-md hover:shadow-lg`}
+    className={`${className} text-green-700 hover:text-green-900 rounded-full transition-all duration-300 sm:w-14 sm:h-14 w-10 h-10 shadow-md hover:shadow-lg`}
     style={{
       ...style,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: "red",
+      backgroundColor: "green",
       zIndex: 2,
     }}
     onClick={onClick}
@@ -26,13 +26,13 @@ const NextArrow = ({ className, style, onClick }) => (
 
 const PrevArrow = ({ className, style, onClick }) => (
   <div
-    className={`${className} text-red-700 hover:text-red-900 rounded-full transition-all duration-300 sm:w-14 sm:h-14 w-10 h-10 shadow-md hover:shadow-lg`}
+    className={`${className} text-green-700 hover:text-green-900 rounded-full transition-all duration-300 sm:w-14 sm:h-14 w-10 h-10 shadow-md hover:shadow-lg`}
     style={{
       ...style,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: "red",
+      backgroundColor: "green",
       zIndex: 2,
     }}
     onClick={onClick}
@@ -43,7 +43,7 @@ const PrevArrow = ({ className, style, onClick }) => (
   </div>
 );
 
-const AucDelegateCard = ({ delegates, title = "" }) => {
+const PyfDelegateCard = ({ delegates, title = "" }) => {
   const navigate = useNavigate();
 
   const handleViewAllDelegates = () => {
@@ -85,7 +85,7 @@ const AucDelegateCard = ({ delegates, title = "" }) => {
       </div>
     ),
     customPaging: () => (
-      <div className="w-3 h-3 rounded-full bg-red-900 hover:bg-red-900 transition-all" />
+      <div className="w-3 h-3 rounded-full bg-green-900 hover:bg-green-900 transition-all" />
     ),
   };
 
@@ -94,7 +94,7 @@ const AucDelegateCard = ({ delegates, title = "" }) => {
   };
 
   return (
-    <section className="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-6 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -104,13 +104,13 @@ const AucDelegateCard = ({ delegates, title = "" }) => {
           className="mb-8 text-center"
         >
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-red-900">
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-green-900">
               {title}
             </h2>
           </div>
           <button
             onClick={handleViewAllDelegates}
-            className="bg-red-700 hover:bg-red-800 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap mt-5"
+            className="bg-green-700 hover:bg-green-800 text-white font-medium py-2 px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap mt-5"
           >
             All Delegates
           </button>
@@ -158,7 +158,7 @@ const DelegateCard = ({ delegate, index, onImageClick }) => {
       <div className="absolute inset-0" />
 
       <motion.div
-        className="absolute inset-0 bg-red-500 opacity-0 group-hover:opacity-10 rounded-2xl"
+        className="absolute inset-0 bg-green-500 opacity-0 group-hover:opacity-10 rounded-2xl"
         animate={{ opacity: isHovered ? 0.1 : 0 }}
         transition={{ duration: 0.4 }}
       />
@@ -185,7 +185,7 @@ const DelegateCard = ({ delegate, index, onImageClick }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
       </motion.div>
 
-      <div className="absolute inset-0 border border-white/20 rounded-2xl m-1 group-hover:m-0 group-hover:border-red-400/50 transition-all duration-500" />
+      <div className="absolute inset-0 border border-white/20 rounded-2xl m-1 group-hover:m-0 group-hover:border-green-400/50 transition-all duration-500" />
 
       <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
         <motion.h3
@@ -200,7 +200,7 @@ const DelegateCard = ({ delegate, index, onImageClick }) => {
 
         {delegate.role && (
           <motion.p
-            className="text-red-300 font-medium mb-2"
+            className="text-green-300 font-medium mb-2"
             animate={{
               y: isHovered ? -3 : 0,
               opacity: isHovered ? 1 : 0.9,
@@ -226,7 +226,7 @@ const DelegateCard = ({ delegate, index, onImageClick }) => {
       </div>
 
       <motion.div
-        className="absolute top-4 right-4 w-2 h-2 bg-red-500 rounded-full"
+        className="absolute top-4 right-4 w-2 h-2 bg-green-500 rounded-full"
         animate={{
           y: [0, -5, 0],
           opacity: [0.6, 1, 0.6],
@@ -238,4 +238,4 @@ const DelegateCard = ({ delegate, index, onImageClick }) => {
   );
 };
 
-export default AucDelegateCard;
+export default PyfDelegateCard;
