@@ -1,9 +1,6 @@
-import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
-
 import WcfLogo from '/src/assets/wcf-assets/wcf-logo.png';
-
 
 function Footer() {
   return (

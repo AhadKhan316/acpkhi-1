@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 function WcfVideoSection() {
@@ -77,9 +76,9 @@ function WcfVideoSection() {
             variants={slideUp}
           >
             <div>
-              <span className="inline-block px-4 py-1 bg-red-100 text-red-600 rounded-full text-sm font-semibold mb-4">
+              {/* <span className="inline-block px-4 py-1 bg-red-100 text-red-600 rounded-full text-sm font-semibold mb-4">
                 WCF 2024
-              </span>
+              </span> */}
               <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight">
                 Where Cultures <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">Collide & Create</span>
               </h2>
@@ -87,7 +86,7 @@ function WcfVideoSection() {
 
             <div className="space-y-6">
               <div className="flex flex-wrap gap-4">
-                <div className="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
+                {/* <div className="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
                   <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center mr-3">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -97,9 +96,9 @@ function WcfVideoSection() {
                     <p className="text-sm text-black">Date</p>
                     <p className="font-semibold">26 Sep - 30 Oct</p>
                   </div>
-                </div>
+                </div> */}
 
-                <div className="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
+                {/* <div className="flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
                   <div className="w-10 h-10 bg-red-50 rounded-lg flex items-center justify-center mr-3">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -110,17 +109,17 @@ function WcfVideoSection() {
                     <p className="text-sm text-black">Location</p>
                     <p className="font-semibold">Arts Council Karachi</p>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               <p className="text-lg text-black leading-relaxed">
-                Experience an unprecedented gathering of global talent at the World Culture Festival 2024, where art transcends boundaries.
+                Experience an unprecedented gathering of global talent at the World Culture Festival, where art transcends boundaries.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: "35+", label: "Countries" },
-                  { value: "250+", label: "Artists" },
+                  { value: "40+", label: "Countries" },
+                  { value: "450+", label: "Artists" },
                   { value: "100+", label: "Performances" },
                   { value: "5", label: "Art Forms" }
                 ].map((stat, index) => (
@@ -131,9 +130,9 @@ function WcfVideoSection() {
                 ))}
               </div>
 
-              <button className="mt-6 px-8 py-3 rounded-md text-white bg-[#B90602] hover:bg-red-600 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              {/* <button className="mt-6 px-8 py-3 rounded-md text-white bg-[#B90602] hover:bg-red-600 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                 Get Your Tickets Now
-              </button>
+              </button> */}
             </div>
           </motion.div>
         </motion.div>

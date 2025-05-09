@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaChevronDown, FaChevronRight, FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
+import { FaBars, FaTimes, FaChevronDown, FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 // ACP Logo
 import acpLogo from '/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.png';
@@ -54,6 +55,11 @@ function WcfNavbar() {
     </Link>
   );
 
+  NavLink.propTypes = {
+    to: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired
+  };
+
   const DropdownButton = ({ children, onClick, isOpen }) => (
     <button
       onClick={onClick}
@@ -63,6 +69,12 @@ function WcfNavbar() {
       <FaChevronDown className={`ml-2 w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
     </button>
   );
+
+  DropdownButton.propTypes = {
+    children: PropTypes.node.isRequired,
+    onClick: PropTypes.func.isRequired,
+    isOpen: PropTypes.bool.isRequired
+  };
 
   return (
     <header className="bg-gradient-to-r from-black/80 to-black/90 sticky top-0 z-50 shadow-md">

@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const FullScreenVideo = () => {
   const videoUrl = "https://www.youtube.com/embed/y2B89Bf5SHA?si=PKFZkNlKqjJa5go_&autoplay=1&mute=1&loop=1&playlist=y2B89Bf5SHA";
 
   // const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [videoUrl];
 
   // Framer Motion Variants for fade animation
   const contentVariants = {
@@ -27,7 +25,7 @@ const FullScreenVideo = () => {
       <div className="absolute inset-0 w-full h-full">
 
         <iframe
-          className="w-1296 h-729"
+          className="w-full h-full"
           src={videoUrl}
           title="World Culture Festival Highlights"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"

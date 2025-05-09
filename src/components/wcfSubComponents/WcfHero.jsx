@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from 'lucide-react';
 
 // Import your WCF hero images
-import WcfHero1 from "/src/assets/wcf-assets/wcf-hero1.png";
-import WcfHero2 from "/src/assets/wcf-assets/wcf-hero2.jpg";
-import WcfHero3 from "/src/assets/wcf-assets/wcf-hero3.jpg";
+import WcfHero1 from "/src/assets/wcf-assets/480353134_935591345356131_845620241989635301_n.jpg";
+import WcfHero2 from "/src/assets/wcf-assets/480465735_935590975356168_2897742645734404426_n.jpg";
+import WcfHero3 from "/src/assets/wcf-assets/480748608_935079365407329_2583587052900021695_n.jpg";
+import WcfHero4 from "/src/assets/wcf-assets/480689688_935592328689366_5465043570001838355_n.jpg";
+import WcfHero5 from "/src/assets/wcf-assets/480899209_935593665355899_2148262077644342806_n.jpg";
 
 const WcfHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -13,7 +14,9 @@ const WcfHero = () => {
   const slides = [
     WcfHero1,
     WcfHero2,
-    WcfHero3
+    WcfHero3,
+    WcfHero4,
+    WcfHero5
   ];
 
   // Auto-slider logic
@@ -50,19 +53,6 @@ const WcfHero = () => {
       opacity: 0.9,
       y: 0,
       transition: { duration: 0.8, delay: 0.4, ease: "easeOut" },
-    },
-  };
-
-  const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.6, delay: 0.6, ease: "easeOut" },
-    },
-    hover: {
-      scale: 1.05,
-      transition: { duration: 0.3 },
     },
   };
 
@@ -106,20 +96,15 @@ const WcfHero = () => {
         variants={contentVariants}
       >
         <motion.h1
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-2 tracking-tight drop-shadow-lg"
-          variants={titleVariants}
-        >
-          Welcome to the
-        </motion.h1>
-        <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg text-red-600"
+          className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg"
           variants={titleVariants}
         >
           World Culture Festival
         </motion.h1>
+    
 
         <motion.p
-          className="text-base sm:text-lg md:text-xl lg:text-2xl mb-4 opacity-90 drop-shadow"
+          className="text-base sm:text-lg md:text-xl lg:text-3xl font-bold mb-4 opacity-90 drop-shadow text-red-600"
           variants={subtitleVariants}
         >
           Where Culture Comes Alive!
@@ -139,7 +124,7 @@ const WcfHero = () => {
           26 SEP TO 02<sup>nd</sup> NOV AT ARTS COUNCIL KARACHI
         </motion.p> */}
 
-        <motion.button
+        {/* <motion.button
           className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-[#B90602] hover:bg-red-600 transition duration-150 ease-in-out"
           variants={buttonVariants}
           whileHover={{ scale: 1.05 }}
@@ -148,7 +133,7 @@ const WcfHero = () => {
         >
           FOR REGISTRATION
           <ArrowRight className="ml-2 -mr-1 h-4 sm:h-5 w-4 sm:w-5" aria-hidden="true" />
-        </motion.button>
+        </motion.button> */}
       </motion.div>
 
       {/* Slide Indicators */}

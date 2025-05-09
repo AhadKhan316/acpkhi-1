@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import PropTypes from 'prop-types';
 
 
 // President Image
@@ -26,6 +27,11 @@ const Card = ({ title, children }) => (
   </motion.div>
 );
 
+Card.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node.isRequired
+};
+
 // Animation Variants
 const fadeInVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -41,21 +47,23 @@ const staggerContainer = {
 };
 
 function WcfAboutSection() {
-  const [activeTab, setActiveTab] = useState("About World Culture Festival");
+  const [activeTab, setActiveTab] = useState("About the Festival");
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
   };
 
   const tabContent = {
-    "About World Culture Festival": (
-      <Card title="World Culture Festival Karachi">
-        Experience a world without borders at the World Culture Festival - Karachi, the grandest global artistic gathering ever hosted in Pakistan. The event will bring together over 250 talented artists from over 35 countries, across all continents, showcasing the best talent in music, theatre, dance, and fine arts in an unprecedented way.
+    "About the Festival": (
+      <Card>
+        The World Culture Festival is a vibrant celebration of global creativity, bringing together artists, creators, and producers from around the world to share their cultures and co-create art. Featuring performances in music, theatre, dance, and visual arts, the festival is a dynamic platform for artistic exchange and cultural dialogue.
+
+With a focus on unity and cultural celebration, the festival introduces a diverse mix of national and international talent each year—offering them a space to perform, exchange ideas, and connect with fellow artists and audiences alike.
       </Card>
     ),
-    "President Message": (
+    "President's Message": (
       <motion.div
-        className="mx-4 flex flex-col md:flex-row items-center gap-8 md:gap-6 p-8"
+        className="mx-4 flex flex-col md:flex-row items-center gap-8 md:gap-6 p-4"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -87,7 +95,7 @@ function WcfAboutSection() {
           {/* Image Section */}
           <motion.img
             src={presImg}
-            alt="Ahmed Shah (H.I, S.I)"
+            alt="Ahmed Shah (HI, SI)"
             className="w-36 h-36 md:w-52 md:h-52 rounded-full object-cover shadow-lg"
             variants={fadeInVariants}
           />
@@ -98,7 +106,7 @@ function WcfAboutSection() {
               className="text-xl md:text-2xl text-black leading-relaxed italic font-serif mb-4"
               variants={fadeInVariants}
             >
-              "The World Culture Festival is the grand celebration of Arts Council of Pakistan, Karachi's efforts in cultural diplomacy. We look forward to welcoming you to experience the world at your doorstep."
+              &quot;The World Culture Festival is a landmark celebration of the Arts Council of Pakistan, Karachi&apos;s commitment to cultural diplomacy. We look forward to welcoming you to experience the richness of global cultures—in the heart of Pakistan&quot;
             </motion.p>
 
             {/* Divider */}
@@ -108,7 +116,7 @@ function WcfAboutSection() {
               className="text-lg font-bold text-black"
               variants={fadeInVariants}
             >
-              - Ahmed Shah (H.I, S.I)
+              -Mohammad Ahmed Shah (HI, SI)
             </motion.p>
             <motion.p
               className="text-sm text-black"
@@ -130,8 +138,8 @@ function WcfAboutSection() {
       </motion.div>
     ),
     "About Arts Council": (
-      <Card title="Arts Council of Pakistan Karachi">
-        The Arts Council of Pakistan, Karachi, has been a beacon of cultural promotion and preservation since 1954, championing the arts both locally and globally. With the World Culture Festival - Karachi, we are taking our mission to the next level, hosting Pakistan’s largest international cultural event. This grand festival embodies our commitment to bridging cultural divides and enhancing Pakistan's cultural diplomacy on the world stage.
+      <Card>
+        The Arts Council of Pakistan, Karachi, has been a beacon of cultural promotion and preservation since 1954, championing the arts both locally and globally. With the World Culture Festival - Karachi, we are taking our mission to the next level, hosting Pakistan&apos;s largest international cultural event. This grand festival embodies our commitment to bridging cultural divides and enhancing Pakistan&apos;s cultural diplomacy on the world stage.
       </Card>
     ),
   };
@@ -141,7 +149,7 @@ function WcfAboutSection() {
       {/* Tabs */}
       <div className="mb-6">
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          {["About World Culture Festival", "President Message", "About Arts Council"].map((tab) => (
+          {["About the Festival", "President's Message", "About Arts Council"].map((tab) => (
             <motion.button
               key={tab}
               onClick={() => handleTabChange(tab)}

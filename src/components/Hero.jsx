@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from 'lucide-react';
 
 import HeroImg1 from "/src/assets/acp-logo-and-hero-img/acp-hero1.jpeg";
 import HeroImg2 from "/src/assets/acp-logo-and-hero-img/acp-hero2.jpeg";
