@@ -1,4 +1,3 @@
-import React from "react";
 import ExhibitionGrid from "../wcfReusableComponents/WcfLandingPageExhibitionCard";
 
 import exhbition1 from "/src/assets/wcf-assets/wcf-exhibition/wcf-exhibition1.jpg";

@@ -67,10 +67,10 @@ function WcfPerformances() {
     <section className="bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700 mb-8">Performing Nations</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700 mb-8">Global Participants</h2>
           {/* <div className="w-24 h-1.5 bg-blue-600 mx-auto mb-6 rounded-full"></div> */}
           <p className="text-lg md:text-xl text-black mx-auto">
-            Celebrating cultural diversity through performances from {nations.length}+ nations worldwide
+          The festival has brought together artists from various nations across the globe and this number continues to grow
           </p>
         </div>
 
