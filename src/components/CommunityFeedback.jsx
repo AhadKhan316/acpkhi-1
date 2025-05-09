@@ -5,24 +5,24 @@ const Feedback = () => {
   const feedbacks = [
     {
       id: 1,
-      text: "The workshops offered by the Arts Council are amazing! I discovered my hidden talents and met inspiring people.",
-      name: "Sarah Ahmed",
-      role: "Artist",
-      image: "https://t3.ftcdn.net/jpg/02/81/81/86/360_F_281818663_XXRCNuGktKeZsnknqWkKI0rR4JPWui3H.jpg",
+      text: "Coming to the Arts Council of Pakistan , Karachi, even on the first day felt like I have been here for a number of years because of the warmth I felt.",
+      name: "Kushtrim B Mehmati ",
+      role: "KOSOVO",
+      image: "https://balkans.aljazeera.net/wp-content/uploads/2017/12/kushtrim-fb.jpg?resize=770%2C513&quality=80",
     },
     {
       id: 2,
-      text: "Dynamic music festivals were an incredible experience. The Arts Council has truly created a cultural hub for everyone.",
-      name: "Ali Khan",
-      role: "Musician",
-      image: "https://live.staticflickr.com/4070/4489718226_6d0b3d1bd5_z.jpg",
+      text: "The Arts Council of Pakistan, Karachi is home to a variety of people and welcomes everyone. The people here are very emotive. It was great interacting with them.",
+      name: "Franck Le Lay",
+      role: "FRANCE",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSMkCNldq3HyUFaRbwqOvvMbIpwvd9wbRhyw&s",
     },
     {
       id: 3,
-      text: "Innovative performing arts programs have truly enriched my understanding of theater and culture. Highly recommend it!",
-      name: "Ayesha Naeem",
-      role: "Theater Enthusiast",
-      image: "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg",
+      text: "I loved being at the Arts Council of Pakistan, Karachi. The people here are very openminded and welcoming.",
+      name: "Dan Griffiths",
+      role: "USA",
+      image: "https://48hills.org/wp-content/uploads/2024/06/David-Griffiths-Church-of-Clown-main.jpg",
     },
   ];
 
