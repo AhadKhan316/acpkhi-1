@@ -89,7 +89,7 @@ const Registration = () => {
       };
 
 
-      const response = await fetch('https://api.acpkhi.com/api/register.com', {
+      const response = await fetch('https://api.aalmiurduconference.com/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

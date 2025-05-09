@@ -28,7 +28,7 @@ const VerifyOtp = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://acpkhi.com/api/verify-otp', {
+      const response = await fetch('https://api.aalmiurduconference.com/api/verify-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const VerifyOtp = () => {
       }
 
       setSuccess('OTP verified successfully! Your registration is complete.');
-      setTimeout(() => navigate('/'), 2000); // Redirect to home after 2 seconds
+      setTimeout(() => navigate('/'), 2000);
     } catch (err) {
       setError(err.message || 'An error occurred. Please try again.');
     } finally {
