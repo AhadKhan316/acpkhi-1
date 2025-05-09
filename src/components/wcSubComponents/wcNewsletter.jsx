@@ -1,97 +1,87 @@
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
-const WcNewsletter = () => {
-  // Framer Motion Variants for animations
-  const textVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
+function WcNewsletter() {
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const formVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.6, delay: 0.2, ease: "easeOut" },
-    },
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Subscribed with:', email);
+    setIsSubscribed(true);
+    setEmail('');
+    setTimeout(() => setIsSubscribed(false), 3000);
   };
 
   return (
-    <section className="py-6 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 text-ivory-100 relative overflow-hidden">
-      {/* SVG Background */}
-      <div className="absolute inset-0">
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 1440 320"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice"
+    <section className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="mx-4">
+        <motion.div
+          className="bg-white p-8 md:p-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
-          <path
-            fill="#db2777"
-            fillOpacity="0.9"
-            d="M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,192C672,203,768,213,864,213.3C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          >
-            <animate
-              attributeName="d"
-              dur="10s"
-              repeatCount="indefinite"
-              values="
-                M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,192C672,203,768,213,864,213.3C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
-                M0,192L48,181.3C96,171,192,149,288,144C384,139,480,149,576,160C672,171,768,181,864,181.3C960,181,1056,171,1152,160C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
-                M0,224L48,213.3C96,203,192,181,288,176C384,171,480,181,576,192C672,203,768,213,864,213.3C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            />
-          </path>
-        </svg>
-      </div>
+          <div className="text-center space-y-6">
+            <h2 className="text-2xl sm:text-4xl font-bold text-black">
+              <span className="text-pink-800">
+                WC Empowers Women Leaders
+              </span>{' '}
+              <br className="hidden sm:block" />
+              Worldwide
+            </h2>
 
-      {/* Main Content */}
-      <div className="max-w-5xl mx-auto text-center relative z-10">
-        <motion.h2
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={textVariants}
-          className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-bold text-pink-900 mb-4 sm:mb-6 tracking-tight"
-        >
-          Subscribe to Our Newsletter
-        </motion.h2>
-        <motion.p
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={textVariants}
-          className="text-sm sm:text-base md:text-lg lg:text-xl font-sans mb-6 sm:mb-8 text-ivory-200"
-        >
-          Stay updated with the latest news and events from WC.
-        </motion.p>
-        <motion.form
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={formVariants}
-          className="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-3"
-        >
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="w-full max-w-xs sm:max-w-sm p-2 sm:p-3 rounded-lg bg-pink-800/50 backdrop-blur-md text-ivory-100 border border-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-900 transition duration-300 text-sm sm:text-base"
-            aria-label="Email address"
-          />
-          <button
-            type="submit"
-            className="sm:w-auto bg-pink-900 text-white font-sans font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-pink-800 transition duration-300 text-sm sm:text-base"
-          >
-            Subscribe
-          </button>
-        </motion.form>
+            <p className="text-lg text-black max-w-2xl mx-auto">
+              Stay connected with the Women Conference. Join our mailing list for exclusive updates!
+            </p>
+
+            {isSubscribed ? (
+              <motion.div
+                className="bg-green-50 text-black p-4 rounded-lg"
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+              >
+                <p className="font-medium">Thank you for subscribing!</p>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubmit} className="mt-8">
+                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                  <div className="relative flex-grow">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.target.value)}
+                      placeholder="Enter your email"
+                      required
+                      className="w-full px-5 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-pink-700 focus:ring-2 focus:ring-pink-700 transition-all duration-200"
+                    />
+                    <svg
+                      className="absolute right-3 top-3.5 h-5 w-5 text-gray-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                  </div>
+                  <motion.button
+                    type="submit"
+                    className="px-6 py-3 bg-gradient-to-r from-pink-600 to-pink-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    Subscribe Now
+                  </motion.button>
+                </div>
+              </form>
+            )}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
-};
+}
 
 export default WcNewsletter;

@@ -62,7 +62,7 @@ const PtfOurPlaysSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-2xl sm:text-4xl lg:text-4xl font-bold text-center mb-12 text-black tracking-tight"
         >
-          Our Plays
+          Our <span className="text-red-800">Plays</span>
         </motion.h2>
 
         {/* Carousel Container */}

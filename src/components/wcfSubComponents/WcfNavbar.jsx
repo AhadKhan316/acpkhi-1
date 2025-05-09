@@ -6,7 +6,7 @@ import { FaBars, FaTimes, FaChevronDown, FaChevronRight, FaFacebookF, FaInstagra
 import acpLogo from '/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.png';
 
 // WCF Logo
-import wcfLogo from '/src/assets/wcf-assets/wcf-logo.png';
+import wcfLogo from '/src/assets/wcf-assets/Logo-wcf-White.png';
 
 
 

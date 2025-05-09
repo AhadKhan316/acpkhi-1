@@ -39,7 +39,7 @@ const PrevArrow = ({ className, style, onClick }) => (
       alignItems: "center",
       justifyContent: "center",
       left: "30px",
-      backgroundColor: "#b91c1c", // red-700
+      backgroundColor: "#b91c1c",
       zIndex: 2,
     }}
     onClick={onClick}
@@ -97,7 +97,7 @@ const PtfPrimeShowsCard = ({ shows, title = "Prime" }) => {
     ),
     responsive: [
       {
-        breakpoint: 1536, // 2xl
+        breakpoint: 1536,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
@@ -106,7 +106,7 @@ const PtfPrimeShowsCard = ({ shows, title = "Prime" }) => {
         },
       },
       {
-        breakpoint: 1280, // xl
+        breakpoint: 1280,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -115,7 +115,7 @@ const PtfPrimeShowsCard = ({ shows, title = "Prime" }) => {
         },
       },
       {
-        breakpoint: 1024, // lg
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -124,7 +124,7 @@ const PtfPrimeShowsCard = ({ shows, title = "Prime" }) => {
         },
       },
       {
-        breakpoint: 768, // md
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -133,7 +133,7 @@ const PtfPrimeShowsCard = ({ shows, title = "Prime" }) => {
         },
       },
       {
-        breakpoint: 640, // sm
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -147,7 +147,7 @@ const PtfPrimeShowsCard = ({ shows, title = "Prime" }) => {
   const fallbackImage = "https://placehold.co/150x150";
 
   return (
-    <section className="py-8 px-4 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden">
+    <section className="py-8 px-4 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden ">
       {/* Decorative Background Element */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -183,20 +183,20 @@ const PtfPrimeShowsCard = ({ shows, title = "Prime" }) => {
               <div key={index} className="px-3 sm:px-4">
                 <motion.div
                   whileHover={{
-                    scale: 1.05,
+                    scale: 1.01,
                     boxShadow: "0 15px 30px rgba(0, 0, 0, 0.15)",
                     y: -5,
                   }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="relative bg-white rounded-xl overflow-hidden shadow-lg mx-auto max-w-[320px] min-h-[460px] flex flex-col group border border-gray-100"
+                  className="relative bg-white rounded-xl overflow-hidden mx-auto max-w-[340px] min-h-[460px] flex flex-col group border border-gray-100"
                 >
                   {/* Image Container */}
-                  <div className="relative w-full h-[431px] bg-gray-100 rounded-t-xl overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-red-900/30 via-transparent to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-90" />
+                  <div className="relative w-full h-[400px] bg-white rounded-t-xl overflow-hidden">
+                    <div className="absolute inset-0 opacity-70 transition-opacity duration-300 group-hover:opacity-90" />
                     <img
                       src={show.image || fallbackImage}
                       alt={show.title}
-                      className="w-full h-full object-fill transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-fill"
                       onError={(e) => (e.target.src = fallbackImage)}
                       loading="lazy"
                     />

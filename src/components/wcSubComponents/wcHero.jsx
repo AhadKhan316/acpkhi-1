@@ -63,6 +63,13 @@ const WcHero = () => {
     },
   };
 
+  const WcmoveDown = () => {
+    const targetSection = document.getElementById("wcFooter");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <section className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[95vh] text-white flex items-center justify-center overflow-hidden">
       {/* Background Slider */}
@@ -123,8 +130,9 @@ const WcHero = () => {
         {slides.map((_, index) => (
           <span
             key={index}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${index === currentSlide ? "bg-white" : "bg-pink-400"
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer ${index === currentSlide ? "bg-white" : "bg-pink-400"
               }`}
+            onClick={() => setCurrentSlide(index)}
           />
         ))}
       </div>
@@ -134,6 +142,7 @@ const WcHero = () => {
         <div className="animate-bounce">
           <svg
             className="w-6 h-6 text-white"
+            onClick={WcmoveDown}
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"

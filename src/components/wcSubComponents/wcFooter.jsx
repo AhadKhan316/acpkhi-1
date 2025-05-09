@@ -6,7 +6,7 @@ import WcFooterLogo from "/src/assets/wc-assets/wc-logo.png";
 
 const WcFooter = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer id="wcFooter" className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="flex flex-wrap">

@@ -99,7 +99,7 @@ const AboutSection = () => {
 
         {/* Scroll Panel */}
         <motion.div
-          key={activeTab} // Ensures animation retriggers on tab change
+          key={activeTab}
           className="relative bg-white/90 rounded-lg shadow-xl border-t-4 border-red-700 max-w-full sm:max-w-3xl mx-auto"
           variants={panelVariants}
           initial="hidden"

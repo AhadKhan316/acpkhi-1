@@ -16,7 +16,7 @@ const AucSponsors = () => {
   };
 
   return (
-    <section className="py-12 bg-white text-center">
+    <section className="py-6 bg-white text-center">
       <motion.div
         initial="hidden"
         whileInView="visible"

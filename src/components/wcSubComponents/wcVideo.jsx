@@ -1,8 +1,10 @@
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const WcVideo = () => {
-  // Framer Motion Variants
-  const frameVariants = {
+  const videoUrl = "https://www.youtube.com/embed/Uwk5DI5Ul70?si=DGtwW1jyE2oH0iRw&autoplay=1&loop=1&mute=1&playlist=Uwk5DI5Ul70";
+
+  const contentVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -10,7 +12,6 @@ const WcVideo = () => {
       transition: { duration: 1, ease: "easeOut" },
     },
   };
-
   const textVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -21,7 +22,7 @@ const WcVideo = () => {
   };
 
   return (
-    <section className="w-full py-6 sm:py-8 text-pink-900 overflow-hidden relative">
+    <section className="w-full py-12 sm:py-16 bg-white text-pink-800 overflow-hidden">
       {/* Section Header */}
       <motion.div
         className="text-center mb-10 sm:mb-12"
@@ -30,53 +31,34 @@ const WcVideo = () => {
         variants={textVariants}
         viewport={{ once: true }}
       >
-        <h2 className="text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-bold text-pink-800 text-center mt-12 mb-8">
-          Women's Conference 2025 Highlights
+        <h2 className="text-2xl md:text-4xl font-bold">
+          Experience WC in Motion
         </h2>
-        <p className="mt-2 text-base sm:text-lg max-w-xl mx-auto text-gray-600">
-          Watch our promo video to experience the inspiration and empowerment of the Women's Conference.
+        <p className="mt-2 text-base sm:text-xl text-black max-w-3xl mx-auto">
+          Watch our promo video to see the spirit of the Women Conference.
         </p>
       </motion.div>
-
-      {/* Video Container */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="relative w-full rounded-lg shadow-2xl overflow-hidden"
-          initial="hidden"
-          whileInView="visible"
-          variants={frameVariants}
-          viewport={{ once: true }}
-        >
-          {/* Decorative Frame */}
-          <div className="absolute inset-0 rounded-lg pointer-events-none z-10">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pink-600/20 to-transparent animate-spotlight"></div>
-          </div>
-
-          {/* Video Iframe */}
-          <div className="relative w-full pb-[56.25%] bg-gray-900">
+      <motion.section
+        className="relative flex items-center justify-center overflow-hidden mt-15"
+        initial="hidden"
+        animate="visible"
+        variants={contentVariants}
+      >
+        {/* Background Video Wrapper */}
+        <div className="relative w-full h-full flex items-center justify-center">
+          <div className="w-full aspect-video max-h-full max-w-full">
             <iframe
-              src="https://www.youtube.com/embed/Uwk5DI5Ul70?si=DGtwW1jyE2oH0iRw"
-              title="YouTube video player"
+              className="w-full h-full object-contain object-center"
+              src={videoUrl}
+              title="Women's Conference 2025 Highlights"
               frameBorder="0"
-              allow="accelerometer; autoplay; loop; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; loop; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              className="absolute inset-0 w-full h-full"
             />
           </div>
-        </motion.div>
-
-        {/* Description */}
-        <motion.p
-          className="mt-6 text-sm sm:text-base md:text-lg text-center max-w-3xl mx-auto text-gray-600"
-          initial="hidden"
-          whileInView="visible"
-          variants={textVariants}
-          viewport={{ once: true }}
-        >
-          Relive the moments of inspiration, connection, and empowerment from the Women's Conference 2025, featuring powerful keynotes, engaging workshops, and a vibrant community of change-makers.
-        </motion.p>
-      </div>
+        </div>
+      </motion.section>
     </section>
   );
 };

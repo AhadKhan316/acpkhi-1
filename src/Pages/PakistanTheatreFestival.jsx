@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import PtfNavbar from "../components/ptfSubComponents/ptfNavbar";
 import PtfHero from "../components/ptfSubComponents/ptfHero";
 import PtfAbout from "../components/ptfSubComponents/ptfAbout";
+import PtfPromoVideoSection from "../components/ptfSubComponents/ptfPromoVideo";
 import PtfInternationalPlayers from "../components/ptfSubComponents/ptfPlays";
 import PtfPrimeShowsCard from "../components/ptfSubComponents/ptfPerformingShows";
 import PtfNewsletter from "../components/ptfSubComponents/ptfNewsletter";
@@ -22,6 +23,7 @@ function AalmiUrduConference() {
           <>
             <PtfHero />
             <PtfAbout />
+            <PtfPromoVideoSection />
             <PtfInternationalPlayers />
             <PtfPrimeShowsCard />
             <PtfHighlightedTheatre />
