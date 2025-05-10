@@ -64,7 +64,7 @@ const TALL_FLAGS = ['BE', 'BI', 'CG'];
 
 function WcfPerformances() {
   return (
-    <section className="bg-white">
+    <section className="bg-white" id="performingNations">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-6">
           <h2 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700 mb-8">Global Participants</h2>

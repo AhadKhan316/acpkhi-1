@@ -61,7 +61,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="w-full py-6 sm:py-8 bg-white overflow-hidden relative">
+    <section className="w-full py-6 sm:py-8 bg-white overflow-hidden relative" id="aboutAuc">
       {/* Section Header */}
       <motion.div
         className="text-center mb-6 sm:mb-12"

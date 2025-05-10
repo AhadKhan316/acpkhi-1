@@ -70,7 +70,7 @@ const GoverningBody = () => {
   };
 
   return (
-    <div className="bg-white text-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white text-gray-900 py-12 px-4 sm:px-6 lg:px-8" id="governingBody">
       {/* Hero Section */}
       <div className="mx-4 text-center mb-16">
         <motion.h1

@@ -8,7 +8,7 @@ import AucPromoVideo from "../components/aucSubComponents/aucPromoVideo";
 import AucDelegates from "../components/aucSubComponents/aucCard";
 import AucHighlightedSessions from "../components/aucSubComponents/aucHighlitedSessions";
 import AucNewsletter from "../components/aucSubComponents/aucNewsletter";
-import AucSponsors from "../components/aucSubComponents/aucSponsors";
+// import AucSponsors from "../components/aucSubComponents/aucSponsors";
 import AucFooter from "../components/aucSubComponents/aucFooter";
 
 // AUC Sub Pages
@@ -29,7 +29,7 @@ function AalmiUrduConference() {
             <AucDelegates />
             <AucHighlightedSessions />
             <AucNewsletter />
-            <AucSponsors />
+            {/* <AucSponsors /> */}
           </>
         } />
 

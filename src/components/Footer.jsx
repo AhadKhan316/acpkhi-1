@@ -44,18 +44,21 @@ const Footer = () => {
   };
 
   const quickLinks1 = [
-    { id: 1, text: "About ACP", href: "#" },
-    { id: 2, text: "Governing Body", href: "#" },
-    { id: 3, text: "Venues", href: "#" },
-    { id: 4, text: "Career", href: "#" },
-    { id: 5, text: "Contact Us", href: "#" },
+    { id: 1, text: "About ACP", href: "#about" },
+    { id: 2, text: "Governing Body", href: "GoverningBody" },
+    { id: 3, text: "Sovapa", href: "sovapa" },
+    { id: 4, text: "Facilities", href: "facilities" },
+    { id: 5, text: "Career", href: "career" },
+    { id: 6, text: "Contact Us", href: "ContactUs" },
   ];
 
   const quickLinks2 = [
-    { id: 1, text: "Aalmi Urdu Conference", href: "#" },
-    { id: 2, text: "Pakistan Literature Festival", href: "#" },
-    { id: 3, text: "Women Conference", href: "#" },
-    { id: 4, text: "Pakistan Youth Festival", href: "#" },
+    { id: 1, text: "World Culture Festival", href: "/festival/wcf" },
+    { id: 1, text: "Aalmi Urdu Conference", href: "/festival/auc" },
+    { id: 2, text: "Pakistan Literature Festival", href: "/festival/plf" },
+    { id: 2, text: "Pakistan Theatre Festival", href: "/festival/ptf" },
+    { id: 4, text: "Pakistan Youth Festival", href: "/festival/pyf" },
+    { id: 3, text: "Women Conference", href: "/festival/wc" },
   ];
 
   const socialLinks = [
@@ -171,7 +174,7 @@ const Footer = () => {
                   custom={14 + index}
                   variants={childVariants}
                 >
-                  <a href={link.href} className="text-gray-400 hover:text-white transition">
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
                     {link.text}
                   </a>
                 </motion.li>

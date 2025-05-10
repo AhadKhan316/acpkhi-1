@@ -16,7 +16,7 @@ const WcfSponsors = () => {
   };
 
   return (
-    <section className="py-12 bg-white text-center">
+    <section className="py-12 bg-white text-center" id='ourPartners'>
       <motion.div
         initial="hidden"
         whileInView="visible"

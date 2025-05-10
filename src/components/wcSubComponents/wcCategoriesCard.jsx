@@ -195,7 +195,7 @@ const WcCategoriesCard = () => {
   };
 
   return (
-    <section className="py-12 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-pink-50 relative overflow-hidden">
+    <section className="py-12 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-pink-50 relative overflow-hidden" id="wcCategories">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">

@@ -76,7 +76,7 @@ const PyfAbout = () => {
   };
 
   return (
-    <section className="w-full py-6 sm:py-8 bg-gradient-to-b from-red-50 to-white overflow-hidden relative">
+    <section className="w-full py-6 sm:py-8 bg-gradient-to-b from-red-50 to-white overflow-hidden relative" id="aboutPyf">
       {/* Section Header */}
       <motion.div
         className="text-center mb-10 sm:mb-12"

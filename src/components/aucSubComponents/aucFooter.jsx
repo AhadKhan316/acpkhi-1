@@ -1,217 +1,269 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedin, FaTiktok } from "react-icons/fa";
 
-import AucFooterLogo from "/src/assets/auc-assets/auc-logo.png"
+// AUC Logo
+import AucFooterLogo from "/src/assets/auc-assets/auc-logo.png";
+// ACP Logo (assumed to be the same as used in WCF Footer)
+import AcpLogo from "/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.png";
 
 const AucFooter = () => {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState({ type: "", content: "" });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setMessage({ type: "", content: "" });
+
+    try {
+      const response = await fetch("http://localhost/organization-website/backend/save_email.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data.status === "success") {
+        setMessage({ type: "success", content: data.message });
+        setEmail("");
+      } else {
+        setMessage({ type: "error", content: data.message });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage({ type: "error", content: "An error occurred. Please try again." });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const quickLinks1 = [
+    { id: 1, text: "About AUC", href: "/festival/auc/about" },
+    { id: 2, text: "Delegates", href: "/festival/auc/delegate" },
+    { id: 3, text: "Highlighted Sessions", href: "#aucHighlightedSessions" },
+    { id: 4, text: "Our Partners", href: "#ourPartners" },
+    { id: 5, text: "Contact Us", href: "/festival/auc/contactUs" },
+  ];
+
+  const quickLinks2 = [
+    { id: 1, text: "Aalmi Urdu Conference", href: "/festival/auc" },
+    { id: 2, text: "World Culture Festival", href: "/festival/wcf" },
+    { id: 3, text: "Pakistan Literature Festival", href: "/festival/plf" },
+    { id: 4, text: "Pakistan Theatre Festival", href: "/festival/ptf" },
+    { id: 5, text: "Pakistan Youth Festival", href: "/festival/pyf" },
+    { id: 6, text: "Women Conference", href: "/festival/wc" },
+  ];
+
+  const socialLinks = [
+    { id: 1, href: "https://www.facebook.com/ACPKHI/", icon: FaFacebookF },
+    { id: 2, href: "https://www.instagram.com/acpkhiofficial", icon: FaInstagram },
+    { id: 3, href: "https://www.linkedin.com/company/acpkhi", icon: FaLinkedin },
+    { id: 4, href: "https://youtube.com/@acpkhi", icon: FaYoutube },
+    { id: 5, href: "https://twitter.com/@acpkhi", icon: FaTwitter },
+    { id: 6, href: "https://www.tiktok.com/@acpkhi", icon: FaTiktok },
+  ];
+
+  const contactInfo = [
+    { id: 1, label: "Phone", value: "+92-300-0802391", icon: "phone" },
+    { id: 2, label: "Email", value: "info@acpkhi.com", icon: "email" },
+    { id: 3, label: "Location", value: "M.R. Kiyani Road, Karachi, Pakistan", icon: "location" },
+  ];
+
+  // Framer Motion variants (same as WCF Footer)
+  const sectionVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, delay: i * 0.1, ease: "easeOut" },
+    }),
+  };
+
+  const buttonVariants = {
+    pulse: {
+      scale: [1, 1.02, 1],
+      transition: { duration: 1.5, repeat: Infinity, ease: "easeInOut" },
+    },
+  };
+
+  const iconVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: (i) => ({
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, delay: i * 0.1, ease: "easeOut" },
+    }),
+    hover: { scale: 1.2, transition: { duration: 0.3 } },
+  };
+
   return (
-    <footer id="aucFooter" className="bg-gray-900 text-white py-16 px-4 md:px-8 relative overflow-hidden">
-      {/* Calligraphic Pattern Background */}
-      <div className="absolute inset-0 bg-[url('https://via.placeholder.com/300x300?text=Calligraphy')] opacity-5 bg-repeat" />
-
-      {/* Glowing Accent Line */}
-      <motion.div
-        className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-700 to-transparent"
-        initial={{ opacity: 0, scaleX: 0 }}
-        whileInView={{ opacity: 1, scaleX: 1 }}
-        transition={{ duration: 1.5, ease: "easeInOut" }}
-        viewport={{ once: true }}
-      />
-
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
-          {/* Logo/Title */}
-          <motion.div
-            className="flex-1"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src={AucFooterLogo}
-              alt="Arts Council Logo"
-              className="w-36 h-30" // Slightly adjusted size for better proportion
-            />
-          </motion.div>
-
-          {/* Info */}
-          <motion.div
-            className="flex-1"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-semibold text-red-700 mb-4">
-              Info
-            </h3>
-            <p className="text-sm text-[#D1D5DB] flex items-center mb-3">
-              <svg
-                className="w-5 h-5 mr-2 text-red-700"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+    <motion.footer
+      id="aucFooter"
+      className="bg-gradient-to-b from-black to-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8"
+      initial="hidden"
+      animate="visible"
+      variants={sectionVariants}
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Logo and Social Icons */}
+        <div className="flex flex-col items-center border-b border-gray-700 pb-4">
+          {/* ACP x AUC Logo */}
+          <div className="flex items-center gap-2 h-full">
+            <Link to="/" className="h-full flex items-center">
+              <img
+                src={AcpLogo}
+                alt="ACP Logo"
+                className="object-contain w-auto max-h-[200px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
+              />
+            </Link>
+            <span className="text-white text-xl font-bold">X</span>
+            <Link to="/festival/auc" className="h-full flex items-center">
+              <img
+                src={AucFooterLogo}
+                alt="Aalmi Urdu Conference Logo"
+                className="object-contain w-auto max-h-[85px] max-w-[200px] sm:max-h-[85px] lg:max-h-[85px]"
+              />
+            </Link>
+          </div>
+          <div className="flex space-x-4 mt-4">
+            {socialLinks.map((link, index) => (
+              <motion.a
+                key={link.id}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition"
+                custom={1 + index}
+                variants={iconVariants}
+                whileHover="hover"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                ></path>
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                ></path>
-              </svg>
-              M.R. Kiyani Road, Karachi 74200, Pakistan
-            </p>
-            <p className="text-sm text-[#D1D5DB] flex items-center mb-3">
-              <svg
-                className="w-5 h-5 mr-2 text-red-700"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                ></path>
-              </svg>
-              info@acpkhi.com
-            </p>
-            <p className="text-sm text-[#D1D5DB] flex items-center">
-              <svg
-                className="w-5 h-5 mr-2 text-red-700"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                ></path>
-              </svg>
-              +92-300-0802391
-            </p>
-          </motion.div>
+                <link.icon className="h-7 w-7" />
+              </motion.a>
+            ))}
+          </div>
+        </div>
 
-          {/* Shows (Links) */}
-          <motion.div
-            className="flex-1"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-semibold text-red-700 mb-4">
-              Shows
-            </h3>
-            <ul className="text-base space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-[#D1D5DB] hover:text-red-700 transition duration-300"
+        {/* Main Content */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-8">
+          {/* Quick Links 1 */}
+          <motion.div custom={7} variants={childVariants}>
+            <h3 className="font-bold text-lg mb-4 uppercase">Quick Links</h3>
+            <ul className="space-y-2">
+              {quickLinks1.map((link, index) => (
+                <motion.li
+                  key={link.id}
+                  custom={8 + index}
+                  variants={childVariants}
                 >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-[#D1D5DB] hover:text-red-700 transition duration-300"
-                >
-                  Speakers
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-[#D1D5DB] hover:text-red-700 transition duration-300"
-                >
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-[#D1D5DB] hover:text-red-700 transition duration-300"
-                >
-                  Sessions
-                </a>
-              </li>
+                  <a href={link.href} className="text-gray-400 hover:text-white transition">
+                    {link.text}
+                  </a>
+                </motion.li>
+              ))}
             </ul>
           </motion.div>
 
-          {/* Social */}
-          <motion.div
-            className="flex-1"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-semibold text-red-700 mb-4">
-              Social
-            </h3>
-            <div className="flex space-x-6">
-              <motion.a
-                href="#"
-                className="text-white hover:text-red-700 transition duration-300"
-                whileHover={{ y: -3, scale: 1.1 }}
-                transition={{ duration: 0.3 }}
+          {/* Quick Links 2 (Events) */}
+          <motion.div custom={13} variants={childVariants}>
+            <h3 className="font-bold text-lg mb-4 uppercase">Events</h3>
+            <ul className="space-y-2">
+              {quickLinks2.map((link, index) => (
+                <motion.li
+                  key={link.id}
+                  custom={14 + index}
+                  variants={childVariants}
+                >
+                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                    {link.text}
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Contact Info */}
+          <motion.div custom={18} variants={childVariants}>
+            <h3 className="font-bold text-lg mb-4 uppercase">Contact Info</h3>
+            <ul className="space-y-2">
+              {contactInfo.map((item, index) => (
+                <motion.li
+                  key={item.id}
+                  custom={19 + index}
+                  variants={childVariants}
+                  className="flex items-start"
+                >
+                  <span className="text-gray-400">{item.label}: </span>
+                  <span className="text-gray-400 ml-1">{item.value}</span>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Newsletter */}
+          <motion.div custom={22} variants={childVariants}>
+            <h3 className="font-bold text-lg mb-4 uppercase">Newsletter</h3>
+            <motion.form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-3"
+              custom={23}
+              variants={childVariants}
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="w-full p-2 bg-gray-800 border border-gray-600 rounded text-white text-sm focus:outline-none focus:border-white transition-all placeholder-gray-400"
+              />
+              <motion.button
+                type="submit"
+                disabled={isLoading}
+                className={`w-full bg-[#B90602] text-white font-semibold py-2 rounded transition ${isLoading ? "opacity-50 cursor-not-allowed" : "hover:bg-red-700"}`}
+                whileHover={isLoading ? {} : { scale: 1.05 }}
+                whileTap={isLoading ? {} : { scale: 0.95 }}
+                animate={isLoading ? {} : "pulse"}
+                variants={buttonVariants}
               >
-                Facebook
-              </motion.a>
-              <motion.a
-                href="#"
-                className="text-white hover:text-red-700 transition duration-300"
-                whileHover={{ y: -3, scale: 1.1 }}
-                transition={{ duration: 0.3 }}
-              >
-                YouTube
-              </motion.a>
-              <motion.a
-                href="#"
-                className="text-white hover:text-red-700 transition duration-300"
-                whileHover={{ y: -3, scale: 1.1 }}
-                transition={{ duration: 0.3 }}
-              >
-                Instagram
-              </motion.a>
-            </div>
+                {isLoading ? "Subscribing..." : "Subscribe"}
+              </motion.button>
+              {message.content && (
+                <p className={`mt-2 text-sm ${message.type === "success" ? "text-green-500" : "text-red-500"}`}>
+                  {message.content}
+                </p>
+              )}
+            </motion.form>
           </motion.div>
         </div>
 
-        {/* Divider */}
+        {/* Bottom Bar */}
         <motion.div
-          className="h-px bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent mt-10"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-        />
-
-        {/* Copyright */}
-        <motion.div
-          className="mt-8 text-center text-sm text-[#D1D5DB]"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          viewport={{ once: true }}
+          className="border-t border-gray-700 pt-6 flex flex-col items-center"
+          custom={25}
+          variants={childVariants}
         >
-          © Arts Council of Pakistan Karachi
+          <p className="text-gray-400 text-sm mb-4">
+            ACPKHI © 2025. All rights reserved.
+          </p>
         </motion.div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

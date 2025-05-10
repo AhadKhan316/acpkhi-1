@@ -61,7 +61,7 @@ const PtfAbout = () => {
   };
 
   return (
-    <section className="w-full py-6 sm:py-8 bg-white overflow-hidden relative">
+    <section className="w-full py-6 sm:py-8 bg-white overflow-hidden relative" id="aboutPtf">
       {/* Tabs and Content */}
       <div className="mx-4 px-4 sm:px-6 lg:px-8">
         {/* Tab Buttons */}

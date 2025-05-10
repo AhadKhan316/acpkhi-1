@@ -10,7 +10,7 @@ import PtfPrimeShowsCard from "../components/ptfSubComponents/ptfPerformingShows
 import PtfNewsletter from "../components/ptfSubComponents/ptfNewsletter";
 import PtfHighlightedTheatre from "../components/ptfSubComponents/ptfHighlightsShows";
 import PtfOurPlaysSection from "../components/ptfSubComponents/ptfOurPlays";
-import PtfSponsors from "../components/ptfSubComponents/ptfSponsors";
+// import PtfSponsors from "../components/ptfSubComponents/ptfSponsors";
 import PtfFooter from "../components/ptfSubComponents/ptfFooter";
 
 
@@ -29,7 +29,7 @@ function AalmiUrduConference() {
             <PtfHighlightedTheatre />
             <PtfOurPlaysSection />
             <PtfNewsletter />
-            <PtfSponsors />
+            {/* <PtfSponsors /> */}
           </>
         } />
 

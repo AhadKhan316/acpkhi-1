@@ -15,7 +15,7 @@ const PlfSponsors = () => {
   };
 
   return (
-    <section className="py-6 bg-white text-center">
+    <section className="py-6 bg-white text-center" id="ourPartners">
       <motion.div
         initial="hidden"
         whileInView="visible"

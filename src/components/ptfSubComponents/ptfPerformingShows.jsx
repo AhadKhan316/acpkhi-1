@@ -147,7 +147,7 @@ const PtfPrimeShowsCard = ({ shows, title = "Prime" }) => {
   const fallbackImage = "https://placehold.co/150x150";
 
   return (
-    <section className="py-8 px-4 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden ">
+    <section className="py-8 px-4 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden" id="primeShows">
       {/* Decorative Background Element */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">

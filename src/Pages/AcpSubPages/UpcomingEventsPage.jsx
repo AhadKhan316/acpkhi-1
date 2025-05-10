@@ -21,7 +21,7 @@ const UpcomingEventsPage = () => {
       description: "Learn from experts in our series of art workshops.",
       image: posterImg3,
       infoLink: "",
-      ticketsLink: "", // No ticket link for this event
+      ticketsLink: "", 
     },
   ]);
 

@@ -58,7 +58,7 @@ function WcfAboutSection() {
       <Card>
         The World Culture Festival is a vibrant celebration of global creativity, bringing together artists, creators, and producers from around the world to share their cultures and co-create art. Featuring performances in music, theatre, dance, and visual arts, the festival is a dynamic platform for artistic exchange and cultural dialogue.
 
-With a focus on unity and cultural celebration, the festival introduces a diverse mix of national and international talent each year—offering them a space to perform, exchange ideas, and connect with fellow artists and audiences alike.
+        With a focus on unity and cultural celebration, the festival introduces a diverse mix of national and international talent each year—offering them a space to perform, exchange ideas, and connect with fellow artists and audiences alike.
       </Card>
     ),
     "President's Message": (
@@ -147,7 +147,7 @@ With a focus on unity and cultural celebration, the festival introduces a divers
   return (
     <div className="bg-white text-red-500 py-6 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Tabs */}
-      <div className="">
+      <div id="aboutWcf">
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           {["About the Festival", "President's Message", "About Arts Council"].map((tab) => (
             <motion.button

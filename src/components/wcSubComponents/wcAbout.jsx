@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const WcAbout = () => {
-  const [activeTab, setActiveTab] = useState("wc"); // Default tab: About WC
+  const [activeTab, setActiveTab] = useState("wc"); 
 
   const tabs = [
     {
@@ -61,7 +61,7 @@ const WcAbout = () => {
   };
 
   return (
-    <section className="w-full py-6 sm:py-8 bg-white overflow-hidden relative">
+    <section className="w-full py-6 sm:py-8 bg-white overflow-hidden relative" id="aboutWc">
       {/* Tabs and Content */}
       <div className="mx-4 px-4 sm:px-6 lg:px-8">
         {/* Tab Buttons */}

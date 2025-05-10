@@ -98,7 +98,7 @@ const WcDelegateCard = ({ delegates, title = "Delegates" }) => {
   };
 
   return (
-    <section className="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden" id="wcDelegates">
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
