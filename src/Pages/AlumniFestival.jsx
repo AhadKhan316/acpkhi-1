@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 
 // Main Image
-import posterImgMain from "/src/assets/ArtsAlumniAssets/alumni-main-poster-2025.jpeg";
+import posterImgMain from "/src/assets/ArtsAlumniAssets/alumni-2025.B9q1FqGS.jpeg";
 
 // Segments Images
 import posterImg1 from "/src/assets/ArtsAlumniAssets/an-Innocent-Murder-segment1.jpg";
@@ -30,7 +29,6 @@ import day2Poster from "/src/assets/ArtsAlumniAssets/schedule-day2.jpg";
 import day3Poster from "/src/assets/ArtsAlumniAssets/schedule-day3.jpg";
 
 const AlumniPage = () => {
-  const navigate = useNavigate();
   const [activeDay, setActiveDay] = useState("Day 1");
   const [activeSegment, setActiveSegment] = useState(null);
 
@@ -343,7 +341,7 @@ const AlumniPage = () => {
           </h2>
           {/* <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto mb-8"></div> */}
           <p className="text-black text-lg sm:text-xl leading-relaxed">
-            The Arts Council of Pakistan, Karachi, proudly presents the Alumni Festival 2025, a spectacular three-day celebration hosted by the School of Visual & Performing Arts. From 9th to 11th May 2025, the festival will transform the Arts Council Karachi into a vibrant hub of creativity, bringing together past students and art enthusiasts for an unforgettable experience.
+            The Arts Council of Pakistan, Karachi, proudly presents the Alumni Festival 2025, a spectacular three-day celebration hosted by the School of Visual & Performing Arts. From 23rd to 25th May 2025, the festival will transform the Arts Council Karachi into a vibrant hub of creativity, bringing together past students and art enthusiasts for an unforgettable experience.
           </p>
           {/* <motion.button
             className="mt-8 px-8 sm:px-10 py-3 sm:py-4 bg-gold-400 text-white font-semibold text-lg rounded-full shadow-lg hover:bg-gold-500 transition duration-300 flex items-center mx-auto"
@@ -644,7 +642,7 @@ const AlumniPage = () => {
               whileTap={{ scale: 0.97 }}
               onClick={() => setActiveDay(day)}
             >
-              {day} - May {8 + parseInt(day.split(" ")[1])}
+              {day} - May {22 + parseInt(day.split(" ")[1])}
             </motion.button>
           ))}
         </div>

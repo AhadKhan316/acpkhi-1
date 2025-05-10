@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import academiesimg from "/src/assets/acp-logo-and-hero-img/academiesimg.png"; 
 
 const Academies = () => {
   // Animation variants
@@ -88,7 +89,8 @@ const Academies = () => {
                 }}
               >
                 <img
-                  src="https://acpkhi.com/imgs/academies.webp"
+                   src={academiesimg}
+                 
                   alt="ACP Academies"
                   className="w-full h-full object-cover"
                   loading="lazy"

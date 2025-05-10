@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import Producationsimg from "/src/assets/acp-logo-and-hero-img/Producationsimg.png"; 
 const ProductionMessage = () => {
   // Animation variants
   const containerVariants = {
@@ -88,7 +88,7 @@ const ProductionMessage = () => {
                 }}
               >
                 <img
-                  src="https://acpkhi.com/imgs/Producations.webp"
+                  src={Producationsimg}
                   alt="Productions"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -137,7 +137,7 @@ const ProductionMessage = () => {
               >
                 At the Arts Council of Pakistan, we see the arts as a powerful force for connection and change. Our year-round programming brings together voices from across Pakistan and the global arts community, creating space for expression, collaboration, and cultural dialogue.
 
-Signature events like the World Culture Festival, Aalmi Urdu Conference, Pakistan Literature Festival, Pakistan Theatre Festival, Pakistan Music Festival, and the Women’s Conference reflect our commitment to celebrating diversity, creativity, and the evolving cultural spirit of our times.
+Signature events like the World Culture Festival, Aalmi Urdu Conference, Pakistan Literature Festival, Pakistan Theatre Festival, Pakistan Music Festival, and the Women's Conference reflect our commitment to celebrating diversity, creativity, and the evolving cultural spirit of our times.
               </motion.p>
 
               {/* <motion.div variants={itemVariants}>
@@ -151,7 +151,7 @@ Signature events like the World Culture Festival, Aalmi Urdu Conference, Pakista
                     "Pakistan Literature Festival",
                     "Pakistan Theatre Festival",
                     "Pakistan Music Festival",
-                    "Women’s Conference",
+                    "Women's Conference",
                   ].map((item, index) => (
                     <motion.li
                       key={index}
@@ -184,14 +184,14 @@ Signature events like the World Culture Festival, Aalmi Urdu Conference, Pakista
           </div>
 
           {/* Floating badge */}
-          {/* <motion.div
-            className="absolute top-6 right-6 bg-white/90 px-6 py-3 rounded-full shadow-xl z-10"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.9 }}
-          >
-            <span className="text-base font-semibold text-gray-900">Est. 1954</span>
-          </motion.div> */}
+            {/* <motion.div
+              className="absolute top-6 right-6 bg-white/90 px-6 py-3 rounded-full shadow-xl z-10"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.9 }}
+            >
+              <span className="text-base font-semibold text-gray-900">Est. 1954</span>
+            </motion.div> */}
         </div>
       </div>
     </motion.section>
