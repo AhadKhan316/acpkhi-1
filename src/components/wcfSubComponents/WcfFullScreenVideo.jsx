@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 
 const FullScreenVideo = () => {
@@ -34,7 +35,7 @@ const FullScreenVideo = () => {
         }
       >
         <h2 className="text-2xl md:text-4xl font-bold">
-          Experience AUC in Motion
+          Experience WCF in Motion
         </h2>
         <p className="mt-2 text-base sm:text-xl text-black max-w-3xl mx-auto">
           Watch our promo video to see the spirit of the Aalmi Urdu Conference.

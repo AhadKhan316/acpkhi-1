@@ -47,10 +47,17 @@ import CdHead1 from "/src/assets/academies/CommunicationDesignAssets/muhammadAli
 import Instructor2 from "/src/assets/academies/CommunicationDesignAssets/mOwais-Instructor2.jpeg";
 import Instructor3 from "/src/assets/academies/CommunicationDesignAssets/dumy-Instructor3.png";
 
+import cdimg1 from "/src/assets/academies/CommunicationDesignAssets/cdimg1.jpg";
+import cdimg2 from "/src/assets/academies/CommunicationDesignAssets/cdimg2.jpg";
+
 // Dance Department
 import DanceHead1 from "/src/assets/academies/DanceAssets/maniChao-Head1.jpeg";
 import DanceInstructor2 from "/src/assets/academies/DanceAssets/khurramTal-Instructor2.jpeg";
 import DanceInstructor3 from "/src/assets/academies/DanceAssets/ghani-Instructor3.jpeg";
+
+import danceimg1 from "/src/assets/academies/DanceAssets/danceimg.jpg";
+import danceimg2 from "/src/assets/academies/DanceAssets/danceimg2.jpg";
+import danceimg3 from "/src/assets/academies/DanceAssets/danceimg3.jpg";
 
 // Fine Arts Department
 import FineArtsHead1 from "/src/assets/academies/FineArtsAssets/muhammadZeeshan-Head1.jpg";
@@ -65,6 +72,10 @@ import FineArtsInstructor9 from "/src/assets/academies/FineArtsAssets/nazarUlIsl
 import FineArtsInstructor10 from "/src/assets/academies/FineArtsAssets/dumy-Instructor9.png";
 import FineArtsInstructor11 from "/src/assets/academies/FineArtsAssets/dumy-Instructor9.png";
 import FineArtsInstructor12 from "/src/assets/academies/FineArtsAssets/dumy-Instructor9.png";
+
+
+
+
 
 // Music Department
 import MusicHead1 from "/src/assets/academies/MusicAssets/AhsanBari-Head1.jpg";
@@ -110,10 +121,13 @@ import TheatreInstructor12 from "/src/assets/academies/TheatreAssets/dumy-Instru
 
 const placeholderImages = {
   "graphic-design": [
-   "https://acpkhi.com/imgs/academies.webp",
+    cdimg1,
+    cdimg2,
   ],
   dance: [
-    "https://acpkhi.com/imgs/academies.webp",
+    danceimg1,
+    danceimg2,
+    danceimg3,
    
   ],
   "fine-arts": [
