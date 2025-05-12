@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+
+import img1 from  "../assets/about/img1.jpg"
 
 const VoterVerification = () => {
   const [membershipInput, setMembershipInput] = useState("");
@@ -19,7 +21,7 @@ const VoterVerification = () => {
       {/* Hero Banner with Gradient Overlay */}
       <div className="relative w-full h-74 md:h-116 overflow-hidden">
         <img
-          src="https://acpkhi.com/imgs/ACP%20Drone%202023.webp"
+          src={img1}
           alt="Arts Council of Pakistan Karachi"
           className="w-full h-full object-cover"
           loading="lazy"

@@ -7,6 +7,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
+
+
+
+
 import departmentImg1 from "../assets/academies/communication-design.png";
 import departmentImg2 from "../assets/academies/dance.png";
 import departmentImg3 from "../assets/academies/fine-arts.png";
@@ -28,7 +32,7 @@ const SovapaPage = () => {
     { id: 2, name: "Dance", image: departmentImg2, route: "dance" },
     { id: 3, name: "Fine Arts", image: departmentImg3, route: "fine-arts" },
     { id: 4, name: "Music", image: departmentImg4, route: "music" },
-    { id: 5, name: "textile Design", image: departmentImg5, route: "textile-design" },
+    { id: 5, name: "Textile Design", image: departmentImg5, route: "textile-design" },
     { id: 6, name: "Theatre", image: departmentImg6, route: "theatre" },
   ];
 
@@ -45,7 +49,7 @@ const SovapaPage = () => {
     <div className="py-6 min-h-screen bg-white text-black">
       <div className="max-w-7xl mx-auto">
         <SectionWithSwiper
-          title="Arts Council Academies Where Artists Thrive"
+          title="School of Visual and Performing Arts"
           description="Since 1954, the Arts Council of Pakistan Academies have been the perfect place to nurture your creativity. Our Performing Arts Academy & Visual Arts Academy boast of highly qualified faculty in their respective disciplines. Join us to kickstart your artistic career."
           images={swiperImages}
           slidesPerView={1}

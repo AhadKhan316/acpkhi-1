@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaCheckCircle } from "react-icons/fa";
+import PropTypes from 'prop-types';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+
+
+
+
 
 // Custom Next Arrow for Slider
 const NextArrow = ({ onClick }) => (
@@ -17,6 +23,10 @@ const NextArrow = ({ onClick }) => (
   </button>
 );
 
+NextArrow.propTypes = {
+  onClick: PropTypes.func
+};
+
 // Custom Prev Arrow for Slider
 const PrevArrow = ({ onClick }) => (
   <button
@@ -26,6 +36,10 @@ const PrevArrow = ({ onClick }) => (
     <IoIosArrowBack className="text-white text-2xl" />
   </button>
 );
+
+PrevArrow.propTypes = {
+  onClick: PropTypes.func
+};
 
 // Course Instructors
 // Communication Design Department
@@ -96,46 +110,27 @@ import TheatreInstructor12 from "/src/assets/academies/TheatreAssets/dumy-Instru
 
 const placeholderImages = {
   "graphic-design": [
-    "https://acpkhi.com/imgs/academies.webp",
-    "https://via.placeholder.com/400x300?text=GraphicDesign-Image2",
-    "https://via.placeholder.com/400x300?text=GraphicDesign-Image3",
-    "https://via.placeholder.com/400x300?text=GraphicDesign-Image4",
-    "https://via.placeholder.com/400x300?text=GraphicDesign-Image5",
+   "https://acpkhi.com/imgs/academies.webp",
   ],
   dance: [
     "https://acpkhi.com/imgs/academies.webp",
-    "https://via.placeholder.com/400x300?text=Dance-Image2",
-    "https://via.placeholder.com/400x300?text=Dance-Image3",
-    "https://via.placeholder.com/400x300?text=Dance-Image4",
-    "https://via.placeholder.com/400x300?text=Dance-Image5",
+   
   ],
   "fine-arts": [
     "https://acpkhi.com/imgs/academies.webp",
-    "https://via.placeholder.com/400x300?text=FineArts-Image2",
-    "https://via.placeholder.com/400x300?text=FineArts-Image3",
-    "https://via.placeholder.com/400x300?text=FineArts-Image4",
-    "https://via.placeholder.com/400x300?text=FineArts-Image5",
+    
   ],
   music: [
     "https://acpkhi.com/imgs/academies.webp",
-    "https://via.placeholder.com/400x300?text=Music-Image2",
-    "https://via.placeholder.com/400x300?text=Music-Image3",
-    "https://via.placeholder.com/400x300?text=Music-Image4",
-    "https://via.placeholder.com/400x300?text=Music-Image5",
+   
   ],
   "textile-design": [
     "https://acpkhi.com/imgs/academies.webp",
-    "https://via.placeholder.com/400x300?text=TextileDesign-Image2",
-    "https://via.placeholder.com/400x300?text=TextileDesign-Image3",
-    "https://via.placeholder.com/400x300?text=TextileDesign-Image4",
-    "https://via.placeholder.com/400x300?text=TextileDesign-Image5",
+   
   ],
   theatre: [
     "https://acpkhi.com/imgs/academies.webp",
-    "https://via.placeholder.com/400x300?text=Theatre-Image2",
-    "https://via.placeholder.com/400x300?text=Theatre-Image3",
-    "https://via.placeholder.com/400x300?text=Theatre-Image4",
-    "https://via.placeholder.com/400x300?text=Theatre-Image5",
+  
   ],
 };
 
@@ -144,7 +139,7 @@ const CoursePage = () => {
 
   const courseData = {
     "graphic-design": {
-      name: "Communication Design Department",
+      name: "Communication Design",
       heroImages: placeholderImages["graphic-design"],
       description: "The Communication Design Department offers a creative journey into the world of graphic design, focusing on visual storytelling, branding, and digital media to equip students with industry-ready skills.",
       details: {
@@ -196,7 +191,7 @@ const CoursePage = () => {
       registerLink: "/academies/graphic-design/register",
     },
     dance: {
-      name: "Dance Department",
+      name: "Dance",
       heroImages: placeholderImages.dance,
       description: "The Dance Department provides a dynamic platform to learn classical and contemporary dance forms, fostering creativity and performance skills under expert guidance.",
       details: {
@@ -246,7 +241,7 @@ const CoursePage = () => {
       registerLink: "/academies/dance/register",
     },
     "fine-arts": {
-      name: "Fine Arts Department",
+      name: "Fine Arts",
       heroImages: placeholderImages["fine-arts"],
       description: "The Fine Arts Department nurtures artistic talent through painting, sculpture, and art history, encouraging students to explore their creativity and express themselves through visual arts.",
       details: {
@@ -318,7 +313,7 @@ const CoursePage = () => {
       registerLink: "/academies/fine-arts/register",
     },
     music: {
-      name: "Music Department",
+      name: "Music",
       heroImages: placeholderImages.music,
       description: "The Music Department offers a harmonious blend of vocal and instrumental training, music theory, and composition, helping students develop their musical talents and perform confidently.",
       details: {
@@ -330,7 +325,7 @@ const CoursePage = () => {
           "Drums",
         ],
         "Compuslory Theory Course": [
-          "Compulsory theory courses will be taught with any one of the above subjects. Students will be a part of ACKHI’s music productions. They will also perform at music festivals."
+          "Compulsory theory courses will be taught with any one of the above subjects. Students will be a part of ACKHI's music productions. They will also perform at music festivals."
         ],
         Days: [
           "Monday to Friday",
@@ -395,7 +390,7 @@ const CoursePage = () => {
       registerLink: "/academies/music/register",
     },
     "textile-design": {
-      name: "Textile Design Department",
+      name: "Textile Design ",
       heroImages: placeholderImages["textile-design"],
       description: "The Textile Design Department explores the art of fabric design and pattern making, equipping students with skills to create innovative and market-ready textile designs.",
       details: {
@@ -459,7 +454,7 @@ const CoursePage = () => {
       registerLink: "/academies/textile-design/register",
     },
     theatre: {
-      name: "Theatre Department",
+      name: "Theatre ",
       heroImages: placeholderImages.theatre,
       description: "The Theatre Department offers immersive training in acting, stage direction, and theatre production, preparing students for a career in the performing arts.",
       details: {
@@ -606,7 +601,7 @@ const CoursePage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                About {currentCourse.name}
+                   {currentCourse.name}
               </motion.h2>
               <motion.p
                 className="text-gray-700 leading-relaxed"
@@ -817,7 +812,7 @@ const CoursePage = () => {
                       {/* Father's Name */}
                       <div>
                         <label className="block text-black font-semibold mb-2 uppercase text-sm">
-                          Father's Name
+                          Father&apos;s Name
                         </label>
                         <input
                           type="text"

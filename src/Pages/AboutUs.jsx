@@ -1,6 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionWithSlider from "../reusableComponents/ReusableCarouselOfAboutUs";
+import img1 from  "../assets/about/img1.jpg"
+import img2 from  "../assets/about/img2.jpg"
+import img3 from  "../assets/about/img3.jpg"
+import img4 from  "../assets/about/img4.jpg"
+import img5 from  "../assets/about/img5.jpg"
+import img6 from  "../assets/about/img6.jpg"
+
 
 const AboutUs = () => {
   const [activeSection, setActiveSection] = useState("history");
@@ -26,15 +33,28 @@ const AboutUs = () => {
               description="Founded in 1980, the Arts Council of Pakistan has been a beacon for cultural preservation, talent development, and a place of collaboration for artists from all corners of Pakistan. We take pride in fostering artistic growth and supporting a creative ecosystem that spans from traditional to contemporary forms."
               images={[
                 {
-                  src: "https://acpkhi.com/studio%20I/1.jpg",
+                  src: img1,
                   alt: "Historical 1",
                 },
                 {
-                  src: "https://acpkhi.com/studio%20I/2.jpg",
+                  src: img2,
                   alt: "Historical 2",
                 },
                 {
-                  src: "https://acpkhi.com/imgs/ACP%20Drone%202023.webp",
+                  src: img3,
+                  alt: "Historical 3",
+                },
+
+                {
+                  src: img4,
+                  alt: "Historical 1",
+                },
+                {
+                  src: img5,
+                  alt: "Historical 2",
+                },
+                {
+                  src: img6,
                   alt: "Historical 3",
                 },
               ]}

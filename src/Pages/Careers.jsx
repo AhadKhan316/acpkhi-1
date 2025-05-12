@@ -1,4 +1,4 @@
-import React from "react";
+import img1 from  "../assets/about/img1.jpg"
 
 const Career = () => {
   return (
@@ -6,7 +6,7 @@ const Career = () => {
       {/* Hero Banner with Gradient Overlay */}
       <div className="relative w-full h-64 md:h-96 overflow-hidden">
         <img
-          src="https://acpkhi.com/imgs/ACP%20Drone%202023.webp"
+          src={img1}
           alt="Arts Council of Pakistan Karachi"
           className="w-full h-full object-cover"
           loading="lazy"
@@ -150,8 +150,8 @@ const Career = () => {
 
         {/* Call to Action */}
         <div className="mt-16 bg-gradient-to-r from-red-600 to-red-700 rounded-xl p-8 md:p-10 text-center text-white">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">Didn't find your perfect role?</h3>
-          <p className="text-lg mb-6 max-w-2xl mx-auto">We're always interested in hearing from talented people. Send us your resume and we'll contact you when a suitable position opens up.</p>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Didn&apos;t find your perfect role?</h3>
+          <p className="text-lg mb-6 max-w-2xl mx-auto">We&apos;re always interested in hearing from talented people. Send us your resume and we&apos;ll contact you when a suitable position opens up.</p>
           <button className="bg-white text-red-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-md transition duration-200">
             Submit Your Resume
           </button>
