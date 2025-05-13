@@ -61,6 +61,8 @@ import PakistanTheatreFestival from './Pages/PakistanTheatreFestival';
 // AAF Pages
 import ArtsAlumniFestival from './Pages/AlumniFestival';
 
+import NewsBlog from './Pages/NewsBlog';
+
 const App = () => {
   return (
     <Router>
@@ -108,6 +110,7 @@ const App = () => {
           <Route path="/mediaKit" element={<MediaKit />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/admissions" element={<Admission />} />
+          <Route path="/NewsBlog" element={<NewsBlog />} />
         </Route>
 
         {/* Routes without Navbar and Footer */}

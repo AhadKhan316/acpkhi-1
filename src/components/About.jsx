@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import presidentImg from '../assets/governing-body-new/ahmed-shah.png';
 
@@ -31,18 +31,18 @@ const About = () => {
             {/* Our Mission and Vision */}
           </motion.p>
           <motion.div
-            // className="h-1 w-20 bg-black mx-auto mb-6 sm:mb-8 rounded"
+            className="h-1 w-20 bg-black mx-auto mb-6 sm:mb-8 rounded"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          ></motion.div>
+          />
           <motion.p
             className="text-black mx-auto leading-relaxed text-base sm:text-lg md:text-xl lg:max-w-3xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
           >
-            The Arts Council of Pakistan, Karachi is the country’s leading platform for arts and culture. As an NPO and NGO, since 1955, the Council has played a central role in preserving heritage, supporting creative talent, and shaping literary and cultural conversations, and the voices in various social causes in Pakistan. Today, its impact extends beyond borders, with international collaborations and festivals placing it at the heart of the global arts scene.
+            The Arts Council of Pakistan, Karachi is where artists, thinkers, and changemakers converge. Hosting over 200 annual events and collaborating with 40+ countries, ACPKHI stands as Pakistan’s most dynamic force in arts and culture. From preserving traditions to pushing creative boundaries, we don’t just host the arts — we connect with millions and shape the future through creativity.
           </motion.p>
         </div>
       ),
@@ -70,11 +70,11 @@ const About = () => {
             {/* A Word from Our Leader */}
           </motion.p>
           <motion.div
-            // className="h-1 w-20 bg-black mx-auto mb-6 sm:mb-8 rounded"
+            className="h-1 w-20 bg-black mx-auto mb-6 sm:mb-8 rounded"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          ></motion.div>
+          />
           {/* President's Image */}
           <motion.div
             className="flex justify-center mb-8"
@@ -92,20 +92,20 @@ const About = () => {
             </div>
           </motion.div>
           <motion.h4
-            className="text-xl sm:text-3xl lg:text-4xl text-black font-semibold mb-4 sm:mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-          >
-            Mohammad Ahmed Shah (HI, SI)
-          </motion.h4>
+  className="text-xl sm:text-3xl lg:text-4xl text-black font-semibold mb-4 sm:mb-6"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
+>
+  Mohammad Ahmed Shah <span className="text-lg sm:text-2xl lg:text-3xl">(HI, SI)</span>
+</motion.h4>
           <motion.p
             className="text-black mx-auto leading-relaxed text-base sm:text-lg md:text-xl lg:max-w-3xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
           >
-            At the Arts Council of Pakistan, our mission is to spotlight the depth and diversity of Pakistani arts, literature and culture on a global stage. We’re committed to creating a vibrant, inclusive space that inspires creativity, supports emerging talent, and builds meaningful connections—both across Pakistan and around the world.
+            At the Arts Council of Pakistan, our mission is to spotlight the depth and diversity of Pakistani arts, literature and culture on a global stage. We're committed to creating a vibrant, inclusive space that inspires creativity, supports emerging talent, and builds meaningful connections—both across Pakistan and around the world.
           </motion.p>
         </div>
       ),
@@ -120,7 +120,6 @@ const About = () => {
       transition: { duration: 0.8, ease: "easeOut" },
     },
   };
-
 
   // Framer Motion variants for tab buttons
   const buttonVariants = {
@@ -146,9 +145,6 @@ const About = () => {
       animate="visible"
       variants={sectionVariants}
     >
-      {/* Subtle Background Gradient */}
-      {/* <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-black pointer-events-none"></div> */}
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="py-8 sm:py-10 rounded-xl overflow-hidden">
           {/* Tab Buttons */}
@@ -156,8 +152,9 @@ const About = () => {
             {tabs.map((tab) => (
               <motion.button
                 key={tab.id}
-                className={`relative px-4 text-xl sm:text-2xl lg:text-3xl font-bold text-black ${activeTab === tab.id ? "text-black" : "text-black"
-                  }`}
+                className={`relative px-4 text-xl sm:text-2xl lg:text-3xl font-bold text-black ${
+                  activeTab === tab.id ? "text-black" : "text-black"
+                }`}
                 variants={buttonVariants}
                 initial="inactive"
                 animate={activeTab === tab.id ? "active" : "inactive"}
@@ -177,15 +174,17 @@ const About = () => {
           </div>
 
           {/* Tab Content */}
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            {tabs.find((tab) => tab.id === activeTab)?.content}
-          </motion.div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            >
+              {tabs.find((tab) => tab.id === activeTab)?.content}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </motion.section>

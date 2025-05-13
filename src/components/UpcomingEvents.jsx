@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
-import posterImg1 from "../assets/Upcoming-events-img/alumni-2025.jpeg";
+import posterImg1 from "../assets/Upcoming-events-img/alumni-2025.B9q1FqGS.jpeg";
 // import posterImg2 from "../assets/Upcoming-events-img/Clement-Visage-event.jpg";
 import posterImg3 from "../assets/Upcoming-events-img/admission-suvapa-2025.jpeg";
 
@@ -11,8 +11,8 @@ const UpcomingEvents = () => {
     {
       id: 1,
       title: "Arts Alumni Festival",
-      date: "2025-05-09",
-      description: "Join us for the second chapter of our cultural event in Sukkur.",
+      date: "2025-05-23",
+      description: "Join us for the second chapter of our cultural event.",
       image: posterImg1,
       registerLink: "/alumni",
     },

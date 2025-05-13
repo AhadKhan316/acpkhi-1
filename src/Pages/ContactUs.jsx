@@ -1,5 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
+
+import img1 from  "../assets/about/img1.jpg"
 
 const ContactUs = () => {
   return (
@@ -7,7 +8,7 @@ const ContactUs = () => {
       {/* Hero Banner with Gradient Overlay */}
       <div className="relative w-full h-64 md:h-96 overflow-hidden">
         <motion.img
-          src="https://acpkhi.com/imgs/ACP%20Drone%202023.webp"
+          src={img1}
           alt="Arts Council of Pakistan Karachi"
           className="w-full h-full object-cover"
           loading="lazy"
