@@ -54,13 +54,13 @@ const WcfArtistEngagement = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="flex flex-col bg-white">
       {/* Main Content */}
-      <main className="flex-1 py-6 md:py-10 px-4 md:px-6">
+      <main className="flex-1 py-6 md:py-10 px-6 md:px-6">
         <h1 className="text-2xl md:text-4xl font-bold text-center mb-2 text-black">
           Artist Engagement
         </h1>
-        <p className="text-center text-black mb-6 md:mb-10 max-w-3xl mx-auto">
+        <p className="text-center text-black">
           The World Culture Festival-Karachi brings artists together to inspire, collaborate, and create meaningful connections.
         </p>
 
@@ -69,7 +69,7 @@ const WcfArtistEngagement = () => {
           slides={collaborationSlides}
           title="ARTIST COLLABORATIONS"
           sectionClassName=""
-          cardClassName="max-w-sm mx-auto"
+          cardClassName="mx-auto"
           titleClassName="text-xl md:text-2xl text-white"
           imageAspectRatio="4/3"
           maxImageHeight="400px"
@@ -80,7 +80,7 @@ const WcfArtistEngagement = () => {
           slides={workshopSlides}
           title="ARTIST WORKSHOPS"
           sectionClassName=""
-          cardClassName="max-w-sm mx-auto"
+          cardClassName="mx-auto"
           titleClassName="text-xl md:text-2xl text-white"
           imageAspectRatio="4/3"
           maxImageHeight="400px"

@@ -64,17 +64,17 @@ const TALL_FLAGS = ['BE', 'BI', 'CG'];
 
 function WcfPerformances() {
   return (
-    <section className="bg-white" id="performingNations">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700 mb-8">Global Participants</h2>
+    <section className="bg-white px-2" id="performingNations">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700 mb-6">Global Participants</h2>
           {/* <div className="w-24 h-1.5 bg-blue-600 mx-auto mb-6 rounded-full"></div> */}
           <p className="text-lg md:text-xl text-black mx-auto">
           The festival has brought together artists from various nations across the globe and this number continues to grow
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 md:gap-4 px-4">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
           {nations.map((nation) => {
             const isWide = WIDE_FLAGS.includes(nation.code);
             const isTall = TALL_FLAGS.includes(nation.code);

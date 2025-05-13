@@ -16,14 +16,14 @@ const WcfSponsors = () => {
   };
 
   return (
-    <section className="py-12 bg-white text-center" id='ourPartners'>
+    <section className="bg-white text-center" id='ourPartners'>
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={sectionVariants}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold mb-5">
           Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-800">Partners</span>
         </h2>
         <motion.div

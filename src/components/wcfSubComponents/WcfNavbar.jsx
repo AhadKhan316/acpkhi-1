@@ -76,7 +76,7 @@ function WcfNavbar() {
             <img
               src={acpLogo}
               alt="ACP Logo"
-              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+              className="object-contain w-auto max-h-[120px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
             />
           </Link>
 
@@ -86,7 +86,7 @@ function WcfNavbar() {
             <img
               src={wcfLogo}
               alt="World Culture Festival Logo"
-              className="object-contain w-auto max-h-[85px] max-w-[200px] sm:max-h-[85px] lg:max-h-[85px]"
+              className="object-contain w-auto max-h-[70px] max-w-[200px] sm:max-h-[85px] lg:max-h-[85px]"
             />
           </Link>
         </div>

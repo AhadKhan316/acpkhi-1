@@ -15,10 +15,10 @@ function WcfNewsletterSignup() {
   };
 
   return (
-    <section className=" px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="mx-4">
+    <section className="sm:px-6 lg:px-8 bg-white py-6">
+      <div>
         <motion.div
-          className="bg-white p-8 md:p-12"
+          className="bg-white p-6 md:p-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -33,7 +33,7 @@ function WcfNewsletterSignup() {
               From 40+ Countries
             </h2>
 
-            <p className="text-lg text-black max-w-2xl mx-auto">
+            <p className="text-lg text-black">
               Stay connected with the global celebration. Join our mailing list for exclusive updates!
             </p>
 
@@ -46,7 +46,7 @@ function WcfNewsletterSignup() {
                 <p className="font-medium">Thank you for subscribing!</p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="mt-8">
+              <form onSubmit={handleSubmit}>
                 <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                   <div className="relative flex-grow ">
                     <input
