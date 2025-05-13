@@ -97,7 +97,7 @@ const PlfHighlightedSession = () => {
   };
 
   return (
-    <section className="px-4 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden" id="plfHighlightedSessions">
+    <section className="px-6 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden" id="plfHighlightedSessions">
       <div className="mx-auto max-w-7xl relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}

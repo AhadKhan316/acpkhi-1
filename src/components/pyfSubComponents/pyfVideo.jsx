@@ -41,7 +41,7 @@ const PyfVideo = () => {
 
       {/* Video Container */}
       <motion.section
-        className="relative flex items-center justify-center overflow-hidden mt-15"
+        className="relative flex items-center justify-center overflow-hidden mt-10"
         initial="hidden"
         animate="visible"
         variants={contentVariants}

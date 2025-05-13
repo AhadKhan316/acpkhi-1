@@ -4,10 +4,10 @@ import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube, FaEnvelope, FaPhone, FaM
 
 const PlfContactUs = () => {
   return (
-    <div className="bg-green-50 min-h-screen text-gray-900 pt-12">
+    <div className="bg-green-50 text-gray-900 py-6">
       {/* Hero Section */}
       <section className="py-8 md:py-8 text-center">
-        <div className="mx-4 px-4 sm:px-6 lg:px-8">
+        <div className="mx-4 sm:px-6 lg:px-8">
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ const PlfContactUs = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-lg sm:text-xl text-gray-600"
           >
             We’d love to hear from you. Get in touch with the Pakistan Literature Festival team.
           </motion.p>
@@ -28,8 +28,8 @@ const PlfContactUs = () => {
       </section>
 
       {/* Contact Info and Form Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="bg-white py-5">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -38,7 +38,7 @@ const PlfContactUs = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-8"
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-green-900 mb-4 mt-20">Our Details</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-green-900 mb-4 mt-5">Our Details</h2>
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="text-green-800 w-5 h-5" />

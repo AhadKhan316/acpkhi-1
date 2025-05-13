@@ -36,12 +36,12 @@ const PromoVideoSection = () => {
         <h2 className="text-2xl md:text-4xl font-bold">
           Experience AUC in Motion
         </h2>
-        <p className="mt-2 text-base sm:text-xl text-black max-w-3xl mx-auto">
+        <p className="mt-2 text-base sm:text-xl text-black mx-4">
           Watch our promo video to see the spirit of the Aalmi Urdu Conference.
         </p>
       </motion.div >
       <motion.section
-        className="relative flex items-center justify-center overflow-hidden mt-15"
+        className="relative flex items-center justify-center overflow-hidden mt-10"
         initial="hidden"
         animate="visible"
         variants={contentVariants}

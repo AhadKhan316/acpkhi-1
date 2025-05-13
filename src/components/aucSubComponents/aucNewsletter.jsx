@@ -14,16 +14,16 @@ function AucNewsletter() {
   };
 
   return (
-    <section className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="mx-4">
+    <section className="sm:px-6 lg:px-8 bg-white">
+      <div>
         <motion.div
-          className="bg-white p-8 md:p-12"
+          className="bg-white py-6 mx-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="text-center space-y-6">
+          <div className="text-center space-y-4">
             <h2 className="text-2xl sm:text-4xl font-bold text-black">
               <span className="text-red-800">
                 AUC Celebrates Urdu Heritage
@@ -32,7 +32,7 @@ function AucNewsletter() {
               with Global Voices
             </h2>
 
-            <p className="text-lg text-black max-w-2xl mx-auto">
+            <p className="text-lg text-black">
               Stay connected with the Aalmi Urdu Conference. Join our mailing list for exclusive updates!
             </p>
 

@@ -108,7 +108,7 @@ const AucNavbar = () => {
             <img
               src={acpLogo}
               alt="ACP Logo"
-              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+              className="object-contain w-auto max-h-[130px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
             />
           </Link>
 
@@ -118,7 +118,7 @@ const AucNavbar = () => {
             <img
               src={AucLogo}
               alt="AUC Logo"
-              className="object-contain w-auto max-h-[90px] max-w-[200px] sm:max-h-[90px] lg:max-h-[90px]"
+              className="object-contain w-auto max-h-[70px] max-w-[200px] sm:max-h-[90px] lg:max-h-[90px]"
             />
           </Link>
         </div>

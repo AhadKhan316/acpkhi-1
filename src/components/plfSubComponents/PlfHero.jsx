@@ -126,7 +126,7 @@ const PlfHero = () => {
       </motion.div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-23 sm:bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
+      <div className="absolute bottom-15 sm:bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
         {slides.map((_, index) => (
           <span
             key={index}
@@ -138,7 +138,7 @@ const PlfHero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+      <div className="absolute bottom-5 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
         <div className="animate-bounce">
           <svg
             className="w-6 h-6 text-white"

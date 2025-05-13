@@ -183,7 +183,7 @@ const PtfHighlightedTheatre = () => {
 
   return (
     <section className="py-6 bg-wgite" id="highlightedShows">
-      <div className="mx-4 px-4">
+      <div className="mx-4">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}

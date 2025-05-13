@@ -12,59 +12,59 @@ import AucDelegatePageCard8 from "/src/assets/auc-assets/page-delegate8.jpg"
 
 const delegates = [
   {
-    name: "Adnan Siddiqui",
-    title: "Actor",
+    name: "Fareed Ayaz Muhammad Abu",
+    title: "Qawwal",
     bio: "Renowned Pakistani actor and television personality.",
     image: AucDelegatePageCard1,
   },
   {
-    name: "Iftikhar Arif",
-    title: "Poet",
+    name: "Anwar Maqsood",
+    title: "scriptwriter, television presenter, satirist, humorist, and occasional actor",
     bio: "Celebrated Urdu poet and scholar.",
     image: AucDelegatePageCard2,
   },
   {
-    name: "Saba Qamar",
-    title: "Actress",
+    name: "Mustansir Hussain",
+    title: "Actor",
     bio: "Award-winning actress known for her versatility.",
     image: AucDelegatePageCard3,
   },
   {
-    name: "Anwar Maqsood",
-    title: "Writer",
+    name: "Arfa Sayeda Zehra",
+    title: "Special Advisor to the Prime Minister for Education and National Harmony Affairs",
     bio: "Iconic playwright and satirist.",
     image: AucDelegatePageCard4,
   },
   {
-    name: "Zeba Bakhtiar",
-    title: "Actress & Director",
+    name: "Iftikhar Arif",
+    title: "Pakistani Urdu poet and litterateur.",
     bio: "Veteran actress and film director.",
     image: AucDelegatePageCard5,
   },
   {
-    name: "Mustafa Qureshi",
+    name: "Humayun Saeed",
     title: "Actor",
     bio: "Legendary figure in Pakistani cinema.",
     image: AucDelegatePageCard6,
   },
   {
-    name: "Nida Yasir",
-    title: "TV Host",
+    name: "Adnan Siddiqui",
+    title: "Actor",
     bio: "Popular television host and actress.",
     image: AucDelegatePageCard7,
   },
   {
-    name: "Bushra Ansari",
-    title: "Actress & Comedian",
+    name: "Suhail Warraich",
+    title: "Columnist who writes columns for the Daily Jang Newspaper",
     bio: "Renowned actress and comedian.",
     image: AucDelegatePageCard8,
   },
-  {
-    name: "Shahid Afridi",
-    title: "Cricketer",
-    bio: "Former Pakistani cricketer and philanthropist.",
-    image: AucDelegatePageCard1,
-  }
+  // {
+  //   name: "Shahid Afridi",
+  //   title: "Cricketer",
+  //   bio: "Former Pakistani cricketer and philanthropist.",
+  //   image: AucDelegatePageCard1,
+  // }
 
 ];
 
@@ -72,7 +72,7 @@ const AucDelegates = () => {
   return (
     <div className="bg-gradient-to-br from-gray-50 via-red-50 to-white min-h-screen text-gray-900 ">
       {/* Hero Section with Diagonal Overlay */}
-      <section className="relative overflow-hidden py-8 md:py-24">
+      <section className="relative overflow-hidden py-6 md:py-12">
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             <polygon points="0,0 100,0 70,100 0,100" fill="url(#diagonal)" />
@@ -105,8 +105,8 @@ const AucDelegates = () => {
       </section>
 
       {/* Delegates Grid */}
-      <section className="py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-6">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

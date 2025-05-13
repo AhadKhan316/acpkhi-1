@@ -115,7 +115,7 @@ const PlfFooter = () => {
   return (
     <motion.footer
       id="plfFooter"
-      className="relative bg-gray-900 text-white py-12 overflow-hidden"
+      className="relative bg-gray-900 text-white overflow-hidden"
       initial="hidden"
       animate="visible"
       variants={sectionVariants}
@@ -145,7 +145,7 @@ const PlfFooter = () => {
               <img
                 src={AcpLogo}
                 alt="ACP Logo"
-                className="object-contain w-auto max-h-[200px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
+                className="object-contain w-auto max-h-[130px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
               />
             </Link>
             <span className="text-white text-xl font-bold">X</span>
@@ -153,7 +153,7 @@ const PlfFooter = () => {
               <img
                 src={PlfFooterLogo}
                 alt="Pakistan Literature Festival Logo"
-                className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+                className="object-contain w-auto max-h-[100px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
               />
             </Link>
           </div>

@@ -128,7 +128,7 @@ const AucFooter = () => {
               <img
                 src={AcpLogo}
                 alt="ACP Logo"
-                className="object-contain w-auto max-h-[200px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
+                className="object-contain w-auto max-h-[130px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
               />
             </Link>
             <span className="text-white text-xl font-bold">X</span>
@@ -136,7 +136,7 @@ const AucFooter = () => {
               <img
                 src={AucFooterLogo}
                 alt="Aalmi Urdu Conference Logo"
-                className="object-contain w-auto max-h-[85px] max-w-[200px] sm:max-h-[85px] lg:max-h-[85px]"
+                className="object-contain w-auto max-h-[70px] max-w-[200px] sm:max-h-[85px] lg:max-h-[85px]"
               />
             </Link>
           </div>
