@@ -144,12 +144,10 @@ const PtfFooter = () => {
               <img
                 src={PtfFooterLogo}
                 alt="Pakistan Theatre Festival Logo"
-<<<<<<< HEAD
                 className="object-contain w-auto max-h-[150px] max-w-[120px] sm:max-h-[150px] lg:max-h-[150px]"
-=======
-                className="object-contain w-auto max-h-[80px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
->>>>>>> 1469dff2fc7d0b2c71aa20a6142cfd9114f1cb8f
-              />
+                
+/>
+              
             </Link>
           </div>
           <div className="flex space-x-4 mt-4">
