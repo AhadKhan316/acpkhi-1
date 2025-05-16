@@ -132,7 +132,7 @@ const AucHero = () => {
         {slides.map((_, index) => (
           <span
             key={index}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer ${index === currentSlide ? "bg-red-700" : "bg-red-800"
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer ${index === currentSlide ? "bg-white" : "bg-red-800"
               }`}
             onClick={() => setCurrentSlide(index)}
           />

@@ -7,19 +7,19 @@ import { useRef } from "react";
 // Custom Arrow Components
 const NextArrow = ({ className, style, onClick }) => (
   <div
-    className={`${className} text-pink-700 hover:text-pink-900 rounded-full transition-all duration-300 sm:w-14 sm:h-14 w-10 h-10 shadow-md hover:shadow-lg`}
+    className={`${className} text-white rounded-full transition-all duration-300 sm:w-12 sm:h-12 w-10 h-10 shadow-md hover:shadow-lg`}
     style={{
       ...style,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      right: "30px",
+      right: "20px",
       backgroundColor: "#f472b6", // pink-400
-      zIndex: 2,
+      zIndex: 10,
     }}
     onClick={onClick}
   >
-    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
       <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
     </svg>
   </div>
@@ -27,19 +27,19 @@ const NextArrow = ({ className, style, onClick }) => (
 
 const PrevArrow = ({ className, style, onClick }) => (
   <div
-    className={`${className} text-pink-700 hover:text-pink-900 rounded-full transition-all duration-300 sm:w-14 sm:h-14 w-10 h-10 shadow-md hover:shadow-lg`}
+    className={`${className} text-white rounded-full transition-all duration-300 sm:w-12 sm:h-12 w-10 h-10 shadow-md hover:shadow-lg`}
     style={{
       ...style,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      left: "30px",
+      left: "20px",
       backgroundColor: "#f472b6", // pink-400
-      zIndex: 2,
+      zIndex: 10,
     }}
     onClick={onClick}
   >
-    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
       <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z" />
     </svg>
   </div>
@@ -49,11 +49,11 @@ const PrevArrow = ({ className, style, onClick }) => (
 const CategoryCard = ({ image, title, paragraph, buttonText = "Explore" }) => {
   const cardRef = useRef(null);
 
-  // 3D Tilt Effect
+  // Subtle 3D Tilt Effect
   const handleMouseMove = (e) => {
     const rect = cardRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width / 2) / 20;
-    const y = (e.clientY - rect.top - rect.height / 2) / 20;
+    const x = (e.clientX - rect.left - rect.width / 2) / 30;
+    const y = (e.clientY - rect.top - rect.height / 2) / 30;
     cardRef.current.style.transform = `perspective(1000px) rotateX(${-y}deg) rotateY(${x}deg)`;
   };
 
@@ -66,58 +66,51 @@ const CategoryCard = ({ image, title, paragraph, buttonText = "Explore" }) => {
   return (
     <motion.div
       ref={cardRef}
-      className="relative bg-white rounded-2xl overflow-hidden max-w-[350px] h-[430px] mx-auto flex flex-col shadow-lg border border-pink-200/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group"
-      whileHover={{ scale: 1.03 }}
+      className="relative bg-white rounded-xl overflow-hidden max-w-[320px] h-[400px] mx-auto flex flex-col shadow-md border border-pink-200/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 group"
+      whileHover={{ scale: 1.02 }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Holographic Image Container */}
-      <div className="relative w-74 h-60 mx-auto mt-6 rounded-lg overflow-hidden bg-pink-100">
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-400/20 via-transparent to-pink-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      {/* Image Container */}
+      <div className="relative w-full h-48 rounded-t-xl overflow-hidden">
         <img
           src={image || fallbackImage}
           alt={title}
-          className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-          loading="lazy" // Lazy loading for performance
+          className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
           onError={(e) => (e.target.src = fallbackImage)}
         />
-        {/* Glowing Border */}
-        <div className="absolute inset-0 rounded-lg border-2 border-pink-500/30 group-hover:border-pink-500/70 transition-colors duration-300 animate-pulse-slow" />
+        {/* Subtle Glowing Border */}
+        <div className="absolute inset-0 rounded-t-xl border border-pink-400/20 group-hover:border-pink-400/50 transition-colors duration-300" />
       </div>
 
       {/* Card Content */}
-      <div className="flex-1 p-6 flex flex-col items-center text-center">
+      <div className="flex-1 p-5 flex flex-col items-center text-center">
         {/* Title with Gradient Underline */}
-        <h3 className="text-2xl font-bold text-pink-900 relative mb-4">
+        <h3 className="text-xl font-semibold text-pink-900 relative mb-3">
           {title}
-          <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-pink-500 to-pink-700 transition-all duration-300 group-hover:w-2/3" />
+          <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-pink-700 transition-all duration-300 group-hover:w-1/2" />
         </h3>
 
         {/* Paragraph */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-sm text-gray-600 mb-6"
+          className="text-sm text-gray-600 mb-4 line-clamp-3"
         >
           {paragraph}
         </motion.p>
 
-        {/* Button with Ripple Effect */}
+        {/* Button */}
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="relative px-6 py-2 bg-pink-600 text-white rounded-full font-medium overflow-hidden transition-all duration-300 hover:bg-pink-700"
+          className="px-5 py-2 bg-pink-600 text-white rounded-md text-sm font-medium transition-all duration-300 hover:bg-pink-700"
         >
           {buttonText}
-          <span className="absolute inset-0 bg-pink-500/30 scale-0 rounded-full group-hover:scale-150 transition-transform duration-300 origin-center" />
         </motion.button>
-      </div>
-
-      {/* Glowing Edge Effect */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
     </motion.div>
   );
@@ -161,61 +154,48 @@ const WcCategoriesCard = () => {
 
   const settings = {
     infinite: true,
-    speed: 600,
+    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 5000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     centerMode: true,
-    centerPadding: "20px",
+    centerPadding: "30px",
     dots: true,
     customPaging: () => (
-      <div className="w-2 h-2 bg-pink-400 rounded-full mt-4 transition-all duration-300 hover:bg-pink-600" />
+      <div className="w-2.5 h-2.5 bg-pink-400 rounded-full mt-3 transition-all duration-300 hover:bg-pink-600" />
     ),
     responsive: [
       {
         breakpoint: 1280,
-        settings: { slidesToShow: 3, centerPadding: "10px" },
+        settings: { slidesToShow: 3, centerPadding: "20px" },
       },
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 2, centerPadding: "20px" },
+        settings: { slidesToShow: 2, centerPadding: "30px" },
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1, centerPadding: "40px" },
+        settings: { slidesToShow: 1, centerPadding: "50px" },
       },
       {
         breakpoint: 640,
-        settings: { slidesToShow: 1, centerPadding: "20px" },
+        settings: { slidesToShow: 1, centerPadding: "30px" },
       },
     ],
   };
 
   return (
-    <section className="py-12 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-pink-50 relative overflow-hidden" id="wcCategories">
-      {/* Decorative Background */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <circle cx="50" cy="50" r="40" fill="url(#grad)" />
-          <defs>
-            <radialGradient id="grad" cx="0.5" cy="0.5" r="0.5">
-              <stop offset="0%" style={{ stopColor: "#db2777" }} />
-              <stop offset="100%" style={{ stopColor: "transparent" }} />
-            </radialGradient>
-          </defs>
-        </svg>
-      </div>
-
+    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-pink-50 relative" id="wcCategories">
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.h2
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-2xl md:text-4xl lg:text-4xl font-bold text-center mb-6 md:mb-8 text-pink-800 tracking-tight"
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-3xl sm:text-4xl font-bold text-center mb-8 text-pink-800 tracking-tight"
         >
           Explore Categories
         </motion.h2>
@@ -224,11 +204,11 @@ const WcCategoriesCard = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.8 }}
         >
           <Slider {...settings}>
             {categories.map((category, index) => (
-              <div key={index} className="px-4">
+              <div key={index} className="px-3">
                 <CategoryCard
                   image={category.image}
                   title={category.title}
@@ -244,8 +224,8 @@ const WcCategoriesCard = () => {
       {/* Custom CSS for Pulse Animation */}
       <style jsx global>{`
         @keyframes pulse-slow {
-          0%, 100% { opacity: 0.5; }
-          50% { opacity: 1; }
+          0%, 100% { opacity: 0.4; }
+          50% { opacity: 0.8; }
         }
         .animate-pulse-slow {
           animation: pulse-slow 3s ease-in-out infinite;

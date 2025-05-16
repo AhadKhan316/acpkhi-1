@@ -100,7 +100,7 @@ const PlfSpeakerCard = ({ speakers, title = "" }) => {
   };
 
   return (
-    <section className="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-6 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section header with All Delegates button */}
         <motion.div
@@ -128,7 +128,7 @@ const PlfSpeakerCard = ({ speakers, title = "" }) => {
         <div className="px-4 sm:px-6">
           <Slider {...settings}>
             {speakers.map((speaker, index) => (
-              <div key={index} className="px-2">
+              <div key={index} className="">
                 <SpeakerCard speaker={speaker} index={index} />
               </div>
             ))}

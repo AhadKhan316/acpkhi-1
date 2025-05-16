@@ -55,8 +55,8 @@ function WcfAboutPage() {
   return (
     <div className="bg-white text-black overflow-hidden">
       {/* Hero Section with Video (Unchanged from Previous Response) */}
-      <section className="relative py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-6 sm:py-8 lg:py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-10 sm:mb-12"
             initial="hidden"
@@ -108,7 +108,7 @@ function WcfAboutPage() {
           </motion.div>
 
           <motion.p
-            className="mt-6 text-base sm:text-lg md:text-xl text-center max-w-3xl mx-auto text-black"
+            className="mt-6 text-base sm:text-lg md:text-xl text-center text-black"
             initial="hidden"
             whileInView="visible"
             variants={textVariants}
@@ -118,7 +118,7 @@ function WcfAboutPage() {
           </motion.p>
 
           <motion.div
-            className="mt-8 text-center"
+            className="mt-5 text-center"
             initial="hidden"
             whileInView="visible"
             variants={textVariants}
@@ -158,10 +158,10 @@ function WcfAboutPage() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-black mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-black mb-5">
             Our Legacy Unfolded
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-black max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-black mx-4">
             Discover the essence of the Arts Council and World Culture Festival through a modern lens on tradition.
           </p>
         </motion.div>
@@ -173,7 +173,7 @@ function WcfAboutPage() {
             {tabs.map((tab) => (
               <motion.button
                 key={tab.id}
-                className="px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold text-white shadow-md"
+                className="px-4 sm:px-6 py-2 sm:py-3 rounded-md font-semibold text-white shadow-md"
                 variants={buttonVariants}
                 initial="inactive"
                 animate={activeTab === tab.id ? "active" : "inactive"}
@@ -188,7 +188,7 @@ function WcfAboutPage() {
           {/* Scroll Panel */}
           <motion.div
             key={activeTab}
-            className="relative bg-white/90 rounded-lg shadow-xl border-t-4 border-black max-w-full sm:max-w-4xl mx-auto"
+            className="relative bg-white/90 rounded-lg shadow-xl border-t-4 border-red-700 max-w-full sm:max-w-4xl mx-auto"
             variants={panelVariants}
             initial="hidden"
             animate="visible"

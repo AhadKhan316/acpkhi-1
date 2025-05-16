@@ -109,7 +109,7 @@ const PtfNavbar = () => {
             <img
               src={acpLogo}
               alt="ACP Logo"
-              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+              className="object-contain w-auto max-h-[130px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
             />
           </Link>
 
@@ -125,7 +125,11 @@ const PtfNavbar = () => {
             <img
               src={PtfLogo}
               alt="PTF Logo"
+<<<<<<< HEAD
               className="object-contain w-auto max-h-[150px] max-w-[120px] sm:max-h-[150px] lg:max-h-[150px]"
+=======
+              className="object-contain w-auto max-h-[70px] max-w-[200px] sm:max-h-[90px] lg:max-h-[90px]"
+>>>>>>> 1469dff2fc7d0b2c71aa20a6142cfd9114f1cb8f
             />
           </Link>
         </div>

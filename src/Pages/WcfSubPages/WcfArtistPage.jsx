@@ -137,8 +137,8 @@ const WcfArtists = () => {
         cards={displayedCards}
         title="Artists"
         useCarousel={false}
-        sectionClassName="py-8 sm:py-6 lg:py-8"
-        cardClassName="max-w-sm mx-4"
+        sectionClassName="py-6 sm:py-6 lg:py-8"
+        cardClassName="mx-4"
         titleClassName="text-2xl sm:text-3xl md:text-4xl"
         imageAspectRatio="4/4"
         maxImageHeight="800px"
@@ -146,7 +146,7 @@ const WcfArtists = () => {
       />
 
       {/* See More / See Less Buttons */}
-      <div className="text-center mt-8 space-x-4">
+      <div className="text-center mt-4 space-x-4">
         {hasMoreCards && (
           <button
             onClick={handleSeeMore}

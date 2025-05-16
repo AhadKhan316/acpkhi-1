@@ -44,7 +44,7 @@ const PtfOurPlaysSection = () => {
   };
 
   return (
-    <section className="relative py-6 sm:py-6 lg:py-8 bg-white overflow-hidden">
+    <section className="relative py-6 px-4 sm:py-6 lg:py-8 bg-white overflow-hidden">
       {/* Background Texture */}
       <div
         className="absolute inset-0 opacity-5 bg-repeat"

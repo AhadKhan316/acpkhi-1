@@ -117,7 +117,7 @@ const PlfFooter = () => {
   return (
     <motion.footer
       id="plfFooter"
-      className="relative bg-gray-900 text-white py-12 overflow-hidden"
+      className="relative bg-gray-900 text-white overflow-hidden"
       initial="hidden"
       animate="visible"
       variants={sectionVariants}
@@ -147,7 +147,7 @@ const PlfFooter = () => {
               <img
                 src={AcpLogo}
                 alt="ACP Logo"
-                className="object-contain w-auto max-h-[200px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
+                className="object-contain w-auto max-h-[130px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
               />
             </Link>
             <Link to="/" className="h-full flex items-center">
@@ -162,7 +162,11 @@ const PlfFooter = () => {
               <img
                 src={PlfFooterLogo}
                 alt="Pakistan Literature Festival Logo"
+<<<<<<< HEAD
                 className="object-contain w-auto max-h-[150px] max-w-[75px] sm:max-h-[150px] lg:max-h-[150px]"
+=======
+                className="object-contain w-auto max-h-[100px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+>>>>>>> 1469dff2fc7d0b2c71aa20a6142cfd9114f1cb8f
               />
             </Link>
           </div>

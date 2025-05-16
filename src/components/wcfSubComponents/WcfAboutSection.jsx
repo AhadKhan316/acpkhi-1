@@ -9,7 +9,7 @@ import presImg from '/src/assets/governing-body-new/ahmed-shah.png'
 // Reusable Card Component
 const Card = ({ title, children }) => (
   <motion.div
-    className="mx-4 text-center p-8 "
+    className="text-center p-8"
     variants={staggerContainer}
     initial="hidden"
     whileInView="visible"
@@ -63,7 +63,7 @@ function WcfAboutSection() {
     ),
     "President's Message": (
       <motion.div
-        className="mx-4 flex flex-col md:flex-row items-center gap-8 md:gap-6 p-4"
+        className="flex flex-col md:flex-row items-center gap-8 md:gap-6 p-4"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -86,7 +86,7 @@ function WcfAboutSection() {
         >
           {/* Large Quotation Mark */}
           <motion.span
-            className="absolute top-0 left-5 text-9xl text-blackopacity-20"
+            className="absolute top-0 left-5 text-9xl text-blackopacity-20 text-red-700"
             variants={fadeInVariants}
           >
             ❝
@@ -103,7 +103,7 @@ function WcfAboutSection() {
           {/* Quote Section */}
           <motion.div className="text-center md:text-left flex flex-col items-center md:items-start" variants={staggerContainer}>
             <motion.p
-              className="text-xl md:text-2xl text-black leading-relaxed italic font-serif mb-4"
+              className="text-xl md:text-2xl text-black leading-relaxed italic mb-4"
               variants={fadeInVariants}
             >
               &quot;The World Culture Festival is a landmark celebration of the Arts Council of Pakistan, Karachi&apos;s commitment to cultural diplomacy. We look forward to welcoming you to experience the richness of global cultures—in the heart of Pakistan&quot;
@@ -128,7 +128,7 @@ function WcfAboutSection() {
 
           {/* Large Closing Quotation Mark */}
           <motion.span
-            className="absolute bottom-0 right-5 text-9xl text-black opacity-20 font-serif"
+            className="absolute -bottom-15 right-5 text-9xl text-red-700 opacity-20 font-serif"
             variants={fadeInVariants}
           >
             ❞
@@ -145,7 +145,7 @@ function WcfAboutSection() {
   };
 
   return (
-    <div className="bg-white text-red-500 py-6 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="bg-white text-red-500 py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Tabs */}
       <div id="aboutWcf">
         <div className="flex flex-col sm:flex-row justify-center gap-4">

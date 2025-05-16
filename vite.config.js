@@ -8,11 +8,17 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+
     VitePWA({
       registerType: "autoUpdate",
       injectRegister: "auto",
       workbox: {
         cleanupOutdatedCaches: true,
+      },
+      server: {
+        host: "0.0.0.0", // Listen on all network interfaces
+        port: 5173, // or any port you prefer
+        strictPort: true, // exit if port is in use
       },
     }),
   ],
@@ -27,8 +33,8 @@ export default defineConfig({
       output: {
         entryFileNames: `assets/[name].[hash].js`,
         chunkFileNames: `assets/[name].[hash].js`,
-        assetFileNames: `assets/[name].[hash].[ext]`
-      }
-    }
-  }
+        assetFileNames: `assets/[name].[hash].[ext]`,
+      },
+    },
+  },
 });

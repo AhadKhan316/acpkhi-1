@@ -63,7 +63,7 @@ const AucHighlightedSessions = () => {
   const fallbackIcon = <FaBook className="w-16 h-16 sm:w-20 sm:h-20 text-red-300" />;
 
   return (
-    <section className="px-4 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden" id="aucHighlightedSessions">
+    <section className="py-12 px-6 sm:px-6 md:px-8 bg-white text-black relative overflow-hidden" id="aucHighlightedSessions">
       <div className="mx-auto max-w-7xl relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}

@@ -125,7 +125,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+      <div className="absolute bottom-3 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30">
         <div className="animate-bounce">
           <svg
             className="w-6 h-6 text-white"

@@ -174,7 +174,7 @@ const PtfInternationalPlayers = () => {
   };
 
   return (
-    <section className="bg-white py-6 sm:py-6 lg:py-8" id="internationalPlays">
+    <section className="bg-white sm:py-6 lg:py-8" id="internationalPlays">
       {styleTag}
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"

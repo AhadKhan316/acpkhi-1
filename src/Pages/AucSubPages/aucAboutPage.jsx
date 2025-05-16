@@ -8,9 +8,9 @@ const visionImage = "https://placehold.co/600x400";
 
 const AboutAuc = () => {
   return (
-    <div className="bg-white min-h-screen text-gray-900">
+    <div className="bg-white text-gray-900">
       {/* Hero Section with Video */}
-      <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-br from-red-50 to-white">
+      <section className="relative py-6 md:py-12 overflow-hidden bg-gradient-to-br from-red-50 to-white">
         <div className="absolute inset-0 pointer-events-none">
           {/* Unique Overlapping Circles */}
           <svg className="w-full h-full opacity-10" viewBox="0 0 200 200" preserveAspectRatio="none">
@@ -19,7 +19,7 @@ const AboutAuc = () => {
             <circle cx="120" cy="60" r="30" fill="none" stroke="#b91c1c" strokeWidth="2" opacity="0.4" />
           </svg>
         </div>
-        <div className="mx-4 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="px-6 sm:px-6 lg:px-8 relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -67,8 +67,8 @@ const AboutAuc = () => {
       </section>
 
       {/* Our Mission Section with Angled Card */}
-      <section className="py-8 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-6 bg-white relative">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -111,9 +111,9 @@ const AboutAuc = () => {
       </section>
 
       {/* Our Vision Section with Floating Card */}
-      <section className="py-8 bg-gradient-to-r from-red-50 to-white relative overflow-hidden">
+      <section className="py-6 bg-gradient-to-r from-red-50 to-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-red-200 rounded-full opacity-20 blur-3xl pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -156,14 +156,14 @@ const AboutAuc = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-6 bg-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-2xl sm:text-4xl md:text-4xl font-bold text-center text-red-800 mb-12"
+            className="text-2xl sm:text-4xl md:text-4xl font-bold text-center text-red-800 mb-6"
           >
             Our Impact
           </motion.h2>

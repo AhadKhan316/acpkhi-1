@@ -49,30 +49,23 @@ const delegates = [
 
 const PlfDelegates = () => {
   return (
-    <div className="bg-gradient-to-br from-green-50 via-green-70 to-white min-h-screen text-gray-900 pt-24 pb-16">
+    <div className="bg-gradient-to-b from-green-50 to-white text-gray-900 py-6">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <svg className="w-full h-full opacity-10" viewBox="0 0 200 200" preserveAspectRatio="none">
-            <circle cx="50" cy="50" r="40" fill="none" stroke="#0D542B" strokeWidth="2" opacity="0.5" />
-            <circle cx="80" cy="80" r="50" fill="none" stroke="#0D542B" strokeWidth="2" opacity="0.7" />
-            <circle cx="120" cy="60" r="30" fill="none" stroke="#0D542B" strokeWidth="2" opacity="0.4" />
-          </svg>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <section className="relative">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 text-center">
           <motion.h1
-            initial={{ opacity: 0, y: -50 }}
+            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-2xl sm:text-4xl md:text-4xl font-bold text-center text-green-900 tracking-tight mb-6"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-green-900 tracking-tight mb-4"
           >
             Meet Our Delegates
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="text-lg sm:text-xl md:text-xl text-center text-gray-700 max-w-3xl mx-auto"
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto"
           >
             A distinguished group of individuals shaping the future of Pakistani literature and culture.
           </motion.p>
@@ -80,60 +73,50 @@ const PlfDelegates = () => {
       </section>
 
       {/* Delegates Grid */}
-      <section className="py-8 bg-green-800 relative mt-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-6">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {delegates.map((delegate, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
                 whileHover={{
-                  scale: 1.03,
-                  boxShadow: "0 15px 30px rgba(0, 0, 0, 0.15)",
+                  scale: 1.02,
                   transition: { duration: 0.3 },
                 }}
-                className="relative bg-green-800 rounded-2xl overflow-hidden shadow-lg flex flex-col h-[500px] group"
+                className="relative flex flex-col bg-white rounded-lg shadow-md overflow-hidden"
               >
                 {/* Image Container */}
-                <div className="relative w-full aspect-square bg-green-800 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-green-900/50 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-90" />
+                <div className="relative w-full aspect-[4/4] overflow-hidden">
                   <img
                     src={delegate.image}
                     alt={delegate.name}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {/* Decorative Ribbon */}
-                  <div className="absolute top-6 right-7 w-16 h-16 bg-white rotate-45 transform translate-x-8 -translate-y-8  transition-colors duration-300">
-                    <span className="absolute inset-0 flex items-center justify-center text-green-900 text-xs font-extrabold transform -rotate-45">
-                      PLF
-                    </span>
+                  <div className="absolute top-4 right-4 w-12 h-12 bg-green-900 text-white flex items-center justify-center rotate-45 transform translate-x-2 -translate-y-2 shadow-sm">
+                    <span className="text-xs font-bold transform -rotate-45">PLF</span>
                   </div>
                 </div>
 
                 {/* Delegate Info */}
-                <div className="flex-1 p-6 flex flex-col justify-between bg-gradient-to-b from-white to-green-50">
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-green-900 mb-2 truncate">
-                      {delegate.name}
-                    </h3>
-                    <p className="text-sm sm:text-base text-green-900 font-medium mb-3">
-                      {/* {delegate.title} */}
-                    </p>
-                    {/* <p className="text-sm text-gray-600 line-clamp-3">{delegate.bio}</p> */}
-                  </div>
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="text-lg sm:text-xl font-semibold text-green-900 mb-1">{delegate.name}</h3>
+                  {/* <p className="text-sm text-green-700 font-medium mb-2">{delegate.title}</p> */}
+                  {/* <p className="text-sm text-gray-600 line-clamp-3 flex-grow">{delegate.bio}</p> */}
                   {/* <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="mt-4 px-4 py-2 bg-green-900 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors duration-300 self-start"
+                    className="mt-4 px-4 py-2 bg-green-900 text-white rounded-md text-sm font-medium hover:bg-green-800 transition-colors self-start"
                   >
                     Learn More
                   </motion.button> */}
@@ -145,14 +128,14 @@ const PlfDelegates = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-t from-green-100 to-white text-center">
+      <section className="py-12 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
-            initial={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-2xl sm:text-4xl font-bold text-green-900 mb-6"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-900 mb-4"
           >
             Join the PLF Community
           </motion.h2>
@@ -160,15 +143,15 @@ const PlfDelegates = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-base sm:text-lg text-gray-700 mb-6 max-w-2xl mx-auto"
           >
             Connect with our delegates and contribute to the celebration of Pakistani literature.
           </motion.p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-green-900 text-white rounded-lg text-lg font-medium hover:bg-green-800 transition-colors duration-300"
+            className="px-6 py-3 bg-green-900 text-white rounded-md text-base font-medium hover:bg-green-800 transition-colors"
           >
             Get Involved
           </motion.button>

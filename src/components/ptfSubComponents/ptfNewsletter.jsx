@@ -17,7 +17,7 @@ function PtfNewsletter() {
     <section className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="mx-4">
         <motion.div
-          className="bg-white p-8 md:p-12"
+          className="bg-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

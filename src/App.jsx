@@ -25,6 +25,7 @@ import SovapaPage from './Pages/SovapaPage';
 import VenuesPage from './Pages/Venue';
 import AboutUs from './Pages/AboutUs';
 import GoverningBody from './Pages/GoverningBody';
+import Initiatives from './Pages/AcpSubPages/Initiative';
 import TeamMembers from './Pages/TeamMember';
 import MembersVerification from './Pages/MembersVerification';
 import Career from './Pages/Careers';
@@ -102,6 +103,7 @@ const App = () => {
           } />
 
           {/* ACP Sub Pages */}
+          <Route path="/initiatives" element={<Initiatives />} />
           <Route path="/upcomingEvents" element={<UpcomingEventsPage />}></Route>
           <Route path="/sovapa/:department" element={<SovapaCoursePage />}></Route>
           <Route path="/facilities/:venueId" element={<VenueSubPage />} />

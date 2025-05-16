@@ -131,7 +131,7 @@ const WcFooter = () => {
               <img
                 src={AcpLogo}
                 alt="ACP Logo"
-                className="object-contain w-auto max-h-[200px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
+                className="object-contain w-auto max-h-[130px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
               />
             </Link>
             <Link to="/" className="h-full flex items-center">
@@ -148,7 +148,11 @@ const WcFooter = () => {
               <img
                 src={WcFooterLogo}
                 alt="Women Conference Logo"
+<<<<<<< HEAD
                 className="object-contain w-auto max-h-[150px] max-w-[70px] sm:max-h-[150px] lg:max-h-[150px]"
+=======
+                className="object-contain w-auto max-h-[80px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+>>>>>>> 1469dff2fc7d0b2c71aa20a6142cfd9114f1cb8f
               />
             </Link>
           </div>

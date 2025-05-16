@@ -132,7 +132,7 @@ const WcfFooter = () => {
               <img
                 src={acpLogo}
                 alt="ACP Logo"
-                className="object-contain w-auto max-h-[200px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
+                className="object-contain w-auto max-h-[130px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
               />
             </Link>
 
@@ -148,7 +148,11 @@ const WcfFooter = () => {
               <img
                 src={wcfLogo}
                 alt="World Culture Festival Logo"
+<<<<<<< HEAD
                 className="object-contain w-auto max-h-[150px] max-w-[120px] sm:max-h-[150px] lg:max-h-[150px]"
+=======
+                className="object-contain w-auto max-h-[75px] max-w-[200px] sm:max-h-[85px] lg:max-h-[85px]"
+>>>>>>> 1469dff2fc7d0b2c71aa20a6142cfd9114f1cb8f
               />
             </Link>
           </div>
