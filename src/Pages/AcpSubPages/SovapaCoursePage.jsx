@@ -118,7 +118,7 @@ import TextileInstructor5 from "/src/assets/academies/TextileDesignAssets/Shamam
 
 
 import Textileimg1 from "/src/assets/academies/TextileDesignAssets/textileimg1.jpg";
-import Textileimg2 from "/src/assets/academies/TextileDesignAssets/Textileimg2.jpg";
+import Textileimg2 from "/src/assets/academies/TextileDesignAssets/textileimg2.jpg";
 
 
 
