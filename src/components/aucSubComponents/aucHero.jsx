@@ -2,15 +2,18 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-import aucHeroImg1 from "/src/assets/auc-assets/auc-hero.jpg";
-import aucHeroImg2 from "/src/assets/auc-assets/auc-hero2.jpg";
-import aucHeroImg3 from "/src/assets/auc-assets/auc-hero3.jpg";
-import aucHeroImg4 from "/src/assets/auc-assets/auc-hero4.jpg";
+import aucHeroImg1 from "/src/assets/auc-assets/1.jpg";
+import aucHeroImg2 from "/src/assets/auc-assets/2.jpg";
+import aucHeroImg3 from "/src/assets/auc-assets/3.jpg";
+import aucHeroImg4 from "/src/assets/auc-assets/4.jpg";
+import aucHeroImg5 from "/src/assets/auc-assets/5.jpg";
+import aucHeroImg6 from "/src/assets/auc-assets/6.jpg";
+import aucHeroImg7 from "/src/assets/auc-assets/7.jpg";
 
 const AucHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [aucHeroImg1, aucHeroImg2, aucHeroImg3, aucHeroImg4];
+  const slides = [aucHeroImg1, aucHeroImg2, aucHeroImg3, aucHeroImg4, aucHeroImg5, aucHeroImg6, aucHeroImg7];
 
   // Auto-slider logic
   useEffect(() => {

@@ -5,8 +5,8 @@ const Feedback = () => {
   const feedbacks = [
     {
       id: 1,
-      text: "Coming to the Arts Council of Pakistan , Karachi, even on the first day felt like I have been here for a number of years because of the warmth I felt.",
-      name: "Kushtrim B Mehmati ",
+      text: "Coming to the Arts Council of Pakistan, Karachi, even on the first day felt like I have been here for a number of years because of the warmth I felt.",
+      name: "Kushtrim B Mehmati",
       role: "KOSOVO",
       image: "https://balkans.aljazeera.net/wp-content/uploads/2017/12/kushtrim-fb.jpg?resize=770%2C513&quality=80",
     },
@@ -26,108 +26,138 @@ const Feedback = () => {
     },
   ];
 
-  // Framer Motion variants for section animation
-  const sectionVariants = {
+  // Animation variants
+  const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
   };
 
-  // Framer Motion variants for feedback cards
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (i) => ({
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, delay: i * 0.2, ease: "easeOut" },
-    }),
-    hover: {
-      scale: 1.05,
-      transition: { duration: 0.3 },
+      transition: { 
+        duration: 0.8, 
+        ease: [0.1, 0.8, 0.2, 1] 
+      }
     },
+    hover: {
+      y: -10,
+      transition: { duration: 0.3 }
+    }
+  };
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" }
+    }
   };
 
   return (
-    <motion.section
-      id="user-feedback"
-      className="py-6 sm:py-6 lg:py-16 bg-white relative"
-      initial="hidden"
-      animate="visible"
-      variants={sectionVariants}
-    >
-      {/* Subtle Background Gradient */}
-      {/* <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-black pointer-events-none"></div> */}
+    <section className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-red-500 blur-3xl"></div>
+        <div className="absolute bottom-10 right-20 w-40 h-40 rounded-full bg-blue-500 blur-3xl"></div>
+      </div>
 
-      <div className="px-4 relative max-w-7xl mx-auto">
-        <div className="text-center mb-10 sm:mb-12">
-          <motion.h2
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-2 sm:mb-3"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            What Our Community Says
-          </motion.h2>
-          <motion.p
-            className="text-black italic text-sm sm:text-base mb-6 sm:mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          >
-            Hear from Our Amazing Members
-          </motion.p>
-          <motion.div
-            // className="h-1 w-20 bg-black mx-auto mb-6 sm:mb-8 rounded"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          ></motion.div>
-        </div>
+      <motion.div 
+        className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        {/* Header */}
+        <motion.div 
+          className="text-center mb-16"
+          variants={titleVariants}
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">
+          Testimonials
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+          Hear what everyone has to say for us
+          </p>
+        </motion.div>
 
-        {/* Feedback Cards */}
-        <div className="flex flex-col lg:flex-row lg:justify-center lg:gap-6 space-y-6 lg:space-y-0">
+        {/* Feedback cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {feedbacks.map((feedback, index) => (
             <motion.div
               key={feedback.id}
-              className="bg-gradient-to-b from-white/25 to-gray shadow-lg rounded-xl p-6 flex flex-col max-w-md mx-auto lg:mx-0 lg:-rotate-1 group transition-all duration-300"
-              custom={index}
-              initial="hidden"
-              animate="visible"
-              variants={cardVariants}
+              className="relative group"
+              variants={itemVariants}
               whileHover="hover"
-              style={{ zIndex: feedbacks.length - index }}
             >
-              <div className="relative flex-grow">
-                <span className="absolute top-0 left-0 text-black text-4xl leading-none">“</span>
-                <p className="text-black italic text-base sm:text-lg pl-6 pr-2">
+              {/* Card */}
+              <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-xl p-8 border border-gray-200/50 group-hover:border-red-300/50 transition-all duration-300">
+                {/* Quote marks */}
+                <div className="absolute top-6 left-6 text-6xl font-serif text-gray-200/80">
+                  "
+                </div>
+                
+                {/* Feedback text */}
+                <p className="relative z-10 text-gray-700 italic text-lg mb-8 pt-8">
                   {feedback.text}
                 </p>
-                <span className="absolute bottom-0 right-0 text-black text-4xl leading-none">”</span>
-              </div>
-              <div className="mt-6 flex items-center">
-                <div className="flex-shrink-0">
-                  <img
-                    src={feedback.image}
-                    alt={`${feedback.name} profile`}
-                    className="rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mr-3 sm:mr-4"
-                  />
+                
+                {/* Profile */}
+                <div className="flex items-center">
+                  <div className="relative">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-red-400 to-blue-500 rounded-full blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img
+                      src={feedback.image}
+                      alt={feedback.name}
+                      className="relative w-14 h-14 rounded-full object-cover border-2 border-white"
+                    />
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-bold text-gray-900">{feedback.name}</h4>
+                    <p className="text-sm text-gray-500">{feedback.role}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-black font-semibold text-base sm:text-lg">
-                    {feedback.name}
-                  </h4>
-                  <span className="text-black text-sm sm:text-base">
-                    {feedback.role}
-                  </span>
+                
+                {/* Decorative corner */}
+                <div className="absolute bottom-0 right-0 w-16 h-16 overflow-hidden">
+                  <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-red-100 to-transparent transform rotate-45 origin-bottom-right"></div>
+                </div>
+              </div>
+              
+              {/* Floating country flag effect */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center border-2 border-white overflow-hidden transform group-hover:rotate-12 transition-transform duration-300">
+                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center text-white font-bold text-xs">
+                  {feedback.role}
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-      </div>
-    </motion.section>
+
+        {/* View more button */}
+        <motion.div 
+          className="text-center mt-16"
+          variants={titleVariants}
+          transition={{ delay: 0.4 }}
+        >
+          <button className="px-8 py-3 bg-gradient-to-r from-red-500 to-blue-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:from-red-600 hover:to-blue-600">
+            View More Testimonials
+            <svg className="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </motion.div>
+      </motion.div>
+    </section>
   );
 };
 

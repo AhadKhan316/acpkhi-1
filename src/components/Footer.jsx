@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedin, FaTiktok } from "react-icons/fa";
-import acpFooterLogo from '/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.png';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedin,
+  FaTiktok,
+} from "react-icons/fa";
+import acpFooterLogo from "/src/assets/acp-logo-and-hero-img/Acp logo White down.png";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -54,29 +61,28 @@ const Footer = () => {
 
   const quickLinks2 = [
     { id: 1, text: "World Culture Festival", href: "/festival/wcf" },
-    { id: 1, text: "Aalmi Urdu Conference", href: "/festival/auc" },
-    { id: 2, text: "Pakistan Literature Festival", href: "/festival/plf" },
-    { id: 2, text: "Pakistan Theatre Festival", href: "/festival/ptf" },
-    { id: 4, text: "Pakistan Youth Festival", href: "/festival/pyf" },
-    { id: 3, text: "Women Conference", href: "/festival/wc" },
+    { id: 2, text: "Aalmi Urdu Conference", href: "/festival/auc" },
+    { id: 3, text: "Pakistan Literature Festival", href: "/festival/plf" },
+    { id: 4, text: "Pakistan Theatre Festival", href: "/festival/ptf" },
+    { id: 5, text: "Pakistan Youth Festival", href: "/festival/pyf" },
+    { id: 6, text: "Women Conference", href: "/festival/wc" },
   ];
 
   const socialLinks = [
     { id: 1, href: "https://www.facebook.com/ACPKHI/", icon: FaFacebookF },
     { id: 2, href: "https://www.instagram.com/acpkhiofficial", icon: FaInstagram },
-    { id: 5, href: "https://www.linkedin.com/company/acpkhi", icon: FaLinkedin },
-    { id: 4, href: "https://youtube.com/@acpkhi", icon: FaYoutube },
     { id: 3, href: "https://twitter.com/@acpkhi", icon: FaTwitter },
-    { id: 5, href: "https://www.tiktok.com/@acpkhi", icon: FaTiktok },
+    { id: 4, href: "https://youtube.com/@acpkhi", icon: FaYoutube },
+    { id: 5, href: "https://www.linkedin.com/company/acpkhi", icon: FaLinkedin },
+    { id: 6, href: "https://www.tiktok.com/@acpkhi", icon: FaTiktok },
   ];
 
   const contactInfo = [
-    { id: 1, label: "UAN", value: "021-111-227-544", icon: "phone" },
-    { id: 2, label: "Email", value: "info@acpkhi.com", icon: "email" },
-    { id: 3, label: "Location", value: "M.R. Kiyani Road, Karachi. Pakistan.", icon: "location" },
+    { id: 1, label: "UAN", value: "021-111-227-544" },
+    { id: 2, label: "Email", value: "info@acpkhi.com" },
+    { id: 3, label: "Location", value: "M.R. Kiyani Road, Karachi. Pakistan." },
   ];
 
-  // Framer Motion variants
   const sectionVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
@@ -118,15 +124,18 @@ const Footer = () => {
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Logo and Social Icons */}
-        <div className="flex flex-col items-center border-b border-gray-700 pb-4">
-          <Link to="/">
+        <div className="flex flex-col items-start md:items-center border-b border-gray-700 py-6">
+          <Link to="/" className="w-full md:w-auto text-left md:text-center">
             <motion.img
               src={acpFooterLogo}
               alt="Arts Council Logo"
-              className="h-auto max-h-44 sm:max-h-52 lg:max-h-68 w-auto object-contain"
+              className="h-auto max-h-36 sm:max-h-36 lg:max-h-36 w-auto object-contain mx-0 md:mx-auto"
             />
           </Link>
-          <div className="flex space-x-4">
+          <h4 className="text-gray-300 text-base font-medium mt-4 mb-2 text-left md:text-center">
+            Get Connected with Us
+          </h4>
+          <div className="flex space-x-4 justify-start md:justify-center">
             {socialLinks.map((link, index) => (
               <motion.a
                 key={link.id}
@@ -144,18 +153,14 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Main Content */}
+        {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-8">
           {/* Quick Links 1 */}
           <motion.div custom={7} variants={childVariants}>
             <h3 className="font-bold text-lg mb-4 uppercase">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks1.map((link, index) => (
-                <motion.li
-                  key={link.id}
-                  custom={8 + index}
-                  variants={childVariants}
-                >
+                <motion.li key={link.id} custom={8 + index} variants={childVariants}>
                   <a href={link.href} className="text-gray-400 hover:text-white transition">
                     {link.text}
                   </a>
@@ -169,12 +174,8 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4 uppercase">Events</h3>
             <ul className="space-y-2">
               {quickLinks2.map((link, index) => (
-                <motion.li
-                  key={link.id}
-                  custom={14 + index}
-                  variants={childVariants}
-                >
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                <motion.li key={link.id} custom={14 + index} variants={childVariants}>
+                  <a href={link.href} className="text-gray-400 hover:text-white transition">
                     {link.text}
                   </a>
                 </motion.li>
@@ -191,10 +192,9 @@ const Footer = () => {
                   key={item.id}
                   custom={19 + index}
                   variants={childVariants}
-                  className="flex items-start"
+                  className="text-gray-400"
                 >
-                  <span className="text-gray-400">{item.label}: </span>
-                  <span className="text-gray-400 ml-1">{item.value}</span>
+                  <span className="font-medium">{item.label}:</span> {item.value}
                 </motion.li>
               ))}
             </ul>
@@ -247,21 +247,6 @@ const Footer = () => {
           <p className="text-gray-400 text-sm mb-4">
             Copyright © Arts Council of Pakistan Karachi. All Rights Reserved.
           </p>
-          {/* <div className="flex space-x-4 mb-4">
-            <a href="#" className="flex items-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Apple_Store_logo.svg" alt="App Store" className="h-8" />
-            </a>
-            <a href="#" className="flex items-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-8" />
-            </a>
-          </div> */}
-          {/* <div className="text-gray-400 text-sm">
-            <a href="#" className="hover:underline mx-2">Website Terms of Use</a>
-            <span>|</span>
-            <a href="#" className="hover:underline mx-2">Privacy Policy</a>
-            <span>|</span>
-            <a href="#" className="hover:underline mx-2">Cookie Preferences</a>
-          </div> */}
         </motion.div>
       </div>
     </motion.footer>

@@ -3,9 +3,16 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaFeatherAlt } from "react-icons/fa";
 
-import PlfHeroImg1 from "/src/assets/plf-assets/plf-hero-img1.jpg"
-import PlfHeroImg2 from "/src/assets/plf-assets/plf-hero-img2.jpg"
-import PlfHeroImg3 from "/src/assets/plf-assets/plf-hero-img3.jpg"
+import PlfHeroImg1 from "/src/assets/plf-assets/1.jpg"
+import PlfHeroImg2 from "/src/assets/plf-assets/2.jpg"
+import PlfHeroImg3 from "/src/assets/plf-assets/3.jpg"
+import PlfHeroImg4 from "/src/assets/plf-assets/4.jpg"
+import PlfHeroImg5 from "/src/assets/plf-assets/5.jpg"
+import PlfHeroImg6 from "/src/assets/plf-assets/6.jpg"
+import PlfHeroImg7 from "/src/assets/plf-assets/7.jpg"
+import PlfHeroImg8 from "/src/assets/plf-assets/8.jpg"
+import PlfHeroImg9 from "/src/assets/plf-assets/9.jpg"
+import PlfHeroImg10 from "/src/assets/plf-assets/10.jpg"
 
 const PlfHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,6 +21,13 @@ const PlfHero = () => {
     PlfHeroImg1,
     PlfHeroImg2,
     PlfHeroImg3,
+    PlfHeroImg4,
+    PlfHeroImg5,
+    PlfHeroImg6,
+    PlfHeroImg7,
+    PlfHeroImg8,
+    PlfHeroImg9,
+    PlfHeroImg10,
     // "../src/assets/plf-assets/hero-image4.png",
   ];
 

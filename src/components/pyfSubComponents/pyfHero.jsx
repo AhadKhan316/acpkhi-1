@@ -3,15 +3,26 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-import HeroImg1 from "/src/assets/pyf-assets/pyf-hero-img1.jpg";
-import HeroImg2 from "/src/assets/pyf-assets/pyf-hero-img2.jpg";
-import HeroImg3 from "/src/assets/pyf-assets/pyf-hero-img3.jpg";
+import HeroImg1 from "/src/assets/pyf-assets/1.jpg";
+import HeroImg2 from "/src/assets/pyf-assets/2.jpg";
+import HeroImg3 from "/src/assets/pyf-assets/3.jpg"
+import HeroImg4 from "/src/assets/pyf-assets/4.jpg";
+import HeroImg5 from "/src/assets/pyf-assets/5.jpg";
+import HeroImg6 from "/src/assets/pyf-assets/6.jpg";
+import HeroImg7 from "/src/assets/pyf-assets/7.jpg";
+import HeroImg8 from "/src/assets/pyf-assets/8.jpg";
+import HeroImg9 from "/src/assets/pyf-assets/9.jpg";
+import HeroImg10 from "/src/assets/pyf-assets/10.jpg";
+import HeroImg11 from "/src/assets/pyf-assets/11.jpg";
+import HeroImg12 from "/src/assets/pyf-assets/12.jpg";
+import HeroImg13 from "/src/assets/pyf-assets/13.jpg";
+import HeroImg14 from "/src/assets/pyf-assets/14.jpg";
 
 const PyfHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Array of background images for PYF
-  const slides = [HeroImg1, HeroImg2, HeroImg3];
+  const slides = [HeroImg1, HeroImg2, HeroImg3, HeroImg4, HeroImg5, HeroImg6, HeroImg7, HeroImg8, HeroImg9, HeroImg10, HeroImg11, HeroImg12, HeroImg13, HeroImg14];
 
   // Auto-slider logic
   useEffect(() => {

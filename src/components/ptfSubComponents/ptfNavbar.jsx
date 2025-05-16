@@ -7,6 +7,7 @@ import acpLogo from '/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.p
 
 // PTF Logo
 import PtfLogo from "/src/assets/ptf-assets/ptf-logo.png";
+import centerimg from "/src/assets/auc-assets/Untitled-1.png";
 
 const PtfNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -112,13 +113,19 @@ const PtfNavbar = () => {
             />
           </Link>
 
-          <span className="text-white text-xl font-bold">X</span>
+          <Link to="/" className="h-full flex items-center">
+            <img
+              src={centerimg}
+              alt="Line"
+              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+            />
+          </Link>
 
           <Link to="/festival/ptf" className="h-full flex items-center">
             <img
               src={PtfLogo}
               alt="PTF Logo"
-              className="object-contain w-auto max-h-[90px] max-w-[200px] sm:max-h-[90px] lg:max-h-[90px]"
+              className="object-contain w-auto max-h-[150px] max-w-[120px] sm:max-h-[150px] lg:max-h-[150px]"
             />
           </Link>
         </div>

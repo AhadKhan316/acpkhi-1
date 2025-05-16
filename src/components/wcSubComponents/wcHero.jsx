@@ -4,14 +4,21 @@ import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 
 // Replace with your Women's Conference hero images
-import WcHeroImg1 from "/src/assets/wc-assets/wc-hero-img1.jpg";
-import WcHeroImg2 from "/src/assets/wc-assets/wc-hero-img2.jpg";
-import WcHeroImg3 from "/src/assets/wc-assets/wc-hero-img3.jpg";
+import WcHeroImg1 from "/src/assets/wc-assets/1.jpg";
+import WcHeroImg2 from "/src/assets/wc-assets/2.jpg";
+import WcHeroImg3 from "/src/assets/wc-assets/3.jpg";
+import WcHeroImg4 from "/src/assets/wc-assets/4.jpg";
+import WcHeroImg5 from "/src/assets/wc-assets/5.jpg";
+import WcHeroImg6 from "/src/assets/wc-assets/6.jpg";
+import WcHeroImg7 from "/src/assets/wc-assets/7.jpg";
+import WcHeroImg8 from "/src/assets/wc-assets/8.jpg";
+import WcHeroImg9 from "/src/assets/wc-assets/9.jpg";
+import WcHeroImg10 from "/src/assets/wc-assets/10.jpg";
 
 const WcHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [WcHeroImg1, WcHeroImg2, WcHeroImg3];
+  const slides = [WcHeroImg1, WcHeroImg2, WcHeroImg3, WcHeroImg4,  WcHeroImg5, WcHeroImg6, WcHeroImg7, WcHeroImg8, WcHeroImg9, WcHeroImg10];
 
   // Auto-slider logic
   useEffect(() => {

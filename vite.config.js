@@ -16,6 +16,12 @@ export default defineConfig({
       },
     }),
   ],
+
+  server: {
+    host: '0.0.0.0', // Listen on all interfaces
+    port: 5173,       // Optional: You can change this if needed
+  },
+  
   build: {
     rollupOptions: {
       output: {

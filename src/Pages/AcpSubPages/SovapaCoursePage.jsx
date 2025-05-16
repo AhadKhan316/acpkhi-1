@@ -75,6 +75,12 @@ import FineArtsInstructor12 from "/src/assets/academies/FineArtsAssets/dumy-Inst
 
 
 
+import Fineimg1 from "/src/assets/academies/FineArtsAssets/fineimg1.jpg";
+import Fineimg2 from "/src/assets/academies/FineArtsAssets/fineimg2.jpg";
+import Fineimg3 from "/src/assets/academies/FineArtsAssets/fineimg3.jpg";
+
+
+
 
 
 // Music Department
@@ -98,12 +104,24 @@ import MusicInstructor17 from "/src/assets/academies/MusicAssets/dumy-Instructor
 import MusicInstructor18 from "/src/assets/academies/MusicAssets/dumy-Instructor17.png";
 import MusicInstructor19 from "/src/assets/academies/MusicAssets/dumy-Instructor17.png";
 
+
+
+import musicimg1 from "/src/assets/academies/MusicAssets/musicimg1.jpg";
+import musicimg2 from "/src/assets/academies/MusicAssets/musicimg2.jpg";
+
 // Textile Design Department
 import TextileHead1 from "/src/assets/academies/TextileDesignAssets/muhammadZeeshan-Head1.jpg";
 import TextileInstructor2 from "/src/assets/academies/TextileDesignAssets/aamirIjaz-Instructor2.jpeg";
 import TextileInstructor3 from "/src/assets/academies/TextileDesignAssets/shahKhalid-Instructor3.jpeg";
 import TextileInstructor4 from "/src/assets/academies/TextileDesignAssets/mYaseen-Instructor4.jpeg";
 import TextileInstructor5 from "/src/assets/academies/TextileDesignAssets/Shamama-Instructor5.jpg";
+
+
+import Textileimg1 from "/src/assets/academies/TextileDesignAssets/textileimg1.jpg";
+import Textileimg2 from "/src/assets/academies/TextileDesignAssets/Textileimg2.jpg";
+
+
+
 
 // Theatre Department
 import TheatreHead1 from "/src/assets/academies/TheatreAssets/khalidAhmed-Head1.jpg";
@@ -119,6 +137,12 @@ import TheatreInstructor10 from "/src/assets/academies/TheatreAssets/irumBasheer
 import TheatreInstructor11 from "/src/assets/academies/TheatreAssets/SaadZameer-Instructor11.jpg";
 import TheatreInstructor12 from "/src/assets/academies/TheatreAssets/dumy-Instructor12.png";
 
+
+
+import theatreimg1 from "/src/assets/academies/TheatreAssets/theatreimg1.jpg";
+import theatreimg2 from "/src/assets/academies/TheatreAssets/theatreimg2.jpg";
+import theatreimg3 from "/src/assets/academies/TheatreAssets/theatreimg3.jpg";
+
 const placeholderImages = {
   "graphic-design": [
     cdimg1,
@@ -131,19 +155,25 @@ const placeholderImages = {
    
   ],
   "fine-arts": [
-    "https://acpkhi.com/imgs/academies.webp",
+    Fineimg1,
+    Fineimg2,
+    Fineimg3,
     
   ],
   music: [
-    "https://acpkhi.com/imgs/academies.webp",
+    musicimg1,
+    musicimg2,
    
   ],
   "textile-design": [
-    "https://acpkhi.com/imgs/academies.webp",
+    Textileimg1,
+    Textileimg2,
    
   ],
   theatre: [
-    "https://acpkhi.com/imgs/academies.webp",
+    theatreimg1,
+    theatreimg2,
+    theatreimg3,
   
   ],
 };

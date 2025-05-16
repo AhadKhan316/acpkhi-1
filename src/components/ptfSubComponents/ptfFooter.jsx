@@ -7,6 +7,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaTwitter, FaInsta
 import PtfFooterLogo from "/src/assets/ptf-assets/ptf-logo.png";
 // ACP Logo (assumed to be the same as used in WCF Footer)
 import AcpLogo from "/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.png";
+import centerimg from "/src/assets/auc-assets/Untitled-1.png";
 
 const PtfFooter = () => {
   const [email, setEmail] = useState("");
@@ -131,12 +132,19 @@ const PtfFooter = () => {
                 className="object-contain w-auto max-h-[200px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
               />
             </Link>
-            <span className="text-white text-xl font-bold">X</span>
+            <Link to="/" className="h-full flex items-center">
+            <img
+              src={centerimg}
+              alt="Line"
+              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+            />
+          </Link>
+
             <Link to="/festival/ptf" className="h-full flex items-center">
               <img
                 src={PtfFooterLogo}
                 alt="Pakistan Theatre Festival Logo"
-                className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+                className="object-contain w-auto max-h-[150px] max-w-[120px] sm:max-h-[150px] lg:max-h-[150px]"
               />
             </Link>
           </div>
