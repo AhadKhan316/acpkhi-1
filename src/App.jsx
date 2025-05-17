@@ -74,6 +74,10 @@ import PresidentsMessage from './components/PresidentsMessage';
 
 import Email from './Pages/Email';
 
+
+import DelegatesPage from './Pages/DelegatesPage';
+
+
 const App = () => {
   return (
     <Router>
@@ -130,6 +134,7 @@ const App = () => {
           <Route path="/registration" element={<Registration />} />
           <Route path="/admissions" element={<Admission />} />
           <Route path="/NewsBlog" element={<NewsBlog />} />
+          <Route path="/DelegatesPage" element={<DelegatesPage />} />
         </Route>
 
         {/* Routes without Navbar and Footer */}
@@ -158,6 +163,8 @@ const App = () => {
         {/* for email link */}
         <Route path="/email" element={<Email/>} />
 
+        
+    
 
         
       </Routes>

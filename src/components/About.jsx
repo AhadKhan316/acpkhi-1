@@ -59,11 +59,11 @@ const About = () => {
             className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-gray-900"
             variants={textVariants}
           >
-            Who <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-purple-600"> We Are</span>
+            Who <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-600"> We Are</span>
           </motion.h2>
           
           <motion.div 
-            className="w-24 h-1 bg-gradient-to-r from-red-500 to-blue-500 mx-auto mb-8 rounded-full"
+            className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-500 mx-auto mb-8 rounded-full"
             variants={dividerVariants}
           />
           

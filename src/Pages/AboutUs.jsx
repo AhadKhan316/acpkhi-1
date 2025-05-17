@@ -64,7 +64,7 @@ const AboutUs = () => {
           >
             <SectionWithSlider
               title="Our Cultural Journey"
-              description="Founded in 1980, the Arts Council of Pakistan has been a beacon for cultural preservation, talent development, and a place of collaboration for artists from all corners of Pakistan. We take pride in fostering artistic growth and supporting a creative ecosystem that spans from traditional to contemporary forms."
+              description="Founded in 1954vite, the Arts Council of Pakistan has been a beacon for cultural preservation, talent development, and a place of collaboration for artists from all corners of Pakistan. We take pride in fostering artistic growth and supporting a creative ecosystem that spans from traditional to contemporary forms."
               images={[
                 { src: img1, alt: "Historical 1" },
                 { src: img2, alt: "Historical 2" },

@@ -1,7 +1,6 @@
 // src/components/DelegateForm.jsx
 import { useState } from 'react';
 import { FiUpload, FiX } from 'react-icons/fi';
-import PropTypes from 'prop-types';
 
 const DelegateForm = ({ delegate = null, onSave, onCancel }) => {
   const [formData, setFormData] = useState({
@@ -192,20 +191,6 @@ const DelegateForm = ({ delegate = null, onSave, onCancel }) => {
       </form>
     </div>
   );
-};
-
-DelegateForm.propTypes = {
-  delegate: PropTypes.shape({
-    name: PropTypes.string,
-    position: PropTypes.string,
-    email: PropTypes.string,
-    phone: PropTypes.string,
-    location: PropTypes.string,
-    bio: PropTypes.string,
-    image: PropTypes.string
-  }),
-  onSave: PropTypes.func.isRequired,
-  onCancel: PropTypes.func.isRequired
 };
 
 export default DelegateForm;
