@@ -66,6 +66,7 @@ import PakistanTheatreFestival from './Pages/PakistanTheatreFestival';
 
 // AAF Pages
 import ArtsAlumniFestival from './Pages/ArtsAlumniFestival';
+import AlumniFestivalPage from './Pages/AlumniFestival'
 
 import NewsBlog from './Pages/NewsBlog';
 import Whatweoffer from './components/Whatweoffer';
@@ -113,7 +114,7 @@ const App = () => {
           <Route path="/facilities/:venueId" element={<VenueSubPage />} />
 
           {/* Arts Alumni Festival Route */}
-          {/* <Route path="/alumni" element={<ArtsAlumniFestival />} /> */}
+          <Route path="/alumni" element={<AlumniFestivalPage />} />
 
           {/* OTP Pages */}
           <Route path="/verifyOtp" element={<VerifyOtp />} />
