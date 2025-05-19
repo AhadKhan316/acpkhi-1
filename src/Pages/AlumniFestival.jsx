@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import posterImgMain from "/src/assets/ArtsAlumniAssets/alumni-2025.B9q1FqGS.jpeg";
 
 // Segments Images
+import posterImg17 from "/src/assets/ArtsAlumniAssets/Alumni 2025 - Opening.jpg";
 import posterImg1 from "/src/assets/ArtsAlumniAssets/an-Innocent-Murder-segment1.jpg";
 import posterImg2 from "/src/assets/ArtsAlumniAssets/Kathak-Workshop-by-Nighat-Chaudhry-segment2.jpg";
 import posterImg11 from "/src/assets/ArtsAlumniAssets/gumaan-segment11.jpg"
@@ -65,6 +66,11 @@ const AlumniPage = () => {
   };
 
   const segments = [
+    {
+      title: "An Innocent Little Murder",
+      image: posterImg17,
+      description: "A dark comedy exploring the unexpected consequences of a seemingly harmless act.",
+    },
     {
       title: "An Innocent Little Murder",
       image: posterImg1,

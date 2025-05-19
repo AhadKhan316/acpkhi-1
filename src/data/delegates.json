@@ -50,5 +50,23 @@
           { "label": "Exhibitions", "value": "25 International" },
           { "label": "Awards", "value": "National Arts Prize 2020" }
         ]
+      },
+
+      {
+        "id": 3,
+        "name": "Ambreen Haseeb Amber",
+        "role": "Visual Artist",
+        "category": "Visual Arts",
+        "image": "/src/assets/delegates/Ambreen Haseeb Amber عنبرین حسیب عنبر.jpg",
+        "bio": "Ahmed is a contemporary artist known for his miniature paintings...",
+        "socialLinks": [
+          { "type": "instagram", "url": "#" },
+          { "type": "website", "url": "#" }
+        ],
+        "additionalDetails": [
+          { "label": "Specialization", "value": "Miniature Painting" },
+          { "label": "Exhibitions", "value": "25 International" },
+          { "label": "Awards", "value": "National Arts Prize 2020" }
+        ]
       }
   ]
