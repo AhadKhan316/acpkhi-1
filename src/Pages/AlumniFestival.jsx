@@ -7,9 +7,9 @@ import posterImgMain from "/src/assets/ArtsAlumniAssets/alumni-2025.B9q1FqGS.jpe
 
 // Segments Images
 import posterImg17 from "/src/assets/ArtsAlumniAssets/Alumni 2025 - Opening.jpg";
+import posterImg11 from "/src/assets/ArtsAlumniAssets/gumaan-segment11.jpg"
 import posterImg1 from "/src/assets/ArtsAlumniAssets/an-Innocent-Murder-segment1.jpg";
 import posterImg2 from "/src/assets/ArtsAlumniAssets/Kathak-Workshop-by-Nighat-Chaudhry-segment2.jpg";
-import posterImg11 from "/src/assets/ArtsAlumniAssets/gumaan-segment11.jpg"
 import posterImg12 from "/src/assets/ArtsAlumniAssets/ai-authenticity-segment12.jpg"
 import posterImg13 from "/src/assets/ArtsAlumniAssets/alumni-stars-segment13.jpg"
 import posterImg3 from "/src/assets/ArtsAlumniAssets/Salgirah-segment3.jpg";
@@ -23,6 +23,10 @@ import posterImg7 from "/src/assets/ArtsAlumniAssets/Voice-Workshop-Khalid-Ahmed
 import posterImg8 from "/src/assets/ArtsAlumniAssets/daastangoi-segment8.png";
 import posterImg9 from "/src/assets/ArtsAlumniAssets/block-Printing-Workshop-segment9.jpg";
 import posterImg10 from "/src/assets/ArtsAlumniAssets/alumni-Art-Exhibition-segment10.jpg";
+import posterImg18 from "/src/assets/ArtsAlumniAssets/future-stars-segment18.jpg"
+import posterImg19 from "/src/assets/ArtsAlumniAssets/alumni-stars-segment19.jpg"
+import posterImg20 from "/src/assets/ArtsAlumniAssets/the-art-story-telling-segment20.jpg"
+import posterImg21 from "/src/assets/ArtsAlumniAssets/classical-performance-segment21.jpg"
 
 // Schedule Posters
 import day1Poster from "/src/assets/ArtsAlumniAssets/schedule-day1.jpg";
@@ -72,13 +76,14 @@ const AlumniPage = () => {
       description: "A dark comedy exploring the unexpected consequences of a seemingly harmless act.",
     },
     {
+      image: posterImg11,
+    },
+    {
       title: "An Innocent Little Murder",
       image: posterImg1,
       description: "A dark comedy exploring the unexpected consequences of a seemingly harmless act.",
     },
-    {
-      image: posterImg11,
-    },
+
     {
       title: "Kathak Workshop by Nighat Chaudhry",
       image: posterImg2,
@@ -130,6 +135,18 @@ const AlumniPage = () => {
       image: posterImg16,
     },
     {
+      image: posterImg18,
+    },
+    {
+      image: posterImg19,
+    },
+    {
+      image: posterImg20,
+    },
+    {
+      image: posterImg21,
+    },
+    {
       title: "Block Printing Workshop",
       image: posterImg9,
       description: "Create beautiful patterns using traditional block printing techniques.",
@@ -148,166 +165,178 @@ const AlumniPage = () => {
   const schedules = {
     "Day 1": [
       {
-        title: "Opening Ceremony | Art Exhibition",
+        title: "Opening Ceremony | Journey of Azadi",
         time: "4:00 PM",
-        location: "Art Gallery",
-        directedBy: "Art by Alumni",
-        details: "Keynote By Muhammad Ahmed Shah - President",
+        location: "Auditorium 1",
+        details: "Flag Hoisting - Keynote by President, Arts Council Pakistan, A Tribute & Celebration: Speeches, Music, Theatre & Dance",
         highlight: true,
       },
       {
-        title: "Theatre Play (Dark Comedy): An Innocent Murder",
-        time: "5:00 PM",
+        title: "Music Panel Discussion: Music Education in Transition",
+        time: "6:00 PM",
+        location: "Studio 1",
+        details: "Panelists: Ahsan Bari & Hamza Jafri, Moderator: Sharaf Qaisar",
+      },
+      {
+        title: "Theatre Play: An Innocent Little Murder",
+        time: "7:00 PM",
         location: "Auditorium 1",
         directedBy: "Director: Hassan Alam",
-        details: "Cast: Ghulam Mohi Uddin, Sara Taqi, Sheryl John",
+        details: "Dark Comedy, Cast: Ghulam Muhi-ud-Din, Sara Taqi & Sheryl John",
       },
       {
-        title: "Kathak Dance Workshop",
-        time: "6:00 PM",
+        title: "Music Performance: Rock & Pop Concert",
+        time: "8:00 PM",
         location: "Studio 2",
-        details: "Expert: Nighat Choudhary",
-      },
-      {
-        title: "Music Performance",
-        time: "7:00 PM",
-        location: "Studio 1",
-        // directedBy: "Director: Alumni Group",
-        details: "Rock & Pop Concert (It might get loud)",
-      },
-      {
-        title: "Theatre Play | Family Drama | Saalgirah",
-        time: "9:00 PM",
-        location: "Auditorium 1",
-        directedBy: "Director: Farhan Rahim",
-        details: "Cast: Kemal Hayat, Emraan Farman",
+        details: "Gumaan",
       },
       {
         title: "Exhibitions",
-        time: "4:00 PM",
-        location: "Art Gallery & Lobby Area",
+        time: "4:00 PM - 8:00 PM",
+        location: "Lobby Area",
         directedBy: "Art by Alumni",
-        details: "Digital Art Screening - Resistance in every Pixel Art Exhibition",
+        details: "Digital Art Screening, Resistance in Every Pixel, Art Exhibition, Art by Alumni Gallery",
       },
       {
-        title: "Activities",
-        time: "5:00 PM",
+        title: "Activities: Block Printing Workshop",
+        time: "5:00 PM - 7:00 PM",
         location: "Lobby Area",
-        details: "Block & Screen Printing - Instructor: Amir Ejaz & Students Live Painting by Zarnab Baloch, Kiran Aslam, Zeenat Khan",
+        details: "Block & Screen Printing, Instructor: Amir Ejaz & Students, Live Painting by Zarnab Baloch, Kiran Aslam & Zeenat Khan",
       },
     ],
     "Day 2": [
       {
-        title: "Musical Panel Discussion",
+        title: "Music Panel Discussion: AI, Authorship & Authenticity",
         time: "4:00 PM",
         location: "Studio 2",
-        details: "AI, Authorship & Authenticity: Who's Really Making the Music?",
+        details: "Who's Really Making the Music?, Panelists: Ayesha Mubarak Ali, Emad Rahman & Umair Dar, Moderator: Babar Sheikh",
       },
       {
-        title: "Theatre Play | Family Drama (Tragedy) | Glass Menagerie",
+        title: "Theatre Play: Monica & A Tale of Two Betrayed",
         time: "5:00 PM",
         location: "Auditorium 1",
-        directedBy: "Director: Adil Shakir",
-        details: "Cast: Sufi Ghous, Sheryl John, Fatima Adil, Usman Hikmat",
-        highlight: true,
+        directedBy: "Director: Zobi Fatima",
+        details: "Dark Comedy, Cast: Hassan Malik, Muneeb Shaikh, Abu Bakar Khan, Sara Taqi & Hasoon Rafi",
       },
       {
-        title: "Fine Arts Panel Discussion",
+        title: "Music Master Class: The Power of Your Voice",
+        time: "5:00 PM",
+        location: "Studio 1",
+        details: "With Khalid Ahmed",
+      },
+      {
+        title: "Independent Artist’s Journey Panel: From Idea to Release",
         time: "6:00 PM",
         location: "Studio 2",
-        details: "Alumni Stars – History & Future: Our Success Stories Panelists: Zarnab Baloch, Habiba Mujeeb, Jawad Hassan, Ramsha Khan, Jawad Jan Moderator: Shahid Rassam",
+        details: "Curator: Anas Khan",
+      },
+      {
+        title: "Fine Arts Panel Discussion: Alumni Stars",
+        time: "6:00 PM",
+        location: "Studio 2",
+        details: "History & Future: Our Success Stories, Panelists: Zarnab Baloch, Habiba Mujeeb, Jawad Hassan, Ramsha Khan, Jawad Jan & Rahat Tasneem, Moderator: Shahid Rassam",
       },
       {
         title: "Bharatanatyam Dance Workshop",
         time: "7:00 PM",
         location: "Studio 2",
         directedBy: "Expert: Mani Chao",
-        // details: "Alumni Stars – History & Future: Our Success Stories Panelists: Zarnab Baloch, Habiba Mujeeb, Jawad Hassan, Ramsha Khan, Jawad Jan Moderator: Shahid Rassam",
+      },
+      {
+        title: "Classical Music Performance",
+        time: "7:00 PM",
+        location: "Studio 1",
+        details: "Curated by: Shahzeb Ali & Gul Muhammad",
       },
       {
         title: "Music Performance by FOLKLORES",
         time: "8:00 PM",
         location: "Studio 1",
-        details: "Folk Woke – Tribute to Pakistani Music",
+        details: "Folk Woke - Tribute to Pakistani Music",
       },
       {
-        title: "Theatre Play | Dark Comedy | Monica & A Tale of Two Betrayed",
+        title: "Theatre Play: Salgirah",
         time: "9:00 PM",
         location: "Auditorium 1",
-        directedBy: "Director: Zobi Fatima",
-        details: "Cast: Abu Bakar, Hassan Malik, Muneeb Khan, Sara Taqi & Hasson Rafi",
+        directedBy: "Director: Farhan Rahim",
+        details: "Family Drama, Cast: Emran Farhan & Komal Hayat",
       },
       {
         title: "Exhibitions",
-        time: "4:00 PM",
-        location: "Art Gallery & Lobby Area",
+        time: "4:00 PM - 9:00 PM",
+        location: "Lobby Area",
         directedBy: "Art by Alumni",
-        details: "Digital Art Screening - Resistance in every Pixel Art Exhibition",
+        details: "Digital Art Screening, Resistance in Every Pixel, Art Exhibition, Art by Alumni Gallery",
       },
       {
-        title: "Activities",
-        time: "5:00 PM",
+        title: "Activities: Block Printing Workshop",
+        time: "5:00 PM - 7:00 PM",
         location: "Lobby Area",
-        details: "Block & Screen Printing - Instructor: Amir Ejaz & Students Live Painting by Zarnab Baloch, Kiran Aslam, Zeenat Khan",
+        details: "Block & Screen Printing, Instructor: Amir Ejaz & Students, Live Painting by Zarnab Baloch, Kiran Aslam & Zeenat Khan",
       },
     ],
     "Day 3": [
       {
-        title: "Theatre Workshop",
+        title: "Theatre Workshop: Master The Power of Your Voice",
         time: "4:00 PM",
         location: "Studio 2",
-        details: "Master The Power of Your Voice with Khalid Ahmed",
+        details: "With Khalid Ahmed",
       },
       {
-        title: "Music Panel Discussion",
+        title: "Music Master Class",
         time: "4:00 PM",
         location: "Studio 1",
-        details: "From Idea to Release: The Independent Artist's Journey",
+        details: "Curators: Ahsan Bari, Gul Muhammad, Jermees Noeed & Emad Rahman",
       },
       {
-        title: "Textile & Communication Design Panel Discussion",
+        title: "Textile & Communication Design Panel Discussion: Alumni Stars",
+        time: "5:00 PM",
+        location: "Studio 1",
+        details: "History & Future: Our Success Stories, Panelists: Noor Hussain, Rida Ali Shah, Bisma Abidi, Sheez Shaukat & Mubashir Saeed, Moderator: Owais Rajput",
+      },
+      {
+        title: "Music Panel Discussion: Future Star Journey",
         time: "5:00 PM",
         location: "Studio 2",
-        details: "Alumni Stars – History & Future: Our Success Stories Panelists: Noor Hussain, Rida Ali Shah, Tasneem Shabbir, Mubasshir, Nazeef, Saira Iqbal Moderator: Owais Rajput",
-        highlight: true,
+        details: "Of ACP Music Alumni, Panelists: Noman Al Sheikh, Muzzamil Muzza & Muneeb Khan, Moderator: Faheem Ahmed",
       },
       {
-        title: "Theatre Panel Discussion",
+        title: "Theatre Play: Glass Menagerie",
         time: "6:00 PM",
-        location: "Studio 2",
-        details: "Alumni Stars – History & Future: Post Diploma Career (Theatre) Panelists: Hassam Irfan, Sheryl John & M. Owais Rehan Moderator: Meesam Naqvi",
-        // highlight: true,
+        location: "Auditorium 1",
+        directedBy: "Director: Adil Shakir",
+        details: "Family Drama (Tragedy), Cast: Hassan Malik, Sheryl John, Fatima Adil & Syed Usman Hikmat",
       },
       {
-        title: "Theatre Performance | Dastaan Goi",
+        title: "Theatre Performance: Dastaan Goi",
         time: "7:00 PM",
-        location: "Auditorium 2",
-        details: "Tilism e Hoshruba: Muqarnis Jadu, Sikandar Jadu Adha by Gulzar Cast: Owais Rehan, Hassam Irfan, Emraan Farman",
+        location: "Studio 2",
+        details: "Tilism e Hoshruba: Muqarnis Jadu, Sikandar Jadu, Adha by Gulzar, Cast: Owais Rehan, Hassam Irfan & Emraan Farman",
       },
       {
-        title: "Journey of Dance",
+        title: "Journey of Dance: Dance Performance",
         time: "8:00 PM",
-        location: "Auditorium 2",
-        details: "Dance Performance by Teachers & Their Students",
+        location: "Auditorium 1",
+        details: "By SOVAPA Teachers & Their Students",
       },
       {
-        title: "Music Performance | Qawwali Fusion by Jambros & Friends",
+        title: "Music Performance: Qawwali Fusion",
         time: "9:00 PM",
         location: "Studio 1",
-        detail: "Echoes of Tradition, Amplified by Today",
+        details: "Echoes of Tradition, Amplified by Today, by Jambros & Friends",
       },
       {
         title: "Exhibitions",
-        time: "4:00 PM",
-        location: "Art Gallery & Lobby Area",
+        time: "4:00 PM - 9:00 PM",
+        location: "Lobby Area",
         directedBy: "Art by Alumni",
-        details: "Digital Art Screening - Resistance in every Pixel Art Exhibition - Art by Alumni",
+        details: "Digital Art Screening, Resistance in Every Pixel, Art Exhibition, Art by Alumni Gallery",
       },
       {
-        title: "Activities",
-        time: "5:00 PM",
+        title: "Activities: Block Printing Workshop",
+        time: "5:00 PM - 7:00 PM",
         location: "Lobby Area",
-        details: "Block & Screen Printing - Instructor: Amir Ejaz & Students Live Painting by Zarnab Baloch, Kiran Aslam, Zeenat Khan",
+        details: "Block & Screen Printing, Instructor: Amir Ejaz & Students, Live Painting by Zarnab Baloch, Kiran Aslam & Zeenat Khan",
       },
     ],
   };
