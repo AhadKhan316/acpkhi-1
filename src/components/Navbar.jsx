@@ -251,27 +251,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* <!-- Google tag (gtag.js) --> */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZH12WE7L2W"></script>
-         
-        
-        
-        
-           {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9375812558466922"
-            crossorigin="anonymous"></script> */}
-        
-        
-        
-        
-          {/* <!-- Meta Pixel Code --> */}
-        
-        
-          <noscript>
-            <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=477835563055833&ev=PageView&noscript=1"
-        />
-          </noscript>
-           {/* End Meta Pixel Code  */}
+            
         </header>
     );
 };
