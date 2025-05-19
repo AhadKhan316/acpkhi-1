@@ -128,7 +128,7 @@ function WcfAboutSection() {
 
           {/* Large Closing Quotation Mark */}
           <motion.span
-            className="absolute -bottom-15 right-5 text-9xl text-red-700 opacity-20 font-serif"
+            className="absolute -bottom-15 right-5 text-9xl text-red-700 opacity-20"
             variants={fadeInVariants}
           >
             ❞

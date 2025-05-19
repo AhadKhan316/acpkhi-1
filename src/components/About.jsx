@@ -31,7 +31,7 @@ const About = () => {
             {/* Our Mission and Vision */}
           </motion.p>
           <motion.div
-            className="h-1 w-20 bg-black mx-auto mb-6 sm:mb-8 rounded"
+            // className="h-1 w-20 bg-black mx-auto mb-6 sm:mb-8 rounded"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
@@ -70,7 +70,7 @@ const About = () => {
             {/* A Word from Our Leader */}
           </motion.p>
           <motion.div
-            className="h-1 w-20 bg-black mx-auto mb-6 sm:mb-8 rounded"
+            // className="h-1 w-20 bg-black mx-auto mb-6 sm:mb-8 rounded"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}

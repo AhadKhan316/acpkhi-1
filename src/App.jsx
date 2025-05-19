@@ -60,7 +60,7 @@ import WomenConference from './Pages/WomenConference'
 import PakistanTheatreFestival from './Pages/PakistanTheatreFestival';
 
 // AAF Pages
-import ArtsAlumniFestival from './Pages/AlumniFestival';
+import ArtsAlumniFestival from './Pages/ArtsAlumniFestival';
 
 import NewsBlog from './Pages/NewsBlog';
 
@@ -92,7 +92,7 @@ const App = () => {
           <Route path="/facilities/:venueId" element={<VenueSubPage />} />
 
           {/* Arts Alumni Festival Route */}
-          <Route path="/alumni" element={<ArtsAlumniFestival />} />
+          {/* <Route path="/alumni" element={<ArtsAlumniFestival />} /> */}
 
           {/* OTP Pages */}
           <Route path="/verifyOtp" element={<VerifyOtp />} />
@@ -136,7 +136,7 @@ const App = () => {
         <Route path="/festival/ptf/*" element={<PakistanTheatreFestival />} />
 
         {/* AAF */}
-        {/* <Route path="/festival/aaf/*" element={<ArtsAlumniFestival />} /> */}
+        <Route path="/festival/aaf/*" element={<ArtsAlumniFestival />} />
 
       </Routes>
     </Router>

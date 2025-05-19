@@ -130,7 +130,7 @@ const Navbar = () => {
                                 <a href="/festival/ptf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Pakistan Theatre Festival</a>
                                 <a href="/festival/pyf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Pakistan Youth Festival</a>
                                 <a href="/festival/wc" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Women Conference</a>
-                                <a href="/alumni" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Arts Alumni Festival</a>
+                                <a href="/festival/aaf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Arts Alumni Festival</a>
                             </div>
                         )}
                     </li>
@@ -189,7 +189,7 @@ const Navbar = () => {
                                     <a href="/festival/ptf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Pakistan Theatre Festival</a>
                                     <a href="/festival/pyf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Pakistan Youth Festival</a>
                                     <a href="/festival/wc" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Women Conference</a>
-                                    <a href="/alumni" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Arts Alumni Festival</a>
+                                    <a href="/festival/aaf" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-white hover:bg-red-800">Arts Alumni Festival</a>
                                 </div>
                             )}
                         </li>
