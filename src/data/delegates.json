@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "name": "Absa Komal",
+      "role": "News Anchor",
+      "category": "Media",
+      "image": "/src/assets/delegates/absa-komal.jpg",
+      "bio": "Absa Komal is a renowned News Anchor specializing in broadcast journalism...",
+      "socialLinks": [
+        { "type": "instagram", "url": "#" },
+        { "type": "twitter", "url": "#" }
+      ],
+      "additionalDetails": [
+        { "label": "Specialization", "value": "Broadcast Journalism" },
+        { "label": "Years Active", "value": "12" },
+        { "label": "Network", "value": "Geo News" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Ahmed Shah",
+      "role": "Art Lover",
+      "category": "Visual Arts",
+      "image": "/src/assets/delegates/Ahmed Shah احمد شاہ.jpg",
+      "bio": "Ahmed is a contemporary artist known for his miniature paintings...",
+      "socialLinks": [
+        { "type": "instagram", "url": "#" },
+        { "type": "website", "url": "#" }
+      ],
+      "additionalDetails": [
+        { "label": "Specialization", "value": "Miniature Painting" },
+        { "label": "Exhibitions", "value": "25 International" },
+        { "label": "Awards", "value": "National Arts Prize 2020" }
+      ]
+    },
+
+    {
+        "id": 2,
+        "name": "Huma Mir",
+        "role": "Visual Artist",
+        "category": "Visual Arts",
+        "image": "/src/assets/delegates/Dr Huma.jpg",
+        "bio": "Ahmed is a contemporary artist known for his miniature paintings...",
+        "socialLinks": [
+          { "type": "instagram", "url": "#" },
+          { "type": "website", "url": "#" }
+        ],
+        "additionalDetails": [
+          { "label": "Specialization", "value": "Miniature Painting" },
+          { "label": "Exhibitions", "value": "25 International" },
+          { "label": "Awards", "value": "National Arts Prize 2020" }
+        ]
+      },
+
+      {
+        "id": 3,
+        "name": "Ambreen Haseeb Amber",
+        "role": "Visual Artist",
+        "category": "Visual Arts",
+        "image": "/src/assets/delegates/Ambreen Haseeb Amber عنبرین حسیب عنبر.jpg",
+        "bio": "Ahmed is a contemporary artist known for his miniature paintings...",
+        "socialLinks": [
+          { "type": "instagram", "url": "#" },
+          { "type": "website", "url": "#" }
+        ],
+        "additionalDetails": [
+          { "label": "Specialization", "value": "Miniature Painting" },
+          { "label": "Exhibitions", "value": "25 International" },
+          { "label": "Awards", "value": "National Arts Prize 2020" }
+        ]
+      }
+  ]

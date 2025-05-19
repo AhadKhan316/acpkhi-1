@@ -8,6 +8,7 @@ import acpLogo from '/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.p
 
 // WCF Logo
 import wcfLogo from '/src/assets/wcf-assets/Logo-wcf-White.png';
+import centerimg from "/src/assets/auc-assets/Untitled-1.png";
 
 const WcfFooter = () => {
   const [email, setEmail] = useState("");
@@ -135,13 +136,20 @@ const WcfFooter = () => {
               />
             </Link>
 
-            <span className="text-white text-xl font-bold">X</span>
+            <Link to="/" className="h-full flex items-center">
+            <img
+              src={centerimg}
+              alt="Line"
+              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+            />
+          </Link>
 
             <Link to="/festival/wcf" className="h-full flex items-center">
               <img
                 src={wcfLogo}
                 alt="World Culture Festival Logo"
-                className="object-contain w-auto max-h-[75px] max-w-[200px] sm:max-h-[85px] lg:max-h-[85px]"
+
+                className="object-contain w-auto max-h-[150px] max-w-[120px] sm:max-h-[150px] lg:max-h-[150px]"
               />
             </Link>
           </div>

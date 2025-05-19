@@ -7,6 +7,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedin, FaTiktok } 
 import PyfFooterLogo from "/src/assets/pyf-assets/pyf-logo.png";
 // ACP Logo (assumed to be the same as used in WCF Footer)
 import AcpLogo from "/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.png";
+import centerimg from "/src/assets/auc-assets/Untitled-1.png";
 
 const PyfFooter = () => {
   const [email, setEmail] = useState("");
@@ -143,12 +144,24 @@ const PyfFooter = () => {
                 className="object-contain w-auto max-h-[130px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
               />
             </Link>
-            <span className="text-white text-xl font-bold">X</span>
+            
+
+            <Link to="/" className="h-full flex items-center">
+            <img
+              src={centerimg}
+              alt="Line"
+              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+            />
+          </Link>
+
+
+
             <Link to="/festival/pyf" className="h-full flex items-center">
               <img
                 src={PyfFooterLogo}
                 alt="Pakistan Youth Festival Logo"
-                className="object-contain w-auto max-h-[80px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+
+                className="object-contain w-auto max-h-[150px] max-w-[90px] sm:max-h-[150px] lg:max-h-[150px]"
               />
             </Link>
           </div>

@@ -7,6 +7,8 @@ import acpLogo from '/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.p
 
 // WC Logo
 import WcLogo from "/src/assets/wc-assets/wc-logo.png";
+import centerimg from "/src/assets/auc-assets/Untitled-1.png";
+
 
 const WcNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,13 +85,19 @@ const WcNavbar = () => {
             />
           </Link>
 
-          <span className="text-white text-xl font-bold">X</span>
+          <Link to="/" className="h-full flex items-center">
+            <img
+              src={centerimg}
+              alt="Line"
+              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+            />
+          </Link>
 
           <Link to="/festival/wc" className="h-full flex items-center">
             <img
               src={WcLogo}
               alt="WC Logo"
-              className="object-contain w-auto max-h-[80px] max-w-[200px] sm:max-h-[80px] lg:max-h-[80px]"
+              className="object-contain w-auto max-h-[80px] max-w-[70px] sm:max-h-[80px] lg:max-h-[80px]"
             />
           </Link>
         </div>

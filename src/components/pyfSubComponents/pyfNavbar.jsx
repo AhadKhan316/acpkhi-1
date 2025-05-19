@@ -7,6 +7,7 @@ import acpLogo from '/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.p
 
 // PYF Logo
 import PyfLogo from "/src/assets/pyf-assets/pyf-logo.png";
+import centerimg from "/src/assets/auc-assets/Untitled-1.png";
 
 const PyfNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,13 +84,21 @@ const PyfNavbar = () => {
             />
           </Link>
 
-          <span className="text-white text-xl font-bold">X</span>
+          <Link to="/" className="h-full flex items-center">
+            <img
+              src={centerimg}
+              alt="Line"
+              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+            />
+          </Link>
+
 
           <Link to="/festival/pyf" className="h-full flex items-center">
             <img
               src={PyfLogo}
               alt="PYF Logo"
-              className="object-contain w-auto max-h-[80px] max-w-[200px] sm:max-h-[100px] lg:max-h-[100px]"
+
+              className="object-contain w-auto max-h-[150px] max-w-[90px] sm:max-h-[150px] lg:max-h-[150px]"
             />
           </Link>
         </div>

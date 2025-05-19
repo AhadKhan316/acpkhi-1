@@ -5,6 +5,8 @@ import { FaBars, FaTimes, FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "
 // ACP Logo
 import acpLogo from '/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.png';
 
+import centerimg from "/src/assets/auc-assets/Untitled-1.png";
+
 // PTF Logo
 import PlfLogo from "/src/assets/plf-assets/plf-logo.png";
 
@@ -84,13 +86,20 @@ const PlfNavbar = () => {
             />
           </Link>
 
-          <span className="text-white text-xl font-bold">X</span>
+          <Link to="/" className="h-full flex items-center">
+            <img
+              src={centerimg}
+              alt="Line"
+              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+            />
+          </Link>
 
           <Link to="/festival/plf" className="h-full flex items-center">
             <img
               src={PlfLogo}
               alt="PLF Logo"
-              className="object-contain w-auto max-h-[100px] max-w-[200px] sm:max-h-[120px] lg:max-h-[120px]"
+
+             className="object-contain w-auto max-h-[150px] max-w-[75px] sm:max-h-[150px] lg:max-h-[150px]"
             />
           </Link>
         </div>

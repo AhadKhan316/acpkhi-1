@@ -7,6 +7,7 @@ import acpLogo from '/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.p
 
 // AUC Logo
 import AucLogo from "/src/assets/auc-assets/auc-logo.png";
+import centerimg from "/src/assets/auc-assets/Untitled-1.png";
 
 const AucNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -112,13 +113,22 @@ const AucNavbar = () => {
             />
           </Link>
 
-          <span className="text-white text-xl font-bold">X</span>
+          <Link to="/" className="h-full flex items-center">
+            <img
+              src={centerimg}
+              alt="Line"
+              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+            />
+          </Link>
 
           <Link to="/festival/auc" className="h-full flex items-center">
             <img
               src={AucLogo}
               alt="AUC Logo"
-              className="object-contain w-auto max-h-[70px] max-w-[200px] sm:max-h-[90px] lg:max-h-[90px]"
+
+              className="object-contain w-auto max-h-[150px] max-w-[120px] sm:max-h-[150px] lg:max-h-[150px]"
+ 
+
             />
           </Link>
         </div>

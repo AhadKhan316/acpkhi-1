@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionWithSlider from "../reusableComponents/ReusableCarouselOfAboutUs";
-import img1 from  "../assets/about/img1.jpg"
-import img2 from  "../assets/about/img2.jpg"
-import img3 from  "../assets/about/img3.jpg"
-import img4 from  "../assets/about/img4.jpg"
-import img5 from  "../assets/about/img5.jpg"
-import img6 from  "../assets/about/img6.jpg"
-
+import img1 from "../assets/about/img1.jpg";
+import img2 from "../assets/about/img2.jpg";
+import img3 from "../assets/about/img3.jpg";
+import img4 from "../assets/about/img4.jpg";
+import img5 from "../assets/about/img5.jpg";
+import img6 from "../assets/about/img6.jpg";
 
 const AboutUs = () => {
   const [activeSection, setActiveSection] = useState("history");
@@ -16,52 +15,68 @@ const AboutUs = () => {
     setActiveSection(section);
   };
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.8, 
+        ease: [0.1, 0.8, 0.2, 1] 
+      }
+    }
+  };
+
+  const sectionVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { 
+        duration: 0.8, 
+        ease: "easeOut" 
+      }
+    }
+  };
+
   const renderSection = () => {
     switch (activeSection) {
       case "history":
         return (
           <motion.div
             key="history"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.6 }}
+            variants={sectionVariants}
+            initial="hidden"
+            animate="visible"
             className="my-12"
           >
             <SectionWithSlider
-              title="Our History"
-              description="Founded in 1980, the Arts Council of Pakistan has been a beacon for cultural preservation, talent development, and a place of collaboration for artists from all corners of Pakistan. We take pride in fostering artistic growth and supporting a creative ecosystem that spans from traditional to contemporary forms."
+              title="Our Cultural Journey"
+              description="Founded in 1954vite, the Arts Council of Pakistan has been a beacon for cultural preservation, talent development, and a place of collaboration for artists from all corners of Pakistan. We take pride in fostering artistic growth and supporting a creative ecosystem that spans from traditional to contemporary forms."
               images={[
-                {
-                  src: img1,
-                  alt: "Historical 1",
-                },
-                {
-                  src: img2,
-                  alt: "Historical 2",
-                },
-                {
-                  src: img3,
-                  alt: "Historical 3",
-                },
-
-                {
-                  src: img4,
-                  alt: "Historical 1",
-                },
-                {
-                  src: img5,
-                  alt: "Historical 2",
-                },
-                {
-                  src: img6,
-                  alt: "Historical 3",
-                },
+                { src: img1, alt: "Historical 1" },
+                { src: img2, alt: "Historical 2" },
+                { src: img3, alt: "Historical 3" },
+                { src: img4, alt: "Historical 4" },
+                { src: img5, alt: "Historical 5" },
+                { src: img6, alt: "Historical 6" },
               ]}
-              className="sm:p-8 rounded-2xl"
-              imageClassName="object-cover w-full max-h-64 sm:max-h-80 lg:max-h-96 rounded-lg"
-              titleClassName="text-2xl sm:text-3xl lg:text-4xl font-bold text-cream-100 text-center"
-              descriptionClassName="text-base sm:text-lg md:text-xl lg:max-w-3xl leading-loose mx-auto text-center"
+              className="sm:p-8 rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-xl"
+              imageClassName="object-cover w-full h-64 sm:h-80 lg:h-96 rounded-lg shadow-md"
+              titleClassName="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 text-center mb-6"
+              descriptionClassName="text-lg sm:text-xl md:text-2xl lg:max-w-4xl leading-relaxed mx-auto text-center text-gray-700"
             />
           </motion.div>
         );
@@ -69,36 +84,81 @@ const AboutUs = () => {
         return (
           <motion.div
             key="vision"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.6 }}
-            className="my-12 rounded-2xl"
+            variants={sectionVariants}
+            initial="hidden"
+            animate="visible"
+            className="my-12 p-8 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl"
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cream-100 mb-6 text-center">
-              Our Vision
-            </h2>
-            <p className="text-black text-base sm:text-lg md:text-xl lg:max-w-3xl mx-auto text-center">
-              Our vision is to create a world where art unites people, transcending borders and creating a global dialogue through artistic expression. We aim to support artists and bring attention to the diverse, rich culture of Pakistan while influencing global trends through innovation and cultural engagement.
-            </p>
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.h2 
+                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 mb-8"
+                variants={itemVariants}
+              >
+                Our Vision
+              </motion.h2>
+              <motion.div 
+                className="relative"
+                variants={itemVariants}
+              >
+                <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 text-6xl text-red-400 opacity-20">
+                  "
+                </div>
+                <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-700 italic">
+                  To create a world where art unites people, transcending borders and creating a global dialogue through artistic expression.
+                </p>
+                <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 text-6xl text-red-400 opacity-20">
+                  "
+                </div>
+              </motion.div>
+              <motion.p 
+                className="mt-8 text-lg text-gray-600"
+                variants={itemVariants}
+              >
+                We aim to support artists and bring attention to the diverse, rich culture of Pakistan while influencing global trends through innovation and cultural engagement.
+              </motion.p>
+            </div>
           </motion.div>
         );
       case "mission":
         return (
           <motion.div
             key="mission"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.6 }}
-            className="my-12 rounded-2xl"
+            variants={sectionVariants}
+            initial="hidden"
+            animate="visible"
+            className="my-12 p-8 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl"
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cream-100 mb-6 text-center">
-              Our Mission
-            </h2>
-            <p className="text-black text-base sm:text-lg md:text-xl lg:max-w-3xl mx-auto text-center">
-              Our mission is to serve as the premier institution supporting the development of artistic talents, fostering a rich cultural dialogue, and promoting the cultural heritage of Pakistan. We aim to provide a platform for artists, both emerging and established, to share their work with a broader audience, enrich society, and promote art as a universal language.
-            </p>
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.h2 
+                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 mb-8"
+                variants={itemVariants}
+              >
+                Our Mission
+              </motion.h2>
+              <motion.ul 
+                className="space-y-6 text-left max-w-2xl mx-auto"
+                variants={containerVariants}
+              >
+                {[
+                  "Serve as the premier institution supporting artistic talents",
+                  "Foster rich cultural dialogue across communities",
+                  "Promote Pakistan's cultural heritage globally",
+                  "Provide platforms for emerging and established artists",
+                  "Enrich society through artistic expression"
+                ].map((item, index) => (
+                  <motion.li 
+                    key={index}
+                    className="flex items-start text-lg text-gray-700"
+                    variants={itemVariants}
+                  >
+                    <svg className="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    {item}
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </div>
           </motion.div>
         );
       default:
@@ -107,63 +167,93 @@ const AboutUs = () => {
   };
 
   return (
-    <section className="bg-white text-black py-6 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-2xl sm:text-4xl lg:text-4xl font-bold text-black mb-6 text-center"
-        >
-          About Us
-        </motion.h1>
+    <section className="relative py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-red-500 blur-3xl"></div>
+        <div className="absolute bottom-10 right-20 w-40 h-40 rounded-full bg-yellow-500 blur-3xl"></div>
+      </div>
 
-        <div className="mb-12 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+      <motion.div 
+        className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        {/* Header */}
+        <motion.div 
+          className="text-center mb-16"
+          variants={itemVariants}
+        >
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800">
+            About
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover the story behind Pakistan's premier cultural institution
+          </p>
+        </motion.div>
+
+        {/* Navigation Tabs */}
+        <motion.div 
+          className="flex flex-wrap justify-center gap-4 mb-12"
+          variants={itemVariants}
+        >
           {["history", "vision", "mission"].map((section) => (
             <motion.button
               key={section}
               onClick={() => handleSectionChange(section)}
-              className={`px-6 py-3 rounded-xl font-semibold capitalize text-base sm:text-lg transition-all duration-300 ${activeSection === section
-                ? "bg-[#B90602] text-white shadow-md cursor-pointer"
-                : "bg-[#B90602] text-white curdor-pointer hover:bg-black/80 to-black/90 hover:shadow-lg cursor-pointer"
-                }`}
+              className={`px-8 py-3 rounded-full font-semibold capitalize text-lg transition-all duration-300 relative overflow-hidden ${
+                activeSection === section
+                  ? "bg-red-600 text-white shadow-lg"
+                  : "bg-white text-gray-800 border border-gray-200 hover:bg-gray-50 hover:shadow-md"
+              }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-              aria-label={`Switch to ${section.charAt(0).toUpperCase() + section.slice(1)}`}
+              variants={itemVariants}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
+              {activeSection === section && (
+                <motion.span 
+                  className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 opacity-20"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.2 }}
+                  transition={{ duration: 0.6 }}
+                />
+              )}
             </motion.button>
           ))}
-        </div>
+        </motion.div>
 
+        {/* Content Section */}
         {renderSection()}
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="rounded-2xl"
+        {/* CTA Section */}
+        <motion.div 
+          className="mt-20 text-center bg-gradient-to-r from-red-50 to-yellow-50 p-8 sm:p-12 rounded-3xl shadow-inner"
+          variants={itemVariants}
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-cream-100 mb-6 text-center">
-            Join Us in Our Mission
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            Join Our Cultural Movement
           </h2>
-          <p className="text-black text-base sm:text-lg md:text-xl lg:max-w-3xl mb-8 text-center mx-auto">
-            Be part of a growing movement to nurture creativity, support artists, and celebrate art in all its forms.
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Be part of Pakistan's most vibrant artistic community and help shape the future of our cultural landscape.
           </p>
-          <div className="text-center">
+          <div className="flex flex-wrap justify-center gap-4">
+           
             <motion.a
-              href="https://www.youtube.com/c/ArtsCouncilofPakistanKarachi"
-              className="inline-block bg-red-700 text-white font-semibold px-8 py-4 rounded-xl shadow-md hover:bg-black/80 to-black/90 hover:shadow-lg transition duration-300"
+              href="#"
+              className="px-8 py-4 bg-white text-gray-800 font-semibold rounded-full border border-gray-200 shadow-lg hover:bg-gray-50 transition-colors flex items-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              aria-label="Get Involved"
             >
-              Get Involved
+              View Upcoming Events
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
             </motion.a>
           </div>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };

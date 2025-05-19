@@ -1,17 +1,22 @@
-import React from 'react';
+//  
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // Components
+import AlumniRedirect from './components/AlumniRedirect'; // We'll create this next
 import Layout from './components/Layout';
 import Hero from './components/Hero';
-import UpcomingEvents from './components/UpcomingEvents';
+// import UpcomingEvents from './components/UpcomingEvents';
 import About from './components/About';
+import Mainpagevideo from './components/Mainpagevideo';
 // import PresidentMessage from './components/PresidentMessage';
 import StayUpdated from './components/StayUpdated';
-import Sovapa from './components/Academy';
+// import Sovapa from './components/Academy';
 import CommunityFeedback from './components/CommunityFeedback';
-import Production from './components/Production';
-// import OurSocial from './components/OurSocial';
+// import Production from './components/Production';
+// import OurSocial from './components/OurSocial'
+import WhatWeDo from './components/WhatWeDo';
+import Initiative from './components/Initiative';
+import Education from './components/Education';
 // import OurSponsors from './components/Sponsors';
 import ContactUs from './Pages/ContactUs';
 
@@ -63,6 +68,15 @@ import PakistanTheatreFestival from './Pages/PakistanTheatreFestival';
 import ArtsAlumniFestival from './Pages/ArtsAlumniFestival';
 
 import NewsBlog from './Pages/NewsBlog';
+import Whatweoffer from './components/Whatweoffer';
+import Alloffers from './components/Alloffers';
+import PresidentsMessage from './components/PresidentsMessage';
+
+import Email from './Pages/Email';
+
+
+import DelegatesPage from './Pages/DelegatesPage';
+
 
 const App = () => {
   return (
@@ -74,13 +88,20 @@ const App = () => {
             <>
               <Hero />
               <About />
-              <UpcomingEvents />
-              {/* <PresidentMessage /> */}
-              <Sovapa />
-              <StayUpdated />
-              <Production />
+              <Mainpagevideo />
+              {/* <UpcomingEvents /> */}
+              <PresidentsMessage />
+              <WhatWeDo />
+              <Initiative />
+              <Education />
+
+
+              {/* <Production /> */}
               {/* <OurSocial /> */}
               <CommunityFeedback />
+              <Whatweoffer />
+              <Alloffers />
+              <StayUpdated />
               {/* <OurSponsors /> */}
             </>
           } />
@@ -113,6 +134,7 @@ const App = () => {
           <Route path="/registration" element={<Registration />} />
           <Route path="/admissions" element={<Admission />} />
           <Route path="/NewsBlog" element={<NewsBlog />} />
+          <Route path="/DelegatesPage" element={<DelegatesPage />} />
         </Route>
 
         {/* Routes without Navbar and Footer */}
@@ -137,7 +159,11 @@ const App = () => {
 
         {/* AAF */}
         <Route path="/festival/aaf/*" element={<ArtsAlumniFestival />} />
+        {/* for barcode scan */}
+        <Route path="/alumni.php" element={<AlumniRedirect />} />
 
+        {/* for email link */}
+        <Route path="/email" element={<Email />} />
       </Routes>
     </Router>
   );
