@@ -133,21 +133,21 @@ const PtfFooter = () => {
               />
             </Link>
             <Link to="/" className="h-full flex items-center">
-            <img
-              src={centerimg}
-              alt="Line"
-              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
-            />
-          </Link>
+              <img
+                src={centerimg}
+                alt="Line"
+                className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+              />
+            </Link>
 
             <Link to="/festival/ptf" className="h-full flex items-center">
               <img
                 src={PtfFooterLogo}
                 alt="Pakistan Theatre Festival Logo"
                 className="object-contain w-auto max-h-[150px] max-w-[120px] sm:max-h-[150px] lg:max-h-[150px]"
-                
-/>
-              
+
+              />
+
             </Link>
           </div>
           <div className="flex space-x-4 mt-4">

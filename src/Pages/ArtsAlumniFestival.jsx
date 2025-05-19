@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import AafNavbar from "../components/aafSubComponents/aafNavbar";
-// import MainAlumniCompo from "../Pages/AlumniFestival";
+import MainAlumniCompo from "../Pages/AlumniFestival";
 
 
 import AafFooter from "../components/aafSubComponents/aafFooter";
@@ -16,7 +16,7 @@ function ArtsAlumiFestival() {
       <Routes>
         <Route path="/" element={
           <>
-            {/* <MainAlumniCompo /> */}
+            <MainAlumniCompo />
             {/* <AucHero /> */}
             {/* <AucAbout /> */}
             {/* <AucPromoVideo /> */}

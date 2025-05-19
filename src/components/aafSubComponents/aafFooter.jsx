@@ -7,6 +7,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedin, FaTiktok } 
 // import AucFooterLogo from "/src/assets/auc-assets/auc-logo.png";
 // ACP Logo (assumed to be the same as used in WCF Footer)
 import AcpLogo from "/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.png";
+import centerimg from "/src/assets/auc-assets/Untitled-1.png";
 
 const AafFooter = () => {
   const [email, setEmail] = useState("");
@@ -132,7 +133,13 @@ const AafFooter = () => {
                 className="object-contain w-auto max-h-[130px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
               />
             </Link>
-            <span className="text-white text-xl font-bold">X</span>
+            <Link to="/" className="h-full flex items-center">
+              <img
+                src={centerimg}
+                alt="Line"
+                className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+              />
+            </Link>
             {/* <Link to="/festival/auc" className="h-full flex items-center">
               <img
                 src={AucFooterLogo}
