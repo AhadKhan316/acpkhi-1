@@ -103,7 +103,7 @@ const Hero = () => {
           className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg"
           variants={titleVariants}
         >
-          Hub of Arts and Culture
+          Hub of Arts 
         </motion.h1>
         <motion.p
           className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 opacity-90 drop-shadow"
