@@ -1,5 +1,5 @@
 //  
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 // Components
 import AlumniRedirect from './components/AlumniRedirect'; // We'll create this next
@@ -81,92 +81,90 @@ import DelegatesPage from './Pages/DelegatesPage';
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        {/* Routes with Navbar and Footer */}
-        <Route element={<Layout />}>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <About />
-              <Mainpagevideo />
-              {/* <UpcomingEvents /> */}
-              <PresidentsMessage />
-              <WhatWeDo />
-              <Initiative />
-              <Education />
+    <Routes>
+      {/* Routes with Navbar and Footer */}
+      <Route element={<Layout />}>
+        <Route path="/" element={
+          <>
+            <Hero />
+            <About />
+            <Mainpagevideo />
+            {/* <UpcomingEvents /> */}
+            <PresidentsMessage />
+            <WhatWeDo />
+            <Initiative />
+            <Education />
 
 
-              {/* <Production /> */}
-              {/* <OurSocial /> */}
-              <CommunityFeedback />
-              <Whatweoffer />
-              <Alloffers />
-              <StayUpdated />
-              {/* <OurSponsors /> */}
-            </>
-          } />
+            {/* <Production /> */}
+            {/* <OurSocial /> */}
+            <CommunityFeedback />
+            <Whatweoffer />
+            <Alloffers />
+            <StayUpdated />
+            {/* <OurSponsors /> */}
+          </>
+        } />
 
-          {/* ACP Sub Pages */}
-          <Route path="/initiatives" element={<Initiatives />} />
-          <Route path="/upcomingEvents" element={<UpcomingEventsPage />}></Route>
-          <Route path="/sovapa/:department" element={<SovapaCoursePage />}></Route>
-          <Route path="/facilities/:venueId" element={<VenueSubPage />} />
+        {/* ACP Sub Pages */}
+        <Route path="/initiatives" element={<Initiatives />} />
+        <Route path="/upcomingEvents" element={<UpcomingEventsPage />}></Route>
+        <Route path="/sovapa/:department" element={<SovapaCoursePage />}></Route>
+        <Route path="/facilities/:venueId" element={<VenueSubPage />} />
 
-          {/* Arts Alumni Festival Route */}
-          <Route path="/alumni" element={<AlumniFestivalPage />} />
+        {/* Arts Alumni Festival Route */}
+        <Route path="/alumni" element={<AlumniFestivalPage />} />
 
-          {/* OTP Pages */}
-          <Route path="/verifyOtp" element={<VerifyOtp />} />
-          <Route path="/resend-otp" element={<ResendOtp />} />
+        {/* OTP Pages */}
+        <Route path="/verifyOtp" element={<VerifyOtp />} />
+        <Route path="/resend-otp" element={<ResendOtp />} />
 
-          {/* Contact Us */}
+        {/* Contact Us */}
 
-          <Route path="/sovapa" element={<SovapaPage />} />
-          <Route path="/facilities" element={<VenuesPage />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/governingBody" element={<GoverningBody />} />
-          <Route path="/teamMembers" element={<TeamMembers />} />
-          <Route path="/membersVerification" element={<MembersVerification />} />
-          <Route path="/career" element={<Career />} />
-          <Route path="/tenders" element={<Tenders />} />
-          <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/mediaKit" element={<MediaKit />} />
-          <Route path="/registration" element={<Registration />} />
-          <Route path="/admissions" element={<Admission />} />
-          <Route path="/NewsBlog" element={<NewsBlog />} />
-          <Route path="/DelegatesPage" element={<DelegatesPage />} />
-        </Route>
+        <Route path="/sovapa" element={<SovapaPage />} />
+        <Route path="/facilities" element={<VenuesPage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/governingBody" element={<GoverningBody />} />
+        <Route path="/teamMembers" element={<TeamMembers />} />
+        <Route path="/membersVerification" element={<MembersVerification />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/tenders" element={<Tenders />} />
+        <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/mediaKit" element={<MediaKit />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/admissions" element={<Admission />} />
+        <Route path="/NewsBlog" element={<NewsBlog />} />
+        <Route path="/DelegatesPage" element={<DelegatesPage />} />
+      </Route>
 
-        {/* Routes without Navbar and Footer */}
+      {/* Routes without Navbar and Footer */}
 
-        {/* WCF */}
-        <Route path="/festival/wcf/*" element={<WorldCultureFestival />} />
+      {/* WCF */}
+      <Route path="/festival/wcf/*" element={<WorldCultureFestival />} />
 
-        {/* PLF */}
-        <Route path="/festival/plf/*" element={<PakistanLiteratureFestival />} />
+      {/* PLF */}
+      <Route path="/festival/plf/*" element={<PakistanLiteratureFestival />} />
 
-        {/* AUC */}
-        <Route path="/festival/auc/*" element={<AalmiUrduConference />} />
+      {/* AUC */}
+      <Route path="/festival/auc/*" element={<AalmiUrduConference />} />
 
-        {/* PYF */}
-        <Route path="/festival/pyf/*" element={<PakistanYouthFestival />} />
+      {/* PYF */}
+      <Route path="/festival/pyf/*" element={<PakistanYouthFestival />} />
 
-        {/* WC */}
-        <Route path="/festival/wc/*" element={<WomenConference />} />
+      {/* WC */}
+      <Route path="/festival/wc/*" element={<WomenConference />} />
 
-        {/* PTF */}
-        <Route path="/festival/ptf/*" element={<PakistanTheatreFestival />} />
+      {/* PTF */}
+      <Route path="/festival/ptf/*" element={<PakistanTheatreFestival />} />
 
-        {/* AAF */}
-        <Route path="/festival/aaf/*" element={<ArtsAlumniFestival />} />
-        {/* for barcode scan */}
-        <Route path="/alumni.php" element={<AlumniRedirect />} />
+      {/* AAF */}
+      <Route path="/festival/aaf/*" element={<ArtsAlumniFestival />} />
+      {/* for barcode scan */}
+      <Route path="/alumni.php" element={<AlumniRedirect />} />
 
-        {/* for email link */}
-        <Route path="/email" element={<Email />} />
-      </Routes>
-    </Router>
+      {/* for email link */}
+      <Route path="/email" element={<Email />} />
+    </Routes>
   );
 };
 
