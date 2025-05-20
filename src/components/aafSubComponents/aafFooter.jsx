@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedin, FaTiktok } from "react-icons/fa";
 
-// AUC Logo
-// import AucFooterLogo from "/src/assets/auc-assets/auc-logo.png";
+// Aaf Logo
+import AafFooterLogo from "/src/assets/ArtsAlumniAssets/alumni-festival-logo.png";
 // ACP Logo (assumed to be the same as used in WCF Footer)
 import AcpLogo from "/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.png";
 import centerimg from "/src/assets/auc-assets/Untitled-1.png";
@@ -49,11 +49,11 @@ const AafFooter = () => {
   };
 
   const quickLinks1 = [
-    { id: 1, text: "About AAF", href: "/festival/auc/about" },
-    { id: 2, text: "Delegates", href: "/festival/auc/delegate" },
+    { id: 1, text: "About AAF", href: "/festival/aaf/about" },
+    { id: 2, text: "Alumni", href: "/festival/aaf/alumni" },
     { id: 3, text: "Our Gallery", href: "#aucHighlightedSessions" },
     // { id: 4, text: "Our Partners", href: "#ourPartners" },
-    { id: 5, text: "Contact Us", href: "/festival/auc/contactUs" },
+    { id: 5, text: "Contact Us", href: "/festival/aaf/contactUs" },
   ];
 
   const quickLinks2 = [
@@ -140,13 +140,13 @@ const AafFooter = () => {
                 className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
               />
             </Link>
-            {/* <Link to="/festival/auc" className="h-full flex items-center">
+            <Link to="/festival/aaf" className="h-full flex items-center">
               <img
-                src={AucFooterLogo}
-                alt="Aalmi Urdu Conference Logo"
-                className="object-contain w-auto max-h-[70px] max-w-[200px] sm:max-h-[85px] lg:max-h-[85px]"
+                src={AafFooterLogo}
+                alt="Arts Alumni Festival Logo"
+                className="object-contain w-auto max-h-[100px] max-w-[200px] sm:max-h-[120px] lg:max-h-[120px]"
               />
-            </Link> */}
+            </Link>
           </div>
           <div className="flex space-x-4 mt-4">
             {socialLinks.map((link, index) => (

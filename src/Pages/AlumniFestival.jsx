@@ -360,13 +360,13 @@ const AlumniPage = () => {
           <img
             src={posterImgMain}
             alt="Arts Alumni Festival 2025"
-            className="py-6 px-4 object-contain"
+            className="py-6 object-contain"
           />
         </motion.div>
 
         {/* About Section */}
         <motion.div
-          className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+          className="text-center sm:px-6 lg:px-8 max-w-7xl mx-auto px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
@@ -378,6 +378,31 @@ const AlumniPage = () => {
           <p className="text-black text-lg sm:text-xl leading-relaxed">
             The Arts Council of Pakistan, Karachi, proudly presents the Alumni Festival 2025, a spectacular three-day celebration hosted by the School of Visual & Performing Arts. From 23rd to 25th May 2025, the festival will transform the Arts Council Karachi into a vibrant hub of creativity, bringing together past students and art enthusiasts for an unforgettable experience.
           </p>
+          <Link to="https://ticketwala.pk/event/arts-alumni-festival-2827" target="_blank">
+            <motion.button
+              className="mt-8 px-8 py-4 bg-red-600 text-white font-semibold text-lg rounded-full shadow-lg hover:bg-red-700 transition duration-300 inline-flex items-center cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+
+            // onClick={handleRegisterClick}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                />
+              </svg>
+              Buy Tickets Now
+            </motion.button>
+          </Link>
           {/* <motion.button
             className="mt-8 px-8 sm:px-10 py-3 sm:py-4 bg-gold-400 text-white font-semibold text-lg rounded-full shadow-lg hover:bg-gold-500 transition duration-300 flex items-center mx-auto"
             whileHover={{ scale: 1.05 }}
@@ -422,13 +447,13 @@ const AlumniPage = () => {
 
       {/* Intro Section */}
       <motion.section
-        className="py-16 lg:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="py-8 lg:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={sectionVariants}
       >
-        <div className="text-center mb-12 px-4">
+        <div className="text-center mb-12">
           <motion.h2
             className="text-2xl sm:text-4xl lg:text-4xl font-bold text-black mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -462,7 +487,7 @@ const AlumniPage = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {[
             {
               icon: (
@@ -556,7 +581,7 @@ const AlumniPage = () => {
         viewport={{ once: true, margin: "-100px" }}
         variants={sectionVariants}
       >
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="text-center mb-16">
             <motion.h2
               className="text-2xl sm:text-4xl lg:text-4xl font-bold text-black mb-6"
@@ -612,7 +637,7 @@ const AlumniPage = () => {
                     {segment.title}
                   </h3> */}
                 </div>
-                <motion.div
+                {/* <motion.div
                   className={`p-6 ${activeSegment === index ? "block" : "hidden"}`}
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
@@ -621,7 +646,7 @@ const AlumniPage = () => {
                   <button className="text-blue-600 font-medium hover:text-blue-800 transition">
                     Learn more →
                   </button>
-                </motion.div>
+                </motion.div> */}
               </motion.div>
             ))}
           </div>
@@ -677,7 +702,7 @@ const AlumniPage = () => {
               whileTap={{ scale: 0.97 }}
               onClick={() => setActiveDay(day)}
             >
-              {day} - May {22 + parseInt(day.split(" ")[1])}
+              {day}
             </motion.button>
           ))}
         </div>
@@ -790,9 +815,9 @@ const AlumniPage = () => {
 
         <div className="mt-16">
           <h3 className="text-2xl sm:text-4xl lg:text-4xl font-bold text-black mb-6 text-center">
-            Schedule Posters
+            Schedule
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { day: "Day 1", image: day1Poster },
               { day: "Day 2", image: day2Poster },
@@ -815,7 +840,7 @@ const AlumniPage = () => {
                 />
                 <div className="p-4 text-center">
                   <h4 className="font-medium text-black">
-                    {item.day} Schedule
+                    {item.day}
                   </h4>
                 </div>
               </motion.div>
@@ -843,7 +868,7 @@ const AlumniPage = () => {
             Secure Your Festival Pass
           </motion.h2>
           <motion.div
-            className="w-24 h-1 bg-white mx-auto mb-6"
+            className="w-24 h-1 bg-white mx-auto"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}

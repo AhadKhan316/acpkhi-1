@@ -4,6 +4,10 @@ import { FaBars, FaTimes, FaChevronDown, FaChevronRight, FaFacebookF, FaInstagra
 
 // ACP Logo
 import acpLogo from '/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.png';
+
+// Aaf Logo
+import AafFooterLogo from "/src/assets/ArtsAlumniAssets/alumni-festival-logo.png";
+
 import centerimg from "/src/assets/auc-assets/Untitled-1.png";
 
 // AUC Logo
@@ -120,13 +124,13 @@ const AafNavbar = () => {
               className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
             />
           </Link>
-          {/* <Link to="/festival/auc" className="h-full flex items-center">
+          <Link to="/festival/aaf" className="h-full flex items-center">
             <img
-              src={AucLogo}
-              alt="AUC Logo"
-              className="object-contain w-auto max-h-[70px] max-w-[200px] sm:max-h-[90px] lg:max-h-[90px]"
+              src={AafFooterLogo}
+              alt="Arts Alumni Festival Logo"
+              className="object-contain w-auto max-h-[100px] max-w-[200px] sm:max-h-[100px] lg:max-h-[100px]"
             />
-          </Link> */}
+          </Link>
         </div>
 
         {/* Hamburger Icon */}
@@ -136,14 +140,15 @@ const AafNavbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden lg:flex space-x-0.5 items-center ms-2">
-          <li><NavLink to="/festival/auc">Home</NavLink></li>
+          <li><NavLink to="/festival/aaf">Home</NavLink></li>
           <li><NavLink to="/festival/aaf/about">About</NavLink></li>
           <li><NavLink to="/festival/aaf/alumni">Alumni</NavLink></li>
+          <li><NavLink to="/festival/aaf/gallery">Gallery</NavLink></li>
           <li className="relative group">
-            <DropdownButton onClick={(e) => toggleSubMenu("events", e)} isOpen={isSubMenuOpen["events"]}>
+            {/* <DropdownButton onClick={(e) => toggleSubMenu("events", e)} isOpen={isSubMenuOpen["events"]}>
               Gallery
-            </DropdownButton>
-            {isSubMenuOpen["events"] && (
+            </DropdownButton> */}
+            {/* {isSubMenuOpen["events"] && (
               <div className="absolute top-full left-0 mt-2 w-64 bg-black rounded-md shadow-lg z-40">
                 <div className="relative">
                   <SubSubMenuButton onClick={(e) => toggleSubSubMenu("karachi", e)} isOpen={isSubSubMenuOpen["karachi"]}>
@@ -157,7 +162,7 @@ const AafNavbar = () => {
                 </div>
                 <NavLink to="/festival/auc/events/houston">Houston</NavLink>
               </div>
-            )}
+            )} */}
           </li>
           {/* <li><NavLink to="/festival/auc/sessions">Sessions</NavLink></li> */}
           <li><NavLink to="/festival/aaf/contactUs">Contact Us</NavLink></li>
@@ -180,10 +185,11 @@ const AafNavbar = () => {
             </button>
           </div>
           <ul className="flex flex-col p-4 space-y-2 text-white">
-            <li><NavLink to="/festival/auc">Home</NavLink></li>
-            <li><NavLink to="/festival/auc/about">About</NavLink></li>
-            <li><NavLink to="/festival/auc/delegate">Speakers</NavLink></li>
-            <li className="relative">
+            <li><NavLink to="/festival/aaf">Home</NavLink></li>
+            <li><NavLink to="/festival/aaf/about">About</NavLink></li>
+            <li><NavLink to="/festival/aaf/alumni">Alumni</NavLink></li>
+            <li><NavLink to="/festival/aaf/gallery">Gallery</NavLink></li>
+            {/* <li className="relative">
               <DropdownButton onClick={(e) => toggleSubMenu("events", e)} isOpen={isSubMenuOpen["events"]}>
                 Events
               </DropdownButton>
@@ -200,9 +206,9 @@ const AafNavbar = () => {
                   <NavLink to="/festival/auc/events/houston">Houston</NavLink>
                 </div>
               )}
-            </li>
-            <li><NavLink to="/festival/auc/sessions">Sessions</NavLink></li>
-            <li><NavLink to="/festival/auc/contactUs">Contact Us</NavLink></li>
+            </li> */}
+            {/* <li><NavLink to="/festival/auc/sessions">Sessions</NavLink></li> */}
+            <li><NavLink to="/festival/aaf/contactUs">Contact Us</NavLink></li>
             <li>
               {/* <button className="bg-red-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-800 transition duration-300 w-full">
                 Register Now
