@@ -88,8 +88,8 @@ const App = () => {
           <Route path="/" element={
             <>
               <Hero />
-              {/* <About /> */}
-              {/* <Mainpagevideo /> */}
+              <About />
+              <Mainpagevideo />
               {/* <UpcomingEvents /> */}
               <PresidentsMessage />
               <WhatWeDo />
