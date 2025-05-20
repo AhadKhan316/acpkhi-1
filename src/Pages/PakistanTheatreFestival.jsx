@@ -24,10 +24,10 @@ function AalmiUrduConference() {
             <PtfHero />
             <PtfAbout />
             <PtfPromoVideoSection />
-            <PtfInternationalPlayers />
+            {/* <PtfInternationalPlayers /> */}
             <PtfPrimeShowsCard />
             <PtfHighlightedTheatre />
-            <PtfOurPlaysSection />
+            {/* <PtfOurPlaysSection /> */}
             <PtfNewsletter />
             {/* <PtfSponsors /> */}
           </>

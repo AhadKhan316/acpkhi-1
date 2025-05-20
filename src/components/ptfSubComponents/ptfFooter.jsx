@@ -198,7 +198,7 @@ const PtfFooter = () => {
                   custom={14 + index}
                   variants={childVariants}
                 >
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-red-700 transition">
+                  <a href={link.href} className="text-gray-300 hover:text-red-700 transition">
                     {link.text}
                   </a>
                 </motion.li>

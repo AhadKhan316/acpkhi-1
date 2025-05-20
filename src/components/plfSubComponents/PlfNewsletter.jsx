@@ -14,7 +14,7 @@ function PlfNewsletter() {
   };
 
   return (
-    <section className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="mx-4">
         <motion.div
           className="bg-white"

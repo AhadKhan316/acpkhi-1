@@ -144,15 +144,15 @@ const PyfFooter = () => {
                 className="object-contain w-auto max-h-[130px] max-w-[200px] sm:max-h-[200px] lg:max-h-[200px]"
               />
             </Link>
-            
+
 
             <Link to="/" className="h-full flex items-center">
-            <img
-              src={centerimg}
-              alt="Line"
-              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
-            />
-          </Link>
+              <img
+                src={centerimg}
+                alt="Line"
+                className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+              />
+            </Link>
 
 
 
@@ -213,7 +213,7 @@ const PyfFooter = () => {
                   custom={14 + index}
                   variants={childVariants}
                 >
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">
+                  <a href={link.href} className="text-gray-400 hover:text-green-400 transition-colors">
                     {link.text}
                   </a>
                 </motion.li>

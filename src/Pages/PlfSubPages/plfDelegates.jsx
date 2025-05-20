@@ -128,7 +128,7 @@ const PlfDelegates = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-12 text-center">
+      {/* <section className="py-12 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
@@ -156,7 +156,7 @@ const PlfDelegates = () => {
             Get Involved
           </motion.button>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

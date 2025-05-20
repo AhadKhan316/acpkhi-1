@@ -18,7 +18,7 @@ import WcHeroImg10 from "/src/assets/wc-assets/10.jpg";
 const WcHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [WcHeroImg1, WcHeroImg2, WcHeroImg3, WcHeroImg4,  WcHeroImg5, WcHeroImg6, WcHeroImg7, WcHeroImg8, WcHeroImg9, WcHeroImg10];
+  const slides = [WcHeroImg1, WcHeroImg2, WcHeroImg3, WcHeroImg4, WcHeroImg5, WcHeroImg6, WcHeroImg7, WcHeroImg8, WcHeroImg9, WcHeroImg10];
 
   // Auto-slider logic
   useEffect(() => {
@@ -78,7 +78,7 @@ const WcHero = () => {
   }
 
   return (
-    <section className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[95vh] text-white flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[90vh] text-white flex items-center justify-center overflow-hidden">
       {/* Background Slider */}
       <div className="absolute inset-0 w-full h-full">
         {slides.map((slide, index) => (
@@ -127,7 +127,8 @@ const WcHero = () => {
           whileTap={{ scale: 0.95 }}
           aria-label="Join Us Now"
         >
-          <Link to="/wc/register">Join Us Now</Link>
+          {/* /wc/register */}
+          <Link to="#">Join Us Now</Link>
           <ArrowRight className="ml-2 -mr-1 h-4 sm:h-5 w-4 sm:w-5" aria-hidden="true" />
         </motion.button>
       </motion.div>

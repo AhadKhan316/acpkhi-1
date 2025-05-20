@@ -56,17 +56,17 @@ const WcNavbar = () => {
   // Menu items array
   const menuItems = [
     { to: "/festival/wc", label: "Home" },
-    { to: "/festival/wc/about", label: "About" },
-    { to: "/festival/wc/speakers", label: "Speakers" },
+    { to: "#", label: "About" }, //festival/wc/about
+    { to: "#", label: "Speakers" }, //festival/wc/speakers
     {
       label: "Events",
       dropdown: [
-        { to: "/wc/events/keynotes", label: "Keynotes" },
-        { to: "/wc/events/workshops", label: "Workshops" },
-        { to: "/wc/events/panels", label: "Panels" },
+        { to: "#", label: "Keynotes" }, //wc/events/keynotes
+        { to: "#", label: "Workshops" }, //wc/events/workshops
+        { to: "#", label: "Panels" }, //wc/events/panels
       ],
     },
-    { to: "/festival/wc/contact", label: "Contact" },
+    { to: "#", label: "Contact" }, //festival/wc/contact
   ];
 
   return (

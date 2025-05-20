@@ -41,20 +41,20 @@ const shows = [
     isHighlighted: false,
     image: PtfHighlights4,
   },
-  {
-    title: "Rooftop Rhapsody",
-    theatreName: "Islamabad Arts Collective",
-    countryName: "Pakistan",
-    isHighlighted: false,
-    // image: PtfHighlightedShow5,
-  },
+  // {
+  //   title: "Rooftop Rhapsody",
+  //   theatreName: "Islamabad Arts Collective",
+  //   countryName: "Pakistan",
+  //   isHighlighted: false,
+  //   // image: PtfHighlightedShow5,
+  // },
 ];
 
 // Custom arrow components
 const NextArrow = ({ className, style, onClick }) => (
   <div
     className={`${className} rounded-full transition duration-300 w-8 h-8 sm:w-12 sm:h-12 z-10`}
-    style={{ ...style, display: "block", right: "15px", backgroundColor: "transparent" }}
+    style={{ ...style, display: "block", right: "35px", backgroundColor: "transparent" }}
     onClick={onClick}
   >
     <svg className="w-full h-full" fill="currentColor" viewBox="0 0 24 24">

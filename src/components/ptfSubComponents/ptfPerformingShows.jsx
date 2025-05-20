@@ -19,7 +19,7 @@ const NextArrow = ({ className, style, onClick }) => (
       alignItems: "center",
       justifyContent: "center",
       right: "30px",
-      // backgroundColor: "#b91c1c",
+      backgroundColor: "#b91c1c",
       zIndex: 2,
     }}
     onClick={onClick}
@@ -32,7 +32,7 @@ const NextArrow = ({ className, style, onClick }) => (
 
 const PrevArrow = ({ className, style, onClick }) => (
   <div
-    className={`${className} text-red-700 hover:text-red-900 rounded-full transition-all duration-300 sm:w-14 sm:h-14 w-10 h-10 shadow-md hover:shadow-lg`}
+    className={`${className} text-red-800 hover:text-red-400 rounded-full transition-all duration-300 sm:w-14 sm:h-14 w-10 h-10 shadow-md hover:shadow-lg`}
     style={{
       ...style,
       display: "flex",

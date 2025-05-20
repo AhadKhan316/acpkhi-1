@@ -151,12 +151,12 @@ const PlfFooter = () => {
               />
             </Link>
             <Link to="/" className="h-full flex items-center">
-            <img
-              src={centerimg}
-              alt="Line"
-              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
-            />
-          </Link>
+              <img
+                src={centerimg}
+                alt="Line"
+                className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+              />
+            </Link>
 
             <Link to="/festival/plf" className="h-full flex items-center">
               <img
@@ -215,7 +215,7 @@ const PlfFooter = () => {
                   custom={14 + index}
                   variants={childVariants}
                 >
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition">
+                  <a href={link.href} className="text-gray-300 hover:text-green-400 transition">
                     {link.text}
                   </a>
                 </motion.li>

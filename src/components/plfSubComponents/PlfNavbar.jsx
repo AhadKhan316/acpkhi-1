@@ -60,11 +60,11 @@ const PlfNavbar = () => {
     { to: "/festival/plf/delegates", label: "Speakers" },
     {
       label: "Chapters",
-      dropdown: [
-        { to: "/chapters/lahore", label: "Lahore" },
-        { to: "/chapters/karachi", label: "Karachi" },
-        { to: "/chapters/islamabad", label: "Islamabad" },
-      ],
+      // dropdown: [
+      //   { to: "/chapters/lahore", label: "Lahore" },
+      //   { to: "/chapters/karachi", label: "Karachi" },
+      //   { to: "/chapters/islamabad", label: "Islamabad" },
+      // ],
     },
     { to: "/festival/plf/contactUs", label: "Contact" },
   ];

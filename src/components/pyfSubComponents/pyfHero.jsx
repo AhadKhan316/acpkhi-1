@@ -82,7 +82,7 @@ const PyfHero = () => {
   }
 
   return (
-    <section className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[95vh] text-white flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[90vh] text-white flex items-center justify-center overflow-hidden">
       {/* Background Slider */}
       <div className="absolute inset-0 w-full h-full">
         {slides.map((slide, index) => (
@@ -131,7 +131,8 @@ const PyfHero = () => {
           whileTap={{ scale: 0.95 }}
           aria-label="Join Us Now"
         >
-          <Link to="/pyf/register">Join Us Now</Link>
+          {/* /pyf/register */}
+          <Link to="#">Join Us Now</Link>
           <ArrowRight className="ml-2 -mr-1 h-4 sm:h-5 w-4 sm:w-5" aria-hidden="true" />
         </motion.button>
       </motion.div>

@@ -55,17 +55,17 @@ const PyfNavbar = () => {
   // Menu items array
   const menuItems = [
     { to: "/festival/pyf", label: "Home" },
-    { to: "/festival/pyf/about", label: "About" },
-    { to: "/festival/pyf/speakers", label: "Speakers" },
+    { to: "#", label: "About" }, //festival/pyf/about
+    { to: "#", label: "Speakers" }, //festival/pyf/speakers
     {
       label: "Events",
       dropdown: [
-        { to: "/pyf/events/keynotes", label: "Keynotes" },
-        { to: "/pyf/events/workshops", label: "Workshops" },
-        { to: "/pyf/events/panels", label: "Panels" },
+        { to: "#", label: "Keynotes" }, //pyf/events/keynotes
+        { to: "#", label: "Workshops" }, //pyf/events/workshops
+        { to: "#", label: "Panels" }, //pyf/events/panels
       ],
     },
-    { to: "/festival/pyf/contact", label: "Contact" },
+    { to: "#", label: "Contact" }, //festival/pyf/contact
   ];
 
   return (
@@ -131,9 +131,9 @@ const PyfNavbar = () => {
             )
           )}
           <li>
-            <button className="bg-green-800 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300">
+            {/* <button className="bg-green-800 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300">
               Register Now
-            </button>
+            </button> */}
           </li>
         </ul>
 

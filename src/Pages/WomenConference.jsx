@@ -60,7 +60,7 @@ const PlfMainPage = () => {
               <WcVideo />
               <WcHighlightedSession />
               <WcDelegateCard delegates={delegates} title="Delegates" />
-              <WcCategoriesCard />
+              {/* <WcCategoriesCard /> */}
               <WcNewsletter />
               {/* <WcSponsors /> */}
               {/* <PlfSponsors /> */}

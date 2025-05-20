@@ -56,7 +56,7 @@ const WcFooter = () => {
     { id: 4, text: "Delegates", href: "#wcDelegates" },
     { id: 5, text: "Explore Categories", href: "#wcCategories" },
     { id: 6, text: "Highlighted Sessions", href: "#wcHighlightedSessions" },
-    { id: 7, text: "Contact Us", href: "/festival/wc/contactUs" },
+    { id: 7, text: "Contact Us", href: "#" }, //festival/wc/contactUs
   ];
 
   const quickLinks2 = [
@@ -135,12 +135,12 @@ const WcFooter = () => {
               />
             </Link>
             <Link to="/" className="h-full flex items-center">
-            <img
-              src={centerimg}
-              alt="Line"
-              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
-            />
-          </Link>
+              <img
+                src={centerimg}
+                alt="Line"
+                className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+              />
+            </Link>
 
 
 
@@ -202,7 +202,7 @@ const WcFooter = () => {
                   custom={14 + index}
                   variants={childVariants}
                 >
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400 transition-colors">
+                  <a href={link.href} className="text-white hover:text-pink-400 transition-colors">
                     {link.text}
                   </a>
                 </motion.li>

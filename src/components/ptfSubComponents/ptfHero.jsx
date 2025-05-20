@@ -120,7 +120,8 @@ const PtfHero = () => {
           whileTap={{ scale: 0.95 }}
           aria-label="Join Us Now"
         >
-          <Link to="/festival/ptf/register">Join Us Now</Link>
+          {/* /festival/ptf/register */}
+          <Link to="#">Join Us Now</Link>
           <ArrowRight className="ml-2 -mr-1 h-4 sm:h-5 w-4 sm:w-5" aria-hidden="true" />
         </motion.button>
       </motion.div>

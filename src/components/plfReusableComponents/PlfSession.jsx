@@ -181,7 +181,7 @@ const PlfSession = () => {
   const fallbackImage = "https://placehold.co/400x300";
 
   return (
-    <section className="py-6 bg-gradient-to-br from-gray-50 via-green-50 to-white relative overflow-hidden" id="ourChapters">
+    <section className="py-12 bg-gradient-to-br from-gray-50 via-green-50 to-white relative overflow-hidden" id="ourChapters">
       {/* Background Decor */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">

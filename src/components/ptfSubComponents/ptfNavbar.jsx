@@ -128,7 +128,7 @@ const PtfNavbar = () => {
 
               className="object-contain w-auto max-h-[150px] max-w-[120px] sm:max-h-[150px] lg:max-h-[150px]"
 
-              
+
             />
           </Link>
         </div>
@@ -141,8 +141,10 @@ const PtfNavbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden lg:flex space-x-0.5 items-center ms-2">
           <li><NavLink to="/festival/ptf">Home</NavLink></li>
-          <li><NavLink to="/festival/ptf/about">About</NavLink></li>
-          <li><NavLink to="/festival/ptf/artists">Artists</NavLink></li>
+          {/* /festival/ptf/about */}
+          <li><NavLink to="#">About</NavLink></li>
+          {/* /festival/ptf/artists */}
+          <li><NavLink to="#">Artists</NavLink></li>
           <li className="relative group">
             <DropdownButton onClick={(e) => toggleSubMenu("shows", e)} isOpen={isSubMenuOpen["shows"]}>
               Shows
@@ -158,16 +160,20 @@ const PtfNavbar = () => {
                   </SubSubMenuButton>
                   {isSubSubMenuOpen["karachi"] && (
                     <div className="absolute top-0 left-full ml-2 w-64 bg-black rounded-md shadow-lg z-50">
-                      <NavLink to="/festival/ptf/shows/karachi/1-16">1 to 16</NavLink>
+                      {/* /festival/ptf/shows/karachi/1-16 */}
+                      <NavLink to="#">1 to 16</NavLink>
                     </div>
                   )}
                 </div>
-                <NavLink to="/festival/ptf/shows/houston">Houston</NavLink>
+                {/* /festival/ptf/shows/houston */}
+                <NavLink to="#">Houston</NavLink>
               </div>
             )}
           </li>
-          <li><NavLink to="/festival/ptf/media-courage">Media Courage</NavLink></li>
-          <li><NavLink to="/festival/ptf/contact-us">Contact Us</NavLink></li>
+          {/* /festival/ptf/media-courage */}
+          <li><NavLink to="#">Media Courage</NavLink></li>
+          {/* /festival/ptf/contact-us */}
+          <li><NavLink to="#">Contact Us</NavLink></li>
           <li>
             {/* <button className="bg-red-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-800 transition duration-300">
               Register Now
