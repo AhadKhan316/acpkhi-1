@@ -32,9 +32,9 @@ const AboutUs = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.8, 
-        ease: [0.1, 0.8, 0.2, 1] 
+      transition: {
+        duration: 0.8,
+        ease: [0.1, 0.8, 0.2, 1]
       }
     }
   };
@@ -44,9 +44,9 @@ const AboutUs = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { 
-        duration: 0.8, 
-        ease: "easeOut" 
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
       }
     }
   };
@@ -90,13 +90,13 @@ const AboutUs = () => {
             className="my-12 p-8 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl"
           >
             <div className="max-w-4xl mx-auto text-center">
-              <motion.h2 
+              <motion.h2
                 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 mb-8"
                 variants={itemVariants}
               >
                 Our Vision
               </motion.h2>
-              <motion.div 
+              <motion.div
                 className="relative"
                 variants={itemVariants}
               >
@@ -110,7 +110,7 @@ const AboutUs = () => {
                   "
                 </div>
               </motion.div>
-              <motion.p 
+              <motion.p
                 className="mt-8 text-lg text-gray-600"
                 variants={itemVariants}
               >
@@ -129,13 +129,13 @@ const AboutUs = () => {
             className="my-12 p-8 bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl"
           >
             <div className="max-w-4xl mx-auto text-center">
-              <motion.h2 
+              <motion.h2
                 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800 mb-8"
                 variants={itemVariants}
               >
                 Our Mission
               </motion.h2>
-              <motion.ul 
+              <motion.ul
                 className="space-y-6 text-left max-w-2xl mx-auto"
                 variants={containerVariants}
               >
@@ -146,7 +146,7 @@ const AboutUs = () => {
                   "Provide platforms for emerging and established artists",
                   "Enrich society through artistic expression"
                 ].map((item, index) => (
-                  <motion.li 
+                  <motion.li
                     key={index}
                     className="flex items-start text-lg text-gray-700"
                     variants={itemVariants}
@@ -174,14 +174,14 @@ const AboutUs = () => {
         <div className="absolute bottom-10 right-20 w-40 h-40 rounded-full bg-yellow-500 blur-3xl"></div>
       </div>
 
-      <motion.div 
+      <motion.div
         className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           variants={itemVariants}
         >
@@ -194,7 +194,7 @@ const AboutUs = () => {
         </motion.div>
 
         {/* Navigation Tabs */}
-        <motion.div 
+        <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
           variants={itemVariants}
         >
@@ -202,18 +202,17 @@ const AboutUs = () => {
             <motion.button
               key={section}
               onClick={() => handleSectionChange(section)}
-              className={`px-8 py-3 rounded-full font-semibold capitalize text-lg transition-all duration-300 relative overflow-hidden ${
-                activeSection === section
-                  ? "bg-red-600 text-white shadow-lg"
-                  : "bg-white text-gray-800 border border-gray-200 hover:bg-gray-50 hover:shadow-md"
-              }`}
+              className={`px-8 py-3 rounded-full font-semibold capitalize text-lg transition-all duration-300 relative overflow-hidden ${activeSection === section
+                ? "bg-red-600 text-white shadow-lg"
+                : "bg-white text-gray-800 border border-gray-200 hover:bg-gray-50 hover:shadow-md"
+                }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               variants={itemVariants}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
               {activeSection === section && (
-                <motion.span 
+                <motion.span
                   className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 opacity-20"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 0.2 }}
@@ -228,7 +227,7 @@ const AboutUs = () => {
         {renderSection()}
 
         {/* CTA Section */}
-        <motion.div 
+        {/* <motion.div 
           className="mt-20 text-center bg-gradient-to-r from-red-50 to-yellow-50 p-8 sm:p-12 rounded-3xl shadow-inner"
           variants={itemVariants}
         >
@@ -252,7 +251,7 @@ const AboutUs = () => {
               </svg>
             </motion.a>
           </div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   );

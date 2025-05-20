@@ -108,17 +108,18 @@ function WcfNavbar() {
         <div className="hidden lg:flex items-center">
           <ul className="flex space-x-0.5 items-center ms-2">
             <li><NavLink to="/festival/wcf">Home</NavLink></li>
+            <li><NavLink to="/festival/wcf/about">About WCF</NavLink></li>
 
-            <li className="relative group">
+            {/* <li className="relative group">
               <DropdownButton onClick={(e) => toggleSubMenu("about", e)} isOpen={isSubMenuOpen["about"]}>
-                About
+                About WCF
               </DropdownButton>
               {isSubMenuOpen["about"] && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-black rounded-md z-40">
                   <NavLink to="/festival/wcf/about">About WCF</NavLink>
                 </div>
               )}
-            </li>
+            </li> */}
 
             <li className="relative group">
               <DropdownButton onClick={(e) => toggleSubMenu("artists", e)} isOpen={isSubMenuOpen["artists"]}>
@@ -126,13 +127,16 @@ function WcfNavbar() {
               </DropdownButton>
               {isSubMenuOpen["artists"] && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-black rounded-md shadow-lg z-40">
-                  <NavLink to="/festival/wcf/artist">Featured Artists</NavLink>
-                  <NavLink to="/festival/wcf/artistEngagement">Artist Engagements</NavLink>
+                  {/* /festival/wcf/artist */}
+                  <NavLink to="#">Featured Artists</NavLink>
+                  {/* /festival/wcf/artistEngagement */}
+                  <NavLink to="#">Artist Engagements</NavLink>
                 </div>
               )}
             </li>
 
-            <li><NavLink to="/festival/wcf/mediaCoverage">Media Coverage</NavLink></li>
+            {/* /festival/wcf/mediaCoverage */}
+            <li><NavLink to="#">Media Coverage</NavLink></li>
             <li><NavLink to="/festival/wcf/contactUs">Contact Us</NavLink></li>
           </ul>
 
@@ -163,8 +167,9 @@ function WcfNavbar() {
           </div>
           <ul className="flex flex-col p-4 space-y-2 text-white">
             <li><NavLink to="/festival/wcf">Home</NavLink></li>
+            <li><NavLink to="/festival/wcf/about">About WCF</NavLink></li>
 
-            <li className="relative">
+            {/* <li className="relative">
               <DropdownButton onClick={(e) => toggleSubMenu("about", e)} isOpen={isSubMenuOpen["about"]}>
                 About
               </DropdownButton>
@@ -173,7 +178,7 @@ function WcfNavbar() {
                   <NavLink to="/festival/wcf/about">About WCF</NavLink>
                 </div>
               )}
-            </li>
+            </li> */}
 
             <li className="relative">
               <DropdownButton onClick={(e) => toggleSubMenu("artists", e)} isOpen={isSubMenuOpen["artists"]}>
@@ -181,13 +186,16 @@ function WcfNavbar() {
               </DropdownButton>
               {isSubMenuOpen["artists"] && (
                 <div className="ml-4">
-                  <NavLink to="/festival/wcf/artist">Featured Artists</NavLink>
-                  <NavLink to="/festival/wcf/artistEngagement">Artist Engagements</NavLink>
+                  {/* /festival/wcf/artist */}
+                  <NavLink to="#">Featured Artists</NavLink>
+                  {/* /festival/wcf/artistEngagement */}
+                  <NavLink to="#">Artist Engagements</NavLink>
                 </div>
               )}
             </li>
 
-            <li><NavLink to="/festival/wcf/mediaCoverage">Media Coverage</NavLink></li>
+            {/* /festival/wcf/mediaCoverage */}
+            <li><NavLink to="#">Media Coverage</NavLink></li>
             <li><NavLink to="/festival/wcf/contactUs">Contact Us</NavLink></li>
             <Link
               to="/"

@@ -90,7 +90,7 @@ const App = () => {
             <About />
             <Mainpagevideo />
             {/* <UpcomingEvents /> */}
-            <PresidentsMessage />
+            {/* <PresidentsMessage /> */}
             <WhatWeDo />
             <Initiative />
             <Education />

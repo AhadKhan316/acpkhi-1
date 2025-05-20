@@ -143,7 +143,8 @@ const AucNavbar = () => {
           <li><NavLink to="/festival/auc">Home</NavLink></li>
           <li><NavLink to="/festival/auc/about">About</NavLink></li>
           <li><NavLink to="/festival/auc/delegate">Speakers</NavLink></li>
-          <li className="relative group">
+          <li><NavLink to="#">Events</NavLink></li>
+          {/* <li className="relative group">
             <DropdownButton onClick={(e) => toggleSubMenu("events", e)} isOpen={isSubMenuOpen["events"]}>
               Events
             </DropdownButton>
@@ -162,8 +163,8 @@ const AucNavbar = () => {
                 <NavLink to="/festival/auc/events/houston">Houston</NavLink>
               </div>
             )}
-          </li>
-          <li><NavLink to="/festival/auc/sessions">Sessions</NavLink></li>
+          </li> */}
+          <li><NavLink to="#">Sessions</NavLink></li>
           <li><NavLink to="/festival/auc/contactUs">Contact Us</NavLink></li>
           <li>
             {/* <button className="bg-red-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-800 transition duration-300">
@@ -187,7 +188,8 @@ const AucNavbar = () => {
             <li><NavLink to="/festival/auc">Home</NavLink></li>
             <li><NavLink to="/festival/auc/about">About</NavLink></li>
             <li><NavLink to="/festival/auc/delegate">Speakers</NavLink></li>
-            <li className="relative">
+            <li><NavLink to="#">Events</NavLink></li>
+            {/* <li className="relative">
               <DropdownButton onClick={(e) => toggleSubMenu("events", e)} isOpen={isSubMenuOpen["events"]}>
                 Events
               </DropdownButton>
@@ -204,8 +206,8 @@ const AucNavbar = () => {
                   <NavLink to="/festival/auc/events/houston">Houston</NavLink>
                 </div>
               )}
-            </li>
-            <li><NavLink to="/festival/auc/sessions">Sessions</NavLink></li>
+            </li> */}
+            <li><NavLink to="#">Sessions</NavLink></li>
             <li><NavLink to="/festival/auc/contactUs">Contact Us</NavLink></li>
             <li>
               {/* <button className="bg-red-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-800 transition duration-300 w-full">

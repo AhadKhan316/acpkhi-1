@@ -168,7 +168,7 @@ const AucDelegates = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-8 bg-gradient-to-t from-red-100 to-white text-center">
+      {/* <section className="py-8 bg-gradient-to-t from-red-100 to-white text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
@@ -196,7 +196,7 @@ const AucDelegates = () => {
             Get Involved
           </motion.button>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

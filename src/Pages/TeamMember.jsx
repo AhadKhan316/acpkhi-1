@@ -121,7 +121,7 @@ const TeamMembers = () => {
               </div>
 
               <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
-                M. Daniyal Umer
+                Muhammad Daniyal Umer
               </h2>
 
               <div className="text-gray-600 space-y-4 text-lg">

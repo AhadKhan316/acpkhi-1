@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube, FaEnvelope, FaPhone, FaM
 
 const AucContactUs = () => {
   return (
-    <div className="bg-gray-50 min-h-screen text-gray-900 pt-24">
+    <div className="bg-gray-50 text-gray-900">
       {/* Hero Section */}
       <section className="py-16 md:py-24 text-center">
         <div className="mx-4 px-4 sm:px-6 lg:px-8">
@@ -28,8 +28,8 @@ const AucContactUs = () => {
       </section>
 
       {/* Contact Info and Form Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className=" bg-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -38,7 +38,7 @@ const AucContactUs = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-8"
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-red-800 mb-4 mt-20">Our Details</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-red-800 mb-4 mt-10">Our Details</h2>
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="text-red-600 w-5 h-5" />
@@ -96,9 +96,9 @@ const AucContactUs = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="bg-white p-8 rounded-xl shadow-md border border-gray-200"
+            className="bg-white p-5 my-5 rounded-xl shadow-md border border-gray-200"
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-red-800 mb-6">Send Us a Message</h2>
+            <h2 className="text-2xl sm:text-4xl font-semibold text-red-800 mb-6">Send Us a Message</h2>
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">

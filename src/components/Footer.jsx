@@ -55,7 +55,7 @@ const Footer = () => {
     { id: 2, text: "Governing Body", href: "GoverningBody" },
     { id: 3, text: "Sovapa", href: "sovapa" },
     { id: 4, text: "Facilities", href: "facilities" },
-    { id: 5, text: "Career", href: "career" },
+    { id: 5, text: "Career", href: "#" }, //career
     { id: 6, text: "Contact Us", href: "ContactUs" },
   ];
 

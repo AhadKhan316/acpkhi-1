@@ -7,6 +7,7 @@ import presidentImg from "../assets/governing-body-new/ahmed-shah.png";
 import img1 from "../assets/governing-body-new/munawar-saeed.png";
 import img2 from "../assets/governing-body-new/ejaz-farooqi.png";
 import img3 from "../assets/governing-body-new/noorul-huda-shah.png";
+import img4 from "../assets/governing-body-new/qudsia-akbar.png"
 
 // Governing Body
 import img5 from "../assets/governing-body-new/huma-mir.png";
@@ -45,6 +46,7 @@ const GoverningBody = () => {
       { id: 1, name: "Munawar Saeed", description: "Vice President", image: img1, buttonText: "View Profile" },
       { id: 2, name: "Ejaz Farooqi", description: "Secretary", image: img2, buttonText: "View Profile" },
       { id: 3, name: "Noor Ul Huda Shah", description: "Joint Secretary", image: img3, buttonText: "View Profile" },
+      { id: 4, name: "Qudsia Akbar", description: "Treasurer", image: img4, buttonText: "View Profile" },
     ],
     "Governing Body": [
       { id: 1, name: "Huma Mir", description: "Member", image: img5, buttonText: "View Profile" },
@@ -193,13 +195,13 @@ const GoverningBody = () => {
             // title={activeTab}
             items={members[activeTab]}
             cardClassName="hover:scale-105 transition-transform duration-300"
-            gridClassName="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+            gridClassName="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8"
           />
         </motion.div>
       </div>
 
       {/* Footer CTA */}
-      <div className="max-w-7xl mx-auto mt-20 bg-gradient-to-r from-red-700 to-red-900 rounded-2xl p-8 md:p-12 text-center text-white">
+      {/* <div className="max-w-7xl mx-auto mt-20 bg-gradient-to-r from-red-700 to-red-900 rounded-2xl p-8 md:p-12 text-center text-white">
         <h3 className="text-2xl md:text-3xl font-bold mb-6">Join Our Cultural Movement</h3>
         <p className="text-lg mb-8 max-w-3xl mx-auto">
           The Arts Council thrives on community participation. Discover how you can contribute to preserving and promoting Pakistan's rich cultural heritage.
@@ -211,7 +213,7 @@ const GoverningBody = () => {
         >
           Get Involved
         </motion.button>
-      </div>
+      </div> */}
     </div>
   );
 };

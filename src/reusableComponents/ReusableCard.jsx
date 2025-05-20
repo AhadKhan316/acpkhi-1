@@ -43,9 +43,9 @@ const ReusableCard = ({ name, description, image, buttonText = "Learn More", sho
           transition={{ delay: 0.2, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold mb-2 drop-shadow-md">{name}</h3>
+          <h3 className="text-xl font-bold drop-shadow-md">{name}</h3>
           {description && (
-            <p className="text-sm mb-4 drop-shadow-md">{description}</p>
+            <p className="text-sm drop-shadow-md">{description}</p>
           )}
           {showButton && (
             <motion.button

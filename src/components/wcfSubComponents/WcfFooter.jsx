@@ -51,9 +51,9 @@ const WcfFooter = () => {
 
   const quickLinks1 = [
     { id: 1, text: "About WCF", href: "#aboutWcf" },
-    { id: 2, text: "Artists", href: "/festival/wcf/artist" },
-    { id: 3, text: "Artists Engagements", href: "/festival/wcf/artistEngagement" },
-    { id: 4, text: "Media Courage", href: "/festival/wcf/mediaCoverage" },
+    { id: 2, text: "Artists", href: "#" }, //festival/wcf/artist
+    { id: 3, text: "Artists Engagements", href: "#" }, ///festival/wcf/artistEngagement
+    { id: 4, text: "Media Courage", href: "#" }, //festival/wcf/mediaCoverage
     { id: 5, text: "Global Participants", href: "#performingNations" },
     { id: 6, text: "Our Partners", href: "#ourPartners" },
     { id: 7, text: "Contact Us", href: "/festival/wcf/contactUs" },
@@ -137,12 +137,12 @@ const WcfFooter = () => {
             </Link>
 
             <Link to="/" className="h-full flex items-center">
-            <img
-              src={centerimg}
-              alt="Line"
-              className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
-            />
-          </Link>
+              <img
+                src={centerimg}
+                alt="Line"
+                className="object-contain w-auto max-h-[150px] max-w-[200px] sm:max-h-[150px] lg:max-h-[150px]"
+              />
+            </Link>
 
             <Link to="/festival/wcf" className="h-full flex items-center">
               <img
@@ -201,7 +201,7 @@ const WcfFooter = () => {
                   custom={14 + index}
                   variants={childVariants}
                 >
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                  <a href={link.href} className="text-gray-400 hover:text-white transition">
                     {link.text}
                   </a>
                 </motion.li>
