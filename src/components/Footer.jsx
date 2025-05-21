@@ -10,6 +10,7 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import acpFooterLogo from "/src/assets/acp-logo-and-hero-img/Acp logo White down.png";
+import acpFooterLogoSmall from "/src/assets/acp-logo-and-hero-img/acp-logo-fullName-white.png";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -55,7 +56,7 @@ const Footer = () => {
     { id: 2, text: "Governing Body", href: "GoverningBody" },
     { id: 3, text: "Sovapa", href: "sovapa" },
     { id: 4, text: "Facilities", href: "facilities" },
-    { id: 5, text: "Career", href: "#" }, //career
+    { id: 5, text: "Career", href: "#" },
     { id: 6, text: "Contact Us", href: "ContactUs" },
   ];
 
@@ -126,10 +127,17 @@ const Footer = () => {
         {/* Logo and Social Icons */}
         <div className="flex flex-col items-start md:items-center border-b border-gray-700 py-6">
           <Link to="/" className="w-full md:w-auto text-left md:text-center">
+            {/* Large screen logo (md and above) */}
             <motion.img
               src={acpFooterLogo}
-              alt="Arts Council Logo"
-              className="h-auto max-h-36 sm:max-h-36 lg:max-h-36 w-auto object-contain mx-0 md:mx-auto"
+              alt="Arts Council Logo Large"
+              className="hidden md:block h-auto max-h-36 w-auto object-contain mx-0 md:mx-auto"
+            />
+            {/* Small screen logo (below md) */}
+            <motion.img
+              src={acpFooterLogoSmall}
+              alt="Arts Council Logo Small"
+              className="block md:hidden h-auto max-h-34 w-auto object-contain mx-0 md:mx-auto"
             />
           </Link>
           <h4 className="text-gray-300 text-base font-medium mt-4 mb-2 text-left md:text-center">

@@ -9,9 +9,15 @@ import PtfInternationalPlayers from "../components/ptfSubComponents/ptfPlays";
 import PtfPrimeShowsCard from "../components/ptfSubComponents/ptfPerformingShows";
 import PtfNewsletter from "../components/ptfSubComponents/ptfNewsletter";
 import PtfHighlightedTheatre from "../components/ptfSubComponents/ptfHighlightsShows";
-import PtfOurPlaysSection from "../components/ptfSubComponents/ptfOurPlays";
+// import PtfOurPlaysSection from "../components/ptfSubComponents/ptfOurPlays";
 // import PtfSponsors from "../components/ptfSubComponents/ptfSponsors";
 import PtfFooter from "../components/ptfSubComponents/ptfFooter";
+
+
+// Pages
+import PtfAboutPage from "../Pages/PtfSubPages/ptfAboutPage"
+import PtfArtistsPage from "../Pages/PtfSubPages/ptfArtistsPage"
+import PtfContactPage from "../Pages/PtfSubPages/ptfContactUsPage"
 
 
 function AalmiUrduConference() {
@@ -33,9 +39,9 @@ function AalmiUrduConference() {
           </>
         } />
 
-        {/* <Route path="about" element={<AucAboutPage />} /> */}
-        {/* <Route path="delegate" element={<AucDelegatePage />} /> */}
-        {/* <Route path="contactUs" element={<AucContactPage />} /> */}
+        <Route path="about" element={<PtfAboutPage />} />
+        <Route path="artists" element={<PtfArtistsPage />} />
+        <Route path="contactUs" element={<PtfContactPage />} />
 
       </Routes>
       <PtfFooter />

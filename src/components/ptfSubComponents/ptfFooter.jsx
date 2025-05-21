@@ -53,7 +53,7 @@ const PtfFooter = () => {
     { id: 2, text: "International Plays", href: "#internationalPlays" },
     { id: 3, text: "Shows", href: "#primeShows" },
     { id: 4, text: "Highlighted Sessions", href: "#highlightedShows" },
-    { id: 5, text: "Contact Us", href: "#" },
+    { id: 5, text: "Contact Us", href: "/festival/ptf/contactUs" },
   ];
 
   const quickLinks2 = [

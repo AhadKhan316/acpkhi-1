@@ -9,24 +9,30 @@ import posterImgMain from "/src/assets/ArtsAlumniAssets/alumni-2025.B9q1FqGS.jpe
 import posterImg17 from "/src/assets/ArtsAlumniAssets/Alumni 2025 - Opening.jpg";
 import posterImg11 from "/src/assets/ArtsAlumniAssets/gumaan-segment11.jpg"
 import posterImg1 from "/src/assets/ArtsAlumniAssets/an-Innocent-Murder-segment1.jpg";
-import posterImg2 from "/src/assets/ArtsAlumniAssets/Kathak-Workshop-by-Nighat-Chaudhry-segment2.jpg";
+import posterImg22 from "/src/assets/ArtsAlumniAssets/Music-Education-in-transition.jpg"
+import posterImg23 from "/src/assets/ArtsAlumniAssets/house-band.jpg"
+// import posterImg2 from "/src/assets/ArtsAlumniAssets/Kathak-Workshop-by-Nighat-Chaudhry-segment2.jpg";
 import posterImg12 from "/src/assets/ArtsAlumniAssets/ai-authenticity-segment12.jpg"
 import posterImg13 from "/src/assets/ArtsAlumniAssets/alumni-stars-segment13.jpg"
 import posterImg3 from "/src/assets/ArtsAlumniAssets/Salgirah-segment3.jpg";
 import posterImg4 from "/src/assets/ArtsAlumniAssets/Glass-Menagerie-segment4.jpg";
 import posterImg5 from "/src/assets/ArtsAlumniAssets/bharatanatyam-workshop-segment5.jpg";
 import posterImg6 from "/src/assets/ArtsAlumniAssets/double-Bill-segment6.jpg";
-import posterImg14 from "/src/assets/ArtsAlumniAssets/idea-to-release-segment14.jpg";
-import posterImg15 from "/src/assets/ArtsAlumniAssets/alumni-stars-segment15.jpg";
+// import posterImg14 from "/src/assets/ArtsAlumniAssets/idea-to-release-segment14.jpg";
+// import posterImg15 from "/src/assets/ArtsAlumniAssets/alumni-stars-segment15.jpg";
 import posterImg16 from "/src/assets/ArtsAlumniAssets/qawwali-fusion-segment16.jpg";
 import posterImg7 from "/src/assets/ArtsAlumniAssets/Voice-Workshop-Khalid-Ahmed-segment7.jpg";
-import posterImg8 from "/src/assets/ArtsAlumniAssets/daastangoi-segment8.png";
+import posterImg8 from "/src/assets/ArtsAlumniAssets/daastangoi-segment8.jpg";
 import posterImg9 from "/src/assets/ArtsAlumniAssets/block-Printing-Workshop-segment9.jpg";
 import posterImg10 from "/src/assets/ArtsAlumniAssets/alumni-Art-Exhibition-segment10.jpg";
 import posterImg18 from "/src/assets/ArtsAlumniAssets/future-stars-segment18.jpg"
 import posterImg19 from "/src/assets/ArtsAlumniAssets/alumni-stars-segment19.jpg"
 import posterImg20 from "/src/assets/ArtsAlumniAssets/the-art-story-telling-segment20.jpg"
 import posterImg21 from "/src/assets/ArtsAlumniAssets/classical-performance-segment21.jpg"
+import posterImg24 from "/src/assets/ArtsAlumniAssets/independent-artist-journey.jpg"
+import posterImg25 from "/src/assets/ArtsAlumniAssets/journey-of-dance.jpg"
+import posterImg26 from "/src/assets/ArtsAlumniAssets/folk-wolk-concert.jpg"
+
 
 // Schedule Posters
 import day1Poster from "/src/assets/ArtsAlumniAssets/schedule-day1.jpg";
@@ -76,87 +82,113 @@ const AlumniPage = () => {
       description: "A dark comedy exploring the unexpected consequences of a seemingly harmless act.",
     },
     {
+      title: "Block Printing Workshop",
+      image: posterImg9,
+      description: "Create beautiful patterns using traditional block printing techniques.",
+    },
+    {
+      image: posterImg22,
+    },
+    {
       image: posterImg11,
+    },
+    {
+      image: posterImg23,
     },
     {
       title: "An Innocent Little Murder",
       image: posterImg1,
       description: "A dark comedy exploring the unexpected consequences of a seemingly harmless act.",
     },
-
-    {
-      title: "Kathak Workshop by Nighat Chaudhry",
-      image: posterImg2,
-      description: "Learn the intricate footwork and expressive gestures of Kathak from a master.",
-    },
-    {
-      title: "Salgirah",
-      image: posterImg3,
-      description: "A heartwarming family drama celebrating cultural traditions and relationships.",
-    },
-    {
-      image: posterImg13,
-    },
-    {
-      image: posterImg14,
-    },
-    {
-      title: "Glass Menagerie",
-      image: posterImg4,
-      description: "Tennessee Williams' classic play about family, fragility, and the pursuit of dreams.",
-    },
-    {
-      title: "Bharatanatyam Workshop",
-      image: posterImg5,
-      description: "A heartwarming family drama celebrating cultural traditions and relationships.",
-    },
+    // {
+    //   title: "Kathak Workshop by Nighat Chaudhry",
+    //   image: posterImg2,
+    //   description: "Learn the intricate footwork and expressive gestures of Kathak from a master.",
+    // },
     {
       image: posterImg12,
+    },
+    {
+      image: posterImg24,
     },
     {
       title: "Double Bill",
       image: posterImg6,
       description: "Two compelling short plays showcasing diverse theatrical styles in one evening.",
     },
+
+    {
+      image: posterImg13,
+    },
+
+    {
+      title: "Bharatanatyam Workshop",
+      image: posterImg5,
+      description: "A heartwarming family drama celebrating cultural traditions and relationships.",
+    },
+
+    {
+      image: posterImg26,
+    },
+
+    {
+      title: "Salgirah",
+      image: posterImg3,
+      description: "A heartwarming family drama celebrating cultural traditions and relationships.",
+    },
+
+    // {
+    //   image: posterImg14,
+    // },
     {
       title: "Voice Workshop by Khalid Ahmed",
       image: posterImg7,
       description: "Develop your vocal presence and projection with techniques from a seasoned performer.",
     },
     {
-      title: "Daastangoi",
-      image: posterImg8,
-      description: "Experience the ancient art of Urdu storytelling with contemporary narratives.",
-    },
-    {
-      image: posterImg15,
-    },
-    {
-      image: posterImg16,
-    },
-    {
-      image: posterImg18,
+      image: posterImg20,
     },
     {
       image: posterImg19,
     },
+
     {
-      image: posterImg20,
+      image: posterImg18,
     },
+
+    {
+      title: "Glass Menagerie",
+      image: posterImg4,
+      description: "Tennessee Williams' classic play about family, fragility, and the pursuit of dreams.",
+    },
+
+    {
+      title: "Daastangoi",
+      image: posterImg8,
+      description: "Experience the ancient art of Urdu storytelling with contemporary narratives.",
+    },
+    // {
+    //   image: posterImg15,
+    // },
     {
       image: posterImg21,
     },
+
     {
-      title: "Block Printing Workshop",
-      image: posterImg9,
-      description: "Create beautiful patterns using traditional block printing techniques.",
+      image: posterImg25,
     },
+
+    {
+      image: posterImg16,
+    },
+
     {
       title: "Alumni Art Exhibition",
       image: posterImg10,
       description: "A curated collection of visual artworks by talented alumni artists.",
     },
-  ];
+
+  ]
 
   // const handleRegisterClick = () => {
   //   navigate("/alumni/register");
