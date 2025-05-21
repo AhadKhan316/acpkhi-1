@@ -43,6 +43,9 @@ const AlumniPage = () => {
   const [activeDay, setActiveDay] = useState("Day 1");
   const [activeSegment, setActiveSegment] = useState(null);
 
+  const videoUrl = "https://www.youtube.com/embed/POKq7AO8fMY?si=rzjxZ2_K0Y3iJWan&autoplay=1&loop=1&mute=1&playlist=POKq7AO8fMY";
+
+
   useEffect(() => {
     const handleScroll = () => {
       // setIsScrolled(window.scrollY > 50);
@@ -51,6 +54,15 @@ const AlumniPage = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const contentVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
+
   // Framer Motion variants
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -58,6 +70,15 @@ const AlumniPage = () => {
       opacity: 1,
       y: 0,
       transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, delay: 0.3, ease: "easeOut" },
     },
   };
 
@@ -374,7 +395,7 @@ const AlumniPage = () => {
   };
 
   return (
-    <div className="bg-white px-4">
+    <div className="bg-white">
       {/* Hero Section */}
       <motion.section
         className="py-8 sm:py-6 lg:py-8 flex flex-col items-center justify-center"
@@ -392,7 +413,7 @@ const AlumniPage = () => {
           <img
             src={posterImgMain}
             alt="Arts Alumni Festival 2025"
-            className="py-6 object-contain"
+            className="py-6 object-contain px-4"
           />
         </motion.div>
 
@@ -452,6 +473,50 @@ const AlumniPage = () => {
             Register Now
           </motion.button> */}
         </motion.div>
+
+        {/* Video Section */}
+
+        <section className="w-full py-12 sm:py-16 bg-white text-red-800 overflow-hidden">
+
+          {/* Section Header */}
+          {/* < motion.div
+            className="text-center mb-10 sm:mb-12"
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+            viewport={{ once: true }
+            }
+          >
+            <h2 className="text-2xl md:text-4xl font-bold">
+              Experience PTF in Motion
+            </h2>
+            <p className="mt-2 text-base sm:text-xl text-black max-w-3xl mx-auto">
+              Watch our promo video to see the spirit of the Pakistan Theatre Festival.
+            </p>
+          </motion.div > */}
+          <motion.section
+            className="relative flex items-center justify-center overflow-hidden mt-10"
+            initial="hidden"
+            animate="visible"
+            variants={contentVariants}
+          >
+            {/* Background Video Wrapper */}
+            <div className="relative w-full h-full flex items-center justify-center">
+              <div className="w-full aspect-video max-h-full max-w-full">
+                <iframe
+                  className="w-full h-full object-contain object-center"
+                  src={videoUrl}
+                  title="PTF Highlights"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; loop; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </motion.section>
+        </section>
+
 
         {/* Scroll Indicator */}
         {/* <motion.div
@@ -632,7 +697,7 @@ const AlumniPage = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
             />
             <motion.p
-              className="text-black text-lg max-w-3xl mx-auto"
+              className="text-black text-lg max-w-3xl mx-auto px-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
