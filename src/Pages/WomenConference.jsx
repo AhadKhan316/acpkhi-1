@@ -9,16 +9,16 @@ import WcAbout from "../components/wcSubComponents/wcAbout";
 import WcVideo from "../components/wcSubComponents/wcVideo";
 import WcDelegateCard from "../components/wcSubComponents/wcDelegateCard";
 import WcHighlightedSession from "../components/wcSubComponents/wcHighlightedSession";
-import WcCategoriesCard from "../components/wcSubComponents/wcCategoriesCard";
+// import WcCategoriesCard from "../components/wcSubComponents/wcCategoriesCard";
 import WcNewsletter from "../components/wcSubComponents/wcNewsletter";
 // import WcSponsors from "../components/wcSubComponents/wcSponsors";
 import WcFooter from "../components/wcSubComponents/wcFooter";
 
 
-// PLF Sub Pages
-// import PlfAboutPage from "./PlfSubPages/plfAboutPage";
-// import PlfDelegatePage from "./PlfSubPages/plfDelegates";
-// import PlfContactPage from "./PlfSubPages/plfContactPage";
+// WC Sub Pages
+import WcAboutPage from "./wcSubPages/wcAboutPage";
+import WcDelegatePage from "./wcSubPages/wcDelegatesPage";
+import WcContactPage from "./wcSubPages/wcContactUsPage";
 
 import wcDelegate1 from "/src/assets/wc-assets/wc-delegate1.jpg"
 import wcDelegate2 from "/src/assets/wc-assets/wc-delegate2.jpg"
@@ -63,14 +63,13 @@ const PlfMainPage = () => {
               {/* <WcCategoriesCard /> */}
               <WcNewsletter />
               {/* <WcSponsors /> */}
-              {/* <PlfSponsors /> */}
             </>
           }
         />
 
-        {/* <Route path="about" element={<PlfAboutPage />} /> */}
-        {/* <Route path="delegates" element={<PlfDelegatePage />} /> */}
-        {/* <Route path="contactUs" element={<PlfContactPage />} /> */}
+        <Route path="about" element={<WcAboutPage />} />
+        <Route path="delegates" element={<WcDelegatePage />} />
+        <Route path="contactUs" element={<WcContactPage />} />
       </Routes >
       <WcFooter />
     </>

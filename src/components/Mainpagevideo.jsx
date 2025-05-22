@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Mainpagevideo = () => {
-  const videoUrl = "https://www.youtube.com/embed/PV9hxIoBxdI?autoplay=1&mute=1";
+  const videoUrl = "https://www.youtube.com/embed/PV9hxIoBxdI?autoplay=1&loop=1&mute=1&playlist=PV9hxIoBxdI";
 
   const contentVariants = {
     hidden: { opacity: 0, scale: 0.9 },

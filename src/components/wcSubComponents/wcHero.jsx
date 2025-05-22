@@ -78,7 +78,7 @@ const WcHero = () => {
   }
 
   return (
-    <section className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[90vh] text-white flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[50vh] sm:h-[50vh] md:h-[60vh] lg:h-[93vh] text-white flex items-center justify-center overflow-hidden">
       {/* Background Slider */}
       <div className="absolute inset-0 w-full h-full">
         {slides.map((slide, index) => (

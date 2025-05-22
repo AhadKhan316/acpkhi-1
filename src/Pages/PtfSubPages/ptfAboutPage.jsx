@@ -187,7 +187,7 @@ function PtfAbout() {
           variants={itemVariants}
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-800">
-            About
+            About Us
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Pakistan Theatre Festival 2023, presented by Arts Council of Pakistan, Karachi is a landmark event that transcends borders and languages. A dynamic lineup of 7 international and 27 prominent national theatre groups. For an incredible span of 30 days, immerse yourself in the magic of 45 captivating shows, interactive workshops and talks. Explore global cultural diversity and a variety of genres under one roof. The festival will feature plays in various languages, including Urdu, English, Turkish, German, Sinhala, Persian, Punjabi & Sindhi.

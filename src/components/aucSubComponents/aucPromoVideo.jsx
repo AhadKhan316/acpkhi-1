@@ -20,7 +20,7 @@ const PromoVideoSection = () => {
       transition: { duration: 0.8, delay: 0.3, ease: "easeOut" },
     },
   };
- 
+
   return (
     <section className="w-full py-12 sm:py-16 bg-white text-red-800 overflow-hidden">
 

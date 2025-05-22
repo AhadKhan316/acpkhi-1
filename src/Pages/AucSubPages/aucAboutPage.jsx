@@ -385,7 +385,7 @@ function AboutAuc() {
           variants={itemVariants}
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-800">
-            About
+            About Us
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             The All Urdu Conference (AUC) is a vibrant platform dedicated to celebrating and preserving the essence of Urdu language and culture.

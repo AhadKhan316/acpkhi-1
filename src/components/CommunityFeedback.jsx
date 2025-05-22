@@ -82,12 +82,12 @@ const Feedback = () => {
           className="text-center mb-16"
           variants={titleVariants}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">
-            Testimonials
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">
+            What People Say
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Hear what everyone has to say for us
-          </p>
+          {/* <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            What people say about us
+          </p> */}
         </motion.div>
 
         {/* Feedback cards */}
@@ -150,7 +150,7 @@ const Feedback = () => {
           transition={{ delay: 0.4 }}
         >
           <button className="px-8 py-3 bg-gradient-to-r from-red-500 to-blue-500 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:from-red-600 hover:to-blue-600">
-            View More Testimonials
+            View More
             <svg className="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
             </svg>

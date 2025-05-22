@@ -43,9 +43,7 @@ const WhatWeDo = () => {
           className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100 leading-relaxed drop-shadow-md max-w-3xl"
           variants={textVariants}
         >
-          At the Arts Council, we empower creativity by combining vision with action. Through inclusive
-          programs, innovative projects, and strong community engagement, we bring ideas to life and
-          foster meaningful change.
+          We empower creativity by combining vision with action at the Arts Council. Through inclusive programs, innovative projects, and strong community engagement, we bring ideas to life and foster meaningful change.
         </motion.p>
       </motion.div>
     </section>

@@ -52,7 +52,7 @@ const PyfFooter = () => {
     { id: 1, text: "About PYF", href: "#aboutPyf" },
     { id: 2, text: "Delegates", href: "#pyfDelegates" },
     { id: 4, text: "Highlighted Sessions", href: "#plfHighlightedSessions" },
-    { id: 3, text: "Contact Us", href: "#" },
+    { id: 3, text: "Contact Us", href: "/festival/pyf/contactUs" },
   ];
 
   const quickLinks2 = [

@@ -2,9 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 
-const PyfContactUs = () => {
+const WcContactUs = () => {
   return (
-    <div className="bg-green-50 text-gray-900 py-6">
+    <div className="bg-pink-50 text-gray-900 py-6">
       {/* Hero Section */}
       <section className="py-8 md:py-8 text-center">
         <div className="mx-4 sm:px-6 lg:px-8">
@@ -12,7 +12,7 @@ const PyfContactUs = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-2xl sm:text-4xl md:text-4xl font-bold text-green-900 mb-4"
+            className="text-2xl sm:text-4xl md:text-4xl font-bold text-pink-800 mb-4"
           >
             Contact Us
           </motion.h1>
@@ -22,7 +22,7 @@ const PyfContactUs = () => {
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
             className="text-lg sm:text-xl text-gray-600"
           >
-            We’d love to hear from you. Get in touch with the Pakistan Youth Festival team.
+            We’d love to hear from you. Get in touch with the Women Conference team.
           </motion.p>
         </div>
       </section>
@@ -38,36 +38,36 @@ const PyfContactUs = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-8"
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-green-900 mb-4 mt-5">Our Details</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-pink-900 mb-4 mt-5">Our Details</h2>
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
-                <FaEnvelope className="text-green-800 w-5 h-5" />
+                <FaEnvelope className="text-pink-800 w-5 h-5" />
                 <div>
-                  <p className="text-lg text-green-900">Email</p>
-                  <a href="mailto:info@pyf.org" className="text-green-900 hover:text-green-700 font-medium">
-                    info@pyf.org
+                  <p className="text-lg text-pink-900">Email</p>
+                  <a href="mailto:info@wc.org" className="text-pink-900 hover:text-pink-700 font-medium">
+                    info@wc.org
                   </a>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <FaPhone className="text-green-800 w-5 h-5" />
+                <FaPhone className="text-pink-800 w-5 h-5" />
                 <div>
-                  <p className="text-lg text-green-800">Phone</p>
-                  <a href="tel:+923001234567" className="text-green-900 hover:text-green-700 font-medium">
+                  <p className="text-lg text-pink-800">Phone</p>
+                  <a href="tel:+923001234567" className="text-pink-900 hover:text-pink-700 font-medium">
                     +92 300 123 4567
                   </a>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <FaMapMarkerAlt className="text-green-800 w-5 h-5" />
+                <FaMapMarkerAlt className="text-pink-800 w-5 h-5" />
                 <div>
-                  <p className="text-lg text-green-800">Address</p>
-                  <p className="text-green-900 font-medium">Arts Council of Pakistan, Karachi, Pakistan</p>
+                  <p className="text-lg text-pink-800">Address</p>
+                  <p className="text-pink-900 font-medium">Arts Council of Pakistan, Karachi, Pakistan</p>
                 </div>
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-green-900 mb-3">Follow Us</h3>
+              <h3 className="text-xl font-semibold text-pink-900 mb-3">Follow Us</h3>
               <div className="flex space-x-4">
                 {[
                   { href: "#", icon: <FaFacebookF />, alt: "Facebook" },
@@ -80,7 +80,7 @@ const PyfContactUs = () => {
                     href={social.href}
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
-                    className="text-green-900 hover:text-green-700 text-lg"
+                    className="text-pink-900 hover:text-pink-700 text-lg"
                     aria-label={social.alt}
                   >
                     {social.icon}
@@ -98,7 +98,7 @@ const PyfContactUs = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="bg-white p-8 rounded-xl shadow-md border border-gray-200"
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-green-800 mb-6">Send Us a Message</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-pink-800 mb-6">Send Us a Message</h2>
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -107,7 +107,7 @@ const PyfContactUs = () => {
                 <input
                   type="text"
                   id="name"
-                  className="mt-1 w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-green-500 focus:border-green-500 transition duration-300"
+                  className="mt-1 w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-pink-500 focus:border-pink-500 transition duration-300"
                   placeholder="Your Name"
                 />
               </div>
@@ -118,7 +118,7 @@ const PyfContactUs = () => {
                 <input
                   type="email"
                   id="email"
-                  className="mt-1 w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-green-500 focus:border-green-500 transition duration-300"
+                  className="mt-1 w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-pink-500 focus:border-pink-500 transition duration-300"
                   placeholder="Your Email"
                 />
               </div>
@@ -129,7 +129,7 @@ const PyfContactUs = () => {
                 <textarea
                   id="message"
                   rows="4"
-                  className="mt-1 w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-green-500 focus:border-green-500 transition duration-300 resize-none"
+                  className="mt-1 w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-1 focus:ring-pink-500 focus:border-pink-500 transition duration-300 resize-none"
                   placeholder="Your Message"
                 />
               </div>
@@ -137,7 +137,7 @@ const PyfContactUs = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="w-full px-6 py-3 bg-green-900 text-white rounded-lg text-base font-medium hover:bg-green-800 transition-colors duration-300"
+                className="w-full px-6 py-3 bg-pink-900 text-white rounded-lg text-base font-medium hover:bg-pink-800 transition-colors duration-300"
               >
                 Submit
               </motion.button>
@@ -149,4 +149,4 @@ const PyfContactUs = () => {
   );
 };
 
-export default PyfContactUs;
+export default WcContactUs;

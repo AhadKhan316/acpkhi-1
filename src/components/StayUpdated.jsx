@@ -82,18 +82,18 @@ const StayUpdated = () => {
         variants={textVariants}
       >
         <motion.h2
-          className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-6 tracking-tight drop-shadow-lg"
           variants={textVariants}
         >
-        Updates
+          Hear From Us
 
         </motion.h2>
-        <motion.p
+        {/* <motion.p
           className="text-base sm:text-lg md:text-xl lg:text-3xl mb-6 opacity-90 drop-shadow"
           variants={textVariants}
         >
           Get the latest scoop from us
-        </motion.p>
+        </motion.p> */}
         <motion.form
           onSubmit={handleSubmit}
           initial="hidden"

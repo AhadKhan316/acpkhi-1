@@ -32,6 +32,8 @@ import posterImg21 from "/src/assets/ArtsAlumniAssets/classical-performance-segm
 import posterImg24 from "/src/assets/ArtsAlumniAssets/independent-artist-journey.jpg"
 import posterImg25 from "/src/assets/ArtsAlumniAssets/journey-of-dance.jpg"
 import posterImg26 from "/src/assets/ArtsAlumniAssets/folk-wolk-concert.jpg"
+import posterImg27 from "/src/assets/ArtsAlumniAssets/opening-ceremony.jpg"
+
 
 
 // Schedule Posters
@@ -97,6 +99,9 @@ const AlumniPage = () => {
   };
 
   const segments = [
+    {
+      image: posterImg27,
+    },
     {
       title: "An Innocent Little Murder",
       image: posterImg17,
@@ -476,7 +481,7 @@ const AlumniPage = () => {
 
         {/* Video Section */}
 
-        <section className="w-full py-12 sm:py-16 bg-white text-red-800 overflow-hidden">
+        <section className="w-full sm:py-16 bg-white text-red-800 overflow-hidden">
 
           {/* Section Header */}
           {/* < motion.div
@@ -544,15 +549,15 @@ const AlumniPage = () => {
 
       {/* Intro Section */}
       <motion.section
-        className="py-8 lg:py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={sectionVariants}
       >
-        <div className="text-center mb-12">
+        <div className="text-center">
           <motion.h2
-            className="text-2xl sm:text-4xl lg:text-4xl font-bold text-black mb-6"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

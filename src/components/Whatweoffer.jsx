@@ -68,7 +68,7 @@ const Whatweoffer = () => {
               className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white leading-tight"
               variants={textVariants}
             >
-              What <span className="text-red-500">We Offer  </span> 
+              What <span className="text-red-500">We Offer  </span>
             </motion.h2>
 
             <motion.div
@@ -80,8 +80,8 @@ const Whatweoffer = () => {
               className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed"
               variants={textVariants}
             >
-             
-             We deliver one-stop innovative solutions that keep the arts alive, empower communities and drive measurable global impact.
+
+              We deliver one-stop innovative solutions that keep the arts alive, empower communities and drive measurable global impact.
             </motion.p>
           </motion.div>
 
@@ -90,22 +90,6 @@ const Whatweoffer = () => {
             variants={fadeIn}
           >
             {/* Service Card 1 */}
-            <motion.div
-              className="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-white/10 hover:border-red-400/30 transition-all text-center"
-              whileHover={{ y: -10 }}
-              variants={textVariants}
-            >
-              <div className="text-red-400 mb-4 flex justify-center">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-white mb-3">Community Empowerment
-              </h3>
-              <p className="text-gray-300">Our programmes provide our people millions of tailor-made opportunities</p>
-            </motion.div>
-
-            {/* Service Card 2 */}
             <motion.div
               className="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-white/10 hover:border-red-400/30 transition-all text-center"
               whileHover={{ y: -10 }}
@@ -121,6 +105,22 @@ const Whatweoffer = () => {
               <p className="text-gray-300">We house world-class venues and facilities that provide customised solutions to help your artistic dreams take flight.</p>
             </motion.div>
 
+            {/* Service Card 2 */}
+            <motion.div
+              className="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-white/10 hover:border-red-400/30 transition-all text-center"
+              whileHover={{ y: -10 }}
+              variants={textVariants}
+            >
+              <div className="text-red-400 mb-4 flex justify-center">
+                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-white mb-3">Community Empowerment
+              </h3>
+              <p className="text-gray-300">Our programmes provide our people millions of tailor-made opportunities</p>
+            </motion.div>
+
             {/* Service Card 3 */}
             <motion.div
               className="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-white/10 hover:border-red-400/30 transition-all text-center"
@@ -133,7 +133,7 @@ const Whatweoffer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white mb-3">Global Impact</h3>
+              <h3 className="text-lg font-bold text-white mb-3">Global Footprint</h3>
               <p className="text-gray-300">Initiatives that create measurable, positive change across borders.</p>
             </motion.div>
           </motion.div>

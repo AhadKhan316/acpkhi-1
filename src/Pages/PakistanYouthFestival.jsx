@@ -12,9 +12,9 @@ import PyfNewsletter from '../components/pyfSubComponents/pyfNewsletter'
 import PyfFooter from '../components/pyfSubComponents/pyfFooter'
 
 // Pages
-// import PyfAboutPage from '../Pages/PyfSubPages/pyfAboutPage'
-// import PyfDelegatesPage from '../Pages/PyfSubPages/pyfDelegatesPage'
-// import PyfContactPage from '../Pages/PyfSubPages/pyfContactUsPage'
+import PyfAboutPage from '../Pages/PyfSubPages/pyfAboutPage'
+import PyfDelegatesPage from './PyfSubPages/pyfDelegatesPage'
+import PyfContactPage from '../Pages/PyfSubPages/pyfContactUsPage'
 
 // Card Image
 // import pyfDelegateCard1 from "/src/assets/pyf-assets/pyf-delegate1.jpg"
@@ -50,9 +50,9 @@ function PakistanYouthFestival() {
             {/* <PyfSponsors /> */}
           </>
         } />
-        {/* <Route path="about" element={<PyfAboutPage />} /> */}
-        {/* <Route path="Delegates" element={<PyfDelegatesPage />} /> */}
-        {/* <Route path="contactUs" element={<PyfContactPage />} /> */}
+        <Route path="about" element={<PyfAboutPage />} />
+        <Route path="delegates" element={<PyfDelegatesPage />} />
+        <Route path="contactUs" element={<PyfContactPage />} />
       </Routes>
       <PyfFooter />
 
