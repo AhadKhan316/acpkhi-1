@@ -60,7 +60,7 @@ const Initiative = () => {
         </div>
 
         <button className="mt-12 px-8 py-3 bg-red-700 text-white rounded-full hover:bg-red-800 transition text-sm md:text-base font-medium">
-          Explore All Initiatives
+          Explore All Brands
         </button>
       </div>
     </section>
