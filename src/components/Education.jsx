@@ -109,7 +109,7 @@ const Education = () => {
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">Music</h3>
                   <p className="text-gray-300 text-sm sm:text-base mb-2">Immerse yourself in the world of sound with our comprehensive music programs.</p>
                   <a
-                    href="/music"
+                    href="#"
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
                   >
                     Explore More
@@ -139,7 +139,7 @@ const Education = () => {
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">Theatre</h3>
                   <p className="text-gray-300 text-sm sm:text-base mb-2">Bring stories to life through our dynamic theatre arts curriculum.</p>
                   <a
-                    href="/theatre"
+                    href="#"
                     className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors text-sm sm:text-base"
                   >
                     Explore More
@@ -169,7 +169,7 @@ const Education = () => {
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">Dance</h3>
                   <p className="text-gray-300 text-sm sm:text-base mb-2">Express yourself through movement with our diverse dance programs.</p>
                   <a
-                    href="/dance"
+                    href="#"
                     className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors text-sm sm:text-base"
                   >
                     Explore More
@@ -200,7 +200,7 @@ const Education = () => {
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">Fine Arts</h3>
                   <p className="text-gray-300 text-sm sm:text-base mb-2">Create stunning visual art with our fine arts training and mentorship.</p>
                   <a
-                    href="/fine-arts"
+                    href="#"
                     className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors text-sm sm:text-base"
                   >
                     Explore More
@@ -230,7 +230,7 @@ const Education = () => {
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">Textile Design</h3>
                   <p className="text-gray-300 text-sm sm:text-base mb-2">Design innovative fabrics and patterns with our textile design courses.</p>
                   <a
-                    href="/textile-design"
+                    href="#"
                     className="inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors text-sm sm:text-base"
                   >
                     Explore More
@@ -260,7 +260,7 @@ const Education = () => {
                   <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">Graphic Design</h3>
                   <p className="text-gray-300 text-sm sm:text-base mb-2">Master visual communication with our cutting-edge graphic design programs.</p>
                   <a
-                    href="/graphic-design"
+                    href="#"
                     className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm sm:text-base"
                   >
                     Explore More
