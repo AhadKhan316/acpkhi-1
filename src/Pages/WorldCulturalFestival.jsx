@@ -21,10 +21,13 @@ import WcfAboutPage from "../Pages/WcfSubPages/WcfAboutPage";
 import WcfPerformances from "../Pages/WcfSubPages/WcfPerformancesPage";
 import WcfWorkshops from "../Pages/WcfSubPages/WcfWorkshopsPage";
 import WcfCommunityBuilding from "../Pages/WcfSubPages/WcfCommunityBuildingPage";
-import WcfArtists from "../Pages/WcfSubPages/WcfArtistPage";
+import Gallery from "../Pages/WcfSubPages/Gallery";
 import WcfArtistsEngagement from "./WcfSubPages/WcfArtistsEngagementPage";
 import WcfMediaCoverage from "./WcfSubPages/WcfMediaCourage";
 import WcfContactUs from "./WcfSubPages/WcfContactUs";
+
+
+
 
 const WorldCultureFestival = () => {
   return (
@@ -50,7 +53,7 @@ const WorldCultureFestival = () => {
         <Route path="performances" element={<WcfPerformances />} />
         <Route path="workshops" element={<WcfWorkshops />} />
         <Route path="communityBuilding" element={<WcfCommunityBuilding />} />
-        <Route path="artist" element={<WcfArtists />} />
+        <Route path="Gallery" element={<Gallery />} />
         <Route path="artistEngagement" element={<WcfArtistsEngagement />} />
         <Route path="mediaCoverage" element={<WcfMediaCoverage />} />
         <Route path="contactUs" element={<WcfContactUs />} />

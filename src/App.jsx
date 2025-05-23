@@ -19,6 +19,7 @@ import Initiative from './components/Initiative';
 import Education from './components/Education';
 // import OurSponsors from './components/Sponsors';
 import ContactUs from './Pages/ContactUs';
+import QRCodeRedirect from './Pages/Qrcode';
 
 // Pages
 import SovapaPage from './Pages/SovapaPage';
@@ -90,7 +91,7 @@ const App = () => {
             <About />
             <Mainpagevideo />
             {/* <UpcomingEvents /> */}
-            {/* <PresidentsMessage /> */}
+            <PresidentsMessage />
             <WhatWeDo />
             <Initiative />
             <Education />
@@ -135,6 +136,7 @@ const App = () => {
         <Route path="/admissions" element={<Admission />} />
         <Route path="/NewsBlog" element={<NewsBlog />} />
         <Route path="/DelegatesPage" element={<DelegatesPage />} />
+        <Route path="/qrcode" element={<QRCodeRedirect />} />
       </Route>
 
       {/* Routes without Navbar and Footer */}

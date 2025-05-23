@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import AafNavbar from "../components/aafSubComponents/aafNavbar";
+import AlumniPage from "../components/aafSubComponents/AlumniPage";
 import MainAlumniCompo from "../Pages/AlumniFestival";
 
 
@@ -27,6 +28,7 @@ function ArtsAlumiFestival() {
           </>
         } />
 
+        <Route path="AlumniPage" element={<AlumniPage />} />
         {/* <Route path="about" element={<AucAboutPage />} /> */}
         {/* <Route path="delegate" element={<AucDelegatePage />} /> */}
         {/* <Route path="contactUs" element={<AucContactPage />} /> */}

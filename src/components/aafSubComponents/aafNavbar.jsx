@@ -142,7 +142,7 @@ const AafNavbar = () => {
         <ul className="hidden lg:flex space-x-0.5 items-center ms-2">
           <li><NavLink to="/festival/aaf">Home</NavLink></li>
           <li><NavLink to="/festival/aaf/about">About</NavLink></li>
-          <li><NavLink to="/festival/aaf/alumni">Alumni</NavLink></li>
+          <li><NavLink to="/festival/aaf/AlumniPage">Alumni</NavLink></li>
           <li><NavLink to="/festival/aaf/gallery">Gallery</NavLink></li>
           <li className="relative group">
             {/* <DropdownButton onClick={(e) => toggleSubMenu("events", e)} isOpen={isSubMenuOpen["events"]}>
@@ -187,7 +187,7 @@ const AafNavbar = () => {
           <ul className="flex flex-col p-4 space-y-2 text-white">
             <li><NavLink to="/festival/aaf">Home</NavLink></li>
             <li><NavLink to="/festival/aaf/about">About</NavLink></li>
-            <li><NavLink to="/festival/aaf/alumni">Alumni</NavLink></li>
+            <li><NavLink to="/festival/aaf/AlumniPage">Alumni</NavLink></li>
             <li><NavLink to="/festival/aaf/gallery">Gallery</NavLink></li>
             {/* <li className="relative">
               <DropdownButton onClick={(e) => toggleSubMenu("events", e)} isOpen={isSubMenuOpen["events"]}>

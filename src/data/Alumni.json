@@ -1,0 +1,61 @@
+[
+    {
+      "id": 1,
+      "name": "Noman Al Sheikh",
+      "role": "Musician",
+      "category": "Singer",
+      "image": "../../src/assets/Alumni/Noman-hassan-min.jpeg",
+      "bio": "Noman is a talented vocalist and composer known for his deeply emotive performances and his ability to blend genres seamlessly. A Musicology graduate from SOVAPA at the Arts Council of Pakistan, Karachi, he gained recognition with his soulful rendition of Ahmed Jahanzeb’s “Apki Yaad.” The Alumni Festival he will present both this beloved cover and his original track “Laapata,” offering audiences a powerful mix of nostalgia and fresh, heartfelt expression.",
+      "socialLinks": [
+        
+      ],
+      "additionalDetails": [
+        { "label": "Specialization", "value": "Vocalist" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Zarnaab Baloch",
+      "role": "Fine Art",
+      "category": "Painter",
+      "image": "../../src/assets/Alumni/Zarnaab-Baloch.jpg",
+      "bio": "Zarnaab’s work has been exhibited at prominent venues across Pakistan, including Sanat Initiative, Full Circle Gallery, O Art Space, Numaish Gah, Sambara Art Gallery, Mainframe Gallery, Ejaz Art Gallery, and Ahmed Pervez Art Gallery, where her thesis project, Just a Little Change, gained recognition for its introspective exploration. She teaches at the Arts Council of Pakistan, mentoring emerging artists and actively contributing to the local art community. At the Alumni Festival, she will showcase new work, contributing actively to the local art community.",
+      "socialLinks": [
+       
+      ],
+      "additionalDetails": [
+        { "label": "Specialization", "value": "Painting" }
+      ]
+    },
+
+    {
+        "id": 3,
+        "name": "M. Jawad Hassan",
+        "role": "Fine Art",
+        "category": "Sculptor",
+        "image": "../../src/assets/Alumni/jawad-hassan.jpg",
+        "bio": "Jawad is a sculptor whose work explores themes of memory, childhood, and early creative restrictions. He is a graduate of SOVAPA and has since exhibited in several notable group shows across Karachi and Lahore. At the Alumni Festival, he will be showcasing a new sculptural work in the Alumni Art Exhibition and participating in a panel discussion on contemporary visual art practices at the Ahmed Pervez Art Gallery at the Arts Council of Pakistan, Karachi.",
+        "socialLinks": [
+          
+        ],
+        "additionalDetails": [
+          { "label": "Specialization", "value": "Sculptor" }
+        ]
+      },
+
+      {
+        "id": 4,
+        "name": "Naheed Noor",
+        "role": "Fine Art",
+        "category": "Painter",
+        "image": "../../src/assets/Alumni/naheed-noor.jpg",
+        "bio": "Naheed is a painter whose work focuses primarily on acrylic and watercolor, exploring themes of solitude, resilience, and inner calm. She is a graduate of SOVAPA and continues to develop her artistic practice. Her work has been exhibited at major venues, including the Alam Ara Gallery in Lahore. At the Alumni Festival, she will present Still Waters, an abstract painting exploring emotional stillness, displayed at the Ahmed Pervez Art Gallery, Arts Council of Pakistan, Karachi.",
+        "socialLinks": [
+         
+        ],
+        "additionalDetails": [
+          { "label": "Specialization", "value": "Painter" }
+         
+        ]
+      }
+  ]
