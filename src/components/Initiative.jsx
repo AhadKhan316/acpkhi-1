@@ -8,7 +8,7 @@ const Initiative = () => {
     {
       id: 1,
       title: 'World Culture Festival Karachi',
-      desc: 'World Culture Festival k box ka text updated to: The World Culture Festival is a vibrant celebration of global creativity, uniting art creators to share their cultures and co-create art. Featuring music, theatre, dance, and visual arts, it offers a dynamic platform for artistic exchange and cultural dialogue from around the world.',
+      desc: 'The World Culture Festival is a vibrant celebration of global creativity, uniting art creators to share their cultures and co-create art. Featuring music, theatre, dance, and visual arts, it offers a dynamic platform for artistic exchange and cultural dialogue from around the world.',
       logo: WCFLogo,
       link: '/festival/wcf'
     },
@@ -31,7 +31,7 @@ const Initiative = () => {
   return (
     <section className="py-20 bg-white text-center">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-800">Our Brands</h2>
+        <h2 className="text-2xl md:text-4xl font-bold mb-12 text-gray-800">Our Brands</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {showcases.map((showcase) => (
