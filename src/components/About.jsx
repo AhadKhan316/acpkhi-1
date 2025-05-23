@@ -19,9 +19,9 @@ const About = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.8, 
-        ease: [0.1, 0.8, 0.2, 1] 
+      transition: {
+        duration: 0.8,
+        ease: [0.1, 0.8, 0.2, 1]
       }
     }
   };
@@ -37,8 +37,8 @@ const About = () => {
   const stats = [
     { value: "70+", label: "Years of Legacy" },
     { value: "500+", label: "Annual Events" },
-    { value: "1M+", label: "Visitors Yearly" },
-    { value: "50+", label: "Countries Hosted" }
+    { value: "1M+", label: "Annual Visitors" },
+    { value: "80+", label: "Connected Countries" }
   ];
 
   return (
@@ -48,43 +48,50 @@ const About = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-50 to-blue-50"></div>
       </div>
 
-      <motion.div 
+      <motion.div
         className="container mx-auto px-6 relative z-10 max-w-4xl"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
         <div className="text-center mb-12">
-          <motion.h2 
+          <motion.h2
             className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-gray-900"
             variants={textVariants}
           >
             Who <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-purple-600"> We Are</span>
           </motion.h2>
-          
-          <motion.div 
-            className="w-24 h-1 bg-gradient-to-r from-red-500 to-blue-500 mx-auto mb-8 rounded-full"
-            variants={dividerVariants}
-          />
-          
+
           <motion.p 
             className="text-xl text-gray-600 max-w-3xl mx-auto"
             variants={textVariants}
           >
             The Arts Council of Pakistan, Karachi is where artists, thinkers, and changemakers converge. Hosting over 200 annual events and collaborating with 40+ countries, ACPKHI stands as Pakistan's most dynamic force in arts and culture. From preserving traditions to pushing creative boundaries, we don't just host the arts — we connect with millions and shape the future through creativity.
           </motion.p>
+
+          <motion.div
+            className="w-24 h-1 bg-gradient-to-r from-red-500 to-blue-500 mx-auto my-8 rounded-full"
+            variants={dividerVariants}
+          />
+
+          <motion.p
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            variants={textVariants}
+          >
+            The Arts Council of Pakistan, Karachi is where artists, thinkers, and changemakers converge. Hosting over 500+ annual events and collaborating with 80+ countries, ACPKHI stands as Pakistan's most dynamic force in arts and culture. From preserving traditions to pushing creative boundaries, we don't just host the arts — we connect with millions and shape the future through creativity.
+          </motion.p>
         </div>
 
         <div className="mb-12">
           {/* Stats */}
-          <motion.div 
+          <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4"
             variants={textVariants}
           >
             {stats.map((stat, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
-                className="p-6 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                className="p-5 rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow text-center"
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
               >

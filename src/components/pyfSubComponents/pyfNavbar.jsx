@@ -55,8 +55,8 @@ const PyfNavbar = () => {
   // Menu items array
   const menuItems = [
     { to: "/festival/pyf", label: "Home" },
-    { to: "#", label: "About" }, //festival/pyf/about
-    { to: "#", label: "Speakers" }, //festival/pyf/speakers
+    { to: "/festival/pyf/about", label: "About" },
+    { to: "/festival/pyf/delegates", label: "Delegates" },
     {
       label: "Events",
       dropdown: [
@@ -65,7 +65,7 @@ const PyfNavbar = () => {
         { to: "#", label: "Panels" }, //pyf/events/panels
       ],
     },
-    { to: "#", label: "Contact" }, //festival/pyf/contact
+    { to: "/festival/pyf/contactUs", label: "Contact Us" },
   ];
 
   return (

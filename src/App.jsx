@@ -2,7 +2,7 @@
 import { Route, Routes } from "react-router-dom";
 
 // Components
-import AlumniRedirect from './components/AlumniRedirect'; // We'll create this next
+import AlumniRedirect from './components/AlumniRedirect';
 import Layout from './components/Layout';
 import Hero from './components/Hero';
 // import UpcomingEvents from './components/UpcomingEvents';

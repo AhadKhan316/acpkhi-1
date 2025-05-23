@@ -11,6 +11,11 @@ import PyfNewsletter from '../components/pyfSubComponents/pyfNewsletter'
 // import PyfSponsors from '../components/pyfSubComponents/pyfSponsors'
 import PyfFooter from '../components/pyfSubComponents/pyfFooter'
 
+// Pages
+import PyfAboutPage from '../Pages/PyfSubPages/pyfAboutPage'
+import PyfDelegatesPage from './PyfSubPages/pyfDelegatesPage'
+import PyfContactPage from '../Pages/PyfSubPages/pyfContactUsPage'
+
 // Card Image
 // import pyfDelegateCard1 from "/src/assets/pyf-assets/pyf-delegate1.jpg"
 // import pyfDelegateCard2 from "/src/assets/pyf-assets/pyf-delegate2.jpg"
@@ -45,14 +50,9 @@ function PakistanYouthFestival() {
             {/* <PyfSponsors /> */}
           </>
         } />
-        {/* <Route path="about" element={<WcfAboutPage />} /> */}
-        {/* <Route path="performances" element={<WcfPerformances />} /> */}
-        {/* <Route path="workshops" element={<WcfWorkshops />} /> */}
-        {/* <Route path="communityBuilding" element={<WcfCommunityBuilding />} /> */}
-        {/* <Route path="artist" element={<WcfArtists />} /> */}
-        {/* <Route path="artistEngagement" element={<WcfArtistsEngagement />} /> */}
-        {/* <Route path="mediaCoverage" element={<WcfMediaCoverage />} /> */}
-        {/* <Route path="contactUs" element={<WcfContactUs />} /> */}
+        <Route path="about" element={<PyfAboutPage />} />
+        <Route path="delegates" element={<PyfDelegatesPage />} />
+        <Route path="contactUs" element={<PyfContactPage />} />
       </Routes>
       <PyfFooter />
 

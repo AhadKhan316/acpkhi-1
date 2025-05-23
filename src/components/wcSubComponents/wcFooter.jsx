@@ -56,7 +56,7 @@ const WcFooter = () => {
     { id: 4, text: "Delegates", href: "#wcDelegates" },
     { id: 5, text: "Explore Categories", href: "#wcCategories" },
     { id: 6, text: "Highlighted Sessions", href: "#wcHighlightedSessions" },
-    { id: 7, text: "Contact Us", href: "#" }, //festival/wc/contactUs
+    { id: 7, text: "Contact Us", href: "/festival/wc/contactUs" },
   ];
 
   const quickLinks2 = [
