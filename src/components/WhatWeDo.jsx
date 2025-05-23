@@ -15,7 +15,7 @@ const WhatWeDo = () => {
 
   return (
     <section
-      className="relative w-full h-[40vh] md:h-[55vh] lg:h-[70vh] overflow-hidden"
+      className="relative w-full h-[50vh] md:h-[55vh] lg:h-[70vh] overflow-hidden"
       style={{
         backgroundImage: `url(${WhatWeDoImage})`,
         backgroundSize: "cover",
@@ -40,7 +40,8 @@ const WhatWeDo = () => {
           How We Do It
         </motion.h2>
         <motion.p
-          className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100 leading-relaxed drop-shadow-md max-w-3xl"
+          className="text-lg px-8 sm:text-base md:text-lg lg:text-xl text-gray-100 leading-relaxed drop-shadow-md max-w-3xl"
+          // text-lg leading-relaxed text-gray-700 text-center px-2
           variants={textVariants}
         >
           We empower creativity by combining vision with action at the Arts Council. Through inclusive programs, innovative projects, and strong community engagement, we bring ideas to life and foster meaningful change.

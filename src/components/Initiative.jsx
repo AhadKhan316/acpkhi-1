@@ -30,8 +30,8 @@ const Initiative = () => {
 
   return (
     <section className="py-10 bg-white text-center">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-4xl font-bold mb-12 text-gray-800">Our Brands</h2>
+      <div className="container mx-auto px-6">
+        <h2 className="text-2xl md:text-4xl font-bold mb-12 text-gray-800">Our Initiatives/Brands</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {showcases.map((showcase) => (
@@ -57,13 +57,13 @@ const Initiative = () => {
                 />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-800 line-clamp-2">{showcase.title}</h3>
-              <p className="text-gray-600 mb-4 text-sm md:text-base flex-grow line-clamp-4">{showcase.desc}</p>
+              <p className="text-gray-600 mb-4 text-lg md:text-base flex-grow line-clamp-4">{showcase.desc}</p>
             </a>
           ))}
         </div>
 
         <button className="mt-12 px-8 py-3 bg-red-700 text-white rounded-full hover:bg-red-800 transition text-sm md:text-base font-medium">
-          Explore All Brands
+          Learn more
         </button>
       </div>
     </section>

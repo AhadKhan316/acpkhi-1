@@ -23,11 +23,11 @@ const Mainpagevideo = () => {
   };
 
   return (
-    <section className="w-full bg-white text-red-800 overflow-hidden">
+    <section className="w-full bg-white text-red-800 overflow-hidden ">
 
       {/* Section Header */}
       < motion.div
-        className="text-center "
+        className="text-center"
         initial="hidden"
         whileInView="visible"
         variants={textVariants}

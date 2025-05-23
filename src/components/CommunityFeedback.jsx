@@ -72,7 +72,7 @@ const Feedback = () => {
       </div>
 
       <motion.div
-        className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+        className="container mx-auto px-6 sm:px-6 lg:px-8 relative z-10"
         initial="hidden"
         animate="visible"
         variants={containerVariants}

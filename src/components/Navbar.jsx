@@ -128,9 +128,9 @@ const Navbar = () => {
                                 <NavLink to="/festival/auc">Aalmi Urdu Conference</NavLink>
                                 <NavLink to="/festival/plf">Pakistan Literature Festival</NavLink>
                                 <NavLink to="/festival/ptf">Pakistan Theatre Festival</NavLink>
-                                <NavLink to="/festival/pyf">Pakistan Youth Festival</NavLink>
-                                <NavLink to="/festival/wc">Women Conference</NavLink>
-                                <NavLink to="/festival/aaf">Arts Alumni Festival</NavLink>
+                                <NavLink to="#">Pakistan Youth Festival</NavLink>
+                                <NavLink to="#">Women Conference</NavLink>
+                                <NavLink to="#">Arts Alumni Festival</NavLink>
                             </div>
                         )}
                     </li>
@@ -190,9 +190,9 @@ const Navbar = () => {
                                     <NavLink to="/festival/auc">Aalmi Urdu Conference</NavLink>
                                     <NavLink to="/festival/plf">Pakistan Literature Festival</NavLink>
                                     <NavLink to="/festival/ptf">Pakistan Theatre Festival</NavLink>
-                                    <NavLink to="/festival/pyf">Pakistan Youth Festival</NavLink>
-                                    <NavLink to="/festival/wc">Women Conference</NavLink>
-                                    <NavLink to="/festival/aaf">Arts Alumni Festival</NavLink>
+                                    <NavLink to="#">Pakistan Youth Festival</NavLink>
+                                    <NavLink to="#">Women Conference</NavLink>
+                                    <NavLink to="#">Arts Alumni Festival</NavLink>
                                 </div>
                             )}
                         </li>

@@ -42,7 +42,7 @@ const Education = () => {
   };
 
   return (
-    <section className="relative w-full py-12 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+    <section className="relative w-full py-12 px-6 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-5 w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-red-600 opacity-10 blur-3xl"></div>
@@ -76,7 +76,7 @@ const Education = () => {
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-8 xl:gap-12 items-start">
           {/* Image section */}
           <motion.div
-            className="relative h-74 sm:h-80 md:h-96 xl:h-[600px] rounded-3xl overflow-hidden shadow-2xl mb-6"
+            className="relative h-64 sm:h-80 md:h-96 xl:h-[550px] rounded-3xl overflow-hidden shadow-2xl mb-6"
             variants={imageVariants}
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10"></div>
@@ -107,9 +107,9 @@ const Education = () => {
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base md:text-lg xl:text-xl font-bold text-white mb-2 line-clamp-2">Music</h3>
-                  <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-2 line-clamp-3">Immerse yourself in the world of sound with our comprehensive music programs.</p>
+                  <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-2 line-clamp-3">Immerse yourself in the world of sound with our music programs.</p>
                   <a
-                    href="#"
+                    href="/sovapa/music"
                     className="mt-auto inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-xs sm:text-sm"
                   >
                     Explore More
@@ -131,15 +131,16 @@ const Education = () => {
             >
               <div className="flex items-start flex-grow">
                 <div className="bg-red-500/10 p-2 sm:p-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 sm:w-8 sm:h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1m0 16v-2.5m0 0l-2 1m2-1l2 1m-2 1v2.5M20 18l-2-1m2 1l2-1m-2 1v2.5"></path>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className="w-8 h-8 text-red-400 fill-current">
+                    <path d="M4 42h56v-4H4v4zm0 4h8v8H4v-8zm10 0h8v8h-8v-8zm10 0h8v8h-8v-8zm10 0h8v8h-8v-8zm10 0h8v8h-8v-8zm10 0h8v8h-8v-8zM10 10v16c0 2.2 1.8 4 4 4h36c2.2 0 4-1.8 4-4V10H10zm38 14H16v-12h32v12zm-14-6l6 4-6 4V18z" />
                   </svg>
+
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base md:text-lg xl:text-xl font-bold text-white mb-2 line-clamp-2">Theatre</h3>
                   <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-2 line-clamp-3">Bring stories to life through our dynamic theatre arts curriculum.</p>
                   <a
-                    href="#"
+                    href="sovapa/theatre"
                     className="mt-auto inline-flex items-center text-red-400 hover:text-red-300 transition-colors text-xs sm:text-sm"
                   >
                     Explore More
@@ -161,15 +162,15 @@ const Education = () => {
             >
               <div className="flex items-start flex-grow">
                 <div className="bg-purple-500/10 p-2 sm:p-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 sm:w-8 sm:h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" className="w-6 h-6 sm:w-8 sm:h-8 text-pink-500 fill-current">
+                    <path d="M32 2a4 4 0 110 8 4 4 0 010-8zm5 10c1 0 2 .5 2.7 1.3 1.6 1.7 2.1 4.6.5 7.4-1 1.9-3 3.9-5.2 5l5.5 8.5c.5.8.2 1.8-.6 2.3l-2 1.2c-.8.5-1.8.2-2.3-.6L32 30.6l-3.6 5.5c-.5.8-1.5 1-2.3.6l-2-1.2c-.8-.5-1-1.5-.6-2.3l5.5-8.5c-2.2-1.2-4.2-3.1-5.2-5-1.5-2.8-1-5.7.5-7.4C25 12.5 26 12 27 12h10zm-1.5 22l-1.5 5-3 6h2.5l2-3 2 3h2.5l-3-6-1.5-5H35.5z" />
                   </svg>
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base md:text-lg xl:text-xl font-bold text-white mb-2 line-clamp-2">Dance</h3>
-                  <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-2 line-clamp-3">Express yourself through movement with our diverse dance programs.</p>
+                  <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-2 line-clamp-3">Express yourself through movement with our dance.</p>
                   <a
-                    href="#"
+                    href="sovapa/dance"
                     className="mt-auto inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors text-xs sm:text-sm"
                   >
                     Explore More
@@ -192,15 +193,15 @@ const Education = () => {
               <div className="flex items-start flex-grow">
                 <div className="bg-green-500/10 p-2 sm:p-3 rounded-lg mr-3 sm:mr-4 flex-shrink-0">
                   <svg className="w-6 h-6 sm:w-8 sm:h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15l-3-3m0 0l3-3m-3 3h6"></path>
                   </svg>
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base md:text-lg xl:text-xl font-bold text-white mb-2 line-clamp-2">Fine Arts</h3>
                   <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-2 line-clamp-3">Create stunning visual art with our fine arts training and mentorship.</p>
                   <a
-                    href="#"
+                    href="sovapa/fine-arts"
                     className="mt-auto inline-flex items-center text-green-400 hover:text-green-300 transition-colors text-xs sm:text-sm"
                   >
                     Explore More
@@ -230,7 +231,7 @@ const Education = () => {
                   <h3 className="text-sm sm:text-base md:text-lg xl:text-xl font-bold text-white mb-2 line-clamp-2">Textile Design</h3>
                   <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-2 line-clamp-3">Design innovative fabrics and patterns with our textile design courses.</p>
                   <a
-                    href="#"
+                    href="sovapa/textile-design"
                     className="mt-auto inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors text-xs sm:text-sm"
                   >
                     Explore More
@@ -260,7 +261,7 @@ const Education = () => {
                   <h3 className="text-sm sm:text-base md:text-lg xl:text-xl font-bold text-white mb-2 line-clamp-2">Graphic Design</h3>
                   <p className="text-gray-300 text-xs sm:text-sm md:text-base mb-2 line-clamp-3">Master visual communication with our cutting-edge graphic design programs.</p>
                   <a
-                    href="#"
+                    href="sovapa/graphic-design"
                     className="mt-auto inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-xs sm:text-sm"
                   >
                     Explore More

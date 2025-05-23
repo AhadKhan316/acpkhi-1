@@ -57,7 +57,7 @@ const Whatweoffer = () => {
 
       {/* Content */}
       <motion.div
-        className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32"
+        className="relative z-10 container mx-auto px-6 sm:px-6 lg:px-8 py-24 sm:py-32"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
