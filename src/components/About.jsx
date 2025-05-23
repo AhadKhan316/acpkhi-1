@@ -42,7 +42,7 @@ const About = () => {
   ];
 
   return (
-    <section className="relative py-20 bg-white overflow-hidden">
+    <section className="relative py-10 bg-white overflow-hidden">
       {/* Subtle background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-50 to-blue-50"></div>

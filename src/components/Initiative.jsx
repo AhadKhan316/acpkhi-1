@@ -8,7 +8,7 @@ const Initiative = () => {
     {
       id: 1,
       title: 'World Culture Festival Karachi',
-      desc: 'The World Culture Festival is a vibrant celebration of global creativity, uniting art creators to share their cultures and co-create art. Featuring music, theatre, dance, and visual arts, it offers a dynamic platform for artistic exchange and cultural dialogue from around the world.',
+      desc: 'The World Culture Festival is a vibrant celebration of global creativity, uniting art creators to share their cultures and co-create art. Featuring music, theatre, dance, and visual arts, it offers a dynamic platform for artistic exchange and cultural dialogue from around the world.',
       logo: WCFLogo,
       link: '/festival/wcf'
     },
@@ -29,33 +29,36 @@ const Initiative = () => {
   ];
 
   return (
-    <section className="py-20 bg-white text-center">
+    <section className="py-10 bg-white text-center">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-4xl font-bold mb-12 text-gray-800">Our Brands</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {showcases.map((showcase) => (
-            <div
+            <a
               key={showcase.id}
-              className="p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition hover:transform hover:-translate-y-1"
+              href={showcase.link}
+              className="flex flex-col p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition hover:transform hover:-translate-y-1 min-h-[400px] no-underline text-inherit cursor-pointer"
+              role="link"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  window.location.href = showcase.link;
+                }
+              }}
             >
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-6 h-32">
                 <img
                   src={showcase.logo}
                   alt={showcase.title}
-                  className="h-32 object-contain"
+                  className="h-full w-full object-contain max-h-32 max-w-[200px]"
                   loading="lazy"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">{showcase.title}</h3>
-              <p className="text-gray-600 mb-4 text-sm md:text-base">{showcase.desc}</p>
-              <a
-                href={showcase.link}
-                className="inline-block mt-2 px-4 py-2 text-sm font-medium text-red-700 hover:text-red-800 transition"
-              >
-                Learn More →
-              </a>
-            </div>
+              <h3 className="text-xl font-semibold mb-3 text-gray-800 line-clamp-2">{showcase.title}</h3>
+              <p className="text-gray-600 mb-4 text-sm md:text-base flex-grow line-clamp-4">{showcase.desc}</p>
+            </a>
           ))}
         </div>
 

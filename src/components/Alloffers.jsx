@@ -25,9 +25,9 @@ const Alloffers = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-10 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -53,8 +53,8 @@ const Alloffers = () => {
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="h-48 w-full overflow-hidden">
-                <img 
-                  src={showcase.logo} 
+                <img
+                  src={showcase.logo}
                   alt={showcase.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
@@ -74,7 +74,7 @@ const Alloffers = () => {
         </div>
 
         <motion.div
-        
+
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}

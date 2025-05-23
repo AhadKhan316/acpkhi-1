@@ -2,12 +2,12 @@ import PresidentImage from "/src/assets/governing-body-new/ahmed-shah.png";
 
 const PresidentsMessage = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">
-          President’s Message
+          <h2 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">
+            President’s Message
           </h2>
           <div className="w-16 h-1 bg-red-500 mx-auto mt-4 rounded-full"></div>
         </div>
@@ -30,7 +30,7 @@ const PresidentsMessage = () => {
         {/* Message Body */}
         <div className="text-lg leading-relaxed text-gray-700 text-center px-2">
           <p className="mb-6">
-          At the Arts Council of Pakistan, our mission is to spotlight the depth and diversity of Pakistani arts, literature, and culture on a global stage. We're committed to creating a vibrant, inclusive space that inspires creativity, supports emerging talent, and builds meaningful connections—both across Pakistan and around the world.
+            At the Arts Council of Pakistan, our mission is to spotlight the depth and diversity of Pakistani arts, literature, and culture on a global stage. We're committed to creating a vibrant, inclusive space that inspires creativity, supports emerging talent, and builds meaningful connections—both across Pakistan and around the world.
           </p>
           <p className="text-red-600 font-semibold text-xl">
             Together, we're writing the next chapter of culture in Pakistan!

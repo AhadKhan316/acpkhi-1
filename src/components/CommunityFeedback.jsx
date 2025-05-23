@@ -64,7 +64,7 @@ const Feedback = () => {
   };
 
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+    <section className="relative py-8 sm:py-10 lg:py-12 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-red-500 blur-3xl"></div>
@@ -79,7 +79,7 @@ const Feedback = () => {
       >
         {/* Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10"
           variants={titleVariants}
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">
@@ -134,11 +134,11 @@ const Feedback = () => {
               </div>
 
               {/* Floating country flag effect */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center border-2 border-white overflow-hidden transform group-hover:rotate-12 transition-transform duration-300">
+              {/* <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center border-2 border-white overflow-hidden transform group-hover:rotate-12 transition-transform duration-300">
                 <div className="w-full h-full bg-gradient-to-br from-blue-500 to-red-500 flex items-center justify-center text-white font-bold text-xs">
                   {feedback.role}
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>
