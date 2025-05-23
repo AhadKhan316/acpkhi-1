@@ -141,9 +141,12 @@ const AafNavbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden lg:flex space-x-0.5 items-center ms-2">
           <li><NavLink to="/festival/aaf">Home</NavLink></li>
-          <li><NavLink to="/festival/aaf/about">About</NavLink></li>
-          <li><NavLink to="/festival/aaf/AlumniPage">Alumni</NavLink></li>
-          <li><NavLink to="/festival/aaf/gallery">Gallery</NavLink></li>
+          {/* /festival/aaf/about */}
+          <li><NavLink to="#">About</NavLink></li>
+          {/* /festival/aaf/AlumniPage */}
+          <li><NavLink to="#">Alumni</NavLink></li>
+          {/* /festival/aaf/gallery */}
+          <li><NavLink to="#">Gallery</NavLink></li>
           <li className="relative group">
             {/* <DropdownButton onClick={(e) => toggleSubMenu("events", e)} isOpen={isSubMenuOpen["events"]}>
               Gallery
@@ -165,7 +168,8 @@ const AafNavbar = () => {
             )} */}
           </li>
           {/* <li><NavLink to="/festival/auc/sessions">Sessions</NavLink></li> */}
-          <li><NavLink to="/festival/aaf/contactUs">Contact Us</NavLink></li>
+          {/* /festival/aaf/contactUs */}
+          <li><NavLink to="#">Contact Us</NavLink></li>
           <li>
             {/* <button className="bg-red-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-800 transition duration-300">
               Register Now
@@ -186,9 +190,12 @@ const AafNavbar = () => {
           </div>
           <ul className="flex flex-col p-4 space-y-2 text-white">
             <li><NavLink to="/festival/aaf">Home</NavLink></li>
-            <li><NavLink to="/festival/aaf/about">About</NavLink></li>
-            <li><NavLink to="/festival/aaf/AlumniPage">Alumni</NavLink></li>
-            <li><NavLink to="/festival/aaf/gallery">Gallery</NavLink></li>
+            {/* /festival/aaf/about */}
+            <li><NavLink to="#">About</NavLink></li>
+            {/* /festival/aaf/AlumniPage */}
+            <li><NavLink to="#">Alumni</NavLink></li>
+            {/* /festival/aaf/gallery */}
+            <li><NavLink to="#">Gallery</NavLink></li>
             {/* <li className="relative">
               <DropdownButton onClick={(e) => toggleSubMenu("events", e)} isOpen={isSubMenuOpen["events"]}>
                 Events
@@ -208,7 +215,8 @@ const AafNavbar = () => {
               )}
             </li> */}
             {/* <li><NavLink to="/festival/auc/sessions">Sessions</NavLink></li> */}
-            <li><NavLink to="/festival/aaf/contactUs">Contact Us</NavLink></li>
+            {/* /festival/aaf/contactUs */}
+            <li><NavLink to="#">Contact Us</NavLink></li>
             <li>
               {/* <button className="bg-red-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-800 transition duration-300 w-full">
                 Register Now
